@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block body %}
+
+<!-- HOD Message -->
+<div class="container ">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-btech-mechanical/sidebar-btech-mechanical.html' with structure="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 style="font-family: 'Lato', sans-serif;" class="text-center">Teaching and Learning Methodolog</h2>
+            <p class="text-justify">Instruction and learning environment in the Department of Civil Engineering at Abasyn University comprises of:
+            </p>
+
+            <ol>
+                <li>Classroom lectures, duly supported by audio-visual aids, demonstrations and relevant handouts.</li>
+                <li>Assignments and tutorials requiring use of reference materials and internet facility. Term projects and classroom
+                    presentations. </li>
+                <li>Laboratory experiments, field work, and design exercises</li>
+                <li>Instructional visits to appropriate establishments, installations, construction sites, field stations, industries,
+                    etc.
+                </li>
+                <li>
+                    Lectures and seminars by renowned professionals from the industry. Enhanced use of modern computing facilities in the institution.
+                </li>
+                <li>
+                    The preparation of visit reports/notebooks/ field books/graphs and drawing sheets pertaining to the field work and practical
+                    work.
+                </li>
+            </ol>
+            <br/>
+            <h2>Programs Offered</h2>
+            <a class="btn btn-primary" href="{% url 'slider:btech-mechanical-course'%}">View Programs</a>
+
+        </div>
+    </div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}

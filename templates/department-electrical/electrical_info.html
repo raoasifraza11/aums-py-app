@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-electrical/sidebar-electrical.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 class="text-center" style="font-family: 'Lato', sans-serif;">BS in Electrical Engineering</h2>
+            <p class="justify">The Department of Engineering offers a four years degree program of BE Electrical Engineering which is permitted by the Pakistan Engineering Council (PEC).</p>
+            <p>The main objective ofthis program is to provide quality education in the field of Electrical Engineering. The desired output of the program is to produce electrical engineers who are able to handle the technical issues of the field today and are prepared to address the challenges of ever growing and ever changing ﬁeld of Electrical Engineering. Our industry oriented curriculum makes sure that our graduates will be able to fulfill the requirements of the local and foreign industry. Ourfocus on incorporating R&D practices in the academics will make sure that our graduates are able to work on novel problems and come up with ground breaking solutions.</p>
+        </div>
+    </div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}
+

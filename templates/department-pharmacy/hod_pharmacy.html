@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container ">
+
+<div class="row">
+      <div class="col-sm-3">
+        <nav class="nav-sidebar">
+            {% include 'department-pharmacy/sidebar-pharmacy.html' with hod="active" %}
+        </nav>
+      </div>
+  <div class="col-md-9 col-sm-9" id="static-content">
+  <h2 style="font-family: 'Lato', sans-serif;" class="text-center">HOD MESSAGE</h2>
+  <center><img src="/static/img/Akhlaq.jpg" class="img-rounded" width="10%"></center>
+  <br>
+  <p style=" font-family: 'Lato', sans-serif; font-size: 25px; line-height: 36px; color: #0b0507a3; text-align: center;">“Our world today is in a state of flux. Information technology has changed, virtually, every facet of our lives, and an ever-evolving business environment affects each and every one of us.”</p>
+  <br>
+  <p class="justify">Capital University of Science & Technology is established by a federal charter and vested with the authority to award degrees at various levels in all disciplines. It started functioning in 1998 as Islamabad Campus of Mohammad Ali Jinnah University (MAJU) Karachi and achieved its recognition in the country and abroad by maintaining excellent academic standards. In recognition to its academic strength, infrastructure and financial viability, the President of the Islamic Republic of Pakistan, on 28th Sep. 2015, gave assent to a bill converting it into a law, passed by the Parliament of Pakistan referred to as ‘Capital University of Science and Technology Act’ which transformed MAJU, Islamabad Campus into Capital University of Science and Technology (CUST). As per CUST Act, it is a comprehensive Institution which can have faculties including, but not limited to, Engineering, Medicines, Natural Sciences, Management, Computing, Humanities and Arts.</p>
+  <p class="justify">
+    Currently, CUST has four Faculties: Faculty of Engineering; Faculty of Computing, Faculty of Health & Life Sciences and Faculty of Management and Social Sciences.
+  </p>
+
+  <p class="justify">
+    Faculty of Engineering has three Departments: Electrical Engineering; Mechanical Engineering and Civil Engineering. Faculty of Computing has Department of Computer Sciences and Department of Mathematics. Faculty of Health & Life Sciences has Department of Bioinformatics & Biosciences. In the Faculty of Management and Social Sciences, we have Department of Management Sciences.
+  </p>
+  </div>
+</div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}

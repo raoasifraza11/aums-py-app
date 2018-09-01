@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-graduate/MSCMB//MSCMB-sidebar.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 class="text-center" style="font-family: 'Lato', sans-serif;">MSc in Microbiology</h2>
+            <p class="justify" >Abasyn University Peshawar campus offers variety of programs in the area of life sciences such as MSc & MPhil in Microbiology and Doctor of Pharmacy. The University is now planning to launch these programs at its campus in Islamabad. The Islamabad Campus has already submitted an application to Pharmacy Council og Pakistan (PCP) for the NOC for its Doctor of Pharmacy program. The campus will launch Pharm-D program after the NOC by the PCP.
+                    Keeping in mind the recent demand of Microbiology discipline, the campus has decided to offer MSc in Microbiology from Spring 2014 Semester. Microbiology is particularly appropriate for students in allied health fields, agriculture, environmental engineering, restuarant and institutional food management. The students taking this course will come to understand and appreciate the unique nature of microoraganisms and their importance of life on the Earth.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

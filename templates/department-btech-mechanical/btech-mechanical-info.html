@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block body %}
+
+<!-- HOD Message -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-btech-mechanical/sidebar-btech-mechanical.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 class="text-center" style="font-family: 'Lato', sans-serif;">Bachelor of Technology (Mechanical)</h2>
+            <p class="justify">The B. Tech Mechanical Engineering program has been carefully designed to enable graduates to undertake operation
+                and maintenance of mechanical appliances by applying his/her knowledge in all stages of Mechanical Engineering
+                projects. The students are extensively exposed to the real mechanical engineering projects that equip them
+                to work in an industrial environment. B. Tech Mechanical Engineering is a 4 years (132 credit hours) program
+                with an average work load of 12-15 credit hours per Trimester.
+            </p>
+        </div>
+
+    </div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}

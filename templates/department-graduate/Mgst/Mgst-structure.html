@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-graduate/Mgst//Mgst-sidebar.html' with structure="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+                <h2 style="font-family: 'Lato', sans-serif;">Learning Outcomes</h2>
+              
+        <ol>
+            <li>Understand the theoretical underpinnings of the modern business activity.</li>
+            <li>Conduct research independently.</li>
+            <li>Think more braodly and more deeply about the beliefs and values at the root of business activities.</li>
+            <li>Appreciate and critically evaluate differetn schools of thought.</li>
+            <li>Contribute towards the development of new ideas, theories and business models.</li>
+        </ol>
+
+
+      
+                <h2 style="font-family: 'Lato', sans-serif;" >Program Structure</h2>
+                <p>MS is 33 CrHr program after 16 years of relevant education. It is research oriented degree. A;though it offers different areas of specialization yet it is deemed necessary that there is a certain bare minimum of strategic understanding of each core functional area in order to develop integrated decision making capability. The broad structure of program is as follows.</p>
+                <table class="table text-left">
+                        <tr>
+                            <th>Sr.No.</th>
+                            <th>Category</th>
+                            <th>CrHr</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Supporting Courses</td>
+                            <td>06 CrHr</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Core Courses</td>
+                            <td>09 CrHr</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Elective Courses</td>
+                            <td>09 CrHr</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Thesis</td>
+                            <td>06 CrHr</td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>Total</th>
+                            <th>30 CrHr</th>
+                        </tr>
+                        </table>
+                    
+               
+     
+              
+              
+                <h2 style="font-family: 'Lato', sans-serif;">Eligibility for non-business 16 years degree holders</h2>
+                <p>The students with 16-year of non relevant education will be required to do 30 credit hours of deficiency courses before they could become eligible for admission to MS program. The following courses are recommended to be successfully completed as minimum requirement.</p>
+                 
+                <ul>
+                        <li>Financial Accounting I</li>
+                        <li>Financial Accounting II</li>
+                        <li>Introduction to Management</li>
+                        <li>Introduction to HRM</li>
+                        <li>Principles of Marketing</li>
+                        <li>Marketing Management</li>
+                        <li>Business Finance</li>
+                        <li>Financial Management</li>
+                        <li>Business Economics</li>
+                        <li>Business mathematics and Statistics</li>
+                    </ul>
+                    
+                    
+              
+              <br>
+              <h2 style="font-family: 'Lato', sans-serif;">View Courses</h2>
+              <a href="{% url 'slider:Mgst-courses' %}" class="btn btn-primary">View Courses</a>
+
+        </div>
+    </div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}
+

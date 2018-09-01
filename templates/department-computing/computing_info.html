@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block body %}
+
+<!-- HOD Message -->
+<div class="container ">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-computing/sidebar.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 style="font-family: 'Lato', sans-serif;" class="text-center">BS in Computer Science</h2>
+            <p class="justify">The BS Computer Science program is an important degree program at the campus. The program is designed very carefully
+                to prepare students for ever changing computing industry. The BSCS program provides students with broad range
+                of computer knowledge and practical skills required in most of the today businesses and industries. This
+                program will provide the following benefits and opportunities to the students:</p>
+
+            <ol>
+                <li>Strong foundation in the computing discipline.</li>
+                <li>Hand on practices suitable for employment.</li>
+                <li>A number of specializati on areas.</li>
+                <li>Industrial internship program during study.</li>
+                <li>Foreign qualified and experienced faculty.</li>
+            </ol>
+            <br>
+            <br>
+            <h2 style="font-family: 'Lato', sans-serif;" class="text-center">BS in Software Engineering</h2>
+            <p class="justify">In a world where computers and software have become essential, the science of software engineering has become
+                a very important field. BSSE program will provide the following benefits and opportunities to students:</p>
+
+            <ol>
+                <li>Program has been accredited from the National Computing Education Accreditation Council (NCEAC), HEC.</li>
+                <li>Strong foundation in the software engineering discipline.</li>
+                <li>Hands on practices suitable for employment.</li>
+                <li>In depth knowledge about modeling, analysis, design and management of software systems.</li>
+                <li>A number of specialization areas</li>
+                <li>Double specialization opportunity</li>
+                <li>Two internship programs during four year study</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}

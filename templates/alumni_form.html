@@ -1,0 +1,63 @@
+<link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+<style>
+.heading{margin-bottom:50px;}
+
+.form-control {
+   background-color: transparent;
+	box-shadow: none;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 1px solid #ccc;
+	border-radius: 0;
+	resize: none;
+}
+
+.contact-form {
+    background-color: #f1f1f1;
+    box-shadow: 0 1px 3px #c1c1c1;
+    padding: 20px 20px 70px;
+}
+.contact-form h3 {
+    background-color: #009fe3;
+    color: #fff;
+    margin-top: -35px;
+    padding: 5px;
+    text-align: center;
+}
+.contactaddr {
+    background-color: #f1f1f1;
+    box-shadow: 0 1px 3px #c1c1c1;
+    padding: 18px;
+}
+
+.contact-form .btn-link {
+    margin-left: 20px;
+    background: #009fe3;
+
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 15px;
+    padding: 8px 15px;
+    text-align: center;
+    transition: all 0.5s ease 0s;
+}
+</style>
+<div class="container well">
+    <div class="row">
+        <form class="form-horizontal" id="contactform" action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% include 'form-template.html' %}
+    <div class="from-group">
+   <div class="col-sm-offset-2 col-sm-10">
+       <button type="submit" class="btn  btn-danger">Submit</button>
+   </div>
+</div>
+        </form>
+
+
+    </div>
+
+    </div>
+

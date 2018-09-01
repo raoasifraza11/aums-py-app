@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container ">
+<div class="row">
+      <div class="col-sm-3">
+            {% include 'department-english/sidebar-english.html' with structure="active" %}
+      </div>
+  <div class="col-md-9 col-sm-9" id="static-content">
+  <h2 style="font-family: 'Lato', sans-serif;" class="text-center">Program Structure</h2>
+
+
+                <h2>BS English</h2>
+                <p class="text-justify">TThe BS English is 8 semesters (4 years) program offered by the department of management and Social Sciences. As per the HEC guidelines, the curriculum has been structured around a set of compulsory courses, general courses, foundation courses, major courses, and electives courses.</p>              
+                <br/>
+                <h2>Program Outcomes</h2>
+                <p class="text-justify">At the time of graduation, students will be able to</p>
+                <ol>
+                    <li>Understand, analyze and interpret literary texts through close and critical reading. Place literature in relation to its historical, cultural, intellectual, theoretical, aesthetic, social and political contexts. </li>
+                    <li>Locate, evaluate and use relevant scholarship, literary criticism and cultural commentary, both in print and online.</li>
+                    <li>Engage in public discourse through careful listening, respectful questioning and thoughtful speaking in both formal and informal settings. </li>
+                    <li>Recognize literature as a vehicle for both individual and cultural expression that can engage the imagination, elicit feeling, express value and enable inquiry. Identify the characteristics of different forms of literature including the major genres and hybrid forms.</li>
+                    <li>Construct clear, grammatical sentences and produce well-organized texts that exhibit an attention to audience, genre, and purpose and that follow the conventions of logical argumentation. </li>
+                    <li>Understand and articulate general issues concerning nature & function of language. These include the basic mechanisms common to all languages: The domains of phonetics, phonology, morphology, syntax, semantics, and pragmatics.</li>
+                    <li>Analyze the structure and function of language as used in natural discourse.</li>
+                    <li>Understand and evaluate current research methodologies and how they are applied to problems in literature and linguistics.</li>
+                    <li> Function effectively in a team by assuming different roles and demonstrating effective leadership qualities and project management skills to accomplish a common goal towards a significant project.</li>
+                    <li>Assess professional, ethical, legal, security and social issues and responsibilities.</li>
+                    <li>Communicate effectively both verbally and in writing with a range of audiences.</li>
+                    <li>Engage in continuing professional development and life-long learning. </li>
+                </ol>
+                <br/>
+                <h2>Programs Offered</h2>
+                <a class="btn btn-primary" href="{% url 'slider:english_courses'%}">View Programs</a>
+
+  </div>
+</div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-graduate/MSSE//MSSE-sidebar.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 class="text-center" style="font-family: 'Lato', sans-serif;">MS in Software Engineering</h2>
+            <p class="justify" >MS in Software Engineering program is an important degree program at the university. The program is designed very carefully to cater for the need of various stakeholders. As software engineering is facilitating other sciences as well therefore the curriculum of MSSE is developed in such a way to prepare students to identify problems, provide solutions fort he existing problems in commercial, financial or other type of organizations. This degree program integratess theoretical and practical aspects of computer science discipline and its applications to various business systems. The design and use of the computer based solution to variety of problems is another major aspect to be studied during the MSSE program. The program provides an opportunity to students to choose a specific area of the computing discipline for their specialization. The whole degree program consists of 30 credit hours.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

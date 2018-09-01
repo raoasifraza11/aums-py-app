@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-graduate/MSCS//MSCS-sidebar.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 class="text-center" style="font-family: 'Lato', sans-serif;">MS in Computer Sciences</h2>
+            <p class="justify" >MS in Computer Science is an advanced degree
+                Program in the area of computer sciences which
+                is aimed at preparing students for advanced and
+                research oriented jobs in the area. Most of the
+                courses in this program are designed in such a way
+                that students are required to exhibit high level skills
+                in research activities. A 6 CrHr thesis is a compulsory
+                part of the MS curriculum. The program covers
+                all major areas of computer sciences core courses
+                related to Algorithms, Operating System, Theory of
+                Programming Languages and Computer Architecture
+                are offered by this program. Apart from core courses
+                students are also required to take courses from one of
+                the specialization areas of their own choice to fulfill
+                the requirements of MS degree at the University.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

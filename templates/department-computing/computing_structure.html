@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container ">
+<div class="row">
+      <div class="col-sm-3">
+            {% include 'department-computing/sidebar.html' with structure="active" %}
+      </div>
+  <div class="col-md-9 col-sm-9" id="static-content">
+  <h2 style="font-family: 'Lato', sans-serif;" class="text-center">Program Structure</h2>
+
+  <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Credit Hr.</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>University Requirements</td>
+                                <td>27</td>
+                                <td>General Education Courses - Required by all AU students</td>
+                            </tr>
+                            <tr>
+                                <td>Department Requirements</td>
+                                <td>24</td>
+                                <td>Support area courses - Only required for students who are registered in Computer Science related degrees</td>
+                            </tr>
+                            <tr>
+                                <td>Core Courses</td>
+                                <td>71</td>
+                                <td>Core courses of Computer Science</td>
+                            </tr>
+                            <tr>
+                                <td>University Requirements</td>
+                                <td>27</td>
+                                <td>General Education Courses - Required by all AU students</td>
+                            </tr>
+                            <tr>
+                                <td>Technical Electives</td>
+                                <td>09</td>
+                                <td>Specialization courses</td>
+                            </tr>
+                            <tr>
+                                <td>Industrial Training - Internship</td>
+                                <td>02</td>
+                                <td>Students will be required to complete one or two internships during the four years studies. In case of internship program cannot be offered due to any reason, students will be required to take courses from the job placement category</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Total</strong></td>
+                                <td>133</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Program Learning Outcomes(PLOs)</h3>
+                <a target="_blank" class="btn btn-primary" href="https://docs.google.com/document/d/1ghCAZ7kVFCjOMPnvC3151i6FVBA3XChnTZYJiLQQNQg/edit?ts=5acc5ce1" >Click to view PLOs</a>
+                
+                <h3>Course Learning Outcomes(CLOs)</h3>
+                <a target="_blank" class="btn btn-danger" href="https://docs.google.com/spreadsheets/d/1TlYCy7JSoflUXMp_62lvRmzAIxQX0se5CUIfo_x_3iw/edit?ts=5acc58e9#gid=896371080" >Click to view CLOs</a>
+
+            <h3>Area of Specialization</h3>
+                <p>The following are some of the specialization areas covered through the elective courses.</p>
+                <ol>
+                    <li>&nbsp;Software Engineering.</li>
+                    <li>&nbsp;Computer Networking.</li>
+                    <li>&nbsp;Databases and Web Technologies.</li>
+                    <li>&nbsp;Mobile Computing.</li>
+                    <li>&nbsp;Artificial Intelligence and Image Processing.</li>
+                </ol>
+                <h3>List of courses related to job placement</h3>
+                <p>In case the internship will not be offered then student can be offered special course from the following list:</p>
+                <ol>
+                    <li>&nbsp;Mini Project 1</li>
+                    <li>&nbsp;Current Trends and Practices in Industry</li>
+                    <li>&nbsp;Professional Ethics and Practices</li>
+                    <li>&nbsp;Project Management</li>
+                </ol>
+                <p>Each of the above courses will be of 2 CrHrs and offered during Summer Semester. These courses are designed in such a way that students will get hand on experience and will be able to find a suitable job for themselves. Major part of these courses will be based on visiting and/or attending training sessions at various organizations and industries.</p>
+                <h3>Courses Offered</h3>
+                <a class="btn btn-primary" href="{% url 'slider:computing-course' %}">View Courses</a>
+  </div>
+</div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}

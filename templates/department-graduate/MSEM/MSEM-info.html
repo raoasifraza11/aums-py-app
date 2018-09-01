@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-graduate/MSEM//MSEM-sidebar.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 class="text-center" style="font-family: 'Lato', sans-serif;">MS in Engineering Management</h2>
+            <p class="justify" >The MS in Engineering Management program is an important degree program at university. The program is designed very carefully to cater the need of various stakeholders. The curriculum of MSEM is developed in such a way to prepare students to identify problems, provide solutions for the existing problems in commercial, financial or other types of organizations. The main tactic of this degree program is to ontegrate theoretical and practical aspects of computer science discipline and its applications to various business systems. The design and use of the computer based colution to variety of problems is another major aspect to be studied during the MSEM program. The MSEM program provides students with broad range of computer knowledge and practical skills required in most of business and industry areas today.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

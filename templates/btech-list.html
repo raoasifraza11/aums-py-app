@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block body %}
+<style>
+    .footer1 {
+        margin-top: 200px;
+    }
+</style>
+<div style="margin-top: 30px;" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 style="background: #006666; color: white;">&nbsp;Department of Bachelor of Technology</h1>
+            <ol>
+                <li>
+                    <a style="color: black" href="{% url 'slider:hod-btech-civil' %}">B.Tech Civil</a>
+                </li>
+                <li>
+                    <a style="color: black" href="{% url 'slider:hod-btech-electrical' %}">B.Tech Electrical</li>
+                <li>
+                    <a style="color: black" href="{% url 'slider:hod-btech-mechanical' %}">B.Tech Mechanical</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}

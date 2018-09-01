@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-graduate/MSCMB//MSCMB-sidebar.html' with structure="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+                <h2 style="font-family: 'Lato', sans-serif;">Program Structure</h2>
+                <p>A total number of 60 credit hours is required to complete this degree.</p><br>
+                <b>Total Duration :</b> 02 years<br>
+                <b>Total Credit Hours :</b> 60<br>
+                <b>Semesters :</b> 04
+                            
+             <br>
+             <br>
+              <h2 style="font-family: 'Lato', sans-serif;">View Courses</h2>
+              <a href="{% url 'slider:MSCMB-courses' %}" class="btn btn-primary">View Courses</a>
+
+        </div>
+    </div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}
+

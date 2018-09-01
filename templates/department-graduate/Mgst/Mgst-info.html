@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-graduate/Mgst//Mgst-sidebar.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 class="text-center" style="font-family: 'Lato', sans-serif;">MS in Management Science</h2>
+            <p class="justify" >The MS in Management Science program aims at developing a student's intellectual ability in terms of understanding the theoretical and philosophical underpinning of modern business. The students are encouraged to explore the deepest, broadest questions of life why we exist, how society should organize itself, how institutions should relate to society and the purpose of human endeavor. The program is essentially research oriented and focuses on adacemic research having practical applications in real life. The program is suitable both for those who want to pursue academic career and for those who want to pursue professional career.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

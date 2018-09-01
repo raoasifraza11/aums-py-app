@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-life-scienecs/department-micro/sidebar-micro.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 class="text-center" style="font-family: 'Lato', sans-serif;">BS in Microbiology</h2>
+            <p class="justify" >Bachelor of Science in Microbiology is a four year program which is offered to candidates who have completed 12 years of pre-medical schooling. This Program covers all minor and major aspects of the discipline. Graduates with this degree will be able to work in industries, hospitals and research organizations. The curriculum has been designed at par with national and international standards.</p>
+        </div>
+    </div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}
+

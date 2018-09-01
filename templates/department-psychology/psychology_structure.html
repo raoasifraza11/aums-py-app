@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container ">
+<div class="row">
+      <div class="col-sm-3">
+            {% include 'department-psychology/sidebar-psychology.html' with structure="active" %}
+      </div>
+  <div class="col-md-9 col-sm-9" id="static-content">
+  <h2 style="font-family: 'Lato', sans-serif;" class="text-center">Program Structure</h2>
+
+
+                <h2>BS Psychology</h2>
+                <p class="text-justify">The BS Psychology is 8 semesters (4 years) program offered by the department of management and Social Sciences. As per the HEC guidelines, the curriculum has been structured around a set of compulsory courses, general courses, foundation courses, major courses, and electives courses.</p>              
+                <br/>
+                <h2>Program Outcomes</h2>
+                <p class="text-justify">At the time of graduation, students will be able to</p>
+                <ol>
+                    <li>Understand goals, methods of inquiry, and areas of study that characterize the
+                        discipline using critical thinking, analytical skills, and experimentation. </li>
+                    <li>Identify various schools of thought in psychology, their history, and critically evaluate
+                        their differences.</li>
+                    <li>Locate, evaluate and use relevant scholarship, literary criticism and cultural
+                        commentary, both in print and online.</li>
+                    <li>Engage in public discourse through careful listening, respectful questioning and
+                        thoughtful speaking in both formal and informal settings.</li>
+                    <li>Demonstrate in-depth understanding of several areas of study using scientific
+                        reasoning to interpret psychological phenomena and their application in a particular
+                        sociocultural context.</li>
+                    <li>Understand scientific methods and their application in conducting academic and
+                        professional research and to critically evaluate the existing body of knowledge.</li>
+                    <li>Use scientific knowledge in order to understand various facets of behavioral and mental
+                        functions and/or can provide clinical or organizational services throughout their occupation
+                        in different fields.</li>
+                    <li> Function effectively in a team by assuming different roles and demonstrating
+                        effective leadership qualities and project management skills in diverse social settings
+                        to accomplish a common goal towards a significant project.</li>
+                    <li>Assess professional, ethical, legal, security and social issues and responsibilities.</li>
+                    <li>Communicate effectively both verbally and in writing with a range of audiences.</li>
+                    <li>Engage in continuing professional development and life-long learning. </li>
+                </ol>
+                <br/>
+                <h2>Programs Offered</h2>
+                <a class="btn btn-primary" href="{% url 'slider:psychology_courses'%}">View Programs</a>
+
+  </div>
+</div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}

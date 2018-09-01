@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-graduate/MSEM//MSEM-sidebar.html' with structure="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+                <h2 style="font-family: 'Lato', sans-serif;">Specialization</h2>
+                <ol>
+                        <li>Engineering Management</li>
+                        <li>Industrial Management</li>
+                    </ol>
+                    <br>
+                    <h2 style="font-family: 'Lato', sans-serif;">Program Structure</h2>
+                    <table class="table text-left">
+                            <tbody><tr>
+                                <th>Category</th>
+                                <th>CrHr</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>Core Courses</td>
+                                <td>15</td>
+                                <td>Core courses are compulsory. A list of five core courses is designed as per the HEC criteria which will be offered to students.</td>
+                            </tr>
+                            <tr>
+                                <td>Elective Courses</td>
+                                <td>09</td>
+                                <td>A number of electives which are common to any specialization area of the CS discipline are identified. Students will be required to take minimum one course from this category</td>
+                            </tr>
+                            <tr>
+                                <td>Thesis</td>
+                                <td>06</td>
+                                <td>Intensive research to be conducted under the supervision of a faculty member</td>
+                            </tr>
+                            <tr>
+                                <th>Total</th>
+                                <th>30</th>
+                                <th></th>
+                            </tr>
+                            </tbody></table>      
+             <br>
+             <br>
+              <h2 style="font-family: 'Lato', sans-serif;">View Courses</h2>
+              <a href="{% url 'slider:MSEM-courses' %}" class="btn btn-primary">View Courses</a>
+
+        </div>
+    </div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}
+

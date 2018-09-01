@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-business/sidebar-business.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 class="text-center" style="font-family: 'Lato', sans-serif;">Bachelor in Business Administration</h2>
+            <p class="justify" >The four years BBA program is tailored made to server the needs of the bright young persons who have completed twelve years of education and are looking for a career education in entrepreneurship, management profession or towards higher education in business administration. This program is open to the students with diverse educational backgrounds including humanities, science, art and commerce. However, being a program with challenging curricula and contents, it is accessible mainly to those stdents who have excellent academic record and high potential for success. The program builds in the students potential for future and enables them to build and maintain balance between the targets of economic success and the limitations of increasing social and environmental responsibility.</p>
+        </div>
+    </div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}
+

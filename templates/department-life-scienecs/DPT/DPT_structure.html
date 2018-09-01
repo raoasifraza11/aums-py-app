@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block body %}
+
+<!-- HOD Message -->
+<div class="container ">
+        <div class="row">
+                <div class="col-sm-3">
+                        {% include 'department-life-scienecs/DPT/sidebar-DPT.html' with structure="active" %}
+                </div>
+                <div class="col-md-9 col-sm-9" id="static-content">
+                        <h2 style="font-family: 'Lato', sans-serif;" class="text-center">Doctor of Physical Therapy (DPT)</h2>
+
+                        <p>The purpose of the Doctor of Physical Therapy Programme (DPT) is to prepare physical therapists who
+                                will: </p>
+                        <ul>
+                                <ol>Be primary providers of physical therapy care.</ol>
+                                <ol>Serve as responsible members in the professional community and are willing and able to assume
+                                        leadership roles in the communities they serve.</ol>
+                                <ol>Identify researchable problems, advocate and participate in research, and incorporate research
+                                        findings into clinical practice.</ol>
+                                <ol>Understand and place in context the social, economic and cultural issues of practice and
+                                        effectively advocate for changes in policy.</ol>
+                                <ol>Correlate theory with practice and think creatively about, react to, adapt or shape new practice
+                                        environments.</ol>
+                                <ol>Participate in and provide education for communities, patients, peers, students and others.</ol>
+                        </ul>
+                        <br>
+                        <h2>Programs Offered</h2>
+                        <a class="btn btn-primary" href="{% url 'slider:DPT-courses'%}">View Programs</a>
+                </div>
+        </div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}

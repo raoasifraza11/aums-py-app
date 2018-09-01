@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-pharmacy/sidebar-pharmacy.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 class="text-center" style="font-family: 'Lato', sans-serif;">Doctor of Pharmacy</h2>
+            <p class="justify">Pharmacy is a profession which enables its practitioners to be involved in a multifaceted service of humanity; starting right from innovation of a new drug candidate to the patient care. Pharmacy is a profession concerned with the art and science of preparing medicine to be used in prevention, diagnosis and treatment of the diseases. A pharmacist has to have the knowledge of identification, selection, isolation, analysis, standardization, pharmacological and therapeutic actions and safe uses
+                 of drugs and medicines. Any healthcare team is incomplete without their services.</p>
+            <p></p>
+        </div>
+    </div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}
+

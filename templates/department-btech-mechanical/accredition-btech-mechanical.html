@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- Accredition  -->
+<div class="container ">
+    <div class="row">
+          <div class="col-sm-3">
+              {% include 'department-btech-mechanical/sidebar-btech-mechanical.html' with accredition="active" %}
+          </div>
+      <div class="col-md-9 col-sm-9" id="static-content">
+      <h2 style="font-family: 'Lato', sans-serif;" class="text-center">Accreditation</h2>
+      <div class="row">
+            <div class="col-sm-4 col-sm-offset-2">
+            <a target="_blank" href="http://www.hec.gov.pk/english/universities/Pages/DAIs/HEC-recognized-Campuses.aspx"><img class="img-rounded" src="/static/img/hecn1.png"></a>
+            </div>
+            <div class="col-sm-6">
+             <a target="_blank" href="https://www.pec.org.pk/schedule_first.aspx"><img class="img-rounded" src="/static/img/pecn1.png"></a>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+<!-- End Accredition -->
+{% endblock %}

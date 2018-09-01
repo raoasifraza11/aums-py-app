@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+    .footer1 {
+        margin-top: 200px;
+    }
+</style>
+<div style="margin-top: 30px;" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 style="background: #006666; color: white;">&nbsp;Department of Management & Social Sciences</h1>
+                <ol>
+                    <li><a style="color: black" href="{% url 'slider:hod-business' %}">Bachelor in Business Administration (BBA)</a></li>
+                    <li><a style="color: black" href="{% url 'slider:hod-psychology' %}">BS Psychology</li>
+                    <li><a style="color: black" href="{% url 'slider:hod-english' %}">BS English</li>
+                    </ol>
+            </div>
+        </div>
+        </div>
+{% endblock %}

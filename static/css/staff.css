@@ -1,0 +1,18 @@
+.padding80 {Padding:5px;}
+.sec-title h2 {font-size:36px;font-weight:600;}
+.sec-title h3 {font-size:14px; margin-bottom:30px;}
+.sec-title h3:after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background: #006666 ;
+    left: 30%;
+    top: 54px;
+}
+.team-box {border: 1px solid #e5e5e5; padding:10px;}
+.team-box:hover {border: 1px solid #006666 ;}
+.team-img img {border: 1px solid #e0e0e0;}
+.team-title h3 {font-size:24px;font-weight:700;color:#006666 ;}
+.team-title h4 {font-size:16px; font-weight:600;}
+.team-title p {line-height:22px;}

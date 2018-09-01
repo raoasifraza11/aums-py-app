@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class=" container">
+        <div class="col-sm-3">
+                {% include 'admission&aids/admission&aids-sidebar.html' with feestructure="active" %}
+            </div>
+            <div id="static-content" class="col-md-9">
+    <h1 class="text-center">Fee Structure</h1>
+            <p>The University charges tuition fee on the credit hours basis. The following table shows tuition fee per credit hour for each degree program. The fee of first semester can be paid in two installment.</p>
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>DEGREE PROGRAM</th>
+                                <th>TUITION FEE (per credit hour)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myTable">
+                                {%for fee in object_list%}
+                            <tr>
+                                <td>{{fee.program_name}}</td>
+                                <td>PKR {{fee.fees}}/-</td>
+                            </tr>
+                            {%endfor%}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>OTHER FEE</th>
+                                <th>Amount in PKR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Reading Course Fee</td>
+                                <td>Same as Normal Fee</td>
+                            </tr>
+                            <tr>
+                                <td>Cr. Hour Transfer Fee</td>
+                                <td>1,000/-</td>
+                            </tr>
+                            <tr>
+                                <td>Admission Fee (One Time)</td>
+                                <td>5,000/-</td>
+                            </tr>
+                            <tr>
+                                <td>Security Fee (One Time)</td>
+                                <td>5,000/-</td>
+                            </tr>
+                            <tr>
+                                <td>Semester Registration Fee (Per Semester)</td>
+                                <td>3000/-</td>
+                            </tr>
+                            <tr>
+                                <td>Misc. fee (Per Semester)</td>
+                                <td>6,000/-</td>
+                            </tr>
+                            <tr>
+                                <td>DL Charges (Per Course)</td>
+                                <td>10,000/-</td>
+                            </tr>
+                            <tr>
+                                <td>Semester Freeze Fee</td>
+                                <td>10,000/-</td>
+                            </tr>
+                            <tr>
+                                <td>Paper Retake Fee (Per Paper)</td>
+                                <td>3000/-</td>
+                            </tr>
+                            <tr>
+                                <td>Paper Recheck Fee (Per Paper)</td>
+                                <td>2,000/-</td>
+                            </tr>
+                            <tr>
+                                <td>Course Exemption Fee</td>
+                                <td>2,000/-</td>
+                            </tr>
+                            <tr>
+                                <td>Prospectus Fee</td>
+                                <td>1,000/-</td>
+                            </tr>
+                            <tr>
+                                <td>Late Fee Fine (Per Day)</td>
+                                <td>200/-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.row -->
+            </div>
+        </div>
+        </div>
+{% endblock %}

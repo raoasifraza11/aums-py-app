@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Info -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-btech-civil/sidebar-btech-civil.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 class="text-center" style="font-family: 'Lato', sans-serif;">Bachelor of Technology (Civil)</h2>
+            <p class="justify">The B. Tech Civil Engineering program has been carefully designed to enable graduates to undertake planning, designing, construction, operation and maintenance of urban and rural infrastructure by applying his/her knowledge in all stages of Civil Engineering projects. The students are extensively exposed to the real civil engineering projects that equip them to work in an industrial environment. </p>
+            <p>B. Tech civil engineering is a 4 years (132 credit hours) program with an average work load of 12-15 credit hours per Trimester. </p>
+        </div>
+    </div>
+</div>
+<!-- End Info -->
+{% endblock %}
+

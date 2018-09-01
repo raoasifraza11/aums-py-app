@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container ">
+<div class="row">
+      <div class="col-sm-3">
+            {% include 'department-business/sidebar-business.html' with structure="active" %}
+      </div>
+  <div class="col-md-9 col-sm-9" id="static-content">
+  <h2 style="font-family: 'Lato', sans-serif;" class="text-center">Program Structure</h2>
+
+
+                <h2>Learning Outcomes</h2>
+                <p class="text-justify">The students who earn the BBA degree will be able to:</p>
+                <ol>
+                        <li>Communicate effectively and professionally and demonstrate the ability to create coherent written and oral statements with the diverse audiance across the cultures replicating skills to analyze and synthesize information.</li>
+                        <li>Demonstrate the ability to identify and evaluate relevant information for decision-making and make usage of diagnostic thinking skills and analytical techniques to access the information and solve problems in the environment like ours characterized by uncertainity.</li>
+                        <li>Understand the importance of teamwork and group dynamics in achieving organizational goals and demonstrate ability to work effectively in teams.</li>
+                </ol>
+                <h2>Area of Specialization</h2>
+                <ol>
+                        <li>Finance</li>
+                        <li>Human Resource Management</li>
+                        <li>Marketing</li>
+                        <li>Information Technology</li>
+                        <li>Management</li>
+                        <li>Project Management</li>
+                        <li>Supply Chain Management</li>
+                </ol>
+                <br>
+                <h2>Programs Offered</h2>
+                <a class="btn btn-primary" href="{% url 'slider:business_courses'%}">View Programs</a>
+  </div>
+</div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}
