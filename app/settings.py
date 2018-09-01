@@ -137,6 +137,6 @@ STATICFILES_DIRS = [
 # FOR server
 STATIC_ROOT  = "/opt/bitnami/apps/django/django_projects/app/static"
 STATIC_URL = '/static/'
-MEDIA_URL ='/media/'
+MEDIA_URL ='/static/'
 
 
