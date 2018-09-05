@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+BASE_DIR = BASE_DIR + "/app/"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -130,7 +130,7 @@ STATIC_URL = '/static_cdn/'
 MEDIA_URL ='/media/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static_cdn"),
+    os.path.join(BASE_DIR + "/app/", "static_cdn"),
 ]
 
 STATIC_ROOT  = os.path.join(BASE_DIR,"static_cdn")
