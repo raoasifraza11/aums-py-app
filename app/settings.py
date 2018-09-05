@@ -129,7 +129,7 @@ STATIC_URL = '/static_cdn/'
 MEDIA_URL ='/media/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR + "/app/", "static_cdn"),
+    os.path.join(BASE_DIR, "static_cdn"),
 ]
 
 STATIC_ROOT  = os.path.join(BASE_DIR,"static_cdn")
