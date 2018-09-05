@@ -5,13 +5,14 @@
     }
 </style>
 <!-- Vision & Mission -->
+    {% load static %}
 <div class="container" style="margin-top: 60px;">
     <div class="row">
         <div class="col-md-12" id="static-content">
             <h1 style="background:#006666;color:white;">&nbsp;Messages</h1>
             <h2>Chancellor (Muhammad Imran Ullah)</h2>
             <center>
-                <img src="/static/img/chancellor.jpg" class="img-rounded" width="10%">
+                <img src="/app{% static "/img/chancellor.jpg"%}" class="img-rounded" width="10%">
             </center>
             <p class="justify">Education is the core value of a nation, and the function of an educational institution is not only to take care
                 of an individual’s academic growth but also to take charge of his/her personal, social, mental, psychological,
@@ -33,7 +34,7 @@
                 our endeavours with success!</p>
             <h2>Vice Chancellor (DR. SYED UMAR FAROOQ)</h2>
             <center>
-                <img src="/static/img/vc.jpg" class="img-rounded" width="10%">
+                <img src="/app{% static "/img/vc.jpg" %}" class="img-rounded" width="10%">
             </center>
             <p class="justify">Great institutions are more than places. They’re ideas, and same is true for AbasynUniversity which is meant
                 to nurture the interplay of ideas, students, and place in ways that serve them all. At Abasyn University
