@@ -12,9 +12,9 @@
     <div class="ccol-md-12">
         <div class="nivoSlider" id="nivoSlider">
             {% for sliders in slider %}
-            <img alt="" class="edit" src="/app{{sliders.slider1.url}}" title="#htmlcaption1">
-            <img alt="" class="edit" src="/app{{sliders.slider2.url}}" title="#htmlcaption1">
-            <img alt="" class="edit" src="/app{{sliders.slider3.url}}" title="#htmlcaption1"> {% endfor %}
+            <img alt="" class="edit" src="{{sliders.slider1.url}}" title="#htmlcaption1">
+            <img alt="" class="edit" src="{{sliders.slider2.url}}" title="#htmlcaption1">
+            <img alt="" class="edit" src="{{sliders.slider3.url}}" title="#htmlcaption1"> {% endfor %}
         </div>
     </div>
 </div>
@@ -36,7 +36,7 @@
         </div>
         <div class="col-md-6">
             <center>
-                <img style="margin-top:100px" class="img-responsive reveal-inline-block" src="/app{% static "/img/logo1.png" %}" width="326" height="329"
+                <img style="margin-top:100px" class="img-responsive reveal-inline-block" src="{% static "/img/logo1.png" %}" width="326" height="329"
                 />
             </center>
         </div>
@@ -75,7 +75,7 @@
                 </a>
             </div>
             <div class="row" data-pg-collapsed>
-                <a target="_blank" href="/app{% static "/pros.pdf" %}">
+                <a target="_blank" href="{% static "/pros.pdf" %}">
                     <div class="col-md-6">
                         <div class="text-center single-content">
                             <i class="fa fa-4x fa-building"></i>
@@ -97,7 +97,7 @@
         </div>
         <div class="col-md-6" data-pg-collapsed>
             <center>
-                <img class="img-responsive reveal-inline-block" src='/app{% static "img/home-01-846x1002.jpg" %}' />
+                <img class="img-responsive reveal-inline-block" src='{% static "img/home-01-846x1002.jpg" %}' />
             </center>
         </div>
     </div>
@@ -126,7 +126,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12 ">
                         <div class="blog-post wow fadeInUp" data-wow-delay="0.2s">
                             <div class="post-img">
-                                <img class="img-responsive" src="/app{{events.picture.url}}" alt="image">
+                                <img class="img-responsive" src="{{events.picture.url}}" alt="image">
                                 <ul class="list-inline post-info">
 
                                     <li class="post-tag text-uppercase">{{events.title}}</li>
@@ -174,7 +174,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12 ">
                         <div class="blog-post wow fadeInUp" data-wow-delay="0.2s">
                             <div class="post-img">
-                                <img class="img-responsive" src="/app{{news.picture.url}}" alt="image">
+                                <img class="img-responsive" src="{{news.picture.url}}" alt="image">
                                 <ul class="list-inline post-info">
 
                                     <li class="post-tag text-uppercase">{{news.title}}</li>
