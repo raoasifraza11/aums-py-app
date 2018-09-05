@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Slider,Staff,Event,Fees,Acdamic_Calander,New
+from .models import Slider,Staff,Event,Fees,Acdamic_Calander,New,Timetable
 # Register your models here.
 
 class StaffAdmin(admin.ModelAdmin):
 
-    list_display = ["name"]
+    list_display = ["name","department"]
     list_display_links = ["name"]
     class Meta:
         model = Staff
@@ -41,7 +41,7 @@ admin.site.register(Slider)
 admin.site.register(Fees,FeesAdmin)
 admin.site.register(New,NewsAdmin)
 admin.site.register(Acdamic_Calander,Acdamic_CalanderAdmin)
-#admin.site.register(Student)
+admin.site.register(Timetable)
 #admin.site.register(Courses,CourseskAdmin)
 admin.site.register(Staff,StaffAdmin)
 admin.site.register(Event,EventAdmin)

@@ -9,11 +9,11 @@ html {
     color: #444;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin: 55px 0 35px;
+    /* margin: 55px 0 35px; */
   }
 
   a {
-    color: #ddd;
+    color: rgb(71, 67, 67);
     text-transform: capitalize;
     font-size: 20px;
     &:hover {

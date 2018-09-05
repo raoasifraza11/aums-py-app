@@ -1,191 +1,207 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Abasyn University Islamabad</title>
     <!-- Section CSS -->
-<link href="app/static/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link rel="stylesheet" href="/static/css/base.css"/>
-<link href="app/static/css/block.css" rel="stylesheet">
-<link href="app/static/css/base.css" rel="stylesheet">
-<link href="app/static/css/sidetabs.css" rel="stylesheet">
-<link href="app/static/css/courses.css" rel="stylesheet">
-<link href="app/static/css/staff.css" rel="stylesheet">
-<link href="app/static/css/default.css" rel="stylesheet">
-<link href="app/static/css/facebook.css" rel="stylesheet">
-<link href="app/static/css/font-awesome.css" rel="stylesheet">
-<link href="app/static/css/style.css" rel="stylesheet">
-<!-- End CSS <link href="/static/css/carousel.css" rel="stylesheet">-->
-<link href="app/static/css/main.css" rel="stylesheet">
-<link href="app/static/css/customnavbar.css" rel="stylesheet">
-<link href="app/static/css/style-library-1.css" rel="stylesheet">
-<link href="app/static/css/font-awesome.css" rel="stylesheet">
-<link href="app/static/css/slider.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- End CSS -->
+    <link href='{% static "bootstrap/css/bootstrap.css" %}' rel="stylesheet">
+    <link rel="stylesheet" href='{% static "css/base.css" %}' />
+    <link href='{% static "css/block.css" %}' rel="stylesheet">
+    <link href='{% static "css/base.css" %}' rel="stylesheet">
+    <link href='{% static "css/sidetabs.css" %}' rel="stylesheet">
+    <link href='{% static "css/courses.css" %}' rel="stylesheet">
+    <link href='{% static "css/staff.css" %}' rel="stylesheet">
+    <link href='{% static "css/default.css" %}' rel="stylesheet">
+    <link href='{% static "css/facebook.css" %}' rel="stylesheet">
+    <link href='{% static "css/font-awesome.css" %}' rel="stylesheet">
+    <link href='{% static "css/style.css" %}' rel="stylesheet">
+    <!-- End CSS <link href="/static/css/carousel.css" rel="stylesheet">-->
+    <link href='{% static "css/main.css" %}' rel="stylesheet">
+    <link href='{% static "css/customnavbar.css" %}' rel="stylesheet">
+    <link href='{% static "css/style-library-1.css" %}' rel="stylesheet">
+    <link href='{% static "css/font-awesome.css" %}' rel="stylesheet">
+    <link href='{% static "css/slider.css" %}' rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- End CSS -->
 
-<!-- Start Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script type="text/javascript" src="app/js/facebook.js"></script>
-<script src="app/static/assets/js/jquery.min.js"></script>
-<script src="app/static/bootstrap/js/bootstrap.min.js"></script>
-<script src="app/static/js/facebook.js"></script>
-<script src="app/static/js/jquery.js"></script>
-<script src="app/static/js/slider.js"></script>
-<script src="app/static/js/customnavbar.js"></script>
-<!-- End Jquery -->
+    <!-- Start Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src='{% static "assets/js/jquery.min.js" %} '></script>
+    <script src='{% static "bootstrap/js/bootstrap.min.js" %} '></script>
+    <script src='{% static "js/facebook.js" %} '></script>
+    <script src='{% static "js/jquery.js" %} '></script>
+    <script src='{% static "js/slider.js" %} '></script>
+    <script src='{% static "js/customnavbar.js" %} '></script>
+    <!-- End Jquery -->
 
- <!-- Font Awesome -->
-<link href="app/static/css/font-awesome.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,900,700,600,300,200" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
- <link rel="stylesheet" href="components/pg.chocka-blocks/css/cb-style.css">
-<link rel="stylesheet" href="components/pg.chocka-blocks/css/owl.carousel.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400">
-<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
-<!-- Font Awesome -->
-    <style>
-        .footer1{
-        position:absolute;
-	width:100%;
-        }
-        .footer1 .tag .btn {
-	background-color: #363636;
-	border: medium none transparent;
-	border-radius: 2px;
-	color: #999;
-	font-size: 11px;
-	margin-bottom: 8px;
-	padding: 7px 10px;
-
-}
-
-    </style>
-	<link rel="icon" type="image/png" href="app/static/img/icon.png">
+    <!-- Font Awesome -->
+    <link href="/static/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,900,700,600,300,200" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="components/pg.chocka-blocks/css/cb-style.css">
+    <link rel="stylesheet" href="components/pg.chocka-blocks/css/owl.carousel.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <!-- Font Awesome -->
+   
+    <link rel="icon" type="image/png" href='{% static "img/icon.png" %}'>
 </head>
+
 <body>
 
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=1724182630977957&autoLogAppEvents=1';
-          fjs.parentNode.insertBefore(js, fjs);
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=1724182630977957&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-<!-- Navbar -->
-<header style="z-index:999;" class="header">
-            <a class="brand-logo" href="{% url 'slider:index' %}" >
-                <img style="margin-top:25px;" alt="logo" src="app/static/img/logo1.png">
-            </a>
-            <nav class="navigation">
-                <div class="navigation__top">
-                    <ul class="top-nav-list desktop-only">
-                        <li class="top-nav-list__item">
-                            <a class="top-link" href="{% block link %}{% endblock %}">Acdamic Calander</a>
-                        </li>
-                        <li class="top-nav-list__item">
-                            <a class="top-link" href="#">Contact Us</a>
-                        </li>
-                        <li class="top-nav-list__item">
-                            <a class="top-link" href="http://peshawar.abasyn.edu.pk/">Peshwar Campus</a>
-                        </li>
-                        <li class="top-nav-list__item">
-                                <a class="top-link" href="http://115.186.163.226/moodle/login/index.php">LMS</a>
-                            </li>
-                        <li class="top-nav-list__item">
-                            <a class="top-link" href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=abasynisb.edu.pk&sacu=1&flowName=GlifWebSignIn&flowEntry=AddSession">Campus Mail</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="navigation__main">
-                    <div class="mobile-nav-ui">
-                        <div class="mobile-nav-ui__left">
-                            <div class="menu-btn" data-action="back">
-                                <div class="menu-btn__icon menu-btn__icon_back"></div>
-                                <span class="menu-btn__label">BACK</span>
-                            </div>
-                        </div>
-                        <div class="mobile-nav-ui__right">
-                            <div class="menu-btn" data-action="open">
-                                <i class="fa fa-align-justify"></i>
-                                <span class="menu-btn__label">MENU</span>
-                            </div>
-                            <div class="menu-btn" data-action="close">
-                                <div class="menu-btn__icon menu-btn__icon_close"></div>
-                                <span class="menu-btn__label">CLOSE</span>
-                            </div>
+    <!-- Navbar -->
+    <header style="z-index:999;" class="header">
+        <a class="brand-logo" href="{% url 'slider:index' %}">
+            <img style="margin-top:25px;" alt="logo" src='{% static "img/logo1.png" %}'>
+        </a>
+        <nav class="navigation">
+            <div class="navigation__top">
+                <ul class="top-nav-list desktop-only">
+                    <li class="top-nav-list__item">
+                        <a target="_blank" class="top-link" href="{% block link %} {% endblock %}">Acdamic Calander</a>
+                    </li>
+                    <li class="top-nav-list__item">
+                        <a target="_blank" class="top-link" href="{% block time %} {% endblock %}">Time Table</a>
+                    </li>
+                    <li class="top-nav-list__item">
+                        <a class="top-link" href="http://peshawar.abasyn.edu.pk/">Peshwar Campus</a>
+                    </li>
+                    <li class="top-nav-list__item">
+                        <a class="top-link" href="http://115.186.163.226/moodle/login/index.php">LMS</a>
+                    </li>
+                    <li class="top-nav-list__item">
+                        <a class="top-link" href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=abasynisb.edu.pk&sacu=1&flowName=GlifWebSignIn&flowEntry=AddSession">Campus
+                            Mail</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__main">
+                <div class="mobile-nav-ui">
+                    <div class="mobile-nav-ui__left">
+                        <div class="menu-btn" data-action="back">
+                            <div class="menu-btn__icon menu-btn__icon_back"></div>
+                            <span class="menu-btn__label">BACK</span>
                         </div>
                     </div>
-                    <div style="background:white;" class="mobile-nav-wrap">
-                        <div class="dropdown-background"></div>
-                        <ul class="main-nav-list menu">
-                            <li class="menu-item menu-item-has-children orange">
-                                <a href="/travel-explore"><span>About Us</span></a>
-                                <div class="menu-dropdown">
-                                    <div class="menu-dropdown__content">
-                                        <ul class="sub-menu">
-                                            <li class="menu-item">
-                                                <a href="">OVERALL</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:vision' %}">Vision & Mission</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:objective' %}">Objectives</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:vc-message' %}">VC Message</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                    <a href="{% url 'slider:historys' %}">History</a>
-                                                </li>
-                                        </ul>
-                                        
-                                    </div>
+                    <div class="mobile-nav-ui__right">
+                        <div class="menu-btn" data-action="open">
+                            <i class="fa fa-align-justify"></i>
+                            <span class="menu-btn__label">MENU</span>
+                        </div>
+                        <div class="menu-btn" data-action="close">
+                            <div class="menu-btn__icon menu-btn__icon_close"></div>
+                            <span class="menu-btn__label">CLOSE</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="background:white;" class="mobile-nav-wrap">
+                    <div class="dropdown-background"></div>
+                    <ul class="main-nav-list menu">
+                        <li class="menu-item menu-item-has-children orange">
+                            <a href="/travel-explore"><span>About Us</span></a>
+                            <div class="menu-dropdown">
+                                <div class="menu-dropdown__content">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                            <a href="">OVERALL</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:vision' %}">Vision & Mission</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:objective' %}">Objectives</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:vc-message' %}">VC Message</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:historys' %}">History</a>
+                                        </li>
+                                    </ul>
+
                                 </div>
-                            </li>
-                            <li class="menu-item menu-item-has-children green">
-                                <a href="#"><span>Departments</span></a>
-                                <div class="menu-dropdown">
-                                    <div class="menu-dropdown__content">
-                                        <ul class="sub-menu">
-                                            <li class="menu-item">
-                                                <a href="">OVERALL</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:hod-civil' %}">Department of Civil Engineering</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:hod-electrical' %}">Department of Electrical Engineering</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:hod-computing' %}">Department of Computing</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:management-sciences' %}">Department of Management Science</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:hod-pharmacy' %}">Department of Pharmacy</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:life-sciences' %}">Department of Life Sciences</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:master-degree-list' %}">Department of Graduate Studies</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:btech-list' %}">Department of Bachelor of Technology</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            </div>
+                        </li>
+                        <li class="menu-item menu-item-has-children green">
+                            <a href="#"><span>Departments</span></a>
+                            <div class="menu-dropdown">
+                                <div class="menu-dropdown__content">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                            <a href="">OVERALL</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:hod-civil' %}">Department of Civil Engineering</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:hod-electrical' %}">Department of Electrical Engineering</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:hod-computing' %}">Department of Computing</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:management-sciences' %}">Department of Management Science</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:hod-pharmacy' %}">Department of Pharmacy</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:life-sciences' %}">Department of Life Sciences</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:master-degree-list' %}">Department of Graduate Studies</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:btech-list' %}">Department of Bachelor of Technology</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </li>
+                            </div>
+                        </li>
 
 
 
-                            <li class="menu-item menu-item-has-children blue">
+                       
+                        <li class="menu-item menu-item-has-children fuchsia">
+                            <a href="#"><span>Admission & Aids</span></a>
+                            <div class="menu-dropdown">
+                                <div class="menu-dropdown__content">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:admission' %}">Admission Overview</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a target="_blank" href="http://abasynisb.edu.pk/admissionsystem/AA/bootstrap/index.php">Apply Online</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:financial-aid' %}">Financial Aid</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:scholarships' %}">Scholarships</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:feestructure' %}">Fee Structure</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:admission' %}">Admission Overview</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu-item menu-item-has-children blue">
                                 <a href="#"><span>Rules & Policies</span></a>
                                 <div class="menu-dropdown">
                                     <div class="menu-dropdown__content">
@@ -196,222 +212,202 @@
                                             <li class="menu-item">
                                                 <a href="{% url 'slider:rules-policy' %}">Rules & Policies</a>
                                             </li>
-                                           
+    
                                         </ul>
-                                        
+    
                                     </div>
                                 </div>
                             </li>
-                            <li class="menu-item menu-item-has-children fuchsia">
-                                <a href="#"><span>Admission & Aids</span></a>
-                                <div class="menu-dropdown">
-                                    <div class="menu-dropdown__content">
-                                        <ul class="sub-menu">
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:admission' %}">Admission Overview</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                    <a target="_blank" href="http://abasynisb.edu.pk/admissionsystem/AA/bootstrap/index.php">Registration</a>
-                                                </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:financial-aid' %}">Financial Aid</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:scholarships' %}">Scholarships</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:feestructure' %}">Fee Structure</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:admission' %}">Admission Overview</a>
-                                            </li>
-                                        </ul>
-                                        
-                                    </div>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#"><span>Research</span></a>
+                            <div class="menu-dropdown">
+                                <div class="menu-dropdown__content">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                            <a href="#"></a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:publications'%}">Publications</a>
+                                        </li>
+
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:journal'%}">Journel of Social Sciences</a>
+                                        </li>
+                                    </ul>
+
                                 </div>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="#"><span>Research</span></a>
-                                <div class="menu-dropdown">
-                                    <div class="menu-dropdown__content">
-                                        <ul class="sub-menu">
-                                            <li class="menu-item">
-                                                <a href="#"></a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:publications'%}">Publications</a>
-                                            </li>
-                                            
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:journal'%}">Journel of Social Sciences</a>
-                                            </li>
-                                        </ul>
-                                        
-                                    </div>
+                            </div>
+                        </li>
+                        <li class="menu-item menu-item-has-children green">
+                            <a href="#"><span>Downloads</span></a>
+                            <div class="menu-dropdown">
+                                <div class="menu-dropdown__content">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                           -<a target="_blank" href="https://drive.google.com/file/d/1BCqc9IeHZ_t7z4W2M-Qs2HfUfpAF-hdn/view?usp=sharing">Prospectus 2018-19</a>
+                                        </li>
+                                        <li class="menu-item">
+                                           <a target="_blank" href="https://drive.google.com/file/d/1BCqc9IeHZ_t7z4W2M-Qs2HfUfpAF-hdn/view?usp=sharing">Prospectus 2018-19</a>
+                                               
+                                        </li>
+                                        <li class="menu-item">
+                                            <a target="_blank" href="https://drive.google.com/file/d/1ixoWm3t6QhVbjBfImxCu-T4hGVA2Ir96/view?usp=sharing">Application Form</a>
+                                        </li>
+                                        <!-- <li class="menu-item">
+                                            <a href="#">News Letter</a>
+                                        </li> -->
+                                        <li class="menu-item">
+                                            <a target="_blank" href="https://drive.google.com/file/d/1jSbBxzOjy6ptdrPakKoqDT4oFAwKqf61/view?usp=sharing">Student Hand Book</a>
+                                        </li>
+                                       
+                                    </ul>
                                 </div>
+                            </div>
+                        </li>
+                        <li class="menu-item  fuchsia">
+                                <a href="#"><span>ANSEC</span></a>
+                                
                             </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="#"><span>Downloads</span></a>
-                                <div class="menu-dropdown">
-                                    <div class="menu-dropdown__content">
-                                        <ul class="sub-menu">
-                                            <li class="menu-item">
-                                                <a href="#">Student Handbook</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                    <a target="_blank" href="http://abasynisb.edu.pk/pdf/Handbook-final-draft.pdf">Student Handbook</a>
-                                                </li>
-                                            <li class="menu-item">
-                                                <a href="#">Application</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="#">News Letter</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="#">Faculity Handbook</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="mobile-sub-nav-list">
-                            <li class="mobile-sub-nav-list__item">
-                                <a class="top-link" href="{% block links %}{% endblock %}">Acdamic Calander</a>
-                            </li>
-                            <li class="mobile-sub-nav-list__item">
-                                <a class="top-link" href="#">Contact Us</a>
-                            </li>
-                            <li class="mobile-sub-nav-list__item">
-                                <a class="top-link" href="http://peshawar.abasyn.edu.pk/">Peshwar Campus</a>
-                            </li>
-                            <li class="mobile-sub-nav-list__item">
-                                <a class="top-link" href="http://115.186.163.226/moodle/login/index.php">LMS</a>
-                            </li>
-                            <li class="mobile-sub-nav-list__item">
-                                <a class="top-link" href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=abasynisb.edu.pk&sacu=1&flowName=GlifWebSignIn&flowEntry=AddSession">Campus Mail</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-<!-- End Navbar -->
-
-{% block body %}
-
-{% endblock %}
-
-<!-- Footer -->
-<section class="footer1" data-pgc="footer-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h1 style="color:#66BB6A;"><i style="color:#66BB6A;" class="fa fa-university"></i> Abasyn</h1>
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#"><i class="fa fa-home"></i></a>
-                            </div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Address</h5>
-                                <p>Park Road, Chak Shahzad, Islamabad, Pakistan</p>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#"><i class="fa fa-envelope-o"></i></a>
-                            </div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Having any questions?</h5>
-                                <p>admissions@abasynisb.edu.pk</p>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#"><i class="fa fa-phone"></i></a>
-                            </div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Call us &amp; Hair us</h5>
-                                <p>+92 051 8438320-1</p>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#"><i class="fa fa-fax"></i></a>
-                            </div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Fax</h5>
-                                <p>+92 051 8438325</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <h4><i class="fa fa-facebook"></i>&nbsp;Facebook Feed</h4>
-                        <div class="media">
-                                <div class="fb-page" data-href="https://www.facebook.com/AbasynUniversityIslamabad/" data-tabs="timeline" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/AbasynUniversityIslamabad/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AbasynUniversityIslamabad/">Abasyn University Islamabad Campus</a></blockquote></div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <h4>Popular tags</h4>
-                        <div class="tag" style="padding-top: 8px;">
-                            <a class="btn  btn-sm" href="#">Online Admssions</a>
-                            <a class="btn btn-default btn-sm" href="{% url 'slider:admission' %}">Admission Overview</a>
-                            <a class="btn btn-default btn-sm" href="{% url 'slider:feestructure' %}">Fee Structure</a>
-                            <a class="btn btn-default btn-sm" href="{% url 'slider:master-degree-list' %}">Graduate Programs</a>
-                            <a class="btn btn-default btn-sm" href="{% url 'slider:publications'%}">Publications</a>
-                            <a class="btn btn-default btn-sm" target="_blank" href="http://115.186.163.226/moodle/login/index.php">LMS</a>
-                        </div>
-
-
-
-						</div>
-
-                </div>
-                <br>
-                <div class="row">
-
-                    <div class="col-md-12">
-                        <iframe class="maps" style="filter: grayscale(90%);" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13284.256932660568!2d73.1555762!3d33.6554975!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe616d54130ec05d3!2sAbasyn+University+Islamabad+Campus!5e0!3m2!1sen!2s!4v1508581882280" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
-
+                    </ul>
+                    <ul class="mobile-sub-nav-list">
+                        <li class="mobile-sub-nav-list__item">
+                            <a class="top-link" href="{% block links %}{% endblock %}">Acdamic Calander</a>
+                        </li>
+                        <li class="mobile-sub-nav-list__item">
+                            <a class="top-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="mobile-sub-nav-list__item">
+                            <a class="top-link" href="http://peshawar.abasyn.edu.pk/">Peshwar Campus</a>
+                        </li>
+                        <li class="mobile-sub-nav-list__item">
+                            <a class="top-link" href="http://115.186.163.226/moodle/login/index.php">LMS</a>
+                        </li>
+                        <li class="mobile-sub-nav-list__item">
+                            <a class="top-link" href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=abasynisb.edu.pk&sacu=1&flowName=GlifWebSignIn&flowEntry=AddSession">Campus
+                                Mail</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
-<!-- End Footer -->
+        </nav>
+    </header>
+    <!-- End Navbar -->
 
-<!--=== Load JS here for greater good ====-->
-        <script src="app/static/js/jquery-1.8.3.min.js"></script>
-        <script src="app/static/js/bootstrap.min.js"></script>
-        <script src="app/static/js/isotope.pkgd.js"></script>
-        <script src="app/static/js/jquery.countdown.min.js"></script>
-        <script src="app/static/js/jquery.flexslider.js"></script>
-        <script src="app/static/js/jquery.nivo.slider.pack.js"></script>
-        <script src="app/static/js/portfolio-custom1.js"></script>
-        <script src="app/static/js/portfolio-custom2.js"></script>
-        <script src="app/static/js/main.js"></script>
-        <script type="text/javascript" src="components/pg.chocka-blocks/js/cb-main.js"></script>
-        <script type="text/javascript" src="components/pg.chocka-blocks/js/owl.carousel.min.js"></script>
-        <script type="text/javascript" src="components/pg.chocka-blocks/js/jquery.easy-pie-chart.js"></script>
+    {% block body %} {% endblock %}
 
-<script>
-    $('.carousel[data-type="multi"] .item').each(function(){
-        var next = $(this).next();
-        if (!next.length) {
-          next = $(this).siblings(':first');
-        }
-        next.children(':first-child').clone().appendTo($(this));
+    <!-- Footer -->
+    <section class="footer1" data-pgc="footer-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1 style="color:#66BB6A;"><i style="color:#66BB6A;" class="fa fa-university"></i> Abasyn</h1>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#"><i class="fa fa-home"></i></a>
+                        </div>
+                        <div class="media-body">
+                            <h5 class="media-heading">Address</h5>
+                            <p>Park Road, Chak Shahzad, Islamabad, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#"><i class="fa fa-envelope-o"></i></a>
+                        </div>
+                        <div class="media-body">
+                            <h5 class="media-heading">Having any questions?</h5>
+                            <p>admissions@abasynisb.edu.pk</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#"><i class="fa fa-phone"></i></a>
+                        </div>
+                        <div class="media-body">
+                            <h5 class="media-heading">Contact Us:</h5>
+                            <p>+92 51 111 222 796</p>
+                            <p>+92 51 8438320-1</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#"><i class="fa fa-fax"></i></a>
+                        </div>
+                        <div class="media-body">
+                            <h5 class="media-heading">Fax</h5>
+                            <p>+92 051 8438325</p>
+                        </div>
+                    </div>
+                </div>
 
-        for (var i=0;i<4;i++) {
-          next=next.next();
-          if (!next.length) {
-              next = $(this).siblings(':first');
+                <div class="col-md-4">
+                    <h4><i class="fa fa-facebook"></i>&nbsp;Facebook Feed</h4>
+                    <div class="media">
+                        <div class="fb-page" data-href="https://www.facebook.com/AbasynUniversityIslamabad/" data-tabs="timeline" data-height="300"
+                            data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <blockquote
+                                cite="https://www.facebook.com/AbasynUniversityIslamabad/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AbasynUniversityIslamabad/">Abasyn University Islamabad Campus</a></blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>Popular tags</h4>
+                    <div class="tag" style="padding-top: 8px;">
+                        <a class="btn btn-default btn-sm" target="_blank" href="http://abasynisb.edu.pk/admissionsystem/AA/bootstrap/index.php">Online Admssions</a>
+                        <a class="btn btn-default btn-sm" target="_blank" href="{% url 'slider:admission' %}">Admission Overview</a>
+                        <a class="btn btn-default btn-sm" target="_blank" href="{% url 'slider:feestructure' %}">Fee Structure</a>
+                        <a class="btn btn-default btn-sm" target="_blank" href="{% url 'slider:master-degree-list' %}">Graduate Programs</a>
+                        <a class="btn btn-default btn-sm" target="_blank" href="{% url 'slider:publications'%}">Publications</a>
+                        <a class="btn btn-default btn-sm" target="_blank" href="http://115.186.163.226/moodle/login/index.php">LMS</a>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <br>
+            <div class="row">
+
+                <div class="col-md-12">
+                    <iframe class="maps" style="filter: grayscale(90%);" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13284.256932660568!2d73.1555762!3d33.6554975!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe616d54130ec05d3!2sAbasyn+University+Islamabad+Campus!5e0!3m2!1sen!2s!4v1508581882280"
+                        width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Footer -->
+
+    <!--=== Load JS here for greater good ====-->
+    <script src='{% static "/js/jquery-1.8.3.min.js" %}'></script>
+    <script src='{% static "/js/bootstrap.min.js" %}'></script>
+    <script src='{% static "/js/isotope.pkgd.js" %}'></script>
+    <script src='{% static "/js/jquery.countdown.min.js" %}'></script>
+    <script src='{% static "/js/jquery.flexslider.js" %}'></script>
+    <script src='{% static "/js/jquery.nivo.slider.pack.js" %}'></script>
+    <script src='{% static "/js/portfolio-custom1.js" %}'></script>
+    <script src='{% static "/js/portfolio-custom2.js" %}'></script>
+    <script src='{% static "/js/main.js" %}'></script>
+    <script>
+        $('.carousel[data-type="multi"] .item').each(function () {
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
             }
+            next.children(':first-child').clone().appendTo($(this));
 
-          next.children(':first-child').clone().appendTo($(this));
-        }
-      });
-</script>
+            for (var i = 0; i < 4; i++) {
+                next = next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
 </body>
+
 </html>

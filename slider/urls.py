@@ -51,7 +51,6 @@ urlpatterns = [
     url(r'^computing/course/$', TemplateView.as_view(template_name='department-computing/computing_courses.html'), name='computing-course'),
     url(r'^computing/stucture/$', TemplateView.as_view(template_name='department-computing/computing_structure.html'), name='computing-structure'),
      url(r'^computing/accredition/$', TemplateView.as_view(template_name='department-computing/accredition-computing.html'), name='accredition-computing'),
-
     # Department of Civil
     url(r'^hod/civil/$', TemplateView.as_view(template_name='department-civil/hod_civil.html'), name='hod-civil'),
     url(r'^civil/info/$', TemplateView.as_view(template_name='department-civil/civil_info.html'), name='civil-info'),

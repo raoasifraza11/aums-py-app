@@ -1,7 +1,7 @@
 import urllib
 from django.shortcuts import render
 from django.views import generic
-from .models import Slider,Staff,Event,Fees,Acdamic_Calander,New
+from .models import Slider,Staff,Event,Fees,Acdamic_Calander,New,Timetable
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
 
@@ -15,6 +15,7 @@ class IndexView(generic.ListView):
         context['slider'] = Slider.objects.all()[:3]
         context['new'] = New.objects.all()[:3]
         context['link'] = Acdamic_Calander.objects.first()
+        context['time'] = Timetable.objects.first()
         context['event'] = Event.objects.all()[:3]
         return  context
 

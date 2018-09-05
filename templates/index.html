@@ -1,39 +1,43 @@
-{% extends 'base.html' %}
-
+{% extends 'base.html' %} {% load static %}
 {% block link %}{{ link }}{% endblock %}
 {% block links %}{{ link }}{% endblock %}
+{% block time %}{{ time }}{% endblock %}
 {% block body %}
+
 
 
 <!-- Slider -->
 
-        <div style="margin-top: -19px" data-pgc="slideshow" id="slideshow1">
-            <div class="ccol-md-12">
-                <div class="nivoSlider" id="nivoSlider">
-                        {% for sliders in slider %}
-                    <img alt="" class="edit" src="{{sliders.slider1.url}}" title="#htmlcaption1">
-                    <img alt="" class="edit" src="{{sliders.slider2.url}}" title="#htmlcaption1">
-                    <img alt="" class="edit" src="{{sliders.slider3.url}}" title="#htmlcaption1">
-                    {% endfor %}
-                </div>
-            </div>
+<div style="margin-top: -19px" data-pgc="slideshow" id="slideshow1">
+    <div class="ccol-md-12">
+        <div class="nivoSlider" id="nivoSlider">
+            {% for sliders in slider %}
+            <img alt="" class="edit" src="{{sliders.slider1.url}}" title="#htmlcaption1">
+            <img alt="" class="edit" src="{{sliders.slider2.url}}" title="#htmlcaption1">
+            <img alt="" class="edit" src="{{sliders.slider3.url}}" title="#htmlcaption1"> {% endfor %}
         </div>
+    </div>
+</div>
 <!-- End Slider -->
 
 <!-- About University -->
 <div class="container underlined-title-about">
     <div class="row">
         <div class="col-md-6" data-pg-collapsed>
-            <h1 data-pg-collapsed=""><b>A Few Words <br>
-About the University</b></h1>
+            <h1 data-pg-collapsed=""><b>A Few Words <br> About the University</b></h1>
             <hr>
             <br>
             <br>
-            <p class="text-justify">HEC has granted NOC via letter No. 16-64/HEC/A&A/2010/401 to Abasyn University to open its campus at Islamabad. The University has established state of art facilities at Park Road, Chak Shahzad for the campus. Highly qualified teaching and non teaching staff have been hired. The campus has also established fully equipped labs with latest state of the art technologies and tools. The campus has also developed a well stocked library which has access to digital research databases, e-journals, e-books and e-reports.</p>
+            <p class="text-justify">HEC has granted NOC via letter No. 16-64/HEC/A&A/2010/401 to Abasyn University to open
+                its campus at Islamabad. The University has established state of art facilities at Park Road, Chak Shahzad
+                for the campus. Highly qualified teaching and non teaching staff have been hired. The campus has also established
+                fully equipped labs with latest state of the art technologies and tools. The campus has also developed a
+                well stocked library which has access to digital research databases, e-journals, e-books and e-reports.</p>
         </div>
         <div class="col-md-6">
             <center>
-                <img style="margin-top:100px" class="img-responsive reveal-inline-block" src="/static/img/logo1.png" width="326" height="329" />
+                <img style="margin-top:100px" class="img-responsive reveal-inline-block" src="/static/img/logo1.png" width="326" height="329"
+                />
             </center>
         </div>
     </div>
@@ -42,97 +46,105 @@ About the University</b></h1>
 
 <!-- Why Choose Us -->
 <div class="container underlined-title-about" data-pg-collapsed>
-<div class="row">
-    <div class="col-md-6">
-        <h1 data-pg-collapsed="" class="text-center">Why Choose Us</h1>
-        <p class="text-justify">The main objective of the university is to provide high quality, comprehensive educational, training and research opportunities that produce highly qualified graduates and responsible citizens who are able to meet the needs of all sectors of human activity. The University offers to its students relevant qualifications, including professional training, which combine high-level knowledge and skills, using courses and content continually tailored to the present and future needs of society</p>
-        <div class="row" data-pg-collapsed>
-            <div class="col-md-6">
-                <div class="text-center single-content">
-                    <i class="fa fa-4x fa-home"></i>
-                    <h3>Founded</h3>
-                    <p>Abasyn Islamabad Campus was established in 2010</p>
-                </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h1 data-pg-collapsed="" class="text-center">Why Choose Us</h1>
+            <p class="text-justify">The main objective of the university is to provide high quality, comprehensive educational,
+                training and research opportunities that produce highly qualified graduates and responsible citizens who
+                are able to meet the needs of all sectors of human activity. The University offers to its students relevant
+                qualifications, including professional training, which combine high-level knowledge and skills, using courses
+                and content continually tailored to the present and future needs of society</p>
+            <div class="row" data-pg-collapsed>
+                <a href="{% url 'slider:historys' %}">
+                    <div class="col-md-6">
+                        <div class="text-center single-content">
+                            <i class="fa fa-4x fa-home"></i>
+                            <h3>Founded</h3>
+                            <p>Abasyn Islamabad Campus was established in 2010</p>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="http://abasynisb.edu.pk/admissionsystem/AA/bootstrap/index.php">
+                    <div class="col-md-6">
+                        <div class="text-center single-content">
+                            <i class="fa fa-4x fa-briefcase"></i>
+                            <h3>Admissions</h3>
+                            <p>Apply Online</p>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div class="col-md-6">
-                <div class="text-center single-content">
-                    <i class="fa fa-4x fa-briefcase"></i>
-                    <h3>Certified Teachers</h3>
-                    <p>probant an malis deserunt commodo labore labore do pariatur</p>
-                </div>
+            <div class="row" data-pg-collapsed>
+                <a target="_blank" href="">
+                    <div class="col-md-6">
+                        <div class="text-center single-content">
+                            <i class="fa fa-4x fa-building"></i>
+                            <h3>Programs</h3>
+                            <p>Offered Programs</p>
+                        </div>
+                    </div>
+                    </a>
+                    <a target="_blank" href="http://115.186.163.226/moodle/login/index.php">
+                    <div class="col-md-6">
+                        <div class="text-center single-content">
+                            <i class="fa fa-4x fa-group"></i>
+                            <h3>Students</h3>
+                            <p>Learning Management System</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
-        <div class="row" data-pg-collapsed>
-            <div class="col-md-6">
-                <div class="text-center single-content">
-                    <i class="fa fa-4x fa-building"></i>
-                    <h3>Featured Programs</h3>
-                    <p>probant an malis deserunt commodo labore labore do pariatur</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="text-center single-content">
-                    <i class="fa fa-4x fa-group"></i>
-                    <h3>Students</h3>
-                    <p>probant an malis deserunt commodo labore labore do pariatur</p>
-                </div>
-            </div>
+        <div class="col-md-6" data-pg-collapsed>
+            <center>
+                <img class="img-responsive reveal-inline-block" src='{% static "img/home-01-846x1002.jpg" %}' />
+            </center>
         </div>
     </div>
-    <div class="col-md-6" data-pg-collapsed>
-        <center>
-            <img class="img-responsive reveal-inline-block" src="/static/img/home-01-846x1002.jpg" />
-        </center>
-    </div>
-</div>
 </div>
 <!-- End Why Choose Us -->
 
 
 <!-- Event -->
 <section style="margin-top:50px;" id="blog1" class=" blog1" data-pgc="Blog">
-            <div class="container">
-                <div class="row">
+    <div class="container">
+        <div class="row">
 
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <div class="underlined-title">
-                            <h1 class="sec-title">Event<br></h1>
-                            <hr>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-
-                    <div class="col-md-10 col-sm-10 col-md-offset-1">
-                        <div class="row">
-                            {% for events in event %}
-                            <div class="col-md-4 col-sm-6 col-xs-12 ">
-                                <div class="blog-post wow fadeInUp" data-wow-delay="0.2s">
-                                    <div class="post-img">
-                                        <img class="img-responsive" src="{{events.picture.url}}" alt="image">
-                                        <ul class="list-inline post-info">
-
-                                            <li class="post-tag text-uppercase">{{events.title}}</li>
-                                        </ul>
-                                    </div>
-                                    <div class="blog-details">
-                                        <h4 class="media-heading">{{events.title}}</h4>
-                                        <p>Lorem Ipsum adalah text contoh digun akan didalam industri pence taka types etting
-                                            adalah text contoh.</p>
-                                        <ul class="list-inline text-capitalize">
-                                            <li>by John Doe</li>
-                                            <li class="pull-right">sl,lsxlx</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            {%endfor%}
-                        </div>
-                    </div>
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="underlined-title">
+                    <h1 class="sec-title">Event<br></h1>
+                    <hr>
                 </div>
             </div>
-        </section>
+
+        </div>
+        <div class="row">
+
+            <div class="col-md-10 col-sm-10 col-md-offset-1">
+                <div class="row">
+                    {% for events in event %}
+                    <div class="col-md-4 col-sm-6 col-xs-12 ">
+                        <div class="blog-post wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="post-img">
+                                <img class="img-responsive" src="{{events.picture.url}}" alt="image">
+                                <ul class="list-inline post-info">
+
+                                    <li class="post-tag text-uppercase">{{events.title}}</li>
+                                </ul>
+                            </div>
+                            <div class="blog-details">
+                                <h4 class="media-heading">{{events.title}}</h4>
+                                <p>{{events.description}}</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- End Event -->
 
 <!-- Test -->
@@ -143,47 +155,48 @@ About the University</b></h1>
 
 <!-- News  -->
 <section style="margin-top:50px;" id="blog1" class=" blog1" data-pgc="Blog">
-            <div class="container">
-                <div class="row">
+    <div class="container">
+        <div class="row">
 
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <div class="underlined-title">
-                            <h1 class="sec-title">News<br></h1>
-                            <hr>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-
-                    <div class="col-md-10 col-sm-10 col-md-offset-1">
-                        <div class="row">
-                            {% for news in new %}
-                            <div class="col-md-4 col-sm-6 col-xs-12 ">
-                                <div class="blog-post wow fadeInUp" data-wow-delay="0.2s">
-                                    <div class="post-img">
-                                        <img class="img-responsive" src="{{news.picture.url}}" alt="image">
-                                        <ul class="list-inline post-info">
-
-                                            <li class="post-tag text-uppercase">{{news.title}}</li>
-                                        </ul>
-                                    </div>
-                                    <div class="blog-details">
-                                        <h4 class="media-heading">{{news.title}}</h4>
-                                        <p>{{news.description}}</p>
-                                        <ul class="list-inline text-capitalize">
-                                            <li>by John Doe</li>
-                                            <li class="pull-right">sl,lsxlx</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            {%endfor%}
-                        </div>
-                    </div>
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="underlined-title">
+                    <h1 class="sec-title">News<br></h1>
+                    <hr>
                 </div>
             </div>
-        </section>
+
+        </div>
+        <div class="row">
+
+            <div class="col-md-10 col-sm-10 col-md-offset-1">
+                <div class="row">
+                    {% for news in new %}
+                    <div class="col-md-4 col-sm-6 col-xs-12 ">
+                        <div class="blog-post wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="post-img">
+                                <img class="img-responsive" src="{{news.picture.url}}" alt="image">
+                                <ul class="list-inline post-info">
+
+                                    <li class="post-tag text-uppercase">{{news.title}}</li>
+                                </ul>
+                            </div>
+                            <div class="blog-details">
+                                <h4 class="media-heading">{{news.title}}</h4>
+                                <p>{{news.description}}</p>
+                              {% if news.link == "#" %}
+
+                              {% else %}
+                              <a target="_blank" class="btn btn-success" href="{{news.link}}">Click Here</a>
+                              {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- End News -->
 
 
@@ -193,6 +206,3 @@ About the University</b></h1>
 {% endfor %}
 -->
 {% endblock %}
-
-
-

@@ -2,6 +2,21 @@
     background:#FAFAFA;
 }
 
+.footer1 {
+  position: absolute;
+  width: 100%;
+}
+
+.footer1 .tag .btn {
+  background-color: #363636;
+  border: medium none transparent;
+  border-radius: 2px;
+  color: #999;
+  font-size: 11px;
+  margin-bottom: 8px;
+  padding: 7px 10px;
+
+}
 
 .navbar-brand {
   padding: 0px;
