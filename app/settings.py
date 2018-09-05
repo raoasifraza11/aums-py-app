@@ -126,7 +126,7 @@ USE_TZ = True
 
 
 
-STATIC_URL = '/static_cdn/'
+STATIC_URL = '/app/static_cdn/'
 MEDIA_URL ='/media/'
 
 STATICFILES_DIRS = [
