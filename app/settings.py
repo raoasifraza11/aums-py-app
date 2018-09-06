@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'w%uk$3#+33fc@ei%qbkboxn@pgylx-e_z60t=3z!_ok(!(vz)_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['18.185.38.39', 'abasynisb.edu.pk', "www.abasynisb.edu.pk"]
 
