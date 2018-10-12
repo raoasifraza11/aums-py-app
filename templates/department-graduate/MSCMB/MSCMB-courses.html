@@ -4,7 +4,12 @@
 
 <div class="container">
     
-
+        <div class="col-sm-3">
+                <nav class="nav-sidebar">
+                        {% include 'department-graduate/MSCMB//MSCMB-sidebar.html' with courses="active" %}
+                </nav>
+            </div>
+            <div class="col-md-9 col-sm-9" id="static-content">
         <div class="table-responsive">
 
             <h3 class="text-center">SEMESTER 1</h3>
@@ -233,6 +238,7 @@
                             </tr>
                         </tbody>
             </table>
+        </div>
         </div>
     </div>
 

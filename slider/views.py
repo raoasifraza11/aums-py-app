@@ -1,7 +1,7 @@
 import urllib
 from django.shortcuts import render
 from django.views import generic
-from .models import Slider,Staff,Event,Fees,Acdamic_Calander,New,Timetable
+from .models import Slider,Staff,Event,Fees,Acdamic_Calander,New,Timetable,Online_Admission,CLO
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
 
@@ -16,6 +16,7 @@ class IndexView(generic.ListView):
         context['new'] = New.objects.all()[:3]
         context['link'] = Acdamic_Calander.objects.first()
         context['time'] = Timetable.objects.first()
+        context['admission'] = Online_Admission.objects.first()
         context['event'] = Event.objects.all()[:3]
         return  context
 
@@ -46,3 +47,15 @@ class FeesView(generic.ListView):
 
     def get_queryset(self):
         return  Fees.objects.order_by('-fees')
+
+class OBEView(generic.ListView):
+    template_name='obe.html'
+    context_object_name = 'object_list'
+
+    def get_template_names(self):
+        template_name = ['department-civil/obe.html']
+        return [self.template_name]
+
+    def get_queryset(self):
+        return  CLO.objects.all()
+

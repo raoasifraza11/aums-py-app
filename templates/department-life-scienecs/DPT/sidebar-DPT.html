@@ -9,14 +9,17 @@
           <li class="{{ structure }}">
             <a href="{% url 'slider:DPT_structure' %}">Program Structure</a>
           </li>
+          <li class="{{ courses }}">
+            <a href="{% url 'slider:DPT-courses'%}">Curriculum</a>
+          </li>
           <li class="{{ faculity }}">
             <a href="{% url 'slider:staff-DPT' %}">Faculty</a>
           </li>
           <li class="{{ accredition }}">
-            <a href="{% url 'slider:accredition-DPT' %}">Accredition</a>
+            <a href="{% url 'slider:accredition-DPT' %}">Accreditation</a>
           </li>
           <li>
-            <a  href="http://35.172.219.204/admissionsystem/AA/bootstrap/index.php">Apply Online</a>
+            <a  href="{{admission.link}}">Apply Online</a>
           </li>
           <li>
             <a target="_blank" href="{% url 'slider:feestructure' %}">Fee Structure</a>

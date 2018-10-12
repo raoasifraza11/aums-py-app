@@ -22,14 +22,14 @@
                 
                 {%for staff in object_list%}
                 {% if staff.department == "computing"%}
-              <div class="col-md-3 col-sm-3">
+              <div class="col-md-4 col-sm-6">
                 <div class="team-box">
                 <div class="team-img">
                    <center> <img src="{{staff.profile.url}}"></center>
                 </div>
-                <div class="team-title">
-                    <h3>{{staff.name}}</h3>
-
+                <div  class="team-title">
+                    <h5>{{staff.name}}</h5>
+                    <h4>{{staff.designation}}</h4>
                     <p>{{staff.qualification}}</p>
                 </div>
             </div>
@@ -41,5 +41,5 @@
         
     </div>
 </div>
-
+</div>
 {% endblock %}

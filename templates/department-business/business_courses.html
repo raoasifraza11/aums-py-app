@@ -1,8 +1,12 @@
-{% extends 'base.html' %}
-
-{% block body %}
+{% extends 'base.html' %} {% block body %}
 <div class="container">
-<div class="table-responsive"> 
+    <div class="col-sm-3">
+        <nav class="nav-sidebar">
+                {% include 'department-business/sidebar-business.html' with courses="active" %}
+        </nav>
+    </div>
+    <div class="col-md-9 col-sm-9" id="static-content">
+    <div class="table-responsive">
         <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 1</h3>
         <table class="table">
             <thead style="background-color:#006666; color: white">
@@ -16,43 +20,43 @@
             <tbody>
                 <tr>
                     <td>SS104</td>
-                   <td>English - I (Comprehension)</td>
+                    <td>English - I (Comprehension)</td>
                     <td>3+0</td>
                     <td>None</td>
-                   
+
                 </tr>
                 <tr>
                     <td>MG108</td>
-                   <td>Introduction to Management</td>
+                    <td>Introduction to Management</td>
                     <td>3+0</td>
                     <td>None</td>
-                   
+
                 </tr>
                 <tr>
                     <td>CS100</td>
-                   <td>Introduction to Computing</td>
+                    <td>Introduction to Computing</td>
                     <td>3+0</td>
                     <td>None</td>
-                   
+
                 </tr>
                 <tr>
                     <td>MT100</td>
-                   <td>Basic Mathematics</td>
+                    <td>Basic Mathematics</td>
                     <td>3+0</td>
                     <td>None</td>
-                   
+
                 </tr>
                 <tr>
                     <td>SS108</td>
                     <td>Islamic Studies/Ethics (for Non-Muslims)</td>
                     <td>2+0</td>
-                    <td>None</td>                          
+                    <td>None</td>
                 </tr>
-                 <tr>
+                <tr>
                     <td>SS118</td>
-                   <td>Pakistan Studies</td>
+                    <td>Pakistan Studies</td>
                     <td>2+0</td>
-                    <td>None</td>                          
+                    <td>None</td>
                 </tr>
             </tbody>
         </table>
@@ -72,21 +76,21 @@
                     <td>English - II (Communication Skills)</td>
                     <td>3+0</td>
                     <td>SS104</td>
-                   
+
                 </tr>
                 <tr>
                     <td>MG104</td>
                     <td>Microeconomics</td>
                     <td>3+0</td>
                     <td>None</td>
-                   
+
                 </tr>
                 <tr>
                     <td>MT104</td>
                     <td>Business Mathematics</td>
                     <td>3+0</td>
                     <td>MT100</td>
-                   
+
                 </tr>
                 <tr>
                     <td>CS121</td>
@@ -100,8 +104,8 @@
                     <td>3+0</td>
                     <td>None</td>
                 </tr>
-                 
-                 
+
+
             </tbody>
         </table>
         <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 3</h3>
@@ -120,21 +124,21 @@
                     <td>English - III (Technical Report Writing)</td>
                     <td>3+0</td>
                     <td>SS124</td>
-                   
+
                 </tr>
                 <tr>
                     <td>MT205</td>
                     <td>Business Statistics</td>
                     <td>3+0</td>
                     <td>MT100</td>
-                   
+
                 </tr>
                 <tr>
                     <td>MG204</td>
                     <td>Macroeconomics</td>
                     <td>3+0</td>
                     <td>MG104</td>
-                   
+
                 </tr>
                 <tr>
                     <td>MG209</td>
@@ -144,21 +148,21 @@
                 </tr>
                 <tr>
                     <td>MG115</td>
-                    <td>Introduction to HRM   </td>
+                    <td>Introduction to HRM </td>
                     <td>3+0</td>
                     <td>None</td>
                 </tr>
                 <tr>
                     <td>SS216</td>
-                    <td>Introduction to Sociology   </td>
+                    <td>Introduction to Sociology </td>
                     <td>3+0</td>
                     <td>None</td>
                 </tr>
             </tbody>
         </table>
-  
 
-  <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 4</h3>
+
+        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 4</h3>
         <table class="table">
             <thead style="background-color:#006666; color: white">
                 <tr>
@@ -174,21 +178,21 @@
                     <td>Business Communication</td>
                     <td>3+0</td>
                     <td>SS211</td>
-                   
+
                 </tr>
                 <tr>
                     <td>SS129</td>
                     <td>Arabic/Chinese etc</td>
                     <td>3+0</td>
                     <td>None</td>
-                   
+
                 </tr>
                 <tr>
                     <td>SS208</td>
                     <td>Environmental Sciences</td>
                     <td>3+0</td>
                     <td>None</td>
-                   
+
                 </tr>
                 <tr>
                     <td>MG202</td>
@@ -210,9 +214,9 @@
                 </tr>
             </tbody>
         </table>
-   
 
-  <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 5</h3>
+
+        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 5</h3>
         <table class="table">
             <thead style="background-color:#006666; color: white">
                 <tr>
@@ -228,21 +232,21 @@
                     <td>Cost Accounting</td>
                     <td>3+0</td>
                     <td>MG202</td>
-                   
+
                 </tr>
                 <tr>
                     <td>MG366</td>
                     <td>Marketing Management</td>
                     <td>3+0</td>
                     <td>MG209</td>
-                   
+
                 </tr>
                 <tr>
                     <td>MT301</td>
                     <td>Statistics & Probability</td>
                     <td>3+0</td>
                     <td>MT205</td>
-                   
+
                 </tr>
                 <tr>
                     <td>MG206</td>
@@ -264,9 +268,9 @@
                 </tr>
             </tbody>
         </table>
-  
 
-  <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 6</h3>
+
+        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 6</h3>
         <table class="table">
             <thead style="background-color:#006666; color: white">
                 <tr>
@@ -277,59 +281,59 @@
                 </tr>
             </thead>
             <tbody>
-                
-                            <tr>
-                                <td>SS406</td>
-                                <td>Business Ethics</td>
-                                <td>3+0</td>
-                                <td>MG308</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MG245</td>
-                                <td>Organizational Behavior</td>
-                                <td>3+0</td>
-                                <td>SS218</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MG306</td>
-                                <td>Consumer Behavior</td>
-                                <td>3+0</td>
-                                <td>MG209</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>CS204</td>
-                                <td>MIS</td>
-                                <td>3+0</td>
-                                <td>CS121</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MG301</td>
-                                <td>Financial Management</td>
-                                <td>3+0</td>
-                                <td>MG202</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MG4xx</td>
-                                <td>Specialization II</td>
-                                <td>3+0</td>
-                                <td>None</td>
-                            </tr>
-               
+
+                <tr>
+                    <td>SS406</td>
+                    <td>Business Ethics</td>
+                    <td>3+0</td>
+                    <td>MG308</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MG245</td>
+                    <td>Organizational Behavior</td>
+                    <td>3+0</td>
+                    <td>SS218</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MG306</td>
+                    <td>Consumer Behavior</td>
+                    <td>3+0</td>
+                    <td>MG209</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>CS204</td>
+                    <td>MIS</td>
+                    <td>3+0</td>
+                    <td>CS121</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MG301</td>
+                    <td>Financial Management</td>
+                    <td>3+0</td>
+                    <td>MG202</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MG4xx</td>
+                    <td>Specialization II</td>
+                    <td>3+0</td>
+                    <td>None</td>
+                </tr>
+
             </tbody>
         </table>
-   
 
-  <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 7</h3>
+
+        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 7</h3>
         <table class="table">
             <thead style="background-color:#006666; color: white">
                 <tr>
@@ -340,50 +344,50 @@
                 </tr>
             </thead>
             <tbody>
-              <tr>
-                                <td>SS401</td>
-                                <td>Research Methodology & Professional Ethics</td>
-                                <td>3+0</td>
-                                <td>None</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MG402</td>
-                                <td>Production and Operations Management</td>
-                                <td>3+0</td>
-                                <td>MG108</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MG404</td>
-                                <td>Entrepreneurship</td>
-                                <td>3+0</td>
-                                <td>None</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MG4xx</td>
-                                <td>Specialization III</td>
-                                <td>3+0</td>
-                                <td>None</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MG499</td>
-                                <td>Project (I)</td>
-                                <td>3+0</td>
-                                <td>None</td>
-                            </tr>
-               
+                <tr>
+                    <td>SS401</td>
+                    <td>Research Methodology & Professional Ethics</td>
+                    <td>3+0</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MG402</td>
+                    <td>Production and Operations Management</td>
+                    <td>3+0</td>
+                    <td>MG108</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MG404</td>
+                    <td>Entrepreneurship</td>
+                    <td>3+0</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MG4xx</td>
+                    <td>Specialization III</td>
+                    <td>3+0</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MG499</td>
+                    <td>Project (I)</td>
+                    <td>3+0</td>
+                    <td>None</td>
+                </tr>
+
             </tbody>
         </table>
-   
 
-  <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 8</h3>
+
+        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 8</h3>
         <table class="table">
             <thead style="background-color:#006666; color: white">
                 <tr>
@@ -394,155 +398,155 @@
                 </tr>
             </thead>
             <tr>
-                                <td>MG411</td>
-                                <td>Strategic Management</td>
-                                <td>3+0</td>
-                                <td>MG108</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MG458</td>
-                                <td>International Business Management</td>
-                                <td>3+0</td>
-                                <td>MG206</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MG4xx</td>
-                                <td>Specialization IV</td>
-                                <td>3+0</td>
-                                <td>None</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MG4xx</td>
-                                <td>General Elective</td>
-                                <td>3+0</td>
-                                <td>None</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MG499</td>
-                                <td>Project (II)</td>
-                                <td>3+0</td>
-                                <td>MG499</td>
-                            </tr>
-                        </tbody>
+                <td>MG411</td>
+                <td>Strategic Management</td>
+                <td>3+0</td>
+                <td>MG108</td>
+            </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MG458</td>
+                    <td>International Business Management</td>
+                    <td>3+0</td>
+                    <td>MG206</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MG4xx</td>
+                    <td>Specialization IV</td>
+                    <td>3+0</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MG4xx</td>
+                    <td>General Elective</td>
+                    <td>3+0</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MG499</td>
+                    <td>Project (II)</td>
+                    <td>3+0</td>
+                    <td>MG499</td>
+                </tr>
+            </tbody>
         </table>
-    
 
-  <h3 class="text-center" style="margin-bottom:20px;">Elective Courses</h3>
+
+        <h3 class="text-center" style="margin-bottom:20px;">Elective Courses</h3>
         <table class="table">
             <thead style="background-color:#006666; color: white">
                 <tr>
                     <th>Course Code</th>
                     <th>Course Name</th>
                     <th>Credit Hours</th>
-                    
+
                 </tr>
             </thead>
             <tbody>
-                            <tr>
-                                <td>MG394</td>
-                                <td>Summer Internship</td>
-                                <td>2+0</td>
-                                
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB422</td>
-                                <td>Molecular Mechanism of Antimicrobial Drugs-1</td>
-                                <td>2+1</td>
-                                
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB423</td>
-                                <td>Epidemiology</td>
-                                <td>3+0</td>
-                                
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB424</td>
-                                <td>Clinical Bacteriology</td>
-                                <td>2+1</td>
-                                
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB425</td>
-                                <td>Medical Virology</td>
-                                <td>2+1</td>
-                                
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB428</td>
-                                <td>Clinical Hematology in Microbial disease</td>
-                                <td>2+1</td>
-                                
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB429</td>
-                                <td>Clinical Mycology</td>
-                                <td>2+1</td>
-                                
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB430</td>
-                                <td>Biosafety and Risk Management</td>
-                                <td>3+0</td>
-                                
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB431</td>
-                                <td>Environment Biotechnology</td>
-                                <td>2+1</td>
-                                
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB431</td>
-                                <td>Hospital Waste managements</td>
-                                <td>3+0</td>
-                                
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB432</td>
-                                <td>Radio Biology</td>
-                                <td>3+0</td>
-                                
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB433</td>
-                                <td>Food Biotechnology</td>
-                                <td>3+0</td>
-                                
-                            </tr>
-                        </tbody>
+                <tr>
+                    <td>MG394</td>
+                    <td>Summer Internship</td>
+                    <td>2+0</td>
+
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MB422</td>
+                    <td>Molecular Mechanism of Antimicrobial Drugs-1</td>
+                    <td>2+1</td>
+
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MB423</td>
+                    <td>Epidemiology</td>
+                    <td>3+0</td>
+
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MB424</td>
+                    <td>Clinical Bacteriology</td>
+                    <td>2+1</td>
+
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MB425</td>
+                    <td>Medical Virology</td>
+                    <td>2+1</td>
+
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MB428</td>
+                    <td>Clinical Hematology in Microbial disease</td>
+                    <td>2+1</td>
+
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MB429</td>
+                    <td>Clinical Mycology</td>
+                    <td>2+1</td>
+
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MB430</td>
+                    <td>Biosafety and Risk Management</td>
+                    <td>3+0</td>
+
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MB431</td>
+                    <td>Environment Biotechnology</td>
+                    <td>2+1</td>
+
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MB431</td>
+                    <td>Hospital Waste managements</td>
+                    <td>3+0</td>
+
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MB432</td>
+                    <td>Radio Biology</td>
+                    <td>3+0</td>
+
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MB433</td>
+                    <td>Food Biotechnology</td>
+                    <td>3+0</td>
+
+                </tr>
+            </tbody>
         </table>
     </div>
+    </div>
 </div>
-        {% endblock %}
-
+{% endblock %}

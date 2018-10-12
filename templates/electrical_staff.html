@@ -21,14 +21,14 @@
                 
                 {%for staff in object_list%}
                 {% if staff.department == "electrical"%}
-              <div class="col-md-3 col-sm-3">
+              <div class="col-md-4 col-sm-6">
                 <div class="team-box">
                 <div class="team-img">
                    <center> <img src="{{staff.profile.url}}"></center>
                 </div>
                 <div class="team-title">
-                    <h3>{{staff.name}}</h3>
-
+                    <h5>{{staff.name}}</h5>
+                    <h5>{{staff.designation}}</h5>
                     <p>{{staff.qualification}}</p>
                 </div>
             </div>
@@ -40,5 +40,5 @@
         
     </div>
 </div>
-
+</div>
 {% endblock %}

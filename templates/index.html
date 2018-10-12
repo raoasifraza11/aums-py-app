@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% load static %}
 {% block link %}{{ link }}{% endblock %}
 {% block links %}{{ link }}{% endblock %}
-{% block time %}{{ time }}{% endblock %}
+
 {% block body %}
 
 
@@ -20,6 +20,16 @@
 </div>
 <!-- End Slider -->
 
+<!-- Message -->
+<div class="pull-alert">
+	<div class="alert alert-success pull-right" >
+	  <button type="button" class="btn btn-default btn-circle btn-xl-alert btn-lateral btn-float-alert"><i class="glyphicon glyphicon-envelope"></i></button>
+	  <hr class="hr-alert">
+      <strong>{{message}}</strong>
+    </div>
+</div> 
+<!-- End Message -->
+
 <!-- About University -->
 <div class="container underlined-title-about">
     <div class="row">
@@ -36,7 +46,7 @@
         </div>
         <div class="col-md-6">
             <center>
-                <img style="margin-top:100px" class="img-responsive reveal-inline-block" src="{% static "/img/logo1.png" %}" width="326" height="329"
+                <img style="margin-top:100px" class="img-responsive reveal-inline-block" src='{% static "img/logo1.png" %}' width="326" height="329"
                 />
             </center>
         </div>
@@ -60,11 +70,11 @@
                         <div class="text-center single-content">
                             <i class="fa fa-4x fa-home"></i>
                             <h3>Founded</h3>
-                            <p>Abasyn University Islamabad Campus was established in 2012</p>
+                            <p>Abasyn Islamabad Campus was established in 2012</p>
                         </div>
                     </div>
                 </a>
-                <a target="_blank" href="http://35.172.219.204/admissionsystem/AA/bootstrap/index.php">
+                <a target="_blank" href="{{admission.link}}">
                     <div class="col-md-6">
                         <div class="text-center single-content">
                             <i class="fa fa-4x fa-briefcase"></i>
@@ -75,12 +85,12 @@
                 </a>
             </div>
             <div class="row" data-pg-collapsed>
-                <a target="_blank" href="{% static "/pros.pdf" %}">
+                <a target="_blank" href='{% static "files/pros.pdf" %}'>
                     <div class="col-md-6">
                         <div class="text-center single-content">
                             <i class="fa fa-4x fa-building"></i>
                             <h3>Prospectus</h3>
-                            <p>2018-19</p>
+                            <p>Download Prospectus</p>
                         </div>
                     </div>
                     </a>
@@ -97,7 +107,7 @@
         </div>
         <div class="col-md-6" data-pg-collapsed>
             <center>
-                <img class="img-responsive reveal-inline-block" src='{% static "img/home-01-846x1002.jpg" %}' />
+                <img class="img-responsive reveal-inline-block" src='{{bannser.image.url}}' />
             </center>
         </div>
     </div>
@@ -106,7 +116,7 @@
 
 
 <!-- Event -->
-<section style="margin-top:50px;" id="blog1" class=" blog1" data-pgc="Blog">
+<section id="blog1" class=" blog1" data-pgc="Blog">
     <div class="container">
         <div class="row">
 
@@ -154,7 +164,7 @@
 
 
 <!-- News  -->
-<section style="margin-top:50px;" id="blog1" class=" blog1" data-pgc="Blog">
+<section id="blog1" class=" blog1" data-pgc="Blog">
     <div class="container">
         <div class="row">
 
@@ -186,7 +196,7 @@
                               {% if news.link == "#" %}
 
                               {% else %}
-                              <a target="_blank" class="btn btn-success" href="{{news.link}}">Click Here</a>
+                              <a target="_blank"  class="btn btn-success" href="{{news.link}}">Click Here</a>
                               {% endif %}
                             </div>
                         </div>

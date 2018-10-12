@@ -15,6 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -24,7 +25,7 @@ SECRET_KEY = 'w%uk$3#+33fc@ei%qbkboxn@pgylx-e_z60t=3z!_ok(!(vz)_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['18.185.38.39', 'abasynisb.edu.pk', "www.abasynisb.edu.pk"]
+ALLOWED_HOSTS = []
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'slider',
     'alumni',
+    'Ansec',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +70,16 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'slider.context_processors.Calander',
+                'slider.context_processors.Admission',
+                'slider.context_processors.Timetables',
+                'slider.context_processors.Messages',
+                'slider.context_processors.TimetableGraduates',
+                'slider.context_processors.Dowmload_by_Application',
+                'slider.context_processors.Dowmload_Accreditation',
+                'slider.context_processors.Calander_Graduate',
+                'slider.context_processors.DateSheets',
+                'slider.context_processors.Banners',
             ],
         },
     },
@@ -125,11 +137,11 @@ USE_TZ = True
 
 
 
-STATIC_URL = '/static_cdn/'
+STATIC_URL = '/static/'
 MEDIA_URL ='/media/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static_cdn"),
+    os.path.join(BASE_DIR, "static"),
 ]
 
 STATIC_ROOT  = os.path.join(BASE_DIR,"static_cdn")

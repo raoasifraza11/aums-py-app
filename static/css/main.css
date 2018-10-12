@@ -2584,7 +2584,7 @@
 .nivoSlider {
 	position:relative;
     width:100%;
-	height:430px;
+	height:450px;
 	overflow: hidden;
 	z-index:1;
 	margin-top:25px;
@@ -4532,7 +4532,7 @@
 /*	blog 1
 /*----------------------------------------------------*/
 .blog1{
-    padding: 50px 0;
+    /* padding: 20px 0; */
     background-color: #f9f9f9;
 }
 
@@ -4573,6 +4573,7 @@
 }
 
 .blog1 .post-img img{
+    height:200px;
     width: 100%;
 }
 
@@ -4661,6 +4662,7 @@
 
 .blog1 .blog-post .blog-details{
     padding: 30px 25px;
+    min-height: 230px;
 }
 
 /*	dividers

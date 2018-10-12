@@ -8,8 +8,9 @@
     <!-- Section CSS -->
     <link href='{% static "bootstrap/css/bootstrap.css" %}' rel="stylesheet">
     <link rel="stylesheet" href='{% static "css/base.css" %}' />
-    <link href='{% static "css/blocks.css" %}' rel="stylesheet">
+    <link href='{% static "css/block.css" %}' rel="stylesheet">
     <link href='{% static "css/base.css" %}' rel="stylesheet">
+    
     <link href='{% static "css/sidetabs.css" %}' rel="stylesheet">
     <link href='{% static "css/courses.css" %}' rel="stylesheet">
     <link href='{% static "css/staff.css" %}' rel="stylesheet">
@@ -19,6 +20,7 @@
     <link href='{% static "css/style.css" %}' rel="stylesheet">
     <!-- End CSS <link href="/static/css/carousel.css" rel="stylesheet">-->
     <link href='{% static "css/main.css" %}' rel="stylesheet">
+    <link href='{% static "css/message.css" %}' rel="stylesheet">
     <link href='{% static "css/customnavbar.css" %}' rel="stylesheet">
     <link href='{% static "css/style-library-1.css" %}' rel="stylesheet">
     <link href='{% static "css/font-awesome.css" %}' rel="stylesheet">
@@ -33,11 +35,12 @@
     <script src='{% static "js/facebook.js" %} '></script>
     <script src='{% static "js/jquery.js" %} '></script>
     <script src='{% static "js/slider.js" %} '></script>
+    <script src='{% static "js/message.js" %} '></script>
     <script src='{% static "js/customnavbar.js" %} '></script>
     <!-- End Jquery -->
 
     <!-- Font Awesome -->
-    <link href="{% static "css/font-awesome.css"%}" rel="stylesheet">
+    <link href="/static/css/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,900,700,600,300,200" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="components/pg.chocka-blocks/css/cb-style.css">
@@ -46,11 +49,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400">
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
     <!-- Font Awesome -->
-   
     <link rel="icon" type="image/png" href='{% static "img/icon.png" %}'>
 </head>
 
-<body>
+<body class="template-slider layout-full-width header-classic minimalist-header sticky-header sticky-white subheader-title-left no-content-padding">
 
     <div id="fb-root"></div>
     <script>(function (d, s, id) {
@@ -69,20 +71,36 @@
             <div class="navigation__top">
                 <ul class="top-nav-list desktop-only">
                     <li class="top-nav-list__item">
-                        <a target="_blank" class="top-link" href="{% block link %} {% endblock %}">Acdamic Calander</a>
+                        <a target="_blank" class="top-link" href="{{calander.link}}">Academic Calander</a>
                     </li>
                     <li class="top-nav-list__item">
-                        <a target="_blank" class="top-link" href="{% block time %} {% endblock %}">Time Table</a>
+                        <a target="_blank" class="top-link" href="{{timetable.link}}">Time Table</a>
                     </li>
                     <li class="top-nav-list__item">
-                        <a class="top-link" href="http://peshawar.abasyn.edu.pk/">Peshwar Campus</a>
+                        <a target="_blank" class="top-link" href="{{Calander_Graduate.link}}">Graduate Academic Calander</a>
                     </li>
                     <li class="top-nav-list__item">
-                        <a class="top-link" href="http://115.186.163.226/moodle/login/index.php">LMS</a>
+                        <a target="_blank" class="top-link" href="{{timetablegraduates.link}}">Graduate Time Table </a>
+                    </li>
+                    {% for sheet in datesheet %}
+                        {% if sheet.visibility == True %}
+                        <li class="top-nav-list__item">
+                            <a target="_blank" class="top-link" href="{{sheet.link}}">{{sheet.title}}</a>
+                        </li>
+                        {% else %}
+
+                        {% endif %}
+                    {% endfor %}
+                    <li class="top-nav-list__item">
+                        <a target="_blank" class="top-link" href="http://peshawar.abasyn.edu.pk/">Peshawar Campus</a>
                     </li>
                     <li class="top-nav-list__item">
-                        <a class="top-link" href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=abasynisb.edu.pk&sacu=1&flowName=GlifWebSignIn&flowEntry=AddSession">Campus
-                            Mail</a>
+                        <a target="_blank" class="top-link" href="http://115.186.163.226/moodle/login/index.php">LMS</a>
+                    </li>
+                    <li class="top-nav-list__item">
+                        <a target="_blank" class="top-link" href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=abasynisb.edu.pk&sacu=1&flowName=GlifWebSignIn&flowEntry=AddSession">Campus
+                            Mail
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -108,13 +126,13 @@
                 <div style="background:white;" class="mobile-nav-wrap">
                     <div class="dropdown-background"></div>
                     <ul class="main-nav-list menu">
-                        <li class="menu-item menu-item-has-children orange">
-                            <a href="/"><span>About Us</span></a>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#"><span>About Us</span></a>
                             <div class="menu-dropdown">
                                 <div class="menu-dropdown__content">
                                     <ul class="sub-menu">
                                         <li class="menu-item">
-                                            <a href="">OVERALL</a>
+                                            <a style="display:none;" href="">OVERALL</a>
                                         </li>
                                         <li class="menu-item">
                                             <a href="{% url 'slider:vision' %}">Vision & Mission</a>
@@ -123,7 +141,7 @@
                                             <a href="{% url 'slider:objective' %}">Objectives</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="{% url 'slider:vc-message' %}">VC Message</a>
+                                            <a href="{% url 'slider:vc-message' %}">Message</a>
                                         </li>
                                         <li class="menu-item">
                                             <a href="{% url 'slider:historys' %}">History</a>
@@ -133,13 +151,13 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="menu-item menu-item-has-children green">
+                        <li class="menu-item menu-item-has-children">
                             <a href="#"><span>Departments</span></a>
                             <div class="menu-dropdown">
                                 <div class="menu-dropdown__content">
                                     <ul class="sub-menu">
                                         <li class="menu-item">
-                                            <a href="">OVERALL</a>
+                                            <a style="display:none;" href="">OVERALL</a>
                                         </li>
                                         <li class="menu-item">
                                             <a href="{% url 'slider:hod-civil' %}">Department of Civil Engineering</a>
@@ -148,22 +166,22 @@
                                             <a href="{% url 'slider:hod-electrical' %}">Department of Electrical Engineering</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="{% url 'slider:hod-computing' %}">Department of Computing</a>
+                                            <a href="{% url 'slider:hod-computing' %}">Department of Computing & Technology</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="{% url 'slider:management-sciences' %}">Department of Management Science</a>
+                                            <a href="{% url 'slider:management-sciences' %}">Department of Management & Social Science</a>
                                         </li>
-                                        <li class="menu-item">
+                                        <li style="margin-top:20px;" class="menu-item">
                                             <a href="{% url 'slider:hod-pharmacy' %}">Department of Pharmacy</a>
                                         </li>
-                                        <li class="menu-item">
+                                        <li style="margin-top:20px;" class="menu-item">
                                             <a href="{% url 'slider:life-sciences' %}">Department of Life Sciences</a>
                                         </li>
                                         <li class="menu-item">
                                             <a href="{% url 'slider:master-degree-list' %}">Department of Graduate Studies</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="{% url 'slider:btech-list' %}">Department of Technology</a>
+                                            <a href="{% url 'slider:btech-list' %}">Department of Bachelor of Technology</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -172,8 +190,8 @@
 
 
 
-                       
-                        <li class="menu-item menu-item-has-children fuchsia">
+
+                        <li class="menu-item menu-item-has-children">
                             <a href="#"><span>Admission & Aids</span></a>
                             <div class="menu-dropdown">
                                 <div class="menu-dropdown__content">
@@ -182,7 +200,8 @@
                                             <a href="{% url 'slider:admission' %}">Admission Overview</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a target="_blank" href="http://35.172.219.204/admissionsystem/AA/bootstrap/index.php">Apply Online</a>
+                                            <a target="_blank" href="{{admission.link}}">Apply
+                                                Online</a>
                                         </li>
                                         <li class="menu-item">
                                             <a href="{% url 'slider:financial-aid' %}">Financial Aid</a>
@@ -201,23 +220,23 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="menu-item menu-item-has-children blue">
-                                <a href="#"><span>Rules & Policies</span></a>
-                                <div class="menu-dropdown">
-                                    <div class="menu-dropdown__content">
-                                        <ul class="sub-menu">
-                                            <li class="menu-item">
-                                                <a href="#"></a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{% url 'slider:rules-policy' %}">Rules & Policies</a>
-                                            </li>
-    
-                                        </ul>
-    
-                                    </div>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#"><span>Rules & Policies</span></a>
+                            <div class="menu-dropdown">
+                                <div class="menu-dropdown__content">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                            <a href="#"></a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{% url 'slider:rules-policy' %}">Rules & Policies</a>
+                                        </li>
+
+                                    </ul>
+
                                 </div>
-                            </li>
+                            </div>
+                        </li>
                         <li class="menu-item menu-item-has-children">
                             <a href="#"><span>Research</span></a>
                             <div class="menu-dropdown">
@@ -238,53 +257,62 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="menu-item menu-item-has-children green">
+                        <li class="menu-item menu-item-has-children">
                             <a href="#"><span>Downloads</span></a>
                             <div class="menu-dropdown">
                                 <div class="menu-dropdown__content">
                                     <ul class="sub-menu">
                                         <li class="menu-item">
-                                           -<a target="_blank" href="https://drive.google.com/file/d/1BCqc9IeHZ_t7z4W2M-Qs2HfUfpAF-hdn/view?usp=sharing">Prospectus 2018-19</a>
+                                        <a style="display:none;" target="_blank" href="https://drive.google.com/file/d/1BCqc9IeHZ_t7z4W2M-Qs2HfUfpAF-hdn/view?usp=sharing">Prospectus
+                                                2018-19</a>
                                         </li>
+                                        {% for downloads in download %}
                                         <li class="menu-item">
-                                           <a target="_blank" href="https://drive.google.com/file/d/1BCqc9IeHZ_t7z4W2M-Qs2HfUfpAF-hdn/view?usp=sharing">Prospectus 2018-19</a>
-                                               
+                                            <a target="_blank" href='/media/{{downloads.file}}'>{{downloads.title}}</a>
                                         </li>
-                                        <li class="menu-item">
-                                            <a target="_blank" href="https://drive.google.com/file/d/1ixoWm3t6QhVbjBfImxCu-T4hGVA2Ir96/view?usp=sharing">Application Form</a>
-                                        </li>
-                                        <!-- <li class="menu-item">
-                                            <a href="#">News Letter</a>
-                                        </li> -->
-                                        <li class="menu-item">
-                                            <a target="_blank" href="https://drive.google.com/file/d/1jSbBxzOjy6ptdrPakKoqDT4oFAwKqf61/view?usp=sharing">Student Hand Book</a>
-                                        </li>
-                                       
+                                        {% endfor %}
                                     </ul>
                                 </div>
                             </div>
                         </li>
-                        <li class="menu-item  fuchsia">
-                                <a href="#"><span>ANSEC</span></a>
-                                
-                            </li>
+                        <!-- <li class="menu-item  fuchsia">
+                            <a href="#"><span>ANSEC</span></a>
+
+                        </li> -->
                     </ul>
                     <ul class="mobile-sub-nav-list">
                         <li class="mobile-sub-nav-list__item">
-                            <a class="top-link" href="{% block links %}{% endblock %}">Acdamic Calander</a>
+                            <a target="_blank" class="top-link" href="{{calander.link}}">Academic Calander</a>
                         </li>
                         <li class="mobile-sub-nav-list__item">
-                            <a class="top-link" href="#">Contact Us</a>
+                            
+                            <a target="_blank" class="top-link" href="{{timetable.link}}">Time Table</a>
                         </li>
                         <li class="mobile-sub-nav-list__item">
-                            <a class="top-link" href="http://peshawar.abasyn.edu.pk/">Peshwar Campus</a>
+                            <a target="_blank" class="top-link" href="{{Calander_Graduate.link}}">Graduate Academic Calander</a>
                         </li>
                         <li class="mobile-sub-nav-list__item">
-                            <a class="top-link" href="http://115.186.163.226/moodle/login/index.php">LMS</a>
+                           <a target="_blank" class="top-link" href="{{timetablegraduates.link}}">Graduate Time Table </a>
+                        </li>
+                        {% for sheet in datesheet %}
+                        {% if sheet.visibility == True %}
+                        <li class="mobile-sub-nav-list__item">
+                            <a target="_blank" class="top-link" href="{{sheet.link}}">{{sheet.title}}</a>
+                        </li>
+                        {% else %}
+
+                        {% endif %}
+                        {% endfor %}
+                        <li class="mobile-sub-nav-list__item">
+                            <a target="_blank " class="top-link" href="http://peshawar.abasyn.edu.pk/">Peshawar Campus</a>
                         </li>
                         <li class="mobile-sub-nav-list__item">
-                            <a class="top-link" href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=abasynisb.edu.pk&sacu=1&flowName=GlifWebSignIn&flowEntry=AddSession">Campus
-                                Mail</a>
+                            <a target="_blank" class="top-link" href="http://115.186.163.226/moodle/login/index.php">LMS</a>
+                        </li>
+                        <li class="mobile-sub-nav-list__item">
+                            <a target="_blank" class="top-link" href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&hd=abasynisb.edu.pk&sacu=1&flowName=GlifWebSignIn&flowEntry=AddSession">Campus
+                                Mail
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -297,7 +325,7 @@
 
     <!-- Footer -->
     <section class="footer1" data-pgc="footer-1">
-        <div class="container">
+        <div class="container container-footer">
             <div class="row">
                 <div class="col-md-4">
                     <h1 style="color:#66BB6A;"><i style="color:#66BB6A;" class="fa fa-university"></i> Abasyn</h1>
@@ -325,8 +353,13 @@
                         </div>
                         <div class="media-body">
                             <h5 class="media-heading">Contact Us:</h5>
-                            <p>+92 51 111 222 796</p>
-                            <p>+92 51 8438320-1</p>
+                            <ul class="footer_phone">
+                                <li style="color:#999">+92 51 111 222 796</li>
+                                <li style="color:#999">+92 51 8438320-1</li>
+                                <li style="color:#999">+92 300 9189006</li>
+                                <li style="color:#999">+92 331 9890066</li>
+                            </ul>
+                           
                         </div>
                     </div>
                     <div class="media">
@@ -335,7 +368,7 @@
                         </div>
                         <div class="media-body">
                             <h5 class="media-heading">Fax</h5>
-                            <p>+92 051 8438325</p>
+                            <p>+92 51 8438325</p>
                         </div>
                     </div>
                 </div>
@@ -345,8 +378,8 @@
                     <div class="media">
                         <div class="fb-page" data-href="https://www.facebook.com/AbasynUniversityIslamabad/" data-tabs="timeline" data-height="300"
                             data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                            <blockquote
-                                cite="https://www.facebook.com/AbasynUniversityIslamabad/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AbasynUniversityIslamabad/">Abasyn University Islamabad Campus</a></blockquote>
+                            <blockquote cite="https://www.facebook.com/AbasynUniversityIslamabad/" class="fb-xfbml-parse-ignore"><a
+                                    href="https://www.facebook.com/AbasynUniversityIslamabad/">Abasyn University Islamabad Campus</a></blockquote>
                         </div>
                     </div>
                 </div>
@@ -354,20 +387,23 @@
                 <div class="col-md-4">
                     <h4>Popular tags</h4>
                     <div class="tag" style="padding-top: 8px;">
-                        <a class="btn btn-default btn-sm" target="_blank" href="http://35.172.219.204/admissionsystem/AA/bootstrap/index.php">Online Admssions</a>
+                        <a class="btn btn-default btn-sm" target="_blank" href="{{admission.link}}">Online
+                            Admssions</a>
                         <a class="btn btn-default btn-sm" target="_blank" href="{% url 'slider:admission' %}">Admission Overview</a>
                         <a class="btn btn-default btn-sm" target="_blank" href="{% url 'slider:feestructure' %}">Fee Structure</a>
-                        <a class="btn btn-default btn-sm" target="_blank" href="{% url 'slider:master-degree-list' %}">Graduate Programs</a>
+                        <a class="btn btn-default btn-sm" target="_blank" href="{% url 'slider:master-degree-list' %}">Graduate
+                            Programs</a>
                         <a class="btn btn-default btn-sm" target="_blank" href="{% url 'slider:publications'%}">Publications</a>
                         <a class="btn btn-default btn-sm" target="_blank" href="http://115.186.163.226/moodle/login/index.php">LMS</a>
                     </div>
 
-
-
+                    
                 </div>
+                <a  target="_blank" title="follow me on twitter" href="http://www.twitter.com/AbasynIslamabad"><img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter_130x50.png" border=0></a>
 
             </div>
             <br>
+            
             <div class="row">
 
                 <div class="col-md-12">

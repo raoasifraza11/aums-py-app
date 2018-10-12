@@ -9,14 +9,21 @@
       <li class="{{ structure }}">
         <a href="{% url 'slider:civil-stucture' %}">Program Structure</a>
       </li>
+      <li class="{{ courses }}">
+          <a href="{% url 'slider:civil-course' %}">Curriculum</a>
+        </li>
       <li class="{{ faculity }}">
         <a href="{% url 'slider:staff-civil' %}">Faculty</a>
       </li>
+      
       <li class="{{ accredition }}">
-        <a  href="{% url 'slider:accredition-civil' %}">Accredition</a>
+        <a  href="{% url 'slider:accredition-civil' %}">Accreditation</a>
       </li>
+      <li class="{{ obe }}">
+          <a  href="{% url 'slider:obe' %}">OBE</a>
+        </li>
       <li>
-        <a  href="http://35.172.219.204/admissionsystem/AA/bootstrap/index.php">Apply Online</a>
+        <a  href="{{admission.link}}">Apply Online</a>
       </li>
       <li>
         <a target="_blank" href="{% url 'slider:feestructure' %}">Fee Structure</a>

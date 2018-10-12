@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block body %}
+<style>
+        .footer1{
+        margin-top:70px;
+        }
+    </style>
+<div style="margin-top: 30px;" class="container">
+    <div class="row">
+            <div class="col-sm-3">
+                    <nav class="nav-sidebar">
+                        {% include 'department-civil/sidebar-civil.html' with obe="active" %}
+                    </nav>
+                  </div>
+        <div class="col-md-9 col-sm-9">
+            <h1 style="background: #006666; color: white;">&nbsp;Outcome Based Education</h1>
+            <h4>Program Learning Outcomes (PLOs) Mapping to Curriculum</h4>
+            <p>The curriculum of BECE degree of Abasyn University Islamabad Campus covers all twelve program learning outcomes (PLOs) of the program.</p><a class="btn btn-danger" href="https://drive.google.com/file/d/1zIRR0Z8udPMffFBUb0oSdAZWM7hFc4Fl/view" target="_blank">Click to see</a>
+            <h4>Course Learning Outcomes (CLOs) Mapping to Curriculum</h4>
+            {%for obe in object_list%}
+            {% if obe.title == "Civil" %}
+            <p>The curriculum of BECE degree of Abasyn University Islamabad Campus covers all the course learning outcomes (CLOs) of the program.</p><a class="btn btn-danger" href="{{obe.link}}" target="_blank">Click to see</a>    
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

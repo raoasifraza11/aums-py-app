@@ -3,9 +3,287 @@
 {% block body %}
 
 <div class="container">
-    
-
+    <div class="col-sm-3">
+        <nav class="nav-sidebar">
+            {% include 'department-graduate/MSEE//MSEE-sidebar.html' with courses="active" %}
+        </nav>
+    </div>
+    <div class="col-md-9 col-sm-9" id="static-content">
         <div class="table-responsive">
+            <h3 class="text-center">Core Courses</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EE601</td>
+                        <td>Probability and Random Processes</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE602</td>
+                        <td>Advanced Digital Signal Processing </td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr>
+                        <td>EE603</td>
+                        <td>Advanced Digital Design</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE604</td>
+                        <td>Advanced Digital Communicaton</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE605</td>
+                        <td>Advanced Engineering Mathematics </td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+               
+                <tbody>
+                    <tr>
+                        <td>EE606</td>
+                        <td>Advanced Computational Techniques</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE607</td>
+                        <td>Advanced Research Methodology*</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE758</td>
+                        <td>Information Theory and Coding</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE750</td>
+                        <td>Advanced Power System Analysis</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE733</td>
+                        <td>Discrete Time Control System</td>
+                        <td>3+0</td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <h6>* Compulsory for Thesis Students</h6>
+            <h3 class="text-center">Elective Courses</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EE620</td>
+                        <td>Advanced Linear Algebra</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE621</td>
+                        <td>Advanced Computer Programming</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE622</td>
+                        <td>Advanced Topics in Electrical Engineering</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE623</td>
+                        <td>Numerical Device Modeling</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE624</td>
+                        <td>Optimization Techniques</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE625</td>
+                        <td>Advanced Artificial Intelligence</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE626</td>
+                        <td>Multi Topics in Computer Architecture</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE627</td>
+                        <td>Advanced Design and analysis of Algorithms</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE628</td>
+                        <td>Advanced Operating System</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE629</td>
+                        <td>Advanced Micro Processor and Interfacing</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE6xx</td>
+                        <td>Digital IC Design</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE711</td>
+                        <td>Detection and Estimation Theory</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE 712</td>
+                        <td>Error Control Coding</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE 713</td>
+                        <td>Cellular Radio Network Planning</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE 714</td>
+                        <td>Optical Communication Systems</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE 715</td>
+                        <td>Advanced Wireless Communication</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE 716</td>
+                        <td>Advanced Communication Networks</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE717</td>
+                        <td>Special Topics in Communication</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE718</td>
+                        <td>Space Time Communication</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE721</td>
+                        <td>Advanced Digital Image Processing</td>
+                        <td>3+0</td>
+
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE722</td>
+                        <td>Pattern Recognition</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
             <h3 class="text-center">SEMESTER 1</h3>
             <table class="table">
@@ -17,46 +295,30 @@
                         <th>Pre Req</th>
                     </tr>
                 </thead>
-             <tbody>
-                            <tr>
-                                <td>MB501</td>
-                                <td>Microbial Anatomy and Physiology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB502</td>
-                                <td>Immuno-biology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB503</td>
-                                <td>Soil Microbiology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB504</td>
-                                <td>Pathogenic Microbiology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB505</td>
-                                <td>Biostatistics</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
+                <tbody>
+                    <tr>
+                        <td>EExxx</td>
+                        <td>Core I</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EExxx</td>
+                        <td>Core II</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EExxx</td>
+                        <td>Electiv I</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
             </table>
 
             <h3 class="text-center">SEMESTER 2</h3>
@@ -69,46 +331,30 @@
                         <th>Pre Req</th>
                     </tr>
                 </thead>
-              <tbody>
-                            <tr>
-                                <td>MB511</td>
-                                <td>Microbial Genetics</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB512</td>
-                                <td>General Virology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB513</td>
-                                <td>Environment Microbiology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB514</td>
-                                <td>Research Methodology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB515</td>
-                                <td>General Mycology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
+                <tbody>
+                    <tr>
+                        <td>EExxx</td>
+                        <td>Core III</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EExxx</td>
+                        <td>Electve II</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EExxx</td>
+                        <td>Electiv III</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
             </table>
 
             <h3 class="text-center">SEMESTER 3</h3>
@@ -122,45 +368,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                            <tr>
-                                <td>MB601</td>
-                                <td>Molecular Immunology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB602</td>
-                                <td>Microbial Diversity</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB603</td>
-                                <td>Clinical Microbiology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB604</td>
-                                <td>Food and Dairy Microbiology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB605</td>
-                                <td>Molecular Mechanism of Antimicrobial Drugs</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
+                    <tr>
+                        <td>EExxx</td>
+                        <td>Electiv IV</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE599</td>
+                        <td>Thesis (I)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            
             </table>
 
             <h3 class="text-center">SEMESTER 4</h3>
@@ -173,68 +396,26 @@
                         <th>Pre Req</th>
                     </tr>
                 </thead>
-               <tbody>
-                            <tr>
-                                <td>MB611</td>
-                                <td>Industrial Microbiology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB612</td>
-                                <td>Parasitology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB613</td>
-                                <td>Microbial Metabolism</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB699</td>
-                                <td>Thesis/Project</td>
-                                <td>6+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-            </table>
-            <h3 class="text-center">Elective Courses</h3>
-            <table class="table">
-                <thead>
+                <tbody>
                     <tr>
-                        <th>Course Code</th>
-                        <th>Course Name</th>
-                        <th>Credit Hours</th>
-                        <th>Pre Req</th>
+                        <td>EExxx</td>
+                        <td>Electve V</td>
+                        <td>3+0</td>
+                        <td></td>
                     </tr>
-                </thead>
-               <tbody>
-                            <tr>
-                                <td>MB622</td>
-                                <td>Principles of Gene Manipulation</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>MB621</td>
-                                <td>Microbial Biotechnology</td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EE599</td>
+                        <td>Thesis (II)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
+</div>
 
 
 

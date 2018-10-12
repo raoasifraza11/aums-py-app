@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^btech/list/$', TemplateView.as_view(template_name='btech-list.html'), name='btech-list'),
     url(r'^scholarships/$', TemplateView.as_view(template_name='scholarships.html'), name='scholarships'),
     url(r'^financial/aid/$', TemplateView.as_view(template_name='financial-aid.html'), name='financial-aid'),
+    
 
     # About Us  
     url(r'^message/$', TemplateView.as_view(template_name='about-us/vc-message.html'), name='vc-message'),
@@ -50,6 +51,7 @@ urlpatterns = [
     url(r'^staff/computing/$', views.StaffView.as_view(template_name='Staff.html'), name='Staff'),
     url(r'^computing/course/$', TemplateView.as_view(template_name='department-computing/computing_courses.html'), name='computing-course'),
     url(r'^computing/stucture/$', TemplateView.as_view(template_name='department-computing/computing_structure.html'), name='computing-structure'),
+    url(r'^obe/computing/$', views.OBEView.as_view(template_name='department-computing/obe.html'), name='obe-computing'),
      url(r'^computing/accredition/$', TemplateView.as_view(template_name='department-computing/accredition-computing.html'), name='accredition-computing'),
     # Department of Civil
     url(r'^hod/civil/$', TemplateView.as_view(template_name='department-civil/hod_civil.html'), name='hod-civil'),
@@ -57,6 +59,7 @@ urlpatterns = [
     url(r'^civil/stucture/$', TemplateView.as_view(template_name='department-civil/civil_structure.html'), name='civil-stucture'),
     url(r'^civil/course/$', TemplateView.as_view(template_name='department-civil/civil_courses.html'), name='civil-course'),
     url(r'^staff/civil/$', views.StaffView.as_view(template_name='civil_staff.html'), name='staff-civil'),
+    url(r'^obe/civil/$', views.OBEView.as_view(template_name='department-civil/obe.html'), name='obe'),
     url(r'^civil/accredition/$', TemplateView.as_view(template_name='department-civil/accredition-civil.html'), name='accredition-civil'),
 
     # Department of Btech Civil
@@ -64,7 +67,7 @@ urlpatterns = [
     url(r'^civil/info/btech/$', TemplateView.as_view(template_name='department-btech-civil/btech-civil-info.html'), name='btech-civil-info'),
     url(r'^civil/stucture/btech/$', TemplateView.as_view(template_name='department-btech-civil/btech-civil-structure.html'), name='btech-civil-stucture'),
     url(r'^civil/course/btech/$', TemplateView.as_view(template_name='department-btech-civil/btech-civil-courses.html'), name='btech-civil-course'),
-    url(r'^staff/civil/btech/$', views.StaffView.as_view(template_name='civil_staff.html'), name='staff-civil'),
+    url(r'^staff/civil/btech/$', views.StaffView.as_view(template_name='civil_staff.html'), name='staff-civil-btech'),
    # url(r'^civil/accredition/btech/$', TemplateView.as_view(template_name='department-btech-civil/accredition-civil.html'), name='accredition-civil'),
 
      # Department of Btech Electrical
@@ -87,6 +90,7 @@ urlpatterns = [
     url(r'^electrical/stucture/$', TemplateView.as_view(template_name='department-electrical/electrical_structure.html'), name='electrical_structure'),
     url(r'^electrical/courses/$', TemplateView.as_view(template_name='department-electrical/electrical_courses.html'), name='electrical_courses'),
     url(r'^staff/electrical/$', views.StaffView.as_view(template_name='electrical_staff.html'), name='staff-electrical'),
+    url(r'^obe/electrical/$', views.OBEView.as_view(template_name='department-electrical/obe.html'), name='obe-electrical'),
     url(r'^electrical/accredition/$', TemplateView.as_view(template_name='department-electrical/accredition-electrical.html'), name='accredition-electrical'),
     # Department of Pharmacy
     url(r'^hod/pharmacy/$', TemplateView.as_view(template_name='department-pharmacy/hod_pharmacy.html'), name='hod-pharmacy'),

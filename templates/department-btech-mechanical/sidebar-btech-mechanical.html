@@ -1,22 +1,19 @@
 <nav class="nav-sidebar">
     <ul class="nav">
-      <!-- <li class="{{ hod }}">
-        <a href="{% url 'slider:hod-btech-mechanical' %}">HOD Message</a>
-      </li> -->
+        <li class="{{ hod }}">
+            <a href="{% url 'slider:hod-btech-mechanical' %}">HOD Message</a>
+          </li>
       <li class="{{ info }}">
         <a href="{% url 'slider:btech-mechanical-info' %}">Program Info</a>
       </li>
       <li class="{{ structure }}">
         <a href="{% url 'slider:btech-mechanical-stucture' %}">Program Structure</a>
       </li>
-      <!-- <li class="{{ faculity }}">
-        <a href="{% url 'slider:staff-electrical' %}">Faculity</a>
+      <li class="{{ courses }}">
+        <a href="{% url 'slider:btech-mechanical-course'%}">Curriculum</a>
       </li>
-      <li class="{{ accredition }}">
-        <a href="#">Accredition</a>
-      </li> -->
       <li>
-        <a  href="http://35.172.219.204/admissionsystem/AA/bootstrap/index.php">Apply Online</a>
+        <a  href="{{admission.link}}">Apply Online</a>
       </li>
       <li>
         <a target="_blank" href="{% url 'slider:feestructure' %}">Fee Structure</a>

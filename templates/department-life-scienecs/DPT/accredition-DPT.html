@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
+{% load static %}
 <!-- Accredition  -->
 <div class="container ">
     <div class="row">
@@ -11,12 +11,16 @@
       <div class="col-md-9 col-sm-9" id="static-content">
         <h2 style="font-family: 'Lato', sans-serif;" class="text-center">Accreditation</h2>
         <div class="row">
-              <div class="col-sm-4 col-sm-offset-2">
-              <a target="_blank" href="http://www.hec.gov.pk/english/universities/Pages/DAIs/HEC-recognized-Campuses.aspx"><img class="img-rounded" src="{% static "/img/hecn1.png" %}></a>
-              </div>
-              <div class="col-sm-4">
-               <a target="_blank" href="https://www.pharmacycouncil.org.pk/PI.php"><img class="img-rounded" src="{% static "/img/gopn1.png" %}"></a>
-              </div>
+            <div class="col-sm-4 col-sm-offset-4">
+                <a  target="_blank" href="http://www.hec.gov.pk/english/universities/Pages/DAIs/HEC-recognized-Campuses.aspx">
+					<img class="img-rounded" src='{% static "img/hecn1.png" %}'>
+					{% for letter in accreditation %}
+					{% if letter.title == "HEC" %}
+					<a style="margin-left:35px;" target="_blank" class="btn btn-primary" href="/media/{{letter.file}}">Download
+						Letter</a>
+					{% endif %}
+					{% endfor %}
+				</a> </div>
           </div>
     
       </div>

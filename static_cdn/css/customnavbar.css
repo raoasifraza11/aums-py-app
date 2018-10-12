@@ -1227,7 +1227,7 @@ input, textarea {
 		-ms-flex-pack: justify
 	}
 	.navigation__top:hover .top-link {
-		opacity: .5
+		/* opacity: .5 */
 	}
 }
 .top-nav-list {
@@ -1309,6 +1309,9 @@ input, textarea {
 }
 .top-link_large {
 	font-size: 10px
+}
+.top-link:hover{
+	color: white;
 }
 @media screen and (min-width:1025px) {
 	.top-link_large {
@@ -1650,7 +1653,7 @@ input, textarea {
 		content: "";
 		background: transparent url(../images/back-icon.png) 50% no-repeat;
 		background-size: contain;
-		width: 12px;
+		width: 22px;
 		height: 15px;
 		display: block;
 		position: absolute;
@@ -1765,7 +1768,7 @@ input, textarea {
 }
 .mobile-sub-nav-list {
 	position: absolute;
-	top: 377px;
+	top: 378px;
 	left: 0;
 	right: 0;
 	z-index: 5;

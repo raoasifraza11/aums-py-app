@@ -9,14 +9,20 @@
       <li class="{{ structure }}">
         <a href="{% url 'slider:computing-structure' %}">Program Structure</a>
       </li>
+      <li class="{{ courses }}">
+          <a href="{% url 'slider:computing-course' %}">Curriculum</a>
+        </li>
       <li class="{{ faculity }}">
         <a  href="{% url 'slider:Staff' %}">Faculty</a>
       </li>
       <li class="{{accredition}}">
-        <a  href="{% url 'slider:accredition-computing' %}">Accredition</a>
+        <a  href="{% url 'slider:accredition-computing' %}">Accreditation</a>
       </li>
+      <li class="{{ obe }}">
+          <a  href="{% url 'slider:obe-computing' %}">OBE</a>
+        </li>
       <li>
-        <a  href="http://35.172.219.204/admissionsystem/AA/bootstrap/index.php">Apply Online</a>
+        <a  href="{{admission.link}}">Apply Online</a>
       </li>
       <li>
         <a target="_blank" href="{% url 'slider:feestructure' %}">Fee Structure</a>

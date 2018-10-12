@@ -1,476 +1,480 @@
-{% extends 'base.html' %}
-
-{% block body %}
+{% extends 'base.html' %} {% block body %}
 <div class="container">
-<div class="table-responsive"> 
-        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 1</h3>
-        <table class="table">
-            <thead style="background-color:#006666; color: white">
-                <tr>
-                    <th>Course Code</th>
-                    <th>Course Name</th>
-                    <th>Credit Hours</th>
-                    <th>Pre Req</th>
-                </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                                <td>ENG101</td>
-                                <td>English Structure</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG102</td>
-                                <td>Introduction to Literature </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG103</td>
-                                <td>Introduction to Linguistics</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>SS118</td>
-                                <td>Pakistan Studies</td>
-                                <td>2</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>XXxxx </td>
-                                <td>General Course I</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>XXxxx </td>
-                                <td>General Course II</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-        </table>
-        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 2</h3>
-        <table class="table">
-            <thead style="background-color:#006666; color: white">
-                <tr>
-                    <th>Course Code</th>
-                    <th>Course Name</th>
-                    <th>Credit Hours</th>
-                    <th>Pre Req</th>
-                </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                                <td>ENG104</td>
-                                <td>English Communication Skills</td>
-                                <td>3</td>
-                                <td>ENG101 </td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG105</td>
-                                <td>History of English Literature I</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG106</td>
-                                <td>Phonetics in English & Phonology</td>
-                                <td>3</td>
-                                <td>ENG101 </td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>SS108 </td>
-                                <td>Islamic Studies </td>
-                                <td>2</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>XXxxx </td>
-                                <td>General Course III</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>XXxxx </td>
-                                <td>General Course IV</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-        </table>
-        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 3</h3>
-        <table class="table">
-            <thead style="background-color:#006666; color: white">
-                <tr>
-                    <th>Course Code</th>
-                    <th>Course Name</th>
-                    <th>Credit Hours</th>
-                    <th>Pre Req</th>
-                </tr>
-            </thead>
-           <tbody>
-                            <tr>
-                                <td>ENG201 </td>
-                                <td>Technical Report Writing</td>
-                                <td>3+0</td>
-                                <td>ENG104 </td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG202 </td>
-                                <td>History of English Literature II</td>
-                                <td>3</td>
-                                <td>ENG105</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG203 </td>
-                                <td>Introduction to Morphology and Syntax</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>CS100 </td>
-                                <td>Introduction to Computers</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>XXxxx </td>
-                                <td>General Course V</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>XXxxx</td>
-                                <td>General Course VI</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-        </table>
-  
+    <div class="col-sm-3">
+        <nav class="nav-sidebar">
+                {% include 'department-english/sidebar-english.html' with courses="active" %}
+        </nav>
+    </div>
+    <div class="col-md-9 col-sm-9" id="static-content">
+        <div class="table-responsive">
+            <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 1</h3>
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ENG101</td>
+                        <td>English Structure</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG102</td>
+                        <td>Introduction to Literature </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG103</td>
+                        <td>Introduction to Linguistics</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>SS118</td>
+                        <td>Pakistan Studies</td>
+                        <td>2</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>XXxxx </td>
+                        <td>General Course I</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>XXxxx </td>
+                        <td>General Course II</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 2</h3>
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ENG104</td>
+                        <td>English Communication Skills</td>
+                        <td>3</td>
+                        <td>ENG101 </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG105</td>
+                        <td>History of English Literature I</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG106</td>
+                        <td>Phonetics in English & Phonology</td>
+                        <td>3</td>
+                        <td>ENG101 </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>SS108 </td>
+                        <td>Islamic Studies </td>
+                        <td>2</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>XXxxx </td>
+                        <td>General Course III</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>XXxxx </td>
+                        <td>General Course IV</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 3</h3>
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ENG201 </td>
+                        <td>Technical Report Writing</td>
+                        <td>3+0</td>
+                        <td>ENG104 </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG202 </td>
+                        <td>History of English Literature II</td>
+                        <td>3</td>
+                        <td>ENG105</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG203 </td>
+                        <td>Introduction to Morphology and Syntax</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>CS100 </td>
+                        <td>Introduction to Computers</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>XXxxx </td>
+                        <td>General Course V</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>XXxxx</td>
+                        <td>General Course VI</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
-  <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 4</h3>
-        <table class="table">
-            <thead style="background-color:#006666; color: white">
-                <tr>
-                    <th>Course Code</th>
-                    <th>Course Name</th>
-                    <th>Credit Hours</th>
-                    <th>Pre Req</th>
-                </tr>
-            </thead>
-           <tbody>
-                            <tr>
-                                <td>ENG204 </td>
-                                <td>Advanced Academic Reading & Writing</td>
-                                <td>2</td>
-                                <td>ENG104 </td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG205 </td>
-                                <td>Poetry I</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG206 </td>
-                                <td>Semantics & Pragmatics </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>SS221 </td>
-                                <td>Human Rights and Citizenship</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>EGN207 </td>
-                                <td>Prose </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>XXxxx </td>
-                                <td>General Course VII</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-        </table>
-   
 
-  <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 5</h3>
-        <table class="table">
-            <thead style="background-color:#006666; color: white">
-                <tr>
-                    <th>Course Code</th>
-                    <th>Course Name</th>
-                    <th>Credit Hours</th>
-                    <th>Pre Req</th>
-                </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                                <td>ENG301 </td>
-                                <td>Visionary Discourse </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG302 </td>
-                                <td>Literary Criticism </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG303 </td>
-                                <td>Novel I</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG304 </td>
-                                <td>Drama I</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG310 </td>
-                                <td>Psycholinguistics </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG306 </td>
-                                <td>English Language Teaching </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-        </table>
-  
+            <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 4</h3>
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ENG204 </td>
+                        <td>Advanced Academic Reading & Writing</td>
+                        <td>2</td>
+                        <td>ENG104 </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG205 </td>
+                        <td>Poetry I</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG206 </td>
+                        <td>Semantics & Pragmatics </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>SS221 </td>
+                        <td>Human Rights and Citizenship</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>EGN207 </td>
+                        <td>Prose </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>XXxxx </td>
+                        <td>General Course VII</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
-  <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 6</h3>
-        <table class="table">
-            <thead style="background-color:#006666; color: white">
-                <tr>
-                    <th>Course Code</th>
-                    <th>Course Name</th>
-                    <th>Credit Hours</th>
-                    <th>Pre Req</th>
-                </tr>
-            </thead>
-           <tbody>
-                            <tr>
-                                <td>ENG401 </td>
-                                <td>American Literature</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG308 </td>
-                                <td>Drama II </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG309 </td>
-                                <td>Poetry II</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG405 </td>
-                                <td>World Literature </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG311 </td>
-                                <td>Stylistics </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>SS401  </td>
-                                <td>Research Methodology in Literature and Linguistics  </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-        </table>
-   
 
-  <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 7</h3>
-        <table class="table">
-            <thead style="background-color:#006666; color: white">
-                <tr>
-                    <th>Course Code</th>
-                    <th>Course Name</th>
-                    <th>Credit Hours</th>
-                    <th>Pre Req</th>
-                </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                                <td>ENG307 </td>
-                                <td>Literary Theory </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG402 </td>
-                                <td>Translation Theory & Literary Studies</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG403 </td>
-                                <td>Novel II</td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG4xx </td>
-                                <td>Specialization elective 1 </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG4xx</td>
-                                <td>Specialization elective 2 </td>
-                                <td>3</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-        </table>
-   
+            <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 5</h3>
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ENG301 </td>
+                        <td>Visionary Discourse </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG302 </td>
+                        <td>Literary Criticism </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG303 </td>
+                        <td>Novel I</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG304 </td>
+                        <td>Drama I</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG310 </td>
+                        <td>Psycholinguistics </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG306 </td>
+                        <td>English Language Teaching </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
-  <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 8</h3>
-        <table class="table">
-            <thead style="background-color:#006666; color: white">
-                <tr>
-                    <th>Course Code</th>
-                    <th>Course Name</th>
-                    <th>Credit Hours</th>
-                    <th>Pre Req</th>
-                </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                                <td>ENG404 </td>
-                                <td>Critical Discourse Analysis </td>
-                                <td>3+0</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG305 </td>
-                                <td>Sociolinguistics </td>
-                                <td>3+1</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG406 </td>
-                                <td>Postmodern Literature </td>
-                                <td>3+1</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG4xx </td>
-                                <td>Specialization elective 3 </td>
-                                <td>3+1</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>ENG4xx </td>
-                                <td>Specialization elective 4 </td>
-                                <td>3+1</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-        </table>
+
+            <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 6</h3>
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ENG401 </td>
+                        <td>American Literature</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG308 </td>
+                        <td>Drama II </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG309 </td>
+                        <td>Poetry II</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG405 </td>
+                        <td>World Literature </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG311 </td>
+                        <td>Stylistics </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>SS401 </td>
+                        <td>Research Methodology in Literature and Linguistics </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 7</h3>
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ENG307 </td>
+                        <td>Literary Theory </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG402 </td>
+                        <td>Translation Theory & Literary Studies</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG403 </td>
+                        <td>Novel II</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG4xx </td>
+                        <td>Specialization elective 1 </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG4xx</td>
+                        <td>Specialization elective 2 </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 8</h3>
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ENG404 </td>
+                        <td>Critical Discourse Analysis </td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG305 </td>
+                        <td>Sociolinguistics </td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG406 </td>
+                        <td>Postmodern Literature </td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG4xx </td>
+                        <td>Specialization elective 3 </td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>ENG4xx </td>
+                        <td>Specialization elective 4 </td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
-    
-{% endblock %}
 
+{% endblock %}

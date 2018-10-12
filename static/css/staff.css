@@ -10,9 +10,9 @@
     left: 30%;
     top: 54px;
 }
-.team-box {border: 1px solid #e5e5e5; padding:10px;}
+.team-box {border: 1px solid #e5e5e5; padding:10px;margin-top:5px;min-height: 370px;}
 .team-box:hover {border: 1px solid #006666 ;}
-.team-img img {border: 1px solid #e0e0e0;}
+.team-img img {border: 1px solid #e0e0e0; height: 200px;}
 .team-title h3 {font-size:24px;font-weight:700;color:#006666 ;}
 .team-title h4 {font-size:16px; font-weight:600;}
 .team-title p {line-height:22px;}

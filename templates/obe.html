@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block body %}
+<style>
+        .footer1{
+        margin-top:70px;
+        }
+    </style>
+<div style="margin-top: 30px;" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 style="background: #006666; color: white;">&nbsp;Outcome Based Education</h1>
+            <ol>
+                    {%for obe in object_list%}
+                <li><a style="color: black" target="_blank" href="{{obe.link}}">{{obe.title}}</a></li>
+                    {% endfor %}
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}

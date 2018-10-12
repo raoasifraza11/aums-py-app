@@ -20,8 +20,8 @@
                 </div>
                 
                 {%for staff in object_list%}
-                {% if staff.department == "DPT"%}
-              <div class="col-md-3 col-sm-3">
+                {% if staff.department == "life-scienecs"%}
+              <div class="col-md-4 col-sm-6">
                 <div class="team-box">
                 <div class="team-img">
                    <center> <img src="{{staff.profile.url}}"></center>
@@ -40,5 +40,5 @@
         
     </div>
 </div>
-
+</div>
 {% endblock %}
