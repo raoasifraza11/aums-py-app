@@ -8,8 +8,8 @@ SET GLOBAL max_allowed_packet=200*1024*1024;
 
 SET NAMES utf8;
 
-DROP DATABASE IF EXISTS `db`;
-CREATE DATABASE `db` character set utf8;
+DROP DATABASE IF EXISTS `addata`;
+CREATE DATABASE `addata` character set utf8;
 USE `db`;
 
 #
@@ -350,10 +350,10 @@ INSERT IGNORE INTO `django_session`(`session_key`, `session_data`, `expire_date`
 UNLOCK TABLES;
 
 #
-# Table structure for table 'slider_acdamic_calander'
+# Table structure for table 'addata.slider_acdamic_calander'
 #
 
-DROP TABLE IF EXISTS `slider_acdamic_calander` CASCADE;
+DROP TABLE IF EXISTS `addata.slider_acdamic_calander` CASCADE;
 CREATE TABLE `slider_acdamic_calander` (
   `id` INT NOT NULL,
   `link` VARCHAR(120) CHARACTER SET utf8 NOT NULL,
@@ -364,15 +364,15 @@ CREATE TABLE `slider_acdamic_calander` (
 # Dumping data for table 'slider_acdamic_calander'
 #
 
-LOCK TABLES `slider_acdamic_calander` WRITE;
+LOCK TABLES `addata.slider_acdamic_calander` WRITE;
 INSERT IGNORE INTO `slider_acdamic_calander`(`id`, `link`) VALUES(2, 'https://drive.google.com/file/d/1YDZubokmzvKW2ijWaKZIVbPh19VVyz_w/view?usp=sharing');
 UNLOCK TABLES;
 
 #
-# Table structure for table 'slider_acdamic_calander_graduate'
+# Table structure for table 'addata.slider_acdamic_calander_graduate'
 #
 
-DROP TABLE IF EXISTS `slider_acdamic_calander_graduate` CASCADE;
+DROP TABLE IF EXISTS `adddata.slider_acdamic_calander_graduate` CASCADE;
 CREATE TABLE `slider_acdamic_calander_graduate` (
   `id` INT NOT NULL,
   `link` VARCHAR(120) CHARACTER SET utf8 NOT NULL,
@@ -381,10 +381,10 @@ CREATE TABLE `slider_acdamic_calander_graduate` (
 ) ENGINE=MyISAM;
 
 #
-# Dumping data for table 'slider_acdamic_calander_graduate'
+# Dumping data for table 'addata.slider_acdamic_calander_graduate'
 #
 
-LOCK TABLES `slider_acdamic_calander_graduate` WRITE;
+LOCK TABLES `addata.slider_acdamic_calander_graduate` WRITE;
 INSERT IGNORE INTO `slider_acdamic_calander_graduate`(`id`, `link`, `title`) VALUES(1, 'https://drive.google.com/file/d/1-4rvZWyxfSOy4hdpjynAuOREpRijuXGT/view?usp=sharing', 'MS Calender');
 UNLOCK TABLES;
 
