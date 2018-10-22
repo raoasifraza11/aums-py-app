@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'w%uk$3#+33fc@ei%qbkboxn@pgylx-e_z60t=3z!_ok(!(vz)_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
 'www.abasynisb.edu.pk',
@@ -103,7 +103,7 @@ WSGI_APPLICATION = 'Menu.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'addata',
+        'NAME': 'db3',
         'USER': 'root',
         'PASSWORD': 'K1HR2fcdWuW8',
         'HOST': 'localhost',
