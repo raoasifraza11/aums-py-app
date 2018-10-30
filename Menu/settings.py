@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
 'www.abasynisb.edu.pk',
-'abasynisb.edu.pk']
+'abasynisb.edu.pk',
+'localhost', '127.0.0.1']
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
