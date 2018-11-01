@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/
 import os, sys
 
 sys.path.append('/opt/bitnami/apps/django/django_projects/app')
-os.environ.setdefault("PYTHON_EGG_CACHE", "/opt/bitnami/apps/django/django_projects/app/egg_cache")
+os.environ.setdefault("PYTHON_EGG_CACHE", "/opt/bitnami/apps/django/django_projects/app/temp")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Menu.settings")
 
 
