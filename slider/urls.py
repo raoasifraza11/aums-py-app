@@ -49,10 +49,10 @@ urlpatterns = [
     url(r'^hod/computing/$', TemplateView.as_view(template_name='department-computing/hod_computing.html'), name='hod-computing'),
     url(r'^computing/info/$', TemplateView.as_view(template_name='department-computing/computing_info.html'), name='computing-info'),
     url(r'^staff/computing/$', views.StaffView.as_view(template_name='Staff.html'), name='Staff'),
-    url(r'^computing/course/$', TemplateView.as_view(template_name='department-computing/computing_courses.html'), name='computing-course'),
+    url(r'^computing/course_CS/$', TemplateView.as_view(template_name='department-computing/computing_courses.html'), name='computing-course'),
     url(r'^computing/stucture/$', TemplateView.as_view(template_name='department-computing/computing_structure.html'), name='computing-structure'),
     url(r'^obe/computing/$', views.OBEView.as_view(template_name='department-computing/obe.html'), name='obe-computing'),
-     url(r'^computing/accredition/$', TemplateView.as_view(template_name='department-computing/accredition-computing.html'), name='accredition-computing'),
+     url(r'^computing/course_SE/$', TemplateView.as_view(template_name='department-computing/accredition-computing.html'), name='accredition-computing'),
     # Department of Civil
     url(r'^hod/civil/$', TemplateView.as_view(template_name='department-civil/hod_civil.html'), name='hod-civil'),
     url(r'^civil/info/$', TemplateView.as_view(template_name='department-civil/civil_info.html'), name='civil-info'),
