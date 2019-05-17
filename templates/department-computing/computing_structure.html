@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 
 {% block body %}
+<style>
+.x{
+   width: 200px;
 
+}
+</style>
 <!-- HOD Message -->
 <div class="container ">
 <div class="row">
@@ -9,41 +14,41 @@
             {% include 'department-computing/sidebar.html' with structure="active" %}
       </div>
   <div class="col-md-9 col-sm-9" id="static-content">
-  <h2 style="font-family: 'Lato', sans-serif;" class="text-center">Program Structure</h2>
+  <h2 style="font-family: 'Lato', sans-serif;" class="text-center">BSCS Program Structure</h2>
 
   <div class="table-responsive">
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Category</th>
+                                <th class="x">Category</th>
                                 <th>Credit Hr.</th>
                                 <th>Description</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>University Requirements</td>
-                                <td>27</td>
+                                <td>General Education</td>
+                                <td>19</td>
                                 <td>General Education Courses - Required by all AU students</td>
                             </tr>
                             <tr>
-                                <td>Department Requirements</td>
+                                <td>Domain CS Core</td>
                                 <td>24</td>
                                 <td>Support area courses - Only required for students who are registered in Computer Science related degrees</td>
                             </tr>
                             <tr>
-                                <td>Core Courses</td>
-                                <td>71</td>
+                                <td>Computing – Core Courses</td>
+                                <td>39</td>
                                 <td>Core courses of Computer Science</td>
                             </tr>
                             <tr>
-                                <td>University Requirements</td>
-                                <td>27</td>
-                                <td>General Education Courses - Required by all AU students</td>
+                                <td>University Electives</td>
+                                <td>12</td>
+                                <td>General Education Courses</td>
                             </tr>
                             <tr>
-                                <td>Technical Electives</td>
-                                <td>09</td>
+                                <td>Mathematics & Science Foundation</td>
+                                <td>12</td>
                                 <td>Specialization courses</td>
                             </tr>
                             <tr>
@@ -52,33 +57,87 @@
                                 <td>Students will be required to complete one or two internships during the four years studies. In case of internship program cannot be offered due to any reason, students will be required to take courses from the job placement category</td>
                             </tr>
                             <tr>
+                                <td>Domain CS Electives</td>
+                                <td>15</td>
+                                <td>Electives for CS domain</td>
+                            </tr>
+                            <tr>
+                                <td>Domain CS Supporting</td>
+                                <td>9</td>
+                                <td>Supporting courses for CS domain.</td>
+                            </tr>
+                            <tr>
                                 <td><strong>Total</strong></td>
-                                <td>133</td>
+                                <td>132</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+      <h2 style="font-family: 'Lato', sans-serif;" class="text-center">BSSE Program Structure</h2>
+      <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="x">Category</th>
+                                <th>Credit Hr.</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>General Education</td>
+                                <td>19</td>
+                                <td>General Education Courses - Required by all AU students</td>
+                            </tr>
+                            <tr>
+                                <td>Domain SE Core</td>
+                                <td>24</td>
+                                <td>Support area courses - Only required for students who are registered in Computer Science related degrees</td>
+                            </tr>
+                            <tr>
+                                <td>Computing – Core Courses</td>
+                                <td>39</td>
+                                <td>Core courses of Computer Science</td>
+                            </tr>
+                            <tr>
+                                <td>University Electives</td>
+                                <td>12</td>
+                                <td>General Education Courses</td>
+                            </tr>
+                            <tr>
+                                <td>Mathematics & Science Foundation</td>
+                                <td>12</td>
+                                <td>Specialization courses</td>
+                            </tr>
+                            <tr>
+                                <td>Industrial Training - Internship</td>
+                                <td>02</td>
+                                <td>Students will be required to complete one or two internships during the four years studies. In case of internship program cannot be offered due to any reason, students will be required to take courses from the job placement category</td>
+                            </tr>
+                            <tr>
+                                <td>Domain SE Electives</td>
+                                <td>15</td>
+                                <td>Electives for SE domain</td>
+                            </tr>
+                            <tr>
+                                <td>Domain SE Supporting</td>
+                                <td>9</td>
+                                <td>Supporting courses for SE domain.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Total</strong></td>
+                                <td>132</td>
                                 <td></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-            <h3>Area of Specialization</h3>
-                <p>The following are some of the specialization areas covered through the elective courses.</p>
-                <ol>
-                    <li>&nbsp;Software Engineering.</li>
-                    <li>&nbsp;Computer Networking.</li>
-                    <li>&nbsp;Databases and Web Technologies.</li>
-                    <li>&nbsp;Mobile Computing.</li>
-                    <li>&nbsp;Artificial Intelligence and Image Processing.</li>
-                </ol>
-                <h3>List of courses related to job placement</h3>
-                <p>In case the internship will not be offered then student can be offered special course from the following list:</p>
-                <ol>
-                    <li>&nbsp;Mini Project 1</li>
-                    <li>&nbsp;Current Trends and Practices in Industry</li>
-                    <li>&nbsp;Professional Ethics and Practices</li>
-                    <li>&nbsp;Project Management</li>
-                </ol>
-                <p>Each of the above courses will be of 2 CrHrs and offered during Summer Semester. These courses are designed in such a way that students will get hand on experience and will be able to find a suitable job for themselves. Major part of these courses will be based on visiting and/or attending training sessions at various organizations and industries.</p>
-  </div>
+              </div>
+
 </div>
 </div>
 <!-- End HOD Message -->
