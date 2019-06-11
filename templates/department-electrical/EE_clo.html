@@ -1,0 +1,2780 @@
+{% extends 'base.html' %} {% block body %}
+<style>
+        .footer1{
+        margin-top:70px;
+        }
+    </style>
+<div style="margin-top: 30px;" class="container">
+    <div class="row">
+            <div class="col-sm-3">
+                    <nav class="nav-sidebar">
+                        {% include 'department-electrical/sidebar-electrical.html' with obe="active" %}
+                    </nav>
+                  </div>
+        <div class="col-md-9 col-sm-9 ">
+<h4>Course Learning Outcomes (CLOs)</h4>
+        <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+</head>
+
+    <div style="margin-top:40px;" class="col-md-12">
+            <div class="table-striped table-condensed">
+            <table style="width: auto;" border=1 class="table">
+					<tr>
+						<th>Subjects</th>
+						<th>CLOs</th>
+						<th colspan="11" align="center">PLOs</th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>Engineering Knowledge</td>
+						<td> Problem Analysis</td>
+						<td>Design / Development of Solutions</td>
+						<td>Investigation</td>
+						<td>Modern Tool Usage</td>
+						<td>The Engineer and Society</td>
+						<td> Environment and Sustainability</td>
+						<td> Ethics</td>
+						<td>Individual and Teamwork</td>
+						<td>Communication</td>
+						<td>Project Management</td>
+						<td> Lifelong Learning</td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+						<td>7</td>
+						<td>8</td>
+						<td>9</td>
+						<td>10</td>
+						<td>11</td>
+						<td>12</td>
+
+
+					</tr>
+					<tr>
+						<td id="noBorder">NS111 - Applied Physics (3+1)</td>
+						<td>CLO-1: Explain fundamental laws of physics relevant to the engineering sciences (i.e. mechanical, electrical engineering etc.). (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-2: Apply knowledge of basic physical laws to solve real life problems. (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Perform experiments demonstrating laws of electrostatics and mechanics (P2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td id="noBorder">SS108 - Islamic Studies (2+0)</td>
+						<td>CLO-1: Demonstrate an understanding of Fundamentals of Quran and Ahadees and their relation with our day to day lives. (C3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Demonstrate an understanding of Islamic ethics, laws, culture and contemporary issue. (C3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td id="noBorder">CS100 - Introduction to Computing (2+1)</td>
+						<td>CLO-1: Describe the fundamental components and concepts of computing (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-2: Identify simple hardware instructions using basic computer architecture (C2)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Solve computing problems using appropriate programming language constructs (C3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder">SS104 - English I (3+0)</td>
+						<td>CLO-1: Comprehend a complex English language text (C2).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-2: Use English language in professional life (A2).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Write a grammatically correct paragraph or essay on a given topic (A2).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>CLOs</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder">MT101 - Calculus and Analytic Geometry (3+0)</td>
+						<td>CLO-1: Solve problems involving Limits, Continuity, Differentiation and Integration of a class of functions. (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-2: Apply concepts of optimization to real world problems especially in electrical engineering domain (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Compute physical lengths, curves and volumes using definite integrals. (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder">EE112 - Workshop Practice (0+1)</td>
+						<td>CLO-1: Describe electrical safety and earthing concepts (C1).</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-2: Practice basic electrical wiring of a house (P3).</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-3: Construct and assemble beginner level printed circuit boards (PCBs) (P3).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Comply with the safety guidelines while dealing with high voltage setup and assist each other in group related tasks (A2).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder">EE116 - Linear Circuit Analysis (3+1)</td>
+						<td>CLO-1: Solve linear circuits using electric network laws and theorems. (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-2: Compute the behavior of energy storing elements and their transient responses. (C4)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-3: Calculate the steady state response of resistive and reactive elements to AC excitation. (C3)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-4: Use lab instruments to verify network laws and theorems. (C3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+                        <td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Setup the lab equipment and measure the readings (P3).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder">EE200 - Digital Logic Design (3+1)</td>
+						<td>CLO-1: Perform number conversions to/from common bases i.e. Binary, Decimal, Hexadecimal (C3).</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-2: Analyze combinational and sequential Circuits (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-3: Construct simple combinational and sequential circuits (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-4: Synthesize digital circuits using frequently used components e.g. multiplexers, de-multiplexers, flip-flops, counters etc. (C5)</td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-5: Reproduce the logic diagram by wiring the digital ICs on breadboard (P3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder">EE213 - Electrical Network Analysis (3+1)</td>
+						<td>CLO-1: Analyze RLC circuits and differentiate between transient and steady state responses. (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-2: Compute time domain, phasor and frequency domain response of second order circuits. (C3)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-3: Analyze balanced three phase systems. (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Assemble circuits on breadboard and perform measurements (P3).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder">EE222 - Basic Mechanical Engineering (3+0)</td>
+						<td>CLO-1: Calculate stress, strain, stress–strain relationships, and shearing distributions in various sections (C3).</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-2: Compute bending moment and shearing force, deflection of beams, torsion of bars of circular cross-section (C3).</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Identify various designs of shafts, pulleys, fly wheels, bearing and couplings (C2).</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder">EE215 - Electronic Devices & Circuits (3+1)</td>
+						<td>CLO-1: Explain the construction, working and characteristics of basic electronic devices including p-n junction diode, Zener diodes, BJTs, FETs and their applications in electronic circuits. (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td id="noBorder"></td>
+						<td>CLO-2: Solve amplifier circuits using BJTs and MOSFETs. (C3)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Setup the lab equipment to conduct experiments and measure the readings (P3).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>MT214 - Complex Variables and Transforms (3+0)</td>
+						<td>CLO-1: Define the complex number system, complex functions and integrals of complex functions (C1)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Compute limits, continuity, differentiability of complex valued functions (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Apply the results and theorems in complex analysis to complex valued functions (C3)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Solve ordinary linear differential equations using Laplace transforms (C3).</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE315 - Electrical Machines (3+1)</td>
+						<td>CLO-1: Explain operating principles of fundamental components of Electric Machines like motors, generators and transformers. (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Describe magnetic field, reluctance of magnetic materials, flux and mmf in magnetic circuits. (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Explain construction, working principles, characteristics and equivalent circuit of AC and DC machines (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Measure transformer parameters using open circuit, short circuit tests (P3) </td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-5: Comply with the safety guidelines while dealing with high voltage setup and assist each other in group related tasks (A2).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE316 - Digital Signal Processing (3+1)</td>
+						<td>CLO-1: Describe discrete time signals and systems in time and frequency domain. (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Solve discrete time signals and systems using z-transform. (C3)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Analyze discrete time signals and systems using Discrete Time Fourier Transform and Discrete Fourier Transform. (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Employ FIR and IIR filter techniques. (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-5: Produce and process signals using digital signal processing techniques. (C3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE313 - Probability Methods in Engineering (3+0)</td>
+						<td>CLO-1: Describe basics of theory of probability and random variables. (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Compute CDFs, PDFs and PMFs of continuous as well as discrete nature. (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Employ descriptive statistics techniques for engineering problems. (C3)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE311 - Electromagnetic Field Theory (3+0)</td>
+						<td>CLO-1: Compute electric and magnetic fields from stationary and dynamic charge and current distributions (C3).</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Solve electrostatic boundary problems (C3).</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Compute energy expressions for both electrostatic and magneto static fields, and apply Maxwell’s equations to interpret Poynting’s theorem (C3)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE300 - Microprocessor based systems</td>
+						<td>CLO-1: Explain basics of specific microprocessor architecture and specific microcontroller architecture/peripherals (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Apply microprocessor’s instruction set and its extensions to problems using assembly language (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Imitate the usage of microcontroller’s peripherals and its interfacing on a microcontroller kit (P3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Manipulate microcontroller based solution for problems e.g. internet of things (IoT), home automation, robotics or human-machine interfaces (P4)</td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-5: Demonstrate problem solving by proposing, debating a solution to a real life problem while working as a team (A3).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>SS401 - Research Methods & Ethics (3+0)</td>
+						<td>CLO-1: Identify proper research type and methodology to solve a given problem (C1)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Write technical documents and literature reviews following well-defined standards for format and references (C3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Give a presentation on a relevant topic (A2)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Analyze the code of ethics from various professional bodies (C4)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-5: Interpret issues related to privacy, civil, and intellectual property rights (C4)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE421 - Computer Communication & Networks (3+1)</td>
+						<td>CLO-1: Describe the working and implementation of protocols in different layers of TCP/IP model (C1)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Compute fundamental analog and digital signal parameters. (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Apply protocols based on layered architecture on basic problems. (C3)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Assemble a network using available physical tools and network simulation tools (P3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE411 - Power Electronics (3+1)</td>
+						<td>CLO-1: Express knowledge of basic principles and techniques of converters used in power electronics (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Analyze various single phase and three phase power converter circuits and their applications. (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Assemble a power electronics based application (P3)</td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Adhere to the safety guidelines while dealing with high voltage setup and sharing work load in group project (A2).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE434 - Power System Analysis (3+0)</td>
+						<td>CLO-1: Construct Pi and T models of power transmission lines. (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Apply method of successive displacement and newton Raphson to compute the load flow results (C3)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Analyze system performance for a balanced and unbalanced fault (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Formulate computational models for analysis of both symmetrical and unsymmetrical conditions in power systems (C5)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE121 - Engineering Drawing (0+1)</td>
+						<td>CLO-1: Imitate drawing concepts like dimensioning, lettering and projections on drawing boards (P3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Sketch layers, regions, 3D drawing, and apply them on primitive solids in AutoCAD tool (P4)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>CS106 - Introduction to Computer Programming (3+1)</td>
+						<td>CLO-1: Use programming IDEs to write and debug programs (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Develop computer programs using procedural programming (C5)</td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Utilize object oriented programming concepts in programs (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Comply with the policy of original work and anti-plagiarism by citing/referencing other people’s work and third party tools & libraries (A2).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>MT111 - Multivariable Calculus & Differential Equation (3+0)</td>
+						<td>CLO1: Solve 1st and 2nd order ordinary differential equations using classical and transform methods (C3).</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO2: Analyze the physical significance of different types of 2nd order differential equations in engineering (C4).</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO3: Apply the concept of Multiple Integrals in finding the simple physical quantities such as area and volume (C3).</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>SS203 - English II (3+0)</td>
+						<td>CLO-1: Show confidence and clarity in public speaking projects (A2)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Demonstrate ability to gather information and apply it to persuade or articulate one's own point of view (C3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Analyze text and be able to paraphrase ideas in writing (C3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+
+					</tr>
+					<tr>
+						<td>EE223 - Signals & Systems (3+1)</td>
+						<td>CLO-1: Express the concepts of signals and systems and their types. (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Identify system properties such as causality, stability, linearity, and time invariance etc. (C1)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Apply convolution integral to determine the output of continuous time systems. (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Analyze continuous time signals and systems in the time/frequency-domain using different transforms. (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE224 - Electronic Circuit Design (3+1)</td>
+						<td>CLO-1: Analyze frequency response of single and multistage amplifiers (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Analyze small signal amplifiers and power amplifiers networks (C3)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Design small-scale electronic circuits using operational amplifiers (C5)</td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Assemble active circuits on breadboard and perform measurements to verify design (P3).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>CS210 - Data structure & Algorithm (3+1)</td>
+						<td>CLO-1: Use standard library’s containers and algorithms (C3).</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Analyze a given data structure and/or algorithm (C4).</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Develop standard/custom algorithms and data structures like sequential and associative (ordered and unordered) containers (C3)</td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Comply with the policy of original work and anti-plagiarism by citing/referencing other people’s work and third party tools & libraries. Share work load in group project (A2).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>MT221 - Linear Algebra (3+0)</td>
+						<td>CLO-1: Solve a system of linear equations that appears in circuit analysis, electromagnetic fields and waves, antenna theory, microwaves, etc. (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Interpret the vector equations and linear transformations which are used in image processing, Control theory, etc. (C3)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Apply knowledge of vector spaces, Eigen value and Eigen vectors in engineering problems (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>SS118 - Pakistan Studies (2+0)</td>
+						<td>CLO-1: Demonstrate an in-depth knowledge of Pakistani Culture, civil rights and constitution (C3).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Demonstrate an understanding of importance of Electrical Engineering projects in Pakistan and their economic impacts (C3).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE321- Communication Systems (3+1)</td>
+						<td>Employ signals and systems concepts and tools for complex band representation of bandpass signals after reviewing them (C3).</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>Describe the concept of analog modulation and identify the performance metrics that engineers use in designing analog communication systems (C2).</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>Use analog modulation schemes i.e. Amplitude Modulation, Angle Modulation and related methods to construct a basic communication system (C3).</td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>Discover the basics of analog/digital modulation in an AWGN (additive white Gaussian noise) baseband channel (C3).</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Demonstrate problem solving by proposing, debating a solution to a problem. Share work load in group project (A3).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE322 - Linear Control Systems (3+1)</td>
+						<td>CLO-1: Construct mathematical models of physical systems using relevant physical laws (C3).</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Formulate the mathematical models using Laplace Transform and represent in the form of a block diagram and signal flow graphs (C5)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Analyze response parameters of different physical systems from responses and stability in time and frequency domain (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Design controllers of linear systems using root locus technique including state space techniques (C5)</td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-5: Setup the trainers & kits and perform measurements to verify control models (P3).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE324 - Measurement & Instrumentation (3+1)</td>
+						<td>CLO-1: Identify peculiar errors associated with electrical/electronic instruments and employ methods for minimizing such errors. (C1)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Express the theory of analogue DC and AC measuring instruments (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Demonstrate integration of transducers with analog and digital hardware. (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Construct a simple prototype design of analog and digital meters to measure electrical signals and other parameters like resistance, capacitance and inductance.(P3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td>EE312 - Applied Thermodynamics (3+0)</td>
+						<td>CLO-1: Describe basic concepts of thermodynamics. (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Apply characteristics of the Otto, Diesel, and Brayton power cycles to solve thermodynamics problems. (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Compute thermal efficiencies and performance of heat engines and refrigeration using second law of thermodynamics and entropy concepts. (C3)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>SS211 - English III (3+0)</td>
+						<td>CLO-1: Identify the basics of technical writing and its guidelines (C1)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Demonstrate the ability to research topics and present them using various mediums, including written reports, group presentations, and multimedia projects (A2)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Write technical documents e.g. memos, proposals, covering letter, fliers, brochures, newsletters, job application letter, business letter, feasibility reports, manual writing etc.(C3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+
+					</tr>
+					<tr>
+						<td>MG435 - Engineering Economics & Management (3+0)</td>
+						<td>CLO-1: Define fundamental principles of project management and economics (C1)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Compare the intelligent decisions of project alternatives during the planning and implementation phases based on the cost / benefit analysis. (C2)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Classify the total cost of a project over its entire life and make more informed decisions about maintaining/replacement of assets to enhance the quality of products and efficiency of machines. (C3)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Demonstrate effective communication, orally as well as in writing the financial/economical language economics fundamental and an economics specialization (A2).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE432 - Power Generation (3+1)</td>
+						<td>CLO-1: Explain different technologies of power generation (C1)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Calculate basic parameters of power plant components like pumps, compressors, turbines, steam generators and condensers etc. (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Analyze various generation technologies with respect to their efficiency. (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE435 - Renewable Energy Systems (3+0)</td>
+						<td>CLO-1: Describe various renewable energy systems (C1)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Analyze fundamentals of energy generation through Wind and Photovoltaic cells (C3)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Compare different renewable energy technologies to choose the most appropriate based on local conditions (C4)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td>EE446 - Wireless and Mobile Communication (3+0)</td>
+						<td>CLO-1: Explain the fundamental tradeoffs between bandwidth efficiency, complexity and reliability (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Apply bandwidth efficiency, complexity and reliability tradeoffs to design practical wireless communication systems (C3).</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Analyze wireless channel impairments such as fading, delay spread, and Doppler spread to choose the appropriate modulation schemes, multiple access techniques and receiver algorithms (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Design cellular communication systems for a given SIR/SINR performance using various path loss models (C5).</td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td>EE433 - Power Distribution & Utilization (3+1)</td>
+						<td>CLO-1: Explain the basics of power distribution system (C2)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Compare distribution systems using ring main and radial distribution schemes (C3)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Analyze utilization of electric power in domestic and industrial applications (C4)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td>EE499 - Senior Design Project (3) + (3)</td>
+						<td>CLO-1: Identify a complex engineering problem based on their interest, prevailing trends and/or departmental requirements. (C2)</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-2: Defend the objectives of the project and the methodology to achieve those objectives. (C6)</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-3: Prepare and adhere to a workplan to meet objectives in reasonable timeline with suitable work division for exposure to the dynamics of working with a team (A4)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-4: Employ the engineering design cycle to design solutions, systems, components and/or processes in order to meet specified objectives efficiently (C3)</td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-5: Analyze engineering data critically and through systematic investigations, make conclusions and/or recommendations for performance improvement of systems (C4).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-6: Measure, build, integrate and/or adapt to execute the project related tasks and activities using the available tools and equipment (P5).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-7: Write a report to present the literature survey, methodology, design and implementation, results and conclusion in a clear and organized way (C5).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-8: Demonstrate and explain the project by making effective use of verbal and non-verbal communication in different project presentations (A3).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-9: Comply with the policy of original work and anti-plagiarism by properly citing/referencing other people’s work and third party tools and libraries (A2).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>CLO-10: Debate the sustainability and impact of the proposed solution in societal and environmental contexts (A3).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+
+					</tr>
+					<tr>
+						<td>Coverage</td>
+						<td></td>
+						<td>57</td>
+						<td>38</td>
+						<td>10</td>
+						<td>4</td>
+						<td>14</td>
+						<td>5</td>
+						<td>2</td>
+						<td>6</td>
+						<td>6</td>
+						<td>10</td>
+						<td>2</td>
+						<td>5</td>
+
+
+					</tr>
+
+                </table>
+            </div></div>
+
+
+        </div></div></div>
+{% endblock %}

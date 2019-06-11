@@ -1,5 +1,7 @@
-{% extends 'base.html' %} {% block body %}
-<style>
+
+{% extends 'base.html' %}{% load   static %} {% block body %}
+
+    <style>
         .footer1{
         margin-top:70px;
         }
@@ -13,7 +15,20 @@
                   </div>
         <div class="col-md-9 col-sm-9 ">
             <h1 style="background: #006666; color: white;">&nbsp;Outcome Based Education</h1>
-            <h4>Program Learning Outcomes (PLOs) Mapping to Curriculum</h4>
+            <h4>Program Educational Objectives (PEOs)</h4>
+            <p>The curriculum of Electrical degree of Abasyn University Islamabad Campus covers all Program Educational Objectives (PEOs) of the program.</p>
+
+    The graduates of BEEE program are expected to
+            <ol>
+
+<li>Be competent engineers who exhibit theoretical and practical knowledge in industry
+    and/or academia.</li>
+                <li>Practice engineering in an ethical and socially responsible manner.</li>
+                <li>Demonstrate interpersonal and management skills and engage in professional growth.</li>
+</ol>
+
+<img src="{%  static 'img/plo.png' %}" height="350px" width="580px"><br>
+            <h4>Program Learning Outcomes (PLOs)</h4>
             <p>The curriculum of Electrical degree of Abasyn University Islamabad Campus covers all twelve program learning outcomes (PLOs) of the program.</p>
 The graduates of Electrical Engineering program will attain the following attributes:
 
@@ -58,27 +73,19 @@ engineering principles to one’s own work, as a member and/or leader in a team,
                 in the broader context of innovation and technological developments.</li>
             </ol>
 
-
-            <h4>Program Educational Objectives (PEOs) Mapping to Program Mission</h4>
-            <p>The curriculum of Electrical degree of Abasyn University Islamabad Campus covers all Program Educational Objectives (PEOs) of the program.</p>
-
-    The graduates of BEEE program are expected to
-            <ol>
-
-<li>Be competent engineers who exhibit theoretical and practical knowledge in industry
-    and/or academia.</li>
-                <li>Practice engineering in an ethical and socially responsible manner.</li>
-                <li>Demonstrate interpersonal and management skills and engage in professional growth.</li>
-</ol>
+<img src="{%  static 'img/peo.png' %}" height="350px" width="580px"><br>
 
 
 
-            <h4>Course Learning Outcomes (CLOs) Mapping to Curriculum</h4>
-            {%for obe in object_list%}
-            {% if obe.title == "Electrical" %}
-            <p>The curriculum of Electrical degree of Abasyn University Islamabad Campus covers all the course learning outcomes (CLOs) of the program.</p><a class="btn btn-danger" href="{{obe.link}}" target="_blank">Click to see</a>    
-            {% endif %}
-            {% endfor %}
+            <h4>Course Learning Outcomes (CLOs)</h4>
+            <p>The curriculum of Electrical degree of Abasyn University Islamabad Campus covers all the course learning outcomes (CLOs) of the program.</p><a class="btn btn-danger" href="{% url 'slider:EE_clo' %}" >Click to see</a>
+
+
+
+
+
+    </div>
+
         </div>
     </div>
 </div>
