@@ -93,9 +93,7 @@ urlpatterns = [
     url(r'^obe/electrical/$', views.OBEView.as_view(template_name='department-electrical/obe.html'), name='obe-electrical'),
     url(r'^electrical/clos/$', TemplateView.as_view(template_name='department-electrical/accredition-electrical.html'), name='accredition-electrical'),
 
-url(r'^electrical/mission/$',
-        TemplateView.as_view(template_name='department-electrical/mission.html'),
-        name='mission'),
+    url(r'^electrical/mission/$',TemplateView.as_view(template_name='department-electrical/mission.html'),name='mission'),
 
     # Department of Pharmacy
     url(r'^hod/pharmacy/$', TemplateView.as_view(template_name='department-pharmacy/hod_pharmacy.html'), name='hod-pharmacy'),
