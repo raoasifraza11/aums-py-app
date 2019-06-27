@@ -7,7 +7,7 @@ import os,shutil
 from django.contrib.auth import login, authenticate
 from .models import Signup,Personal,Address,EducationBsc,EducationMatric,EducationFsc,EducationMs,EducationPhd,Ntstest,Otherdeatils,Resultcard,Programs,Details,Status,Submit,Admissions,Offered_programs,Admitcard
 
-from xhtml2pdf import pisa
+
 from datetime import datetime
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
