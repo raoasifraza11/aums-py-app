@@ -107,7 +107,7 @@ WSGI_APPLICATION = 'Menu.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db3',
+        'NAME': 'admission',
         'USER': 'root',
         'PASSWORD': 'K1HR2fcdWuW8',
         'HOST': 'localhost',
