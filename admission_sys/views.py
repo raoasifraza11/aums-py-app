@@ -6,7 +6,7 @@ from django.core.files.storage import FileSystemStorage
 import os,shutil
 from django.contrib.auth import login, authenticate
 from .models import Signup,Personal,Address,EducationBsc,EducationMatric,EducationFsc,EducationMs,EducationPhd,Ntstest,Otherdeatils,Resultcard,Programs,Details,Status,Submit,Admissions,Offered_programs,Admitcard
-from easy_pdf.rendering import render_to_pdf
+
 from xhtml2pdf import pisa
 from datetime import datetime
 from django.contrib.auth.forms import UserCreationForm
@@ -17,7 +17,7 @@ import csv
 import itertools
 from django.contrib.auth.decorators import login_required
 import datetime
-from easy_pdf.rendering import render_to_pdf_response
+
 from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
 import re
@@ -1008,7 +1008,7 @@ def admission_opened(request):
     session = get_object_or_404(Admissions,id = 7)
     programs = Offered_programs.objects.filter(status = "1")
     admit = get_object_or_404(Admitcard,id=124)
-    return render_to_pdf_response(request,'admission_sys/admission_opened.html',{'session':session,'programs':programs,'admit':admit})
+    return render(request,'admission_sys/admission_opened.html',{'session':session,'programs':programs,'admit':admit})
 
 def add_programs(request):
     if request.method == 'POST':
