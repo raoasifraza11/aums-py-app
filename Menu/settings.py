@@ -105,22 +105,16 @@ WSGI_APPLICATION = 'Menu.wsgi.application'
 
 
 DATABASES = {
-
-
-    'default' : {
+    'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'admission',
+        'NAME': 'db3',
         'USER': 'root',
-        'PASSWORD': '03445324401ahmad',
+        'PASSWORD': 'K1HR2fcdWuW8',
         'HOST': 'localhost',
         'PORT': '3306',
-        'OPTIONS':{
-
-            "init_command":"SET foreign_key_checks = 0;",
-        }
     }
-
 }
+
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
