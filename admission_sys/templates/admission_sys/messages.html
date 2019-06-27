@@ -1,0 +1,61 @@
+{% extends 'admission_sys/admin_base.html' %}
+{% block admin %}
+    {% load static %}
+   <style>
+table {
+  border-collapse: collapse;
+
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+</style>
+    <h2 >Messages &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'upload' %}"><input  class="btn btn-sucess" type="button" value="Upload"></a></h2>
+<hr>
+
+
+<form method="post" class="form-inline"  enctype="multipart/form-data">
+{% csrf_token %}
+        <table  width="900" >
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Father name</th>
+        <th >Mobile number</th>
+        <th>Form number</th>
+        <th>Recomended</th>
+
+    </tr>
+</thead>
+            {% for p,app in submit %}
+        <tr>
+        <td>{{ app.uname }}</td>
+        <td>{{ app.fname }}</td>
+
+        <td>0{{ app.mobcode }}-{{ app.mobnumber }}</td>
+            <td>{{p.id }}</td>
+
+        <td >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="checks" type="checkbox" value="{{ p.id }}" checked></td>
+
+        </tr>
+
+
+    {% endfor %}
+        </table>
+<br>
+    <button class="btn" style="margin-left: 850px" type="submit"  >Send</button>
+</form>
+
+{% endblock %}

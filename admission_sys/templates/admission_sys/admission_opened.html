@@ -1,0 +1,19 @@
+
+    <h2 >Admission Details</h2>
+
+    <p><strong>Session:</strong>{{ session.session }}{{ session.year }}</p>
+    <p><strong>Opened date:</strong>{{ session.open_date }}</p>
+    <p><strong>Close date: </strong>{{ session.close_date }}</p>
+    <p><strong>Test date: </strong>{{ admit.date }}</p>
+    <p><strong>Test start time: </strong>{{ admit.time_start }}</p>
+    <p><strong>Test end time: </strong>{{ admit.time_end }}</p>
+
+
+    <h2>Programs offered in this session</h2>
+    <ol type="1">
+    {% for pro in programs %}
+
+        <li>{{ pro.short_name }}-{{ pro.name }}</li>
+
+    {% endfor %}
+    </ol>

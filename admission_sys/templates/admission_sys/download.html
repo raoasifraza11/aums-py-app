@@ -1,0 +1,151 @@
+{% extends 'admission_sys/base.html' %}
+{% block body %}
+<head>
+    {% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+        <style>
+
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 300px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 150px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 180px; /* Same as the width of the sidebar */
+  margin-right: 0px;
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+table {
+  border-collapse: collapse;
+
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+
+    input{
+        border-radius:4px;
+        border:1px solid #AAAAAA;
+        height: 37px;
+
+    }
+    .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+    .button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+<head>
+    {% load static %}
+   <link type="text/css" href="{% static 'admission_sys/css/style3.css' %}" rel="stylesheet">
+</head>
+    <div  class="sidenav">
+
+        {% if status.program %}
+            <a href="{% url 'program' %}" ><p>Program choice &#10004;</p></a><hr>
+        {% else %}
+            <a href="{% url 'program' %}">Program choice &#10008;</a><hr>
+        {% endif %}
+        {% if status.personalstatus %}
+            <a href="{% url 'application' %}"><p>Personal information &#10004;</p></a><hr>
+        {% else %}
+             <a href="{% url 'application' %}">Personal information &#10008;</a><hr>
+        {% endif %}
+        {% if status.address %}
+            <a  href="{% url 'address' %}"><p>Address details &#10004;</p></a><hr>
+        {% else %}
+            <a  href="{% url 'address' %}">Address details &#10008;</a><hr>
+        {% endif %}
+        {% if status.metric and status.fsc %}
+            <a href="{% url 'education' %}" ><p>Educational details &#10004;</p></a><hr>
+        {% else %}
+            <a href="{% url 'education' %}" >Educational details &#10008;</a><hr>
+        {% endif %}
+        {% if status.othdetil %}
+            <a  href="{% url 'others' %}"><p>Other details &#10004;</p> </a><hr>
+        {% else %}
+            <a  href="{% url 'others' %}">Other details &#10008;</a><hr>
+        {% endif %}
+   <a  style="background-color: #4CAF50; color: white;" ><p>Downloads &#10144;</p></a><hr>
+   </div>
+    <div style="margin-left: 320px" >
+<div>
+    <h1 >Download Application Form</h1><hr>
+
+    <p>Download your admission form<a href="{% url 'form' %}">  Click here</a></p>
+    <p>Download your admission fee slip<a href="{% url 'fee' %}">  Click here</a></p>
+    <p>Download your admit card slip<a href="{% url 'card' %}">  Click here</a></p>
+<br><br><br>
+    <b></b><p><span class="glyphicon glyphicon-info-sign"></span>Applicants are advised to bring along
+				<b>ORIGINAL ADMIT CARD</b> to appear in the entry test/interview.<br>Applicants, who have passed NAT-I/II and GAT General are exempted from entry test, are advised to appear for an interview on the same date.
+
+				<br>
+				<br><b><span class="glyphicon glyphicon-info-sign"></span>IF your NTS not clear Admit Card used for AUIC Admission Test and IF NTS clear Admit Card used for selection Interview.</b></p>
+
+</div>
+
+    {% endblock  %}

@@ -1,0 +1,24 @@
+{% extends 'admission_sys/admin_base.html' %}
+{% block admin %}
+    <h2>Details</h2><hr>
+    <b><p>Name:{{ form.uname }}</b></p>
+    <b><p>Father's Name:{{ form.fname }}</b></p>
+    <b><p>Date of birth:{{ form.day }}-{{ form.month }}-{{ form.year }}</b></p>
+    <b><p>CNIC:{{ form.cnici }}-{{ form.cnicii }}-{{ form.cniciii }}</b></p>
+    <b><p>Gender:{{ form.gender }}</b></p>
+    <b><p>Mobile:0{{ form.mobcode }}-{{ form.mobnumber }}</b></p>
+    <b><p>Domicile:{{ form.domicile }}</b></p>
+    <b><p>Nationality:{{ form.citizen }}</b></p>
+
+    <a href="/Apply_Online/admin/adm_form/{{ form.signup_id }}"><button class="btn-success"  >Student form</button></a>
+    <a href="/Apply_Online/admin/admit_card/{{ form.signup_id }}"><button class="btn-success">Admit card</button></a>
+    <a href="/Apply_Online/admin/SSC/{{ form.signup_id }}"><button class="btn-success">SSC result card</button></a>
+    <a href="/Apply_Online/admin/HSSC/{{ form.signup_id }}"><button class="btn-success">HSSC result card</button></a>
+    {% if status.nts %}
+        <button class="btn-success">NTS result card</button>
+    {% endif %}
+    <a><button class="btn-success">Edit form</button></a>
+    <a><button class="btn-success">Hope certificate</button></a>
+
+    <a><button class="btn-success">IBCC</button></a>
+{% endblock %}

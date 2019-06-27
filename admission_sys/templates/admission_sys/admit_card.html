@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<style>
+#logo{
+
+	margin-top:10px;
+	width:140px;
+}
+
+#logo1{
+
+position: absolute;
+    left: 250px;
+    top: 30px;
+
+
+}
+#logo12{
+
+position: absolute;
+    left: 250px;
+    top: 530px;
+
+
+}
+#div1{
+	position: absolute;
+    left: 270px;
+    top: 10px;
+}
+
+
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+#cocc{
+
+
+    position:absolute;
+	left: 577px;
+	margin-top:10px;
+	font-size: 110%
+}
+
+
+
+
+#prof{
+	position:absolute;
+	left: 560px;
+
+}
+
+.content {
+	display:none;
+}
+
+.preload {
+	margin:0;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-right: -50%;
+	transform:translate(-50%, -50%);
+}
+
+
+
+
+#perz{
+	 position:absolute;
+	left: 20px;
+	font-size: 18px;
+	top:125px;
+
+}
+
+#perz2{
+	 position:absolute;
+	left: 20px;
+	font-size: 18px;
+	top:625px;
+
+}
+
+#per1{
+	position:absolute;
+	left: 180px;
+	font-size: 18px;
+	top:125px;
+
+}
+#per22{
+	 position:absolute;
+	left: 20px;
+	font-size: 15px;
+
+	top:145px;
+
+}
+
+#per222{
+	 position:absolute;
+	left: 20px;
+	font-size: 15px;
+
+	top:645px;
+
+}
+
+#per2{
+	position:absolute;
+	left: 180px;
+	font-size: 18px;
+	top:145px;
+
+}
+
+#per33{
+	 position:absolute;
+	left: 20px;
+	font-size: 15px;
+
+	top:165px;
+
+}
+
+
+#per332{
+	 position:absolute;
+	left: 20px;
+	font-size: 15px;
+
+	top:665px;
+
+}
+
+#per44{
+	 position:absolute;
+	left: 20px;
+	font-size: 15px;
+
+	top:185px;
+
+}
+
+
+#per442{
+	 position:absolute;
+	left: 20px;
+	font-size: 15px;
+
+	top:685px;
+
+}
+
+
+
+#per5{
+	position:absolute;
+	left: 180px;
+	font-size: 18px;
+	top:205px;
+
+}
+
+
+#prt{
+
+	 position:absolute;
+	 left: 1150px;
+	  top:50px;
+	  width:150px;
+
+}
+
+
+
+
+    #logo{
+
+	margin-top:10px;
+}
+
+#logo1{
+
+	position: absolute;
+    left: 260px;
+    top:20px;
+	width:270px;
+
+}
+
+#div1{
+	position: absolute;
+    left: 270px;
+    top: 10px;
+}
+
+
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+#cocc{
+
+
+    position:absolute;
+	left: 577px;
+	margin-top:10px;
+	font-size: 110%
+}
+
+
+
+#prof{
+	position:absolute;
+	left: 560px;
+
+}
+
+
+.content {
+	display:none;
+}
+
+.preload {
+	margin:0;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-right: -50%;
+	transform:translate(-50%, -50%);
+}
+
+
+
+
+
+
+#perz{
+	 position:absolute;
+	left: 20px;
+	font-size: 18px;
+	top:125px;
+
+}
+
+#per1{
+	position:absolute;
+	left: 180px;
+	font-size: 18px;
+	top:125px;
+
+}
+#per22{
+	 position:absolute;
+	left: 20px;
+	font-size: 15px;
+
+	top:145px;
+
+}
+#per2{
+	position:absolute;
+	left: 180px;
+	font-size: 18px;
+	top:145px;
+
+}
+
+#per33{
+	 position:absolute;
+	left: 20px;
+	font-size: 15px;
+
+	top:165px;
+
+}
+
+
+#per44{
+	 position:absolute;
+	left: 20px;
+	font-size: 15px;
+
+	top:185px;
+
+}
+#per4{
+	position:absolute;
+	left: 180px;
+	font-size: 18px;
+	top:185px;
+
+}
+
+
+
+#per5{
+	position:absolute;
+	left: 180px;
+	font-size: 18px;
+	top:205px;
+
+}
+
+
+#prt{
+
+	 position:absolute;
+	 left: 1150px;
+	  top:50px;
+	  width:150px;
+
+}
+</style>
+
+
+  <head>
+
+
+     <script>
+function printContent(el){
+	var restorepage = document.body.innerHTML;
+	var printcontent = document.getElementById(el).innerHTML;
+	document.body.innerHTML = printcontent;
+	window.print();
+	document.body.innerHTML = restorepage;
+}
+</script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   <title>Abasyn University Online Admission Form</title>
+	<link rel="shortcut icon"  href="{% static 'admission_sys/img/abasyn.ico' %}" type="image/x-icon"/>
+
+    <link href="{% static 'admission_sys/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+  <script src="{% static 'admission_sys/js/jquery-1.8.3.js' %}"></script>
+  </head>
+  <body>
+   <div class="preload">
+    	<img src="{% static 'admission_sys/img/loading_spinner.gif' %}" />
+    </div>
+	<div class="content">
+
+	<div id="div1"  class="col-md-7" style="border:0.5px solid gray;" >
+
+
+	<img src="{% static 'admission_sys/img/logon.png' %}" id="logo" title="Abasyn Admission System">
+
+
+	<font id="logo1" size="5" style="font-weight:bold">ADMIT CARD SLIP</font>
+
+		 <b id="cocc">Form No: {{ submit.id}} <br/>
+             <p>Session:{{ adm.session }} - {{ adm.year }}</p>
+
+		</b>
+<p>Islamabad Campus.Park road Chak Shehzad Islamabad.Cell #:0331-9890066.Phone #:051-111 222 796</p>
+
+		<hr >
+
+		<img  id="prof" style="width: 145px; height: 170px;"src="{% static 'admission_sys'%}{{ personal.photo }} " >
+
+
+
+        <b id="per44">Date:  {{ date }}    </b><b id="per5"> </b><br />
+		<b id="perz">Name:{{ personal.uname }}</b><b id="per1"></b><br />
+		<b id="per22">Father's Name:{{ personal.fname }}</b><b id="per2"></b><br />
+
+		<b id="per33">Gender:  {{ personal.gender }}    </b><b id="per5"> </b><br />
+
+
+		<table  style="width: 500px">
+            <tr>
+                <td><p align="center"><strong>Program Appllied For</strong></p></td>
+                <td><p align="center"><strong>Entry Test/Interview Schedule and Venue</strong></p></td>
+            </tr>
+            <tr>
+                <td><p align="center">{{ program.programone }}</p></td>
+                <td><p align="center">Date:{{ card.date }} Time:{{ card.time_start }}&nbsp;to &nbsp;{{ card.time_end }}
+                    <br>Venue:No:Park Road Chak Shehzad Islamabad</p></td>
+            </tr>
+
+        </table>
+
+<br>
+
+    Please note that:<br>
+	1. Applicants are advised to bring along <b>ORIGINAL ADMIT CARD</b> to appear to i the entry test/interview. <br />
+	2. Applicants, who have passed NAT-I/II and GAT General are exempted from entry test, are advised to appear<br /> &nbsp;&nbsp;&nbsp; for an interview on the same time date. <br />
+
+
+			<br />
+        <div align="right"><p><strong>Admission Officer</strong></p></div>
+
+<hr>
+
+
+
+
+<img src="{% static 'admission_sys/img/logon.png' %}" id="logo" title="Abasyn Admission System">
+
+
+	<font id="logo12" size="5" style="font-weight:bold">ADMIT CARD SLIP</font>
+
+
+		 <b id="cocc">Form No: {{ submit.id}} <br/>
+             <p>Session:{{ adm.session }} - {{ adm.year }}</p>
+
+		</b>
+<p>Islamabad Campus.Park road Chak Shehzad Islamabad.Cell #:0331-9890066.Phone #:051-111 222 796</p>
+
+		<hr >
+
+		<img  id="prof" style="width: 145px; height: 170px;"src="{% static 'admission_sys'%}{{ personal.photo }} " >
+
+
+
+        <b id="per442">Date:  {{ date }}    </b><b id="per5"> </b><br />
+		<b id="perz2">Name:{{ personal.uname }}</b><b id="per1"></b><br />
+		<b id="per222">Father's Name:{{ personal.fname }}</b><b id="per2"></b><br />
+
+		<b id="per332">Gender:  {{ personal.gender }}    </b><b id="per5"> </b><br />
+
+
+		<table  style="width: 500px">
+            <tr>
+                <td><p align="center"><strong>Program Appllied For</strong></p></td>
+                <td><p align="center"><strong>Entry Test/Interview Schedule and Venue</strong></p></td>
+            </tr>
+            <tr>
+                <td><p align="center">{{ program.programone }}</p></td>
+                <td><p align="center">Date:{{ card.date }} Time:{{ card.time_start }}&nbsp;to &nbsp;{{ card.time_end }}
+                    <br>Venue:No:Park Road Chak Shehzad Islamabad</p></td>
+            </tr>
+
+        </table>
+
+<br>
+
+    Please note that:<br>
+	1. Applicants are advised to bring along <b>ORIGINAL ADMIT CARD</b> to appear to i the entry test/interview. <br />
+	2. Applicants, who have passed NAT-I/II and GAT General are exempted from entry test, are advised to appear<br /> &nbsp;&nbsp;&nbsp; for an interview on the same time date. <br />
+
+
+			<br />
+        <div align="right"><p><strong>Admission Officer</strong></p></div>
+
+<hr>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	<br />
+	<br />
+
+	</div>
+
+<a><img id="prt" src="{% static 'admission_sys/img/print.png' %}" onClick="printContent('div1')" title="Print Copy"></a>
+
+	 <!--
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+	-->
+
+
+
+<script>
+	$(function() {
+		$(".preload").fadeOut(700, function() {
+			$(".content").fadeIn(100);
+		});
+	});
+</script>
+
+
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'admission_sys/js/bootstrap.min.js' %}"></script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

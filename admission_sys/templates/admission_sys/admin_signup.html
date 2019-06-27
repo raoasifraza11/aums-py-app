@@ -1,0 +1,22 @@
+{% extends 'admission_sys/admin_base.html' %}
+{% block admin %}
+    <h2 >Signup</h2>
+    <br>
+
+
+ <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button type="submit">Sign up</button>
+  </form>
+
+{% endblock %}

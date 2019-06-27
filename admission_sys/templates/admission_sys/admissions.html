@@ -1,0 +1,52 @@
+{% extends 'admission_sys/admin_base.html' %}
+{% block admin %}
+    <h2 >Admissions</h2>
+    <hr>
+{% if x %}
+    <div class="alert alert-info" style="width: 500px">
+  <strong>Info!</strong> Admissions are currently open.
+</div>
+     {% endif %}
+<form method="post">
+    {% csrf_token %}
+        <table border="0">
+            <tr><td>Session:</td><td>{{ form.Session }}</td></tr>
+            <tr><td>Year:</td><td>{{ form.Year }}</td></tr>
+            <tr><td>Open date:</td><td>{{form.Open_date  }}</td></tr>
+            <tr><td>Close date:</td><td>{{form.Close_date  }}</td></tr>
+        </table>
+    <button type="submit">Save</button>
+</form>
+
+
+
+    <hr>
+    <h2>Admit card details</h2>
+    <hr>
+    {% if y %}
+    <div class="alert alert-info" style="width: 500px">
+  <strong>Info!</strong> Admit card date set.
+</div>
+     {% endif %}
+    {% if save %}
+     <div class="alert alert-success" style="width: 500px">
+  <strong>Sucess!</strong> Admit card data saved.
+</div>
+    {% endif %}
+    <form method="post">
+    {% csrf_token %}
+    <p>Test Date:{{ aform.date }}</p>
+    <p>Start time: {{ aform.time_start }}</p>
+    <p>End time: {{ aform.time_end }}</p>
+    <button type="submit">Save</button>
+    </form>
+
+
+
+
+
+
+
+
+
+{% endblock %}

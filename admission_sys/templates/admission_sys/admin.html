@@ -1,0 +1,116 @@
+{% extends 'admission_sys/admin_base.html' %}
+{% block admin %}
+    <h2 >Admin</h2>
+    <hr>
+<style>
+table {
+  border-collapse: collapse;
+
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+</style>
+    <form method="get" action="" style="margin-right: 100px">
+    <button type="submit" style="float: right;"  class="btn"> Search </button>
+
+    <input type="text" name="q" placeholder="Search" style="float: right; height: 35px">
+</form>
+<form method="post" >{% csrf_token %}<button type="submit" class="btn">View all</button></form>
+    <br>
+{% if result %}
+    <table  width="900" >
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Father name</th>
+        <th >Mobile number</th>
+        <th>Form number</th>
+        <th>Date</th>
+        <th>Details</th>
+        <th>Print card</th>
+        <th>Print</th>
+
+    </tr>
+</thead>
+
+
+        <tr>
+        <td>{{ result.uname }}</td>
+        <td>{{ result.fname }}</td>
+
+        <td>0{{ result.mobcode }}-{{ result.mobnumber }}</td>
+            <td>{{id.id }}</td>
+    <td>{{ date.date }}</td>
+        <td><a href="/Apply_Online/admin/form/{{ result.signup_id }}"><button  class="btn">Details</button></a></td>
+    <td><a href="/Apply_Online/admin/print_all/{{ result.signup_id }}"><button  class="btn">Print card</button></a></td>
+    <td><a href="/Apply_Online/admin/print/{{result.signup_id }}"><button class="btn">Print form</button></a></td>
+
+{% else %}
+
+
+    <table  width="1000" >
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Father name</th>
+        <th >Mobile number</th>
+        <th>Form number</th>
+        <th>Date</th>
+        <th>Details</th>
+        <th>Print card</th>
+        <th>Print</th>
+
+    </tr>
+</thead>
+
+    {% for p,app,d in submit %}
+        {% if d.date < admission%}
+
+        {% else %}
+
+        <tr>
+        <td>{{ app.uname }}</td>
+        <td>{{ app.fname }}</td>
+
+        <td>0{{ app.mobcode }}-{{ app.mobnumber }}</td>
+            <td>{{p.id }}</td>
+            <td>{{ d.date }}</td>
+        <td><a href="/Apply_Online/admin/form/{{ app.signup_id }}"><button class="btn">Details</button></a></td>
+            <td><a href="/Apply_Online/admin/print_all/{{ app.signup_id }}"><button  class="btn">Print card</button></a></td>
+            <td><a href="/Apply_Online/admin/print/{{ app.signup_id }}"><button  class="btn">Print form</button></a></td>
+
+        </tr>
+        {% endif %}
+
+    {% endfor %}
+
+{% endif %}
+
+</table>
+<div class="pagination">
+    <span class="step-links">
+        {% if applicants.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ applicants.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            {{ applicants.number }}  {{ applicants.paginator.num_pages }}.
+        </span>
+
+        {% if applicants.has_next %}
+            <a href="?page={{ applicants.next_page_number }}">next</a>
+            <a href="?page={{ applicants.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+
+{% endblock %}

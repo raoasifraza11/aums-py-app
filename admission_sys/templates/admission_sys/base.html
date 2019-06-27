@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>Abasyn University</title>
+
+        {% load static %}		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="{%static 'admission_sys/css/bootstrap.min.css' %}"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="{%static 'admission_sys/css/font-awesome.min.css' %}">
+
+		<link href="{%static 'admission_sys/css/cdd.css' %}" rel="stylesheet">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="{%static 'admission_sys/css/style.css' %}"/>
+
+
+
+</head>
+<body>
+<header style="z-index:999;" class="header">
+            <a class="brand-logo" href="" >
+                <img style="margin-top:25px;" alt="logo" src="{%static 'admission_sys/img/logo1.png' %}">
+            </a>
+            <nav class="navigation">
+                <div class="navigation__top">
+                <ul class="top-nav-list desktop-only">
+                    <li class="top-nav-list__item">
+                        <a target="_blank" class="top-link" href="{{calander.link}}">Academic Calander</a>
+                    </li>
+                    <li class="top-nav-list__item">
+                        <a target="_blank" class="top-link" href="{{timetable.link}}">Time Table</a>
+                    </li>
+                    <li class="top-nav-list__item">
+                        <a target="_blank" class="top-link" href="{{Calander_Graduate.link}}">Graduate Academic Calander</a>
+                    </li>
+                    <li class="top-nav-list__item">
+                        <a target="_blank" class="top-link" href="{{timetablegraduates.link}}">Graduate Time Table </a>
+                    </li>
+                    {% for sheet in datesheet %}
+                        {% if sheet.visibility == True %}
+                        <li class="top-nav-list__item">
+                            <a target="_blank" class="top-link" href="{{sheet.link}}">{{sheet.title}}</a>
+                        </li>
+                        {% else %}
+
+                        {% endif %}
+                    {% endfor %}
+                    <li class="top-nav-list__item">
+                        <a target="_blank" class="top-link" href="http://peshawar.abasyn.edu.pk/">Peshawar Campus</a>
+                    </li>
+                    <li class="top-nav-list__item">
+                        <a target="_blank" class="top-link" href="http://115.186.163.226/moodle/login/index.php">LMS</a>
+                    </li>
+                    <li class="top-nav-list__item">
+                        <a target="_blank" class="top-link" href="http://202.142.169.100/qecisb">Student Portal
+                        </a>
+                    </li>
+                        {% if user.is_authenticated %}
+                        <li class="top-nav-list__item" style="alignment: right">
+                            <a class="top-link" href="{% url 'logout' %}">logout</a>
+                        </li>
+                        {% endif %}
+                </ul>
+            </div>
+                <div class="navigation__main">
+                    <div class="mobile-nav-ui">
+                        <div class="mobile-nav-ui__left">
+                            <div class="menu-btn" data-action="back">
+                                <div class="menu-btn__icon menu-btn__icon_back"></div>
+                                <span class="menu-btn__label">BACK</span>
+                            </div>
+                        </div>
+                        <div class="mobile-nav-ui__right">
+                            <div class="menu-btn" data-action="open">
+                                <i class="fa fa-align-justify"></i>
+                                <span class="menu-btn__label">MENU</span>
+                            </div>
+                            <div class="menu-btn" data-action="close">
+                                <div class="menu-btn__icon menu-btn__icon_close"></div>
+                                <span class="menu-btn__label">CLOSE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background:white;" class="mobile-nav-wrap">
+                        <div class="dropdown-background"></div>
+                        <ul class="main-nav-list menu">
+                            <li class="menu-item menu-item-has-children">
+                                <a href="/travel-explore"><span>About Us</span></a>
+
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="/play-sports"><span>Scholarships</span></a>
+
+                            </li>
+
+
+
+                            <li class="menu-item menu-item-has-children ">
+                                <a href="/ski-ride"><span>Admission Overview</span></a>
+
+                            </li>
+                            <li class="menu-item menu-item-has-children ">
+                                <a href="/social-events"><span>Rules and policy</span></a>
+
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#"><span>Fee Structure</span></a>
+
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="/about"><span>Financial Aids</span></a>
+
+                            </li>
+                        </ul>
+                        <ul class="mobile-sub-nav-list">
+                            <li class="mobile-sub-nav-list__item">
+                                <a class="top-link" href="#">Acdamic Calander</a>
+                            </li>
+                            <li class="mobile-sub-nav-list__item">
+                                <a class="top-link" href="#">Contact Us</a>
+                            </li>
+                            <li class="mobile-sub-nav-list__item">
+                                <a class="top-link" href="#">Peshwar Campus</a>
+                            </li>
+                            <li class="mobile-sub-nav-list__item">
+                                <a class="top-link" href="#">Peshwar Campus</a>
+                            </li>
+                            <li class="mobile-sub-nav-list__item">
+                                <a class="top-link" href="#">Campus Mail</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+<!-- End Navbar -->
+
+
+
+
+
+<br><br><br><br><br><br><br><br>
+{% block body %}
+{% endblock %}
+
+<br><br><br><br><br><br><br><br>
+
+
+
+</body>
+</html>

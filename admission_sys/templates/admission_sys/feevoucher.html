@@ -1,0 +1,234 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<style>
+#prt{
+
+	 position:absolute;
+	 left: 90%;
+	  top:50px;
+	  width:150px;
+
+}
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+</style>
+<head>
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+    {% load static %}
+<link rel="shortcut icon"  href="{% static 'admission_sys/img/abasyn.ico' %}" type="image/x-icon"/>
+</head>
+<body>
+
+
+<center><img src="{% static 'admission_sys/img/bank.png' %}" width="100%" height="80" ></img></center>
+
+
+
+
+<center>
+
+<table width="100%">
+<tbody>
+<tr>
+<td colspan="7" width="25%"><strong>Note:</strong> <span style="text-decoration: underline;">Fee Can be deposited in any HBL Branch without any Extra charges.</span></td>
+<td colspan="6" width="25%"><strong>Note:</strong> <span style="text-decoration: underline;">Fee Can be deposited in any HBL Branch without any Extra charges.</span></td>
+<td colspan="6" width="25%"><strong>Note:</strong> <span style="text-decoration: underline;">Fee Can be deposited in any HBL Branch without any Extra charges.</span></td>
+</tr>
+<tr>
+<td>Form No.:</td>
+<td colspan="2">{{ personal.signup_id }}<b></b>
+</td>
+<td colspan="2">Issue Date:</td>
+<td colspan="2">{{ date.date }}<b></b></td>
+<td>Form No.:</td>
+<td colspan="2">{{ personal.signup_id }}<b></b>
+</td>
+<td>Issue Date:</td>
+<td colspan="2">{{ date.date }}<b></b></td>
+<td>Form No.:</td>
+<td colspan="2">{{ personal.signup_id }}<b></b>
+</td>
+<td>Issue Date:</td>
+<td colspan="2">{{ date.date }}<b></b></td>
+</tr>
+<tr>
+<td>Program:</td>
+<td colspan="2">{{ program.programone }}<b></b></td>
+<td colspan="2">Due Date:</td>
+<td colspan="2">
+<b>02-08-2018</b>
+</td>
+<td>Program:</td>
+<td colspan="2">{{ program.programone }}<b></b></td>
+<td>Due Date:</td>
+<td colspan="2"><b>02-08-2018</b>
+</td>
+<td>Program:</td>
+<td colspan="2">{{ program.programone }}<b></b></td>
+<td>Due Date:</td>
+<td colspan="2"><b>02-08-2018</b>
+</td>
+
+
+</tr>
+<tr>
+<td>Semester:</td>
+<td colspan="2"><b>Fall 2018</b></td>
+<td colspan="2">Session:</td>
+<td colspan="2"><b>Fall 2018</b></td>
+<td>Semester:</td>
+<td colspan="2"><b>Fall 2018</b></td>
+<td>Session:</td>
+<td colspan="2"><b>Fall 2018</b></td>
+<td>Semester:</td>
+<td colspan="2"><b>Fall 2018</b></td>
+<td>Session:</td>
+<td colspan="2"><b>Fall 2018</b></td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;" colspan="7" width="600"><strong>Form No. Should be quoted against Credit.</strong></td>
+<td style="text-align: center;" colspan="6" width="600"><strong>Form No. Should be quoted against Credit.</strong></td>
+<td style="text-align: center;" colspan="6" width="600"><strong>Form No. Should be quoted against Credit.</strong></td>
+</tr>
+
+<tr>
+<td colspan="5">Abasyn University Fee Collection A/C</td>
+<td colspan="2" rowspan="2" width="600"><strong>Habib Bank Ltd.</strong>
+<strong> I-9 Branch Islamabad</strong><br>
+<strong> A/C NO. 02967900504403</strong></td>
+<td colspan="4">Abasyn University Fee Collection A/C</td>
+<td colspan="2" rowspan="2" width="600"><strong>Habib Bank Ltd.</strong>
+<strong> I-9 Branch Islamabad</strong><br>
+<strong> A/C NO. 02967900504403</strong></td>
+<td colspan="4">Abasyn University Fee Collection A/C</td>
+<td colspan="2" rowspan="2" width="600"><strong>Habib Bank Ltd.</strong>
+<strong> I-9 Branch Islamabad</strong><br>
+<strong> A/C NO. 02967900504403</strong></td>
+</tr>
+<tr>
+<td colspan="5">Received with thanks from</td>
+<td colspan="4">Received with thanks from</td>
+</tr>
+<tr>
+<td><b>Mr./Miss.</b></td>
+<td colspan="6">
+<b></b>
+</td>
+<td colspan="2"><b>Mr./Miss.</b></td>
+<td colspan="4"><b></b></td>
+<td colspan="2"><b>Mr./Miss.</b></td>
+<td colspan="4"><b></b></td>
+</tr>
+<tr>
+<td>Total Cr. Hrs:</td>
+<td colspan="3">0</td>
+<td colspan="2">Total Courses:</td>
+<td>0</td>
+<td colspan="2">Total Cr. Hrs:</td>
+<td>0</td>
+<td colspan="2">Total Courses:</td>
+<td>0</td>
+<td colspan="2">Total Cr. Hrs:</td>
+<td>0</td>
+<td colspan="2">Total Courses:</td>
+<td>0</td>
+</tr>
+<tr>
+<td colspan="5">Admission Fee</td>
+<td colspan="2">0</td>
+<td colspan="4">Admission Fee</td>
+<td colspan="2">0</td>
+<td colspan="4">Admission Fee</td>
+<td colspan="2">0</td>
+</tr>
+<tr>
+<td colspan="5">Prospectus Fee</td>
+<td colspan="2">1,000/-</td>
+<td colspan="4">Prospectus Fee</td>
+<td colspan="2">1,000/-</td>
+<td colspan="4">Prospectus Fee</td>
+<td colspan="2">1,000/-</td>
+</tr>
+<tr>
+<td colspan="5">Transcript Fee</td>
+<td colspan="2">0</td>
+<td colspan="4">Transcript Fee</td>
+<td colspan="2">0</td>
+<td colspan="4">Transcript Fee</td>
+<td colspan="2">0</td>
+</tr>
+<tr>
+<td colspan="5">Tuition Fee</td>
+<td colspan="2">0</td>
+<td colspan="4">Tuition Fee</td>
+<td colspan="2">0</td>
+<td colspan="4">Tuition Fee</td>
+<td colspan="2">0</td>
+</tr>
+<tr>
+<td colspan="5">Remote area Examination Fee</td>
+<td colspan="2">0</td>
+<td colspan="4">Remote area Examination Fee</td>
+<td colspan="2">0</td>
+<td colspan="4">Remote area Examination Fee</td>
+<td colspan="2">0</td>
+</tr>
+<tr>
+<td colspan="5">DVD Charges</td>
+<td colspan="2">0</td>
+<td colspan="4">DVD Charges</td>
+<td colspan="2">0</td>
+<td colspan="4">DVD Charges</td>
+<td colspan="2">0</td>
+</tr>
+<tr>
+<td colspan="5">Discount/Scholarship</td>
+<td colspan="2">0</td>
+<td colspan="4">Discount/Scholarship</td>
+<td colspan="2">0</td>
+<td colspan="4">Discount/Scholarship</td>
+<td colspan="2">0</td>
+</tr>
+<tr>
+<td colspan="5">Arrears</td>
+<td colspan="2">0</td>
+<td colspan="4">Arrears</td>
+<td colspan="2">0</td>
+<td colspan="4">Arrears</td>
+<td colspan="2">0</td>
+</tr>
+<tr>
+<td colspan="5">Total amount Payable</td>
+<td colspan="2">1,000/-</td>
+<td colspan="4">Total amount Payable</td>
+<td colspan="2">1,000/-</td>
+<td colspan="4">Total amount Payable</td>
+<td colspan="2">1,000/-</td>
+</tr>
+
+
+</tbody>
+</table>
+
+<br>
+
+
+
+</center>
+
+</body>
+</html>

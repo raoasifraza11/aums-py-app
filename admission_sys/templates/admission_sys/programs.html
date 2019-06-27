@@ -1,0 +1,19 @@
+{% extends 'admission_sys/admin_base.html' %}
+{% block admin %}
+    <h2 >Select programs</h2>
+<p >Click the checkbox to Select programs to be offered and uncheck the programs which are not offered.</p>
+
+<a href=" {% url 'add_programs' %}"><button style="float: right">Add Programs</button></a>
+<form method="post">
+{% csrf_token %}
+    <h3>Programs</h3>
+{% for program in Programsb %}
+    <input type="checkbox" checked name="programs" value="{{ program.short_name }}">{{ program.short_name }}-{{ program.name }}<br>
+
+{% endfor %}
+
+
+<br>
+<input type="submit">
+</form>
+{% endblock %}

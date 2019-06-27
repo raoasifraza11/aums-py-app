@@ -1,0 +1,51 @@
+{% extends 'admission_sys/base.html' %}
+{% block body %}
+    <head>
+    {% load static %}
+   <link type="text/css" href="{% static 'admission_sys/css/style3.css' %}" rel="stylesheet">
+</head>
+    <style>
+    table {
+  border-collapse: collapse;
+
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 15px;
+    width: 200px;
+    height: 15px;
+}
+
+</style>
+    <div  >
+<div style="width:500px; margin:0 auto; box-shadow: 5px 10px #888888;">
+    <h2 >Signup</h2>
+ <form method="post" class="form-inline" >
+    {% csrf_token %}
+    <table>
+     {% for field in form %}
+
+      <tr>
+
+        <td>{{ field.label_tag }}</td>
+        <td>{{ field }}</td>
+      </tr>
+
+    {% endfor %}
+    </table>
+        <button class="btn" style="margin-left: 318px" type="submit">Signup</button>
+  </form>
+<br>
+<p>Have an account?<a href="{% url 'login' %}"> Login</a></p>
+<br>
+</div>
+    </div>
+{% endblock %}

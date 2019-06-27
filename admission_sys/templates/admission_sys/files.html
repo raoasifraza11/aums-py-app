@@ -1,0 +1,9 @@
+{% extends 'admission_sys/admin_base.html' %}
+{% block admin %}
+    {% load static %}
+<h1>Files</h1>
+    {% for f in files %}
+    <a href="{% static 'admission_sys/challan_forms/' %}{{f  }}">{{ f }}</a><br>
+
+    {% endfor %}
+{% endblock %}

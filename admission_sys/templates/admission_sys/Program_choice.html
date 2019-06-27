@@ -1,0 +1,226 @@
+{% extends 'admission_sys/base.html' %}
+{% block body %}
+<head>
+    {% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+        <style>
+
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 300px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 150px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 180px; /* Same as the width of the sidebar */
+  margin-right: 0px;
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+table {
+  border-collapse: collapse;
+
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.selectWrapper{
+  border-radius:20px;
+  display:inline-block;
+  overflow:hidden;
+  background:#cccccc;
+  border:1px solid #cccccc;
+}
+.selectBox{
+  width:200px;
+  height:40px;
+  border:0px;
+  outline:none;
+}
+
+    input{
+        border-radius:4px;
+        border:1px solid #AAAAAA;
+        height: 37px;
+
+    }
+    .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+    .button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+<head>
+    {% load static %}
+   <link type="text/css" href="{% static 'admission_sys/css/style3.css' %}" rel="stylesheet">
+</head>
+    <div  class="sidenav">
+
+        {% if status.program %}
+            <a style="background-color: #4CAF50; color: white;" ><p>Program choice &#10004;</p></a><hr>
+        {% else %}
+            <a style="background-color: #4CAF50; color: white;" >Program choice &#10008;</a><hr>
+        {% endif %}
+        {% if status.personalstatus %}
+            <a href="{% url 'application' %}"><p>Personal information &#10004;</p></a><hr>
+        {% else %}
+             <a href="{% url 'application' %}">Personal information &#10008;</a><hr>
+        {% endif %}
+        {% if status.address %}
+            <a  href="{% url 'address' %}"><p>Address details &#10004;</p></a><hr>
+        {% else %}
+            <a  href="{% url 'address' %}">Address details &#10008;</a><hr>
+        {% endif %}
+        {% if status.metric and status.fsc %}
+            <a href="{% url 'education' %}" ><p>Educational details &#10004;</p></a><hr>
+        {% else %}
+            <a href="{% url 'education' %}" >Educational details &#10008;</a><hr>
+        {% endif %}
+        {% if status.othdetil %}
+            <a  href="{% url 'others' %}"><p>Other details &#10004;</p> </a><hr>
+        {% else %}
+            <a  href="{% url 'others' %}">Other details &#10008;</a><hr>
+        {% endif %}
+   <a  ><p>Downloads &#10144;</p></a><hr>
+   </div>
+    <div >
+<div style="width:630px; margin:0 auto;">
+    <h2 >Choose Programs</h2><hr>
+ <form method="post" >
+    {% csrf_token %}
+     {% if signup.program == 'Undergraduate' or signup.program == 'BS' %}
+         <div class="selectWrapper">
+         &nbsp;&nbsp;Program choice 1:
+         <select name="Program_choice_11" class="selectBox">
+         {% for p in form %}
+             <option value="{{ p.name }}">{{ p.name }}</option>
+
+         {% endfor %}
+         <option value="{{ one }}" selected>{{ one }}</option>
+         </select>
+         </div>
+         <br><br>
+        <div class="selectWrapper">
+         &nbsp;&nbsp;Program choice 2:
+         <select name="Program_choice_21" class="selectBox">
+         {% for p in form %}
+             <option value="{{ p.name }}">{{ p.name }}</option>
+         {% endfor %}
+         <option value="{{ two }}" selected>{{ two }}</option>
+         </select>
+        </div>
+         <br><br>
+         <div class="selectWrapper">
+         &nbsp;&nbsp;Program choice 3:
+         <select name="Program_choice_31" class="selectBox">
+         {% for p in form %}
+             <option value="{{ p.name }}">{{ p.name }}</option>
+
+         {% endfor %}
+         <option value="{{ three }}" selected>{{ three }}</option>
+         </select>
+         </div>
+         <br><br>
+     {% else %}
+         <div class="selectWrapper">
+             &nbsp;&nbsp;Program choice 1:
+         <select name="Program_choice_1" class="selectBox">
+         {% for p in formm %}
+             <option value="{{ p.name }}">{{ p.name }}</option>
+         {% endfor %}
+         <option value="{{ one }}" selected>{{ one }}</option>
+         </select>
+         </div><br><br>
+         <div class="selectWrapper">
+         &nbsp;&nbsp;Program choice 2:
+         <select name="Program_choice_2" class="selectBox">
+         {% for p in formm %}
+             <option value="{{ p.name }}">{{ p.name }}</option>
+         {% endfor %}
+            <option value="{{ two}}" selected>{{ two }}</option>
+         </select>
+         </div><br><br>
+         <div class="selectWrapper">
+         &nbsp;&nbsp;Program choice 3:
+         <select name="Program_choice_3" class="selectBox">
+         {% for p in formm %}
+             <option value="{{ p.name }}">{{ p.name }}</option>
+         {% endfor %}
+         <option value="{{ three }}" selected>{{ three }}</option>
+         </select>
+         </div>
+       <div>{{ form.Program_choice_1.label }}<br>{{ form.Program_choice_1 }}</div>
+    <div>{{ form.Program_choice_2.label }}<br>{{ form.Program_choice_2 }}</div>
+     <div>{{ form.Program_choice_3.label }}<br>{{ form.Program_choice_3 }}</div>
+
+     {% endif %}
+
+    <button class="btn" type="submit">Save</button>
+  </form>
+<br>
+
+
+</div>
+    </div>
+{% endblock  %}

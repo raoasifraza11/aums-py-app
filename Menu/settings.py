@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'slider',
     'alumni',
     'Ansec',
+    'admission_sys',
+
 ]
 
 MIDDLEWARE = [
@@ -101,18 +103,24 @@ WSGI_APPLICATION = 'Menu.wsgi.application'
     }
 }'''
 
+
 DATABASES = {
-    'default': {
+
+
+    'default' : {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db3',
+        'NAME': 'admission',
         'USER': 'root',
-        'PASSWORD': 'K1HR2fcdWuW8',
+        'PASSWORD': '03445324401ahmad',
         'HOST': 'localhost',
         'PORT': '3306',
+        'OPTIONS':{
+
+            "init_command":"SET foreign_key_checks = 0;",
+        }
     }
+
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 

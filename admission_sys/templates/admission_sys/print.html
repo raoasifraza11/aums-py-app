@@ -1,0 +1,780 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Admission Form</title>
+<style>
+body
+{
+    background-color: white;
+
+}
+.container {
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+}
+t
+header #branding {
+  float: left;
+}
+
+header #branding h1 {
+  margin: 0;
+}
+
+header .highlight, header .current a {
+  color: #2E8B57;
+  font-weight: bold;
+}
+
+header .high {
+  color: #2E8B57;
+  font-weight: bold;
+  font-size: 30px;
+  float: center;
+  margin-top: -110px;
+  margin-left: 200px;
+}
+
+header nav {
+  float: left;
+}
+
+header .hi {
+  color: #2E8B57;
+  font-size: 50px;
+  margin-left: 10px;
+}
+
+
+
+.uzi {
+  color: #000000;
+  font-size: 20px;
+  float: center;
+}
+
+.uz {
+  margin-right: 100px;
+  margin-left: 500px;
+}
+
+.add {
+  background-color: #2E8B57;
+  border-radius: 10px;
+  font-size: 25px;
+  color: #ffffff;
+  text-align: center;
+  margin: 10px auto;
+  margin-top: 40px;
+  width: 380px;
+  height: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.addd {
+  background-color: #2E8B57;
+  border-radius: 20px;
+  font-size: 25px;
+  color: #ffffff;
+  text-align: center;
+  margin: 20px auto;
+  margin-top: 10px;
+  width: 350px;
+  height: 50px;
+}
+
+
+
+.fort {
+  margin-right:400px;
+margin-left: 600px;
+
+font-size: 20px;
+      border: 2px;
+
+      width: 300px;
+      height:40px;
+margin-top: 20px;
+
+}
+.imgt {
+
+
+  margin-left: 1170px;
+
+  margin-top: -340px;
+  width: 300px;
+  height: 280px;
+  border: 1px solid;
+  border-top: 1px;
+  border-right: 1px;
+  border-left: 1px;
+
+}
+
+.fort1
+{
+
+
+margin-left: 690px;
+margin-right: -630px;
+border: 1px solid;
+border-top: 0px;
+border-right: 0px;
+border-left: 0px;
+margin-top: -70px;
+
+   height:35px;
+}
+.um
+{
+  margin-left: 990px;
+  margin-right: 460px;
+  border: 1px solid;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  margin-top: -35px;
+
+}
+.un
+{
+  margin-left: 1380px;
+  margin-right: 90px;
+  border: 1px solid;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  margin-top: -60px;
+
+}
+.yt
+{
+    margin-left: 1330px;
+    margin-right: 700px;
+    border: 1px solid;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    margin-top: -23px;
+
+
+}
+.zz
+{
+  margin-left: 220px;
+margin-top: -35px;
+  margin-right: 90px;
+  border: 1px solid;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+
+
+}
+.zp
+{
+  margin-left: 290px;
+
+  margin-right: 10px;
+  border: 1px solid;
+  border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+  margin-top: -55px;
+}
+  input[type=text]
+   {
+    width: 5.00122%;
+    background-color: #99cc00;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: solid;
+    background: #ffffff;
+    font-size: 25px;
+  }
+  .box{
+  font-size: 25px;
+
+
+
+  }
+  .box1
+  {
+  font-size: 25px;
+  }
+.zpp
+{
+
+    margin-left: 230px;
+
+    margin-right: 810px;
+    border: 1px solid;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    margin-top: -9px;
+
+
+
+
+  border-right: 0px;
+  border-left: 0px;
+  margin-top: -28px;
+  background-color: white;
+}
+
+
+
+
+
+.zoo
+{
+  margin-left: 300px;
+
+  margin-right: 10px;
+  border: 1px solid;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  margin-top: -55px;
+
+}
+.zo
+{
+  margin-left: 270px;
+
+  margin-right: 10px;
+  border: 1px solid;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  margin-top: -55px;
+
+}
+input[type=text] {
+  width: 5.00122%;
+  background-color: #99cc00;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: solid;
+  background: #ffffff;
+  font-size: 25px;
+}
+.box{
+font-size: 25px;
+
+
+
+}
+.box1{
+font-size: 25px;
+}
+.zpp
+{
+
+  margin-left: 250px;
+
+  margin-right: 880px;
+  border: 1px solid;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  margin-top: -30px;
+
+
+}
+.zztt
+{
+margin-left: 670px;
+
+margin-right: 720px;
+
+margin-top: -20px;
+
+}
+
+.zt
+{
+  margin-left: 265px;
+
+  margin-right: 10px;
+  border: 1px solid;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  margin-top: -55px;
+
+}
+.male {
+  font-size: 25px;
+  margin-top: 60px;
+}
+
+input[type=checkbox] {
+  transform: scale(2);
+  -ms-transform: scale(2);
+  -webkit-transform: scale(2);
+  padding: 10px;
+  width: 60px;
+  /*Desired width*/
+  height: 20px;
+  /*Desired height*/
+}
+
+.ur {
+  font-size: 25px;
+  margin-right: 350px;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+.di {
+  text-align: center;
+  margin-right: 10px;
+  margin-left: -600px;
+  margin-top: 50px;
+  height:50px;
+}
+
+.tp {
+  font-size: 25px;
+  margin-right: 2px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+table,
+th,
+td {
+  border-width: 20px
+}
+tr{
+    border: 1px solid black;
+}
+table {
+  font-size: 30px;
+  content: 10px;
+  color: #ffffff;
+    border: 1px solid black;
+}
+
+.tabl {
+  background-color: #2E8B57;
+    border: 1px solid black;
+  text-align: center;
+  width: 100px;
+  height: 80px;
+}
+
+.t {
+  color: black;
+  font-size: 25px;
+  border: 20px;
+  background-color:white;
+  border: 3px solid black;
+    text-align: center;
+}
+
+.te {
+  background-color: #99cc00;
+  font-size: 25px;
+  margin-right: 350px;
+  margin-left: 10px;
+  margin-top: 100px;
+}
+
+.page {
+  height: 200px;
+  margin-left: 200px;
+}
+
+.tex1 {
+  height: 100px;
+  margin-left: 10px;
+}
+
+.tex2 {
+  margin-left: 955px;
+  margin-right: 30px;
+  margin-top: -38px;
+}
+.tex3 {
+  margin-left: 955px;
+  margin-right: 30px;
+  border: 2px;
+  border-left: 2px;
+  background-color: #99cc00;
+  margin-top: -38px;
+}
+.ottt
+{
+  margin-left: 250px;
+
+  margin-right: 10px;
+  border: 1px solid;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  margin-top: -40px;
+  font-size: 20px;
+
+}
+
+  .big-div
+  {
+    margin-left: 10px;
+    margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+    border: 0px solid;
+    display:block;
+
+
+
+  }
+  .zztt
+  {
+    margin-left: 670px;
+
+    margin-right: 600px;
+
+    margin-top: -20px;
+
+  }
+  .zooo
+  {
+    margin-left: 305px;
+
+    margin-right: 780px;
+    border: 1px solid;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    margin-top: -55px;
+
+  }
+  .cnic
+  {
+    margin-left: 670px;
+  margin-top: -70px;
+    margin-right: -610px;
+height: 60px;
+text-align: 25px;
+  }
+  .short-divt
+  {
+    margin-left: 750px;
+  margin-top: -60px;
+    margin-right: 10px;
+    border: 1px solid;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+
+  }
+  .zg
+  {
+
+      margin-left: 775px;
+
+      margin-right: 900px;
+
+      margin-top: -40px;
+
+
+  }
+  .zn
+  {
+    margin-left: 920px;
+
+    margin-right: 10px;
+    border: 1px solid;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    margin-top: -55px;
+
+  }
+  .ottu
+  {
+    margin-left: 40px;
+    display:run-in;
+    margin-right: 1170px;
+    border: 1px solid;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    margin-top: -40px;
+    font-size: 20px;
+
+  }
+  </style>
+</head>
+
+<body>
+  <div class="big-div">
+
+
+  <div >
+		<header>
+		  <div class="container">
+			<div id="branding">
+			  <h1><span class="hi">ABASYN<br>University</h1>
+			</div>
+			<nav>
+			  <ul>
+				<h3 class="high">ABASYN UNIVERSITY ISLAMABAD CAMPUS<br><span class="uzi">Park Road,Chak Shehzad,Islamabad,Tel:051-8438320-1:<br>
+					Email: admission@abasynisb.edu.pk, Web: www.abasynisb.edu.pk:</span></h3>
+
+			  </ul>
+
+			</nav>
+		  </div>
+
+		</header>
+		<div class="fort">
+		<p class="fort">  Form No:</p> <div class="fort1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ submit.id }}</div>
+		</div>
+		<div class="add" style="border: 1px solid black">
+		  <h2 style="color: black">ADMISSION FORM</h2>
+
+		</div>
+
+		<div class="ur">
+		  <div class="di">
+			Admission Semester <div class="um">{{ adm.session }}</div>
+			<p class="yt">Year<div class="un">{{ adm.year }}</div><p>
+		  </div>
+		  <p><em>NOTE:</em>To be filled by the application himself/herself.</p>
+			Application's Name:<div class="zz"> &nbsp;&nbsp;&nbsp;&nbsp;{{ personal.uname}}</div>
+            <p>Application's CNIC No:
+            {% for c in c1 %}
+			<input style="width: 53px" type="text" name="" value={{ c }}  >
+            {% endfor %}
+                  <input style="width: 53px" type="text" name="" value="-" >
+            {% for c in c2 %}
+			<input style="width: 53px" type="text" name="" value={{ c }}  >
+            {% endfor %}
+            <input style="width: 53px" type="text" name="" value="-" >
+            {% for c in c3 %}
+			<input style="width: 53px" type="text" name="" value={{ c }}  >
+            {% endfor %}
+    </p>
+
+{% load static %}
+
+			<div class="imgt">
+
+			  <img width="300px" height="280px" src="{% static 'admission_sys'%}{{ personal.photo }}" alt="">
+
+			</div>
+
+		</div>
+
+		<div class="tp">
+
+		  <p class="male">Application's Gender :
+              {% if personal.gender == "Male" or personal.gender == "1"%}
+
+                 Male <input type="checkbox" name="male" value="Male" checked>Female <input type="checkbox" name="Female" value="Female">
+              {% else %}
+                 Male <input type="checkbox" name="male" value="Male" >Female <input type="checkbox" name="Female" value="Female" checked>
+
+              {% endif %}
+
+
+         Date of Birth:<div class="cnic">
+            {% for c in c4 %}
+            <input type="text" name="" value={{ c }}>
+            {% endfor %}
+            <input type="text" name="" value="-" >
+            {% for c in c5 %}
+            <input type="text" name="" value={{ c }}>
+            {% endfor %}
+            <input type="text" name="" value="-" >
+            {% for c in c6 %}
+            <input type="text" name="" value={{ c }}>
+            {% endfor %}
+		  </div></p>
+
+      <p>Father's/Guardian Name: <div class="zt">&nbsp;&nbsp;&nbsp;&nbsp;{{ personal.fname }}</div></p>
+      <p>Postal Address(Permanent):<div class="zp">&nbsp;&nbsp;&nbsp;&nbsp;{{ address.address }}</div></p>
+      <p>Postal Address(Current):<div class="zo">&nbsp;&nbsp;&nbsp;&nbsp;{{ address.addresstwo }}</div></p>
+      Application's Contact# <div class="zpp">&nbsp;&nbsp;&nbsp;&nbsp;0{{ personal.mobcode }}-{{ personal.mobnumber }}</div>
+      <p class="zztt">E-mail: <div class="short-divt">&nbsp;&nbsp;&nbsp;&nbsp;{{ email }}</div></p>
+      <p>Father's/Guardian Contact# :<div class="zoo">&nbsp;&nbsp;&nbsp;&nbsp;{{ address.fathermob }}</div></p>
+      <p>In case Emergency, Contact<div class="zooo">&nbsp;&nbsp;&nbsp;&nbsp;{{ address.fathermob }}</div></p>
+      <p class="zg">Relationship:<div class="zn">&nbsp;&nbsp;&nbsp;&nbsp;</div></p>
+      <div class="">
+        <table>
+          <tr class="tabl">
+            <th width="30" style="color: black;font-size: 30px">S.No</th>
+            <th width="200" style="color: black;font-size: 30px">Qualification</th>
+            <th width="400" style="color: black;font-size: 30px">Board/University</th>
+            <th width="100" style="color: black;font-size: 30px">Year</th>
+            <th width="100" style="color: black;font-size: 30px">Obtained<br>Marks/CGPA</th>
+            <th width="200" style="color: black;font-size: 30px">Percent</th>
+            <th width="300" style="color: black;font-size: 30px">Major Subject</th>
+
+          </tr>
+          <tr>
+            <td height="80px" class="tabl">1</td>
+            <td class="t">SSC/O-level</td>
+            <td class="t">{{ educationm.board }}</td>
+            <td class="t">{{ educationm.yearpass }}</td>
+            <td class="t">{{ educationm.obtainmark }}</td>
+            <td class="t">{{ educationm.percent }}</td>
+            <td class="t">{{ educationm.subject }}</td>
+          </tr>
+          <tr>
+            <td class="tabl">2</td>
+            <td class="t">FA/FSC/A-level</td>
+            <td class="t">{{ educationf.fsebod }}</td>
+            <td class="t">{{ educationf.fseyr }}</td>
+            <td class="t">{{ educationf.fseobno }}</td>
+            <td class="t">{{ educationf.percent }}</td>
+            <td class="t">{{ educationf.fsesub }}</td>
+          </tr>
+          <tr>
+            <td class="tabl">3</td>
+            <td class="t">Bachelors</td>
+            <td class="t">{{ educationb.bseuni }}</td>
+            <td class="t">{{ educationb.bseyr }}</td>
+            <td class="t">{{ educationb.bseobt }}</td>
+            <td class="t">NA</td>
+            <td class="t">{{ educationb.bsesub }}</td>
+          </tr>
+          <tr>
+            <td class="tabl">4</td>
+            <td class="t">Masters</td>
+            <td class="t">{{ educationms.msnui }}</td>
+            <td class="t">{{ educationms.msyr }}</td>
+            <td class="t">{{ educationms.msobcgpa }}</td>
+            <td class="t">NA</td>
+            <td class="t">{{ educationms.mssub }}</td>
+          </tr>
+          <tr>
+            <td class="tabl">5</td>
+            <td class="t">MS/M-phil</td>
+            <td class="t"></td>
+            <td class="t"></td>
+            <td class="t"></td>
+            <td class="t"></td>
+            <td class="t"></td>
+          </tr>
+          <tr>
+            <td class="tabl">6</td>
+            <td class="t">Other(if any)</td>
+            <td class="t"></td>
+            <td class="t"></td>
+            <td class="t"></td>
+            <td class="t"></td>
+            <td class="t"></td>
+          </tr>
+        </table>
+        <div class="addd">
+          <h2 style="color: black;" >Undertaking</h2>
+
+        </div>
+        <nav class="page">
+
+            <p>1. All of the above information in this form is correct to the best of my knowledge. I will be fully<br>&nbsp;&nbsp;&nbsp;&nbsp;responsible for any invalid information provided.</p>
+            <p>2. I fully understand and agree that any fee deposit by me will not be refundable or adjustable </p>
+
+</nav>
+
+      </div>
+    </div>
+
+  </div>
+
+  <table style="width:100%;border: 1px black ">
+
+      <tr>
+          <th style="text-align: center;color: black;font-size: 30px">Program Choice 1</th>
+          <th style="text-align: center;color: black;font-size: 30px">Program Choice 2</th>
+          <th style="text-align: center;color: black;font-size: 30px">Program Choice 3</th>
+      </tr>
+      <tr style="height: 80px">
+          <td class="t">{{ program.programone }}</td>
+          <td class="t">{{ program.programtwo }}</td>
+          <td class="t">{{ program.programthree }}</td>
+      </tr>
+  </table>
+  <br><br><br><br><br><br>
+<div class="tex1">
+  <p><strong>Date</strong><div class="ottu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ date }}</div></p>
+  <div class="tex2">
+    <p><strong>Signature of Applicant/Guardian</strong><div class="ottt"><p style="color: black">:</p></div></p>
+  </div>
+</div>
+
+  </div>
+<br><br><br><br>
+</body>
+<h2>Matric Result</h2>
+<br>
+<img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.mresult  }}">
+
+
+{% if result.fresult != "no file" and result.fresult != "" %}
+<br><br>
+<h2>Intermediat Result</h2>
+<br>
+<img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.fresult  }}">
+{% endif %}
+
+
+{% if result.bscresult != "no file" and  result.bscresult != ""  %}
+    <h2>BSc result</h2>
+    <img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.bscresult  }}">
+{% endif %}
+
+
+{% if result.bsresult != "no file" and result.bsresult != ""  %}
+<h2>BS result</h2>
+    <img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.bsresult  }}">
+{% endif %}
+
+
+{% if result.msresult != "no file" and result.msresult != ""  %}
+ <h2>MS Result</h2>
+    <img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.msresult  }}">
+{% endif %}
+
+
+{% if result.e_certificate != "no file" and  result.e_certificate != "" %}
+<h2>Equivalance certificate O-levels</h2>
+    <img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.e_certificate  }}">
+{% endif %}
+
+
+{% if result.e_certificate_a != "no file" and result.e_certificate_a != ""  %}
+<h2>Equivalance certificate A-levels</h2>
+    <img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.e_certificate_a  }}">
+{% endif %}
+
+
+{% if result.hope_certificate != "no file" and result.hope_certificate != ""  %}
+<h2>Hope certificate</h2>
+    <img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.hope_certificate  }}">
+{% endif %}
+
+
+<script type="text/javascript">
+window.onload = function () { window.print(); }
+</script>
+</html>
