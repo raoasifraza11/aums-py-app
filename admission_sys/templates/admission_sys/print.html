@@ -578,7 +578,7 @@ text-align: 25px;
 
 			<div class="imgt">
 
-			  <img width="300px" height="280px" src="{% static 'admission_sys'%}{{ personal.photo }}" alt="">
+			  <img width="300px" height="280px" src="{% static 'adsys'%}{{ personal.photo }}" alt="">
 
 			</div>
 
@@ -727,50 +727,50 @@ text-align: 25px;
 </body>
 <h2>Matric Result</h2>
 <br>
-<img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.mresult  }}">
+<img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.mresult  }}">
 
 
 {% if result.fresult != "no file" and result.fresult != "" %}
 <br><br>
 <h2>Intermediat Result</h2>
 <br>
-<img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.fresult  }}">
+<img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.fresult  }}">
 {% endif %}
 
 
 {% if result.bscresult != "no file" and  result.bscresult != ""  %}
     <h2>BSc result</h2>
-    <img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.bscresult  }}">
+    <img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.bscresult  }}">
 {% endif %}
 
 
 {% if result.bsresult != "no file" and result.bsresult != ""  %}
 <h2>BS result</h2>
-    <img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.bsresult  }}">
+    <img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.bsresult  }}">
 {% endif %}
 
 
 {% if result.msresult != "no file" and result.msresult != ""  %}
  <h2>MS Result</h2>
-    <img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.msresult  }}">
+    <img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.msresult  }}">
 {% endif %}
 
 
 {% if result.e_certificate != "no file" and  result.e_certificate != "" %}
 <h2>Equivalance certificate O-levels</h2>
-    <img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.e_certificate  }}">
+    <img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.e_certificate  }}">
 {% endif %}
 
 
 {% if result.e_certificate_a != "no file" and result.e_certificate_a != ""  %}
 <h2>Equivalance certificate A-levels</h2>
-    <img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.e_certificate_a  }}">
+    <img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.e_certificate_a  }}">
 {% endif %}
 
 
 {% if result.hope_certificate != "no file" and result.hope_certificate != ""  %}
 <h2>Hope certificate</h2>
-    <img style="height: 100%;width: 100%;" src="{% static 'admission_sys'%}{{result.hope_certificate  }}">
+    <img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.hope_certificate  }}">
 {% endif %}
 
 

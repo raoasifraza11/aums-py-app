@@ -221,23 +221,23 @@ function printContent(el){
     {% load static %}
       <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
    <title>Abasyn University Online Admission Form</title>
-	<link rel="shortcut icon"  href="{% static 'admission_sys/img/abasyn.ico' %}" type="image/x-icon"/>
+	<link rel="shortcut icon"  href="{% static 'adsys/img/abasyn.ico' %}" type="image/x-icon"/>
 
-    <link href="{% static 'admission_sys/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'adsys/css/bootstrap.min.css' %}" rel="stylesheet">
 
 
-  <script src="{% static 'admission_sys/js/jquery-1.8.3.js' %}"></script>
+  <script src="{% static 'adsys/js/jquery-1.8.3.js' %}"></script>
   </head>
   <body>
    <div class="preload">
-    	<img src="{% static 'admission_sys/img/loading_spinner.gif' %}" />
+    	<img src="{% static 'adsys/img/loading_spinner.gif' %}" />
     </div>
 	<div class="content">
 
 	<div id="div1A"  class="col-md-7" style="border:0.5px solid gray;" >
 
 
-	<img src="{% static 'admission_sys/img/logon.png' %}" id="logoA" title="Abasyn Admission System">
+	<img src="{% static 'adsys/img/logon.png' %}" id="logoA" title="Abasyn Admission System">
 
 
 	<font id="logo1A" size="5" style="font-weight:bold">ADMIT CARD SLIP</font>
@@ -250,7 +250,7 @@ function printContent(el){
 
 		<hr >
 
-		<img  id="profA" style="width: 145px; height: 170px;"src="{% static 'admission_sys'%}{{ personal.photo }} " >
+		<img  id="profA" style="width: 145px; height: 170px;"src="{% static 'adsys'%}{{ personal.photo }} " >
 
 
 
@@ -289,7 +289,7 @@ function printContent(el){
 
 
 
-<img src="{% static 'admission_sys/img/logon.png' %}" id="logo2A" title="Abasyn Admission System">
+<img src="{% static 'adsys/img/logon.png' %}" id="logo2A" title="Abasyn Admission System">
 
 
 	<font id="logo12A" size="5" style="font-weight:bold">ADMIT CARD SLIP</font>
@@ -303,7 +303,7 @@ function printContent(el){
 
 		<hr >
 
-		<img  id="profA" style="width: 145px; height: 170px;"src="{% static 'admission_sys'%}{{ personal.photo }} " >
+		<img  id="profA" style="width: 145px; height: 170px;"src="{% static 'adsys'%}{{ personal.photo }} " >
 
 
 
@@ -358,7 +358,7 @@ function printContent(el){
 
 	</div>
 
-<a><img id="prt" src="{% static 'admission_sys/img/print.png' %}" onClick="printContent('div1')" title="Print Copy"></a>
+<a><img id="prt" src="{% static 'adsys/img/print.png' %}" onClick="printContent('div1')" title="Print Copy"></a>
 
 	 <!--
 
@@ -386,7 +386,7 @@ function myFunction() {
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{% static 'admission_sys/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'adsys/js/bootstrap.min.js' %}"></script>
 
   </body>
 </html>
