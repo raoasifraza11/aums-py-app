@@ -29,7 +29,7 @@ from django.contrib.auth import logout
 def logout_view(request):
     logout(request)
     #redirect('login')
-    return HttpResponseRedirect('/login/')
+    return HttpResponseRedirect('/Apply_Online/')
 
 
 def login_user(request):
