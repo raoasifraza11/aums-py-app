@@ -23,6 +23,14 @@ from bs4 import BeautifulSoup as soup
 import re
 import mechanize
 
+from django.contrib.auth import logout
+
+
+def logout_view(request):
+    logout(request)
+    #redirect('login')
+    return HttpResponseRedirect('/Apply_Online/')
+
 
 def login_user(request):
 
