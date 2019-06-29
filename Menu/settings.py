@@ -24,7 +24,8 @@ SECRET_KEY = 'w%uk$3#+33fc@ei%qbkboxn@pgylx-e_z60t=3z!_ok(!(vz)_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_AGE = 10 * 60
 ALLOWED_HOSTS = [
 'www.abasynisb.edu.pk',
 'abasynisb.edu.pk',
