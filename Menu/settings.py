@@ -162,4 +162,5 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT  = os.path.join(BASE_DIR,"static_cdn")
+CHALLAN_FORM  = os.path.join(BASE_DIR,"challan_forms")
 MEDIA_ROOT  = os.path.join(BASE_DIR,"media-root")
