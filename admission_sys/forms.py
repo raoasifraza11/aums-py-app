@@ -69,7 +69,7 @@ class personalform(forms.Form):
     Citizen  = forms.ChoiceField(choices=Countries,required=True,widget=forms.Select(attrs={'class': 'form-control'}))
     Domicile = forms.ChoiceField(choices=(('PUNJAB','PUNJAB'),('SINDH','SINDH'),('BALOCHISTAN','BALOCHISTAB'),
                                   ('KPK','KPK'),('GILGIT BALTISTAN','GILGIT BALTISTAN'),('FATA','FATA')
-                                  ,('AJK','AJK'),),required=True,widget=forms.Select(attrs={'class': 'form-control'}))
+                                  ,('AJK','AJK'),('FEDRAL','FEDRAL'),),required=True,widget=forms.Select(attrs={'class': 'form-control'}))
     CNIC = forms.RegexField( max_length=5,regex = r'^\+?[1-9]\d{1,14}$',
         error_messages = {'required': 'CNIC number required'},
         widget = forms.TextInput(attrs={'class': 'form-control','size':'5'}),required=True)
