@@ -28,7 +28,7 @@ from django.contrib.auth import logout
 
 def logout_view(request):
     logout(request)
-    redirect('login')
+    #redirect('login')
 
 
 def login_user(request):
