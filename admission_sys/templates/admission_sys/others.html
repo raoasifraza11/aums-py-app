@@ -116,7 +116,7 @@
    </div>
     <div style="width:630px; margin:0 auto;">
     <h2>Other details</h2><hr>
- <form method="post" action="{% url 'downloads' %}">
+ <form method="post" >
                     {% csrf_token %}
                     <input type="checkbox" name="transport" >Transport</input><br>
                     <input type="checkbox" name="hostle" >Hostle</input><br>
@@ -152,19 +152,14 @@
     Update Address details to Submit application.
 </div>
 {% endif %}
-{% if   status.othdetil == Null %}
-<div class="isa_info">
-    <i class="fa fa-info-circle"></i>
-    Update Other details(Transport/Hostle) to Submit application.
-</div>
-{% endif %}
+
 {% if   status.program == Null %}
 <div class="isa_info">
     <i class="fa fa-info-circle"></i>
     Select program to Submit application.
 </div>
 {% endif %}
-{% if status.personalstatus != Null and status.othdetil != Null and status.program != Null and status.address != Null and status.fsc != Null and status.metric != Null %}
+{% if status.personalstatus != Null  and status.program != Null and status.address != Null and status.fsc != Null and status.metric != Null %}
     <button class="btn" type="submit">Save</button>
                 </form>
 {% endif %}<br>
