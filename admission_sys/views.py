@@ -1186,7 +1186,7 @@ def messages(request):
             pe = get_object_or_404(Personal,signup_id = su.signup_id)
             mobile_code = pe.mobcode
             mobile_number = pe.mobnumber
-            path = 'static/admission_sys/challan_forms'
+            path = 'static/adsys/challan_forms'
 
 
             sms_url = "http://www.paigam.pk/UserSendSingleSMS.aspx"
@@ -1196,7 +1196,7 @@ def messages(request):
             br.select_form(predicate=select_form)
             br.form['ctl00$MainPlaceHolder$MobileTextBox'] = "0"+str(mobile_code)+str(mobile_number)
             br.form['ctl00$MainPlaceHolder$MessageTextBox'] = "Mr. " + pe.uname + " your Fee Chalan Link is" \
-                                                                                   "http://127.0.0.1:8000/"+path+"/logo1.png"
+                                                                                   "http://www.abasynisb.edu.pk/"+path+"/logo1.png"
             br.submit()
 
 
