@@ -24,7 +24,7 @@ import re
 import mechanize
 
 from django.contrib.auth import logout
-from Menu.settings import CHALLAN_FORM
+
 
 def logout_view(request):
     logout(request)
@@ -517,16 +517,16 @@ def nts(request):
                       {'form1': Matric, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts,'signup':sig,'status':sta})
 
 
-
 @login_required
 def others(request):
     sta = get_object_or_404(Status, signup=request.user.signup)
     per = get_object_or_404(Personal,signup=request.user.signup)
     pro = get_object_or_404(Programs,signup=request.user.signup)
+
     try:
         oth = Otherdeatils.objects.get(signup_id=request.user.signup.signup_id)
         if request.method == 'POST':
-            return render(request, 'admission_sys/others.html', {'status': sta})
+            return render(request, 'admission_sys/download.html', {'status': sta})
     except:
         if request.method == 'POST':
             if request.POST.get('transport'):
@@ -559,46 +559,7 @@ def others(request):
                 stat.save()
                 tra.save()
 
-            #my_url = "http://www.paigam.pk/"
 
-            #uClient = uReq(my_url)
-            #page_html = uClient.read()
-            #uClient.close()
-
-            #page_soup = soup(page_html, "html.parser")
-
-            #container = page_soup.find("li", {"id": "LoginButtonID"})
-
-            #link = re.sub("\.\.", "", container.find('a')['href'])
-            #my_url2 = "http://www.paigam.pk" + link
-
-            #uClient = uReq(my_url2)
-            #page_html2 = uClient.read()
-            #uClient.close()
-
-            #br = mechanize.Browser()
-
-            #br.open(my_url2)
-            #response = br.response()
-
-            #def select_form(form):
-             #   return form.attrs.get('id', None) == 'form1'
-
-           # br.select_form(predicate=select_form)
-            #br.form['ctl00$MainPlaceHolder$UserNameTextBox'] = 'AUIC'
-            #br.form['ctl00$MainPlaceHolder$PasswordTextBox'] = 'Abasyn@123'
-            #br.submit()
-
-            #sms_url = "http://www.paigam.pk/UserSendSingleSMS.aspx"
-
-            #br.open(sms_url)
-
-            #br.select_form(predicate=select_form)
-            #br.form['ctl00$MainPlaceHolder$MobileTextBox'] = "03085151383"
-            #br.form['ctl00$MainPlaceHolder$MessageTextBox'] = "Mr. "+per.uname+" your Admission form " \
-             #                                                                  "for admission in "+pro.programone+" has " \
-              #                                                                  "been submitted sucessfully"
-            #br.submit()
 
             det = Details()
             det.signup = request.user.signup
@@ -614,10 +575,52 @@ def others(request):
             sub.signup = request.user.signup
             sub.conform = 'true'
             sub.save()
+            subm = get_object_or_404(Submit, signup_id=request.user.signup.signup_id)
+
+            my_url = "http://www.paigam.pk/"
+
+            uClient = uReq(my_url)
+            page_html = uClient.read()
+            uClient.close()
+
+            page_soup = soup(page_html, "html.parser")
+
+            container = page_soup.find("li", {"id": "LoginButtonID"})
+
+            link = re.sub("\.\.", "", container.find('a')['href'])
+            my_url2 = "http://www.paigam.pk" + link
+
+            uClient = uReq(my_url2)
+            page_html2 = uClient.read()
+            uClient.close()
+
+            br = mechanize.Browser()
+
+            br.open(my_url2)
+            response = br.response()
+
+            def select_form(form):
+                return form.attrs.get('id', None) == 'form1'
+
+            br.select_form(predicate=select_form)
+            br.form['ctl00$MainPlaceHolder$UserNameTextBox'] = 'AUIC'
+            br.form['ctl00$MainPlaceHolder$PasswordTextBox'] = 'Abasyn@123'
+            br.submit()
+
+            sms_url = "http://www.paigam.pk/UserSendSingleSMS.aspx"
+
+            br.open(sms_url)
+
+            br.select_form(predicate=select_form)
+            br.form['ctl00$MainPlaceHolder$MobileTextBox'] = '0' + str(per.mobcode) + str(per.mobnumber)
+            br.form['ctl00$MainPlaceHolder$MessageTextBox'] = per.uname + ", your admission form " \
+                                                                          +str(subm.id)+" in " + pro.programone + " has " \
+                                                                                                                 "been submitted sucessfully"
+            br.submit()
             status = get_object_or_404(Status,signup=request.user.signup)
             status.submit = '1'
             status.save()
-            return render(request, 'admission_sys/others.html', {'status': sta})
+            return render(request, 'admission_sys/download.html', {'status': sta})
 
 
 
@@ -1196,7 +1199,7 @@ def messages(request):
             pe = get_object_or_404(Personal,signup_id = su.signup_id)
             mobile_code = pe.mobcode
             mobile_number = pe.mobnumber
-            path = CHALLAN_FORM
+            path = 'static/adsys/challan_forms'
 
 
             sms_url = "http://www.paigam.pk/UserSendSingleSMS.aspx"
@@ -1213,7 +1216,7 @@ def messages(request):
 
         return render(request, 'admission_sys/messages.html', {'sent':1})
     else:
-        path = CHALLAN_FORM
+        path = 'static/adsys/challan_forms'
         allfiles = listdir(path)
         sub = Submit.objects.all()
         ids = sub.values_list('signup_id',flat=True)
@@ -1232,7 +1235,7 @@ def messages(request):
     return render(request,'admission_sys/messages.html',{'forms':allfiles,'submit':x})
 
 def handle_uploaded_file(f):
-    with open(CHALLAN_FORM + '/' +f.name, 'wb+') as destination:
+    with open('static/adsys/challan_forms/'+f.name, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
 
@@ -1241,9 +1244,8 @@ import shutil
 
 def upload(request):
 
-
     if 'delete' in request.POST:
-        path = CHALLAN_FORM
+        path = 'static/adsys/challan_forms'
         allfiles = listdir(path)
         for f in allfiles:
             os.remove(path+'/'+f)
@@ -1261,6 +1263,6 @@ def upload(request):
 
 
 def files(request):
-    path = CHALLAN_FORM
+    path = 'static/adsys/challan_forms'
     allfiles = listdir(path)
     return render(request,'admission_sys/files.html',{'files':allfiles,'flag':0})
