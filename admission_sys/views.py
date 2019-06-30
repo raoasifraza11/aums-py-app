@@ -56,7 +56,8 @@ def signup(request):
 
     if request.method=='POST':
         form = SignUpForm(request.POST)
-        return HttpResponse("hello form post"+ request.POST.get('Program'))
+        return HttpResponse("hello form post"+ request.POST.get('Program')+ request.POST.get('First_name')+ request.POST.get('Last_name')+ request.POST.get('email')
+		+ request.POST.get('password1'))
         if form.is_valid():
             user=form.save()
             user.refresh_from_db()
