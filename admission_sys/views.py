@@ -74,22 +74,8 @@ def signup(request):
             user = authenticate(username=username,password=raw_password)
             login(request,user)
             return redirect('program')
-
-        user=form.save()
-        user.refresh_from_db()
-        user.signup.program=form.cleaned_data.get('Program')
-        user.signup.firstname=form.cleaned_data.get('First_name')
-        user.signup.last_name = form.cleaned_data.get('Last_name')
-        user.signup.email = form.cleaned_data.get('email')
-        user.signup.password = form.cleaned_data.get('password1')
-        user.signup.university = 'Islamabad'
-        user.signup.save()
-        username = form.cleaned_data.get('username')
-        raw_password = form.cleaned_data.get('password1')
-        user = authenticate(username=username,password=raw_password)
-        login(request,user)
-        return redirect('program')
->>>>>>> 7cc836945344cf1fddb888e594ba6062358a9219
+        else:
+            return HttpResponse(form.errors)
     else:
         # Req this Attempt
         #return HttpResponse("hello form get")
