@@ -58,21 +58,21 @@ def signup(request):
         form = SignUpForm(request.POST)
         #return HttpResponse("hello form post"+ request.POST.get('Program')+ request.POST.get('First_name')+ request.POST.get('Last_name')+ request.POST.get('email')
 		#+ request.POST.get('password1'))
-        #if form.is_valid():
-		user=form.save()
-		user.refresh_from_db()
-		user.signup.program=form.cleaned_data.get('Program')
-		user.signup.firstname=form.cleaned_data.get('First_name')
-		user.signup.last_name = form.cleaned_data.get('Last_name')
-		user.signup.email = form.cleaned_data.get('email')
-		user.signup.password = form.cleaned_data.get('password1')
-		user.signup.university = 'Islamabad'
-		user.signup.save()
-		username = form.cleaned_data.get('username')
-		raw_password = form.cleaned_data.get('password1')
-		user = authenticate(username=username,password=raw_password)
-		login(request,user)
-		return redirect('program')
+        if form.is_valid():
+            user=form.save()
+            user.refresh_from_db()
+            user.signup.program=form.cleaned_data.get('Program')
+            user.signup.firstname=form.cleaned_data.get('First_name')
+            user.signup.last_name = form.cleaned_data.get('Last_name')
+            user.signup.email = form.cleaned_data.get('email')
+            user.signup.password = form.cleaned_data.get('password1')
+            user.signup.university = 'Islamabad'
+            user.signup.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username,password=raw_password)
+            login(request,user)
+            return redirect('program')
     else:
         # Req this Attempt
         #return HttpResponse("hello form get")
