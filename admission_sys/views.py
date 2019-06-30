@@ -24,7 +24,7 @@ import re
 import mechanize
 
 from django.contrib.auth import logout
-from Menu.settings import CHALLAN_FORM
+
 
 def logout_view(request):
     logout(request)
@@ -1197,7 +1197,7 @@ def messages(request):
             pe = get_object_or_404(Personal,signup_id = su.signup_id)
             mobile_code = pe.mobcode
             mobile_number = pe.mobnumber
-            path = CHALLAN_FORM
+            path = 'static/adsys/challan_forms'
 
 
             sms_url = "http://www.paigam.pk/UserSendSingleSMS.aspx"
@@ -1214,7 +1214,7 @@ def messages(request):
 
         return render(request, 'admission_sys/messages.html', {'sent':1})
     else:
-        path = CHALLAN_FORM
+        path = 'static/adsys/challan_forms'
         allfiles = listdir(path)
         sub = Submit.objects.all()
         ids = sub.values_list('signup_id',flat=True)
@@ -1233,7 +1233,7 @@ def messages(request):
     return render(request,'admission_sys/messages.html',{'forms':allfiles,'submit':x})
 
 def handle_uploaded_file(f):
-    with open(CHALLAN_FORM + '/' +f.name, 'wb+') as destination:
+    with open('static/adsys/challan_forms/'+f.name, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
 
@@ -1242,9 +1242,8 @@ import shutil
 
 def upload(request):
 
-
     if 'delete' in request.POST:
-        path = CHALLAN_FORM
+        path = 'static/adsys/challan_forms'
         allfiles = listdir(path)
         for f in allfiles:
             os.remove(path+'/'+f)
@@ -1262,6 +1261,6 @@ def upload(request):
 
 
 def files(request):
-    path = CHALLAN_FORM
+    path = 'static/adsys/challan_forms'
     allfiles = listdir(path)
     return render(request,'admission_sys/files.html',{'files':allfiles,'flag':0})
