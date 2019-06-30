@@ -56,9 +56,6 @@ def signup(request):
 
     if request.method=='POST':
         form = SignUpForm(request.POST)
-
-        #return HttpResponse("hello form post"+ request.POST.get('Program')+ request.POST.get('First_name')+ request.POST.get('Last_name')+ request.POST.get('email')
-		#+ request.POST.get('password1'))
         if form.is_valid():
             user=form.save()
             user.refresh_from_db()
@@ -74,11 +71,7 @@ def signup(request):
             user = authenticate(username=username,password=raw_password)
             login(request,user)
             return redirect('program')
-        else:
-            return HttpResponse(form.errors)
     else:
-        # Req this Attempt
-        #return HttpResponse("hello form get")
         form = SignUpForm()
     return render(request, 'admission_sys/signup.html', {'form':form})
 
