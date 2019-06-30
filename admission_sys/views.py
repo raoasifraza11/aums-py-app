@@ -57,6 +57,7 @@ def signup(request):
     if request.method=='POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
+            return HttpResponse("hello form post")
             user=form.save()
             user.refresh_from_db()
             user.signup.program=form.cleaned_data.get('Program')
@@ -72,6 +73,7 @@ def signup(request):
             login(request,user)
             return redirect('program')
     else:
+        return HttpResponse("hello form get")
         form = SignUpForm()
     return render(request, 'admission_sys/signup.html', {'form':form})
 
