@@ -32,11 +32,14 @@ input {
     {% csrf_token %}
     <table>
      {% for field in form %}
-
-        <td>{{ field.label_tag }}</td> <td>{{ field }}</td><td>{{ field.errors }}</td>
-        
-    
-    {% endfor %}
+<tr>
+        <td>{{ field.label_tag }}</td> 
+    </tr>    <tr>
+    <td>{{ field }}</td></tr>
+	<tr>
+	<td>{{ field.errors }}</td>
+    </tr>
+	{% endfor %}
     </table>
         <button class="btn" style="margin-left: 318px" type="submit">Signup</button>
   </form>
