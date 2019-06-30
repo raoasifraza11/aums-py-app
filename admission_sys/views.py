@@ -73,6 +73,7 @@ def signup(request):
             login(request,user)
             return redirect('program')
     else:
+        # Req this Attempt
         return HttpResponse("hello form get")
         form = SignUpForm()
     return render(request, 'admission_sys/signup.html', {'form':form})
