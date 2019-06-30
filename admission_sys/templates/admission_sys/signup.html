@@ -33,11 +33,9 @@ input {
     <table>
      {% for field in form %}
 
-      <div class="fieldWrapper">
-        {{ field.errors }}
-        {{ field.label_tag }} {{ field }}
-    </div>
-
+        <td>{{ field.label_tag }}</td> <td>{{ field }}</td><td>{{ field.errors }}</td>
+        
+    
     {% endfor %}
     </table>
         <button class="btn" style="margin-left: 318px" type="submit">Signup</button>
