@@ -723,8 +723,10 @@ def fee(request):
     user = request.user
     personal = Personal.objects.get(signup=request.user.signup)
     prog = Programs.objects.get(signup=request.user.signup)
+    adm = Admissions.objects.get(id = 7)
+    sub = Submit.objects.get(signup=request.user.signup)
 
-    return render(request,'admission_sys/feevoucher.html',{'user':user,'personal':personal,'program':prog,'date':datetime.datetime.now()})
+    return render(request,'admission_sys/feevoucher.html',{'user':user,'submit':sub,'personal':personal,'program':prog,'date':datetime.datetime.now(),'adm':adm})
 
 def card(request):
     sub = Submit.objects.get(signup=request.user.signup)
