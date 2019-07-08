@@ -303,7 +303,15 @@ def fsc(request):
     if request.method == 'POST':
         if fsc.is_valid and request.POST.get('Degree2'):
             try:
-                b = EducationFsc.objects.get(signup=request.user.signup)
+                fa = EducationFsc.objects.get(signup=request.user.signup)
+                ff = Fsc_form(
+                    initial={'Degree2': fa.fsedeg, 'Year_of_passing2': fa.fseyr, 'Board2': fa.fsebod,
+                             'Subject2': fa.fsesub, 'Total_marks2': fa.fsetono,
+                             'Obtained_marks2': fa.fseobno, 'Percentage2': fa.percent})
+                return render(request, 'admission_sys/nts.html',
+                              {'form1': Matric, 'form2': ff, 'form3': BSC, 'form4': Mas, 'form5': Nts, 'signup': sig,
+                               'status': sta})
+
             except:
                 fsc = EducationFsc()
                 stat = get_object_or_404(Status, signup=request.user.signup)
@@ -359,6 +367,10 @@ def fsc(request):
                 stat.fsc = '1'
                 stat.save()
                 fsc.save()
+                return render(request, 'admission_sys/nts.html',
+                              {'form1': Matric, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts, 'signup': sig,
+                               'status': sta})
+
     else:
         try:
             fa = EducationFsc.objects.get(signup=request.user.signup)
@@ -376,6 +388,7 @@ def fsc(request):
     return render(request, 'admission_sys/fsc.html',
                   {'form1': Matric, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts, 'signup': sig,
                    'status': sta})
+
 
 
 @login_required
@@ -490,6 +503,9 @@ def nts(request):
         if Nts.is_valid and request.POST.get('roll_num'):
             try:
                 e = Ntstest.objects.get(signup=request.user.signup)
+                return render(request, 'admission_sys/others.html',
+                              {'form1': Matric, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts, 'signup': sig,
+                               'status': sta})
             except:
                 nts = Ntstest()
                 stat = get_object_or_404(Status, signup=request.user.signup)
@@ -511,8 +527,12 @@ def nts(request):
                 stat.nts = '1'
                 stat.save()
                 nts.save()
+                return render(request, 'admission_sys/others.html',
+                              {'form1': Matric, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts, 'signup': sig,
+                               'status': sta})
     return render(request,'admission_sys/nts.html',
                       {'form1': Matric, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts,'signup':sig,'status':sta})
+
 
 
 @login_required
@@ -640,13 +660,19 @@ def program(request):
             pro.signup = request.user.signup
 
             if(sig.program=='Undergraduate' or sig.program=='BS'):
-                pro.programone = request.POST.get('Program_choice_11')
-                pro.programtwo = request.POST.get('Program_choice_21')
-                pro.programthree = request.POST.get('Program_choice_31')
+                one = get_object_or_404(Offered_programs,name = request.POST.get('Program_choice_11'))
+                pro.programone = one.short_name
+                two = get_object_or_404(Offered_programs, name=request.POST.get('Program_choice_21'))
+                pro.programtwo = two.short_name
+                three = get_object_or_404(Offered_programs, name=request.POST.get('Program_choice_31'))
+                pro.programthree = three.short_name
             else:
-                pro.programone = request.POST.get('Program_choice_1')
-                pro.programtwo = request.POST.get('Program_choice_2')
-                pro.programthree = request.POST.get('Program_choice_3')
+                onee = get_object_or_404(Offered_programs, name=request.POST.get('Program_choice_1'))
+                pro.programone = onee.short_name
+                twoo= get_object_or_404(Offered_programs, name=request.POST.get('Program_choice_2'))
+                pro.programtwo = twoo.short_name
+                threee = get_object_or_404(Offered_programs, name=request.POST.get('Program_choice_3'))
+                pro.programthree = threee.short_name
 
             stat.program = '1'
             stat.save()
@@ -671,6 +697,8 @@ def program(request):
     programb = Offered_programs.objects.filter(status = 1 ).filter(code=1)
     programm = Offered_programs.objects.filter(status=1).filter(code=2)
     return render(request,'admission_sys/Program_choice.html',{'form':programb,'formm':programm,'signup':sig})
+
+
 
 
 
@@ -899,6 +927,7 @@ def hssc(request,id):
     return render(request,'admission_sys/hssc.html',{'card':result})
 
 def admin_downloads(request):
+
     if not request.user.is_staff:
         return redirect('application')
     dform = downloadform()
@@ -908,7 +937,7 @@ def admin_downloads(request):
 
         writer = csv.writer(response)
         writer.writerow(['ID', 'Form_number', 'Name','Mobile number', 'Program','City', 'Matric obtained marks',
-                         'Matric total marks','Matric %','Fsc total marks','Fsc obtained marks','Fsc %','14year total marks',
+                         'Matric total marks','Matric %','Fsc obtained marks','Fsc total marks','Fsc %','14year total marks',
                         '14year obtained marks','14year %','BS total marks/gpa','BS obtained marks.gpa',
                          'BS %','Date'
                          ])
@@ -954,7 +983,7 @@ def admin_downloads(request):
                 num = x.mobnumber
                 g = ("0"+cod+'-'+num)
                 id += 1
-                feilds_list = [[id,y.id,x.uname,g,p.programone,a.city,m.totalmark,m.obtainmark,m.percent,f.fsetono,f.fseobno,f.percent,
+                feilds_list = [[id,y.id,x.uname,g,p.programone,a.city,m.totalmark,m.obtainmark,m.percent,f.fseobno,f.fsetono,f.percent,
                                 tt,oo,pp,mm,cc,pp2,d.date]]
                 writer.writerows(feilds_list)
 
@@ -967,6 +996,8 @@ def admin_downloads(request):
 
 
 def admissions(request):
+    if not request.user.is_staff:
+        return redirect('application')
     adm = admissionsform()
     admit = admitform()
     admis = get_object_or_404(Admissions,id=7)
@@ -1002,6 +1033,8 @@ def admissions(request):
 
 
 def programs(request):
+    if not request.user.is_staff:
+        return redirect('application')
     progb = Offered_programs.objects.all
     if request.method == 'POST':
         prog_zero = Offered_programs.objects.all()
@@ -1018,12 +1051,16 @@ def programs(request):
 
 
 def admission_opened(request):
+    if not request.user.is_staff:
+        return redirect('application')
     session = get_object_or_404(Admissions,id = 7)
     programs = Offered_programs.objects.filter(status = "1")
     admit = get_object_or_404(Admitcard,id=124)
     return render(request,'admission_sys/admission_opened.html',{'session':session,'programs':programs,'admit':admit})
 
 def add_programs(request):
+    if not request.user.is_staff:
+        return redirect('application')
     if request.method == 'POST':
         prog = Offered_programs()
         prog.status = 0
@@ -1163,6 +1200,8 @@ def print_all(request,id):
 
 from os import listdir
 def messages(request):
+    if not request.user.is_staff:
+        return redirect('application')
     if request.method == 'POST':
         recomended = request.POST.getlist('checks')
         my_url = "http://www.paigam.pk/"
@@ -1243,7 +1282,8 @@ from .forms import chaform
 import shutil
 
 def upload(request):
-
+    if not request.user.is_staff:
+        return redirect('application')
     if 'delete' in request.POST:
         path = 'static/adsys/challan_forms'
         allfiles = listdir(path)

@@ -25,6 +25,7 @@ class SignUpForm(UserCreationForm):
     Program = forms.ChoiceField(choices=(('Gradudate','Graduate'),('Undergraduate','Undergraduate')),required=True,widget=forms.Select(attrs={'class': 'form-control'}))
     First_name = forms.CharField(max_length=50,required=True )
     Last_name = forms.CharField(max_length=50,required=True)
+	email = forms.CharField(max_length=75, required=True)
     class Meta:
         model = User
         fields = ('username','First_name','Last_name', 'password1', 'password2', 'email','Program'  )
@@ -198,12 +199,12 @@ class Fsc_form(forms.Form):
 ('Aga Khan Board', 'Aga Khan Board'),
 ('Ziauddin Board', 'Ziauddin Board')), required=True,widget=forms.Select(attrs={'class': 'form-control'}))
     Subject2 = forms.CharField(max_length=50, required=True,widget=forms.TextInput(attrs={'class': 'form-control'}))
-    Total_marks2 = forms.RegexField(max_length=4, regex=r'^\+?[1-9]\d{1,14}$',
+    Total_marks2 = forms.RegexField(required=True,max_length=4, regex=r'^\+?[1-9]\d{1,14}$',
                              error_messages={'required': 'Marks are required'},
-                             widget=forms.TextInput(attrs={'class': 'form-control','style':"width:90px"}),initial=" ")
-    Obtained_marks2 = forms.RegexField(max_length=4, regex=r'^\+?[1-9]\d{1,14}$',
+                             widget=forms.TextInput(attrs={'class': 'form-control','style':"width:90px"}))
+    Obtained_marks2 = forms.RegexField(required=True,max_length=4, regex=r'^\+?[1-9]\d{1,14}$',
                              error_messages={'required': 'Marks are required'},
-                             widget=forms.TextInput(attrs={'class': 'form-control','style':"width:90px"}),initial=" ")
+                             widget=forms.TextInput(attrs={'class': 'form-control','style':"width:90px"}))
 
 class Matic_form(forms.Form):
     def __init__(self, *args, **kwargs):
