@@ -25,7 +25,6 @@ class SignUpForm(UserCreationForm):
     Program = forms.ChoiceField(choices=(('Gradudate','Graduate'),('Undergraduate','Undergraduate')),required=True,widget=forms.Select(attrs={'class': 'form-control'}))
     First_name = forms.CharField(max_length=50,required=True )
     Last_name = forms.CharField(max_length=50,required=True)
-	email = forms.CharField(max_length=75, required=True)
     class Meta:
         model = User
         fields = ('username','First_name','Last_name', 'password1', 'password2', 'email','Program'  )
