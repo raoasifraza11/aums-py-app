@@ -1186,6 +1186,7 @@ def print_all(request,id):
     c6 = str(personal.year)
     adm = Admissions.objects.get(id=7)
     det = get_object_or_404(Details,signup_id = id)
+	adt = Admitcard.objects.get(id=124)
 
 
     return render(request,'admission_sys/print2.html', { 'personal': personal, 'program': prog,
@@ -1195,7 +1196,7 @@ def print_all(request,id):
                                                                     'submit':sub,'user':user,'adm':adm,
                                                                     'c1': c1, 'c2': c2, 'c3': c3,
                                                                     'c4': c4, 'c5': c5, 'c6': c6,'date':det.date,
-                                                                    'email':email
+                                                                    'email':email,'card':adt
                                                                     })
 
 from os import listdir
