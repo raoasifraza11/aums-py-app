@@ -429,8 +429,9 @@ table {
   border-right: 0px;
   border-left: 0px;
   margin-top: -40px;
-  font-size: 20px;
+  font-size: 25px;
 
+  font-family: Courier New;
 }
 
   .big-div
@@ -578,7 +579,7 @@ text-align: 25px;
 
 			<div class="imgt">
 
-			  <img width="300px" height="280px" src="{% static 'adsys'%}{{ personal.photo }}" alt="">
+			  <img width="300px" height="280px" src="{{ personal.photo }}" alt="">
 
 			</div>
 
@@ -718,7 +719,7 @@ text-align: 25px;
 <div class="tex1">
   <p><strong>Date</strong><div class="ottu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ date }}</div></p>
   <div class="tex2">
-    <p><strong>Signature of Applicant/Guardian</strong><div class="ottt"><p style="color: black">:</p></div></p>
+    <p><strong>Signature of Applicant/Guardian</strong><div class="ottt"><p style="color: black">:{{ personal.uname }}</p></div></p>
   </div>
 </div>
 
@@ -727,50 +728,50 @@ text-align: 25px;
 </body>
 <h2>Matric Result</h2>
 <br>
-<img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.mresult  }}">
+<img style="height: 100%;width: 100%;" src="{{result.mresult  }}">
 
 
 {% if result.fresult != "no file" and result.fresult != "" %}
 <br><br>
 <h2>Intermediat Result</h2>
 <br>
-<img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.fresult  }}">
+<img style="height: 100%;width: 100%;" src="{{result.fresult  }}">
 {% endif %}
 
 
 {% if result.bscresult != "no file" and  result.bscresult != ""  %}
     <h2>BSc result</h2>
-    <img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.bscresult  }}">
+    <img style="height: 100%;width: 100%;" src="{{result.bscresult  }}">
 {% endif %}
 
 
 {% if result.bsresult != "no file" and result.bsresult != ""  %}
 <h2>BS result</h2>
-    <img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.bsresult  }}">
+    <img style="height: 100%;width: 100%;" src="{{result.bsresult  }}">
 {% endif %}
 
 
 {% if result.msresult != "no file" and result.msresult != ""  %}
  <h2>MS Result</h2>
-    <img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.msresult  }}">
+    <img style="height: 100%;width: 100%;" src="{{result.msresult  }}">
 {% endif %}
 
 
 {% if result.e_certificate != "no file" and  result.e_certificate != "" %}
 <h2>Equivalance certificate O-levels</h2>
-    <img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.e_certificate  }}">
+    <img style="height: 100%;width: 100%;" src="{{result.e_certificate  }}">
 {% endif %}
 
 
 {% if result.e_certificate_a != "no file" and result.e_certificate_a != ""  %}
 <h2>Equivalance certificate A-levels</h2>
-    <img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.e_certificate_a  }}">
+    <img style="height: 100%;width: 100%;" src="{{result.e_certificate_a  }}">
 {% endif %}
 
 
 {% if result.hope_certificate != "no file" and result.hope_certificate != ""  %}
 <h2>Hope certificate</h2>
-    <img style="height: 100%;width: 100%;" src="{% static 'adsys'%}{{result.hope_certificate  }}">
+    <img style="height: 100%;width: 100%;" src="{{result.hope_certificate  }}">
 {% endif %}
 
 
