@@ -3,7 +3,10 @@
     {% load static %}
 <h1>Files</h1>
     {% for f in files %}
-    <a href="{% static 'adsys/challan_forms/' %}{{f  }}">{{ f }}</a><br>
-
+    <a href="/media_root/downloads/challan_forms/{{f  }}">{{ f }}</a><br>
+    {% endfor %}
+    <p>list</p>
+    {% for f in files2 %}
+    {{ f }}
     {% endfor %}
 {% endblock %}

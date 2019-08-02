@@ -1,12 +1,13 @@
-from django.shortcuts import render,redirect,render_to_response
-from .forms import loginform,SignUpForm,personalform,program_choice_form,address_detail_form,Matic_form,M_form,Fsc_form,B_form,Nts_form,admin_signup_form,downloadform,admissionsform,admitform
-from django.http import HttpResponse,HttpResponseRedirect
+from django.shortcuts import render, redirect, render_to_response
+from .forms import loginform, SignUpForm, personalform, program_choice_form, address_detail_form, Matic_form, M_form, \
+    Fsc_form, B_form, Nts_form, admin_signup_form, downloadform, admissionsform, admitform
+from django.http import HttpResponse, HttpResponseRedirect
 from django.core.files.storage import FileSystemStorage
-#from admission_system.settings import MEDIA_URL,MEDIA_ROOT
-import os,shutil
+# from admission_system.settings import MEDIA_URL,MEDIA_ROOT
+import os, shutil
 from django.contrib.auth import login, authenticate
-from .models import Signup,Personal,Address,EducationBsc,EducationMatric,EducationFsc,EducationMs,EducationPhd,Ntstest,Otherdeatils,Resultcard,Programs,Details,Status,Submit,Admissions,Offered_programs,Admitcard
-
+from .models import Signup, Personal, Address, EducationBsc, EducationMatric, EducationFsc, EducationMs, EducationPhd, \
+    Ntstest, Otherdeatils, Resultcard, Programs, Details, Status, Submit, Admissions, Offered_programs, Admitcard
 
 from datetime import datetime
 from django.contrib.auth.forms import UserCreationForm
@@ -28,39 +29,38 @@ from django.contrib.auth import logout
 
 def logout_view(request):
     logout(request)
-    #redirect('login')
+    # redirect('login')
     return HttpResponseRedirect('/Apply_Online/')
 
 
 def login_user(request):
-
-    if request.method=='POST':
+    if request.method == 'POST':
         username = request.POST.get('username')
         raw_password = request.POST.get('password')
-        user = authenticate(username = username,password=raw_password)
+        user = authenticate(username=username, password=raw_password)
         if user is not None and user.is_active:
             if user.is_staff:
                 login(request, user)
                 return redirect('admin')
             else:
-                login(request,user)
+                login(request, user)
                 return redirect('program')
         else:
             form = loginform()
-            return render(request, 'admission_sys/log.html', {'form': form,'invalid':1})
+            return render(request, 'admission_sys/log.html', {'form': form, 'invalid': 1})
     else:
         form = loginform()
     return render(request, 'admission_sys/log.html', {'form': form})
 
-def signup(request):
 
-    if request.method=='POST':
+def signup(request):
+    if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
-            user=form.save()
+            user = form.save()
             user.refresh_from_db()
-            user.signup.program=form.cleaned_data.get('Program')
-            user.signup.firstname=form.cleaned_data.get('First_name')
+            user.signup.program = form.cleaned_data.get('Program')
+            user.signup.firstname = form.cleaned_data.get('First_name')
             user.signup.last_name = form.cleaned_data.get('Last_name')
             user.signup.email = form.cleaned_data.get('email')
             user.signup.password = form.cleaned_data.get('password1')
@@ -68,21 +68,23 @@ def signup(request):
             user.signup.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username,password=raw_password)
-            login(request,user)
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
             return redirect('program')
     else:
         form = SignUpForm()
-    return render(request, 'admission_sys/signup.html', {'form':form})
+    return render(request, 'admission_sys/signup.html', {'form': form})
+
 
 @login_required
 def application(request):
     try:
         per = Personal.objects.get(signup=request.user.signup)
-        form = personalform(initial={'Fullname': per.uname,'Father_name':per.fname,'Month':per.month,
-                                 'Date':per.day,'Year':per.year,'Gender':per.gender,'Citizen':per.citizen,
-                                 'Domicile':per.domicile,'CNIC':per.cnici,'CNICI':per.cnicii,'CNICII':per.cniciii,
-                                 'Mobilecode':per.mobcode,'Mobile':per.mobnumber,})
+        form = personalform(initial={'Fullname': per.uname, 'Father_name': per.fname, 'Month': per.month,
+                                     'Date': per.day, 'Year': per.year, 'Gender': per.gender, 'Citizen': per.citizen,
+                                     'Domicile': per.domicile, 'CNIC': per.cnici, 'CNICI': per.cnicii,
+                                     'CNICII': per.cniciii,
+                                     'Mobilecode': per.mobcode, 'Mobile': per.mobnumber, })
         if request.method == 'POST':
             per.uname = request.POST.get('Fullname')
             per.fname = request.POST.get('Father_name')
@@ -101,17 +103,17 @@ def application(request):
             next = request.POST.get('next', '/Apply_Online/address')
             return HttpResponseRedirect(next)
         else:
-            sta = get_object_or_404(Status,signup=request.user.signup)
-            return render(request, 'admission_sys/application.html', {'form': form,'status':sta})
+            sta = get_object_or_404(Status, signup=request.user.signup)
+            return render(request, 'admission_sys/application.html', {'form': form, 'status': sta})
 
 
     except:
-        if request.method=='POST':
-            pe=Personal()
-            stat = get_object_or_404(Status,signup=request.user.signup)
-            pe.signup=request.user.signup
-            pe.uname=request.POST.get('Fullname')
-            pe.fname=request.POST.get('Father_name')
+        if request.method == 'POST':
+            pe = Personal()
+            stat = get_object_or_404(Status, signup=request.user.signup)
+            pe.signup = request.user.signup
+            pe.uname = request.POST.get('Fullname')
+            pe.fname = request.POST.get('Father_name')
             pe.month = request.POST.get('Month')
             pe.day = request.POST.get('Date')
             pe.year = request.POST.get('Year')
@@ -142,33 +144,34 @@ def application(request):
         else:
             form = personalform
             sta = get_object_or_404(Status, signup=request.user.signup)
-            return render(request,'admission_sys/application.html',{'form':form,'status':sta})
+            return render(request, 'admission_sys/application.html', {'form': form, 'status': sta})
+
 
 @login_required
 def address(request):
     try:
         addr = Address.objects.get(signup=request.user.signup)
-        addre = address_detail_form(initial={'Address':addr.address,'City':addr.city,'Phone':addr.phone,
-                                         'Address2':addr.addresstwo,'City2':addr.citytwo,
-                                          'Phone2':addr.phonetwo,'Address3':addr.addressthree,
-                                          'City3':addr.citythree,'Phone3':addr.phonethree,
-                                          'Father_mobile':addr.fathermob})
+        addre = address_detail_form(initial={'Address': addr.address, 'City': addr.city, 'Phone': addr.phone,
+                                             'Address2': addr.addresstwo, 'City2': addr.citytwo,
+                                             'Phone2': addr.phonetwo, 'Address3': addr.addressthree,
+                                             'City3': addr.citythree, 'Phone3': addr.phonethree,
+                                             'Father_mobile': addr.fathermob})
         if request.method == 'POST':
             addr.address = request.POST.get('Address')
             addr.city = request.POST.get('City')
             addr.phone = request.POST.get('Phone')
             addr.save()
-            #next = request.POST.get('next', '/Apply_Online/education')
+            # next = request.POST.get('next', '/Apply_Online/education')
             return redirect('education')
         else:
-            sta = get_object_or_404(Status,signup=request.user.signup)
-            return render(request, 'admission_sys/Address_detail.html', {'form': addre,'status':sta})
+            sta = get_object_or_404(Status, signup=request.user.signup)
+            return render(request, 'admission_sys/Address_detail.html', {'form': addre, 'status': sta})
     except:
         if request.method == 'POST':
-            ad=Address()
-            stat = get_object_or_404(Status,signup=request.user.signup)
-            ad.signup=request.user.signup
-            ad.address=request.POST.get('Address')
+            ad = Address()
+            stat = get_object_or_404(Status, signup=request.user.signup)
+            ad.signup = request.user.signup
+            ad.address = request.POST.get('Address')
             ad.city = request.POST.get('City')
             ad.phone = request.POST.get('Phone')
             if 'ad2' in request.POST:
@@ -194,12 +197,13 @@ def address(request):
             stat.save()
             ad.save()
 
-            #next = request.POST.get('next', '/Apply_Online/education')
+            # next = request.POST.get('next', '/Apply_Online/education')
             return redirect('education')
         else:
             address_form = address_detail_form
             sta = get_object_or_404(Status, signup=request.user.signup)
-            return render(request,'admission_sys/Address_detail.html',{'form':address_form,'status':sta})
+            return render(request, 'admission_sys/Address_detail.html', {'form': address_form, 'status': sta})
+
 
 def _get_form(request, formcls, prefix):
     data = request.POST if prefix in request.POST else None
@@ -209,8 +213,8 @@ def _get_form(request, formcls, prefix):
 @login_required
 def education(request):
     sig = request.user.signup
-    sta = get_object_or_404(Status,signup=request.user.signup)
-    if request.method=='POST':
+    sta = get_object_or_404(Status, signup=request.user.signup)
+    if request.method == 'POST':
         Matric = Matic_form
         fsc = Fsc_form
         BSC = B_form
@@ -218,7 +222,7 @@ def education(request):
         Nts = Nts_form
         res = Resultcard()
         res.signup = request.user.signup
-        if Matric.is_valid and request.POST.get('Degree') :
+        if Matric.is_valid and request.POST.get('Degree'):
             try:
                 a = EducationMatric.objects.get(signup=request.user.signup)
             except:
@@ -231,7 +235,7 @@ def education(request):
                 mat.subject = request.POST.get('Subject')
                 mat.totalmark = request.POST.get('Total_marks')
                 mat.obtainmark = request.POST.get('Obtained_marks')
-                mat.percent = (int(request.POST.get('Obtained_marks'))/int(request.POST.get('Total_marks')))*100
+                mat.percent = (int(request.POST.get('Obtained_marks')) / int(request.POST.get('Total_marks'))) * 100
                 res.signup = request.user.signup
                 res.save()
 
@@ -240,7 +244,7 @@ def education(request):
                     fs = FileSystemStorage()
                     filename = fs.save(myfile.name, myfile)
                     uploaded_file_url = fs.url(filename)
-                    result = get_object_or_404(Resultcard,signup=request.user.signup)
+                    result = get_object_or_404(Resultcard, signup=request.user.signup)
                     result.mresult = uploaded_file_url
                     result.save()
 
@@ -253,7 +257,7 @@ def education(request):
                     fs = FileSystemStorage()
                     filename = fs.save(myfile.name, myfile)
                     uploaded_file_url = fs.url(filename)
-                    result = get_object_or_404(Resultcard,signup=request.user.signup)
+                    result = get_object_or_404(Resultcard, signup=request.user.signup)
                     result.e_certificate = uploaded_file_url
                     result.save()
 
@@ -275,7 +279,7 @@ def education(request):
             Mat = Matic_form(
                 initial={'Degree': matric.degree, 'Year_of_passing': matric.yearpass, 'Board': matric.board,
                          'Subject': matric.subject, 'Total_marks': matric.totalmark,
-                         'Obtained_marks': matric.obtainmark,'Percentage':matric.percent})
+                         'Obtained_marks': matric.obtainmark, 'Percentage': matric.percent})
 
             fsc = Fsc_form
             BSC = B_form
@@ -283,13 +287,15 @@ def education(request):
             Nts = Nts_form
 
             return render(request, 'admission_sys/Education_detail.html',
-                              {'form1': Mat, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts,'signup':sig,'status':sta})
+                          {'form1': Mat, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts, 'signup': sig,
+                           'status': sta})
 
 
         except:
             Mat = Matic_form()
-            return render(request,'admission_sys/Education_detail.html',{'form1': Mat,'signup':sig,'status':sta})
+            return render(request, 'admission_sys/Education_detail.html', {'form1': Mat, 'signup': sig, 'status': sta})
     return redirect('fsc')
+
 
 @login_required
 def fsc(request):
@@ -299,7 +305,7 @@ def fsc(request):
     Mas = M_form
     Nts = Nts_form
     sig = request.user.signup
-    sta = get_object_or_404(Status,signup=request.user.signup)
+    sta = get_object_or_404(Status, signup=request.user.signup)
     if request.method == 'POST':
         if fsc.is_valid and request.POST.get('Degree2'):
             try:
@@ -323,7 +329,7 @@ def fsc(request):
                 fsc.fsesub = request.POST.get('Subject2')
                 fsc.fsetono = request.POST.get('Total_marks2')
                 fsc.fseobno = request.POST.get('Obtained_marks2')
-                fsc.percent = (int(request.POST.get('Obtained_marks2'))/int(request.POST.get('Total_marks2')))*100
+                fsc.percent = (int(request.POST.get('Obtained_marks2')) / int(request.POST.get('Total_marks2'))) * 100
 
                 try:
                     myfile = request.FILES['myfile2']
@@ -377,7 +383,7 @@ def fsc(request):
             ff = Fsc_form(
                 initial={'Degree2': fa.fsedeg, 'Year_of_passing2': fa.fseyr, 'Board2': fa.fsebod,
                          'Subject2': fa.fsesub, 'Total_marks2': fa.fsetono,
-                         'Obtained_marks2': fa.fseobno,'Percentage2':fa.percent})
+                         'Obtained_marks2': fa.fseobno, 'Percentage2': fa.percent})
             return render(request, 'admission_sys/fsc.html',
                           {'form1': Matric, 'form2': ff, 'form3': BSC, 'form4': Mas, 'form5': Nts, 'signup': sig,
                            'status': sta})
@@ -390,7 +396,6 @@ def fsc(request):
                    'status': sta})
 
 
-
 @login_required
 def bsc(request):
     Matric = Matic_form
@@ -399,7 +404,7 @@ def bsc(request):
     Mas = M_form
     Nts = Nts_form
     sig = request.user.signup
-    sta = get_object_or_404(Status,signup=request.user.signup)
+    sta = get_object_or_404(Status, signup=request.user.signup)
     if request.method == 'POST':
         if BSC.is_valid and request.POST.get('Degree3'):
             try:
@@ -431,8 +436,10 @@ def bsc(request):
                 stat.bsc = '1'
                 stat.save()
                 bsc.save()
-    return render(request,'admission_sys/bsc.html',
-                      {'form1': Matric, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts,'signup':sig,'status':sta})
+    return render(request, 'admission_sys/bsc.html',
+                  {'form1': Matric, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts, 'signup': sig,
+                   'status': sta})
+
 
 @login_required
 def bs(request):
@@ -442,7 +449,7 @@ def bs(request):
     Mas = M_form
     Nts = Nts_form
     sig = request.user.signup
-    sta = get_object_or_404(Status,signup=request.user.signup)
+    sta = get_object_or_404(Status, signup=request.user.signup)
     if request.method == 'POST':
         if Mas.is_valid and request.POST.get('Msdeg'):
             try:
@@ -487,8 +494,10 @@ def bs(request):
 
         except:
             pass
-    return render(request,'admission_sys/bs.html',
-                      {'form1': Matric, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts,'signup':sig,'status':sta})
+    return render(request, 'admission_sys/bs.html',
+                  {'form1': Matric, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts, 'signup': sig,
+                   'status': sta})
+
 
 @login_required
 def nts(request):
@@ -498,7 +507,7 @@ def nts(request):
     Mas = M_form
     Nts = Nts_form
     sig = request.user.signup
-    sta = get_object_or_404(Status,signup=request.user.signup)
+    sta = get_object_or_404(Status, signup=request.user.signup)
     if request.method == 'POST':
         if Nts.is_valid and request.POST.get('roll_num'):
             try:
@@ -530,16 +539,16 @@ def nts(request):
                 return render(request, 'admission_sys/others.html',
                               {'form1': Matric, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts, 'signup': sig,
                                'status': sta})
-    return render(request,'admission_sys/nts.html',
-                      {'form1': Matric, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts,'signup':sig,'status':sta})
-
+    return render(request, 'admission_sys/nts.html',
+                  {'form1': Matric, 'form2': fsc, 'form3': BSC, 'form4': Mas, 'form5': Nts, 'signup': sig,
+                   'status': sta})
 
 
 @login_required
 def others(request):
     sta = get_object_or_404(Status, signup=request.user.signup)
-    per = get_object_or_404(Personal,signup=request.user.signup)
-    pro = get_object_or_404(Programs,signup=request.user.signup)
+    per = get_object_or_404(Personal, signup=request.user.signup)
+    pro = get_object_or_404(Programs, signup=request.user.signup)
 
     try:
         oth = Otherdeatils.objects.get(signup_id=request.user.signup.signup_id)
@@ -576,8 +585,6 @@ def others(request):
                 stat.othdetil = '1'
                 stat.save()
                 tra.save()
-
-
 
             det = Details()
             det.signup = request.user.signup
@@ -632,24 +639,21 @@ def others(request):
             br.select_form(predicate=select_form)
             br.form['ctl00$MainPlaceHolder$MobileTextBox'] = '0' + str(per.mobcode) + str(per.mobnumber)
             br.form['ctl00$MainPlaceHolder$MessageTextBox'] = per.uname + ", your admission form " \
-                                                                          +str(subm.id)+" in " + pro.programone + " has " \
-                                                                                                                 "been submitted sucessfully"
+                                                              + str(subm.id) + " in " + pro.programone + " has " \
+                                                                                                         "been submitted sucessfully"
             br.submit()
-            status = get_object_or_404(Status,signup=request.user.signup)
+            status = get_object_or_404(Status, signup=request.user.signup)
             status.submit = '1'
             status.save()
             return render(request, 'admission_sys/download.html', {'status': sta})
 
+    return render(request, 'admission_sys/others.html', {'status': sta})
 
-
-    return render(request, 'admission_sys/others.html',{'status':sta})
 
 @login_required
 def program(request):
-
-
     sig = request.user.signup
-    if request.method=='POST':
+    if request.method == 'POST':
         try:
             x = Programs.objects.get(signup=request.user.signup)
             return redirect('application')
@@ -659,8 +663,8 @@ def program(request):
             stat.signup = request.user.signup
             pro.signup = request.user.signup
 
-            if(sig.program=='Undergraduate' or sig.program=='BS'):
-                one = get_object_or_404(Offered_programs,name = request.POST.get('Program_choice_11'))
+            if (sig.program == 'Undergraduate' or sig.program == 'BS'):
+                one = get_object_or_404(Offered_programs, name=request.POST.get('Program_choice_11'))
                 pro.programone = one.short_name
                 two = get_object_or_404(Offered_programs, name=request.POST.get('Program_choice_21'))
                 pro.programtwo = two.short_name
@@ -669,7 +673,7 @@ def program(request):
             else:
                 onee = get_object_or_404(Offered_programs, name=request.POST.get('Program_choice_1'))
                 pro.programone = onee.short_name
-                twoo= get_object_or_404(Offered_programs, name=request.POST.get('Program_choice_2'))
+                twoo = get_object_or_404(Offered_programs, name=request.POST.get('Program_choice_2'))
                 pro.programtwo = twoo.short_name
                 threee = get_object_or_404(Offered_programs, name=request.POST.get('Program_choice_3'))
                 pro.programthree = threee.short_name
@@ -688,28 +692,25 @@ def program(request):
             one = sel.programone
             two = sel.programtwo
             three = sel.programthree
-            statu = get_object_or_404(Status,signup=request.user.signup)
+            statu = get_object_or_404(Status, signup=request.user.signup)
             return render(request, 'admission_sys/Program_choice.html',
-                          {'form': programb, 'formm': programm, 'signup': sig,'status':statu,
-                           'one':one,'two':two,'three':three})
+                          {'form': programb, 'formm': programm, 'signup': sig, 'status': statu,
+                           'one': one, 'two': two, 'three': three})
         except:
-           pass
-    programb = Offered_programs.objects.filter(status = 1 ).filter(code=1)
+            pass
+    programb = Offered_programs.objects.filter(status=1).filter(code=1)
     programm = Offered_programs.objects.filter(status=1).filter(code=2)
-    return render(request,'admission_sys/Program_choice.html',{'form':programb,'formm':programm,'signup':sig})
-
-
-
+    return render(request, 'admission_sys/Program_choice.html', {'form': programb, 'formm': programm, 'signup': sig})
 
 
 @login_required
 def downloads(request):
+    sta = get_object_or_404(Status, signup=request.user.signup)
+    return render(request, 'admission_sys/download.html', {'status': sta})
 
-    sta = get_object_or_404(Status,signup=request.user.signup)
-    return render(request,'admission_sys/download.html',{'status':sta})
+
 @login_required
 def form(request):
-
     user = request.user
     sub = Submit.objects.get(signup=request.user.signup)
     personal = Personal.objects.get(signup=request.user.signup)
@@ -735,26 +736,28 @@ def form(request):
     c5 = str(personal.month)
     c6 = str(personal.year)
 
-    return render(request,'admission_sys/application_form.html',{'submit':sub,'user':user,'personal':personal,'program':prog,
-                                                                 'educationm':educationm,'educationf':educationf,
-                                                                 'educationb':educationb,'educationms':educationms,
-                                                                 'address':addre,'other':othr,'adm':adm,
-                                                                 'c1':c1,'c2':c2,'c3':c3,
-                                                                 'c4':c4,'c5':c5,'c6':c6,'date':det.date
+    return render(request, 'admission_sys/application_form.html',
+                  {'submit': sub, 'user': user, 'personal': personal, 'program': prog,
+                   'educationm': educationm, 'educationf': educationf,
+                   'educationb': educationb, 'educationms': educationms,
+                   'address': addre, 'other': othr, 'adm': adm,
+                   'c1': c1, 'c2': c2, 'c3': c3,
+                   'c4': c4, 'c5': c5, 'c6': c6, 'date': det.date
 
-                                                                 })
-
-
+                   })
 
 
 def fee(request):
     user = request.user
     personal = Personal.objects.get(signup=request.user.signup)
     prog = Programs.objects.get(signup=request.user.signup)
-    adm = Admissions.objects.get(id = 7)
+    adm = Admissions.objects.get(id=7)
     sub = Submit.objects.get(signup=request.user.signup)
 
-    return render(request,'admission_sys/feevoucher.html',{'user':user,'submit':sub,'personal':personal,'program':prog,'date':datetime.datetime.now(),'adm':adm})
+    return render(request, 'admission_sys/feevoucher.html',
+                  {'user': user, 'submit': sub, 'personal': personal, 'program': prog, 'date': datetime.datetime.now(),
+                   'adm': adm})
+
 
 def card(request):
     sub = Submit.objects.get(signup=request.user.signup)
@@ -763,15 +766,16 @@ def card(request):
     prog = Programs.objects.get(signup=request.user.signup)
     adt = Admitcard.objects.get(id=124)
     adm = Admissions.objects.get(id=7)
-    return render(request,'admission_sys/admit_card.html'
-                  , {'submit':sub,'user': user, 'personal': personal, 'program': prog, 'date': datetime.date.today()
-                     ,'card':adt,'adm':adm})
+    return render(request, 'admission_sys/admit_card.html'
+                  , {'submit': sub, 'user': user, 'personal': personal, 'program': prog, 'date': datetime.date.today()
+                      , 'card': adt, 'adm': adm})
+
 
 def admin_signup(request):
     if not request.user.is_staff:
         return redirect('application')
 
-    if request.method=='POST':
+    if request.method == 'POST':
         form = admin_signup_form(request.POST)
         if form.is_valid():
             user = form.save()
@@ -779,19 +783,18 @@ def admin_signup(request):
     else:
         form = admin_signup_form()
 
+    return render(request, 'admission_sys/admin_signup.html', {'form': form})
 
-    return render(request,'admission_sys/admin_signup.html',{'form':form})
 
 def admin(request):
     if not request.user.is_staff:
         return redirect('application')
 
-
     sub = Submit.objects.all()
-    ids = sub.values_list('signup_id',flat=True)
+    ids = sub.values_list('signup_id', flat=True)
     applicants = Personal.objects.filter(signup_id__in=ids)
 
-    app_id = applicants.values_list('signup_id',flat=True)
+    app_id = applicants.values_list('signup_id', flat=True)
     sub_num = Submit.objects.filter(signup_id__in=app_id)
 
     det = Details.objects.filter(signup_id__in=app_id)
@@ -804,12 +807,12 @@ def admin(request):
     if request.method == 'POST':
         return render(request, 'admission_sys/admin.html', {'submit': x})
     else:
-        adm = get_object_or_404(Admissions,id=7)
+        adm = get_object_or_404(Admissions, id=7)
         datemask = "%Y-%m-%d"
         da = datetime.datetime.strftime(adm.open_date, datemask)
-        #paginator = Paginator(sub2,30)
-        #page = request.GET.get('page')
-        #applicant = paginator.get_page(page)
+        # paginator = Paginator(sub2,30)
+        # page = request.GET.get('page')
+        # applicant = paginator.get_page(page)
 
         if 'q' in request.GET and request.GET['q']:
             q = request.GET['q']
@@ -817,57 +820,58 @@ def admin(request):
             appl = Personal.objects.get(signup_id=res.signup_id)
             de = Details.objects.get(signup_id=res.signup_id)
 
-            return render(request, 'admission_sys/admin.html', {'submit': x, 'result': appl,'id':res,'date':de})
+            return render(request, 'admission_sys/admin.html', {'submit': x, 'result': appl, 'id': res, 'date': de})
+
+    return render(request, 'admission_sys/admin.html', {'submit': x, 'admission': da})
 
 
-    return render(request,'admission_sys/admin.html',{'submit':x,'admission':da})
-
-def detail(request,Signup_id):
+def detail(request, Signup_id):
     if not request.user.is_staff:
         return redirect('application')
-    stat = get_object_or_404(Status,signup_id=Signup_id)
-    form = get_object_or_404(Personal,signup=Signup_id)
-    return render(request,'admission_sys/detail.html',{'status':stat,'form':form})
+    stat = get_object_or_404(Status, signup_id=Signup_id)
+    form = get_object_or_404(Personal, signup=Signup_id)
+    return render(request, 'admission_sys/detail.html', {'status': stat, 'form': form})
 
-def adm_form(request,id):
+
+def adm_form(request, id):
     if not request.user.is_staff:
         return redirect('application')
 
-    user = get_object_or_404(Signup,signup_id = id)
+    user = get_object_or_404(Signup, signup_id=id)
     user_id = user.user_id
-    main_user = get_object_or_404(User, id = user_id)
+    main_user = get_object_or_404(User, id=user_id)
     email = main_user.email
-    personal = get_object_or_404(Personal,signup=id)
+    personal = get_object_or_404(Personal, signup=id)
     try:
-        prog = get_object_or_404(Programs,signup_id=id)
+        prog = get_object_or_404(Programs, signup_id=id)
     except:
         prog = ""
     try:
-        educationm = get_object_or_404(EducationMatric,signup_id=id)
+        educationm = get_object_or_404(EducationMatric, signup_id=id)
     except:
         educationm = ""
     try:
-        educationf = get_object_or_404(EducationFsc,signup_id=id)
+        educationf = get_object_or_404(EducationFsc, signup_id=id)
     except:
         educationf = ""
     try:
-        educationb = get_object_or_404(EducationBsc,signup_id=id)
+        educationb = get_object_or_404(EducationBsc, signup_id=id)
     except:
         educationb = ""
     try:
-        educationms = get_object_or_404(EducationMs,signup_id=id)
+        educationms = get_object_or_404(EducationMs, signup_id=id)
     except:
         educationms = ""
     try:
-        addre = get_object_or_404(Address,signup_id=id)
+        addre = get_object_or_404(Address, signup_id=id)
     except:
         addre = ""
     try:
-        othr = get_object_or_404(Otherdeatils,signup_id=id)
+        othr = get_object_or_404(Otherdeatils, signup_id=id)
     except:
         othr = ""
     try:
-        sub = get_object_or_404(Submit,signup_id = id)
+        sub = get_object_or_404(Submit, signup_id=id)
     except:
         sub = ""
     c1 = str(personal.cnici)
@@ -877,21 +881,20 @@ def adm_form(request,id):
     c5 = str(personal.month)
     c6 = str(personal.year)
     adm = Admissions.objects.get(id=7)
-    det = get_object_or_404(Details,signup_id = id)
-    res = get_object_or_404(Resultcard, signup_id = id)
-    return render(request,'admission_sys/adm_form.html', { 'personal': personal, 'program': prog,
-                                                                   'educationm': educationm, 'educationf': educationf,
-                                                                   'educationb': educationb, 'educationms': educationms,
-                                                                   'address': addre, 'other': othr,
-                                                                    'submit':sub,'user':user,'adm':adm,
-                                                                    'c1': c1, 'c2': c2, 'c3': c3,
-                                                                    'c4': c4, 'c5': c5, 'c6': c6,'date':det.date,
-                                                                    'email':email,'result':res
-                                                                    })
+    det = get_object_or_404(Details, signup_id=id)
+    res = get_object_or_404(Resultcard, signup_id=id)
+    return render(request, 'admission_sys/adm_form.html', {'personal': personal, 'program': prog,
+                                                           'educationm': educationm, 'educationf': educationf,
+                                                           'educationb': educationb, 'educationms': educationms,
+                                                           'address': addre, 'other': othr,
+                                                           'submit': sub, 'user': user, 'adm': adm,
+                                                           'c1': c1, 'c2': c2, 'c3': c3,
+                                                           'c4': c4, 'c5': c5, 'c6': c6, 'date': det.date,
+                                                           'email': email, 'result': res
+                                                           })
 
 
-
-def adt_card(request,idd):
+def adt_card(request, idd):
     if not request.user.is_staff:
         return redirect('application')
     adm = Admissions.objects.get(id=7)
@@ -906,28 +909,31 @@ def adt_card(request,idd):
     except:
         sub = ""
     return render(request, 'admission_sys/adt_card.html'
-                  , {'submit':sub,'personal': personal, 'program': prog, 'date': datetime.datetime.now()
-                     ,'adm':adm,'card':adt})
+                  , {'submit': sub, 'personal': personal, 'program': prog, 'date': datetime.datetime.now()
+                      , 'adm': adm, 'card': adt})
 
-def ssc(request,id):
+
+def ssc(request, id):
     if not request.user.is_staff:
         return redirect('application')
     try:
         result = Resultcard.objects.get(signup_id=id)
     except:
         request = ""
-    return render(request,'admission_sys/ssc.html',{'card':result})
-def hssc(request,id):
+    return render(request, 'admission_sys/ssc.html', {'card': result})
+
+
+def hssc(request, id):
     if not request.user.is_staff:
         return redirect('application')
     try:
         result = Resultcard.objects.get(signup_id=id)
     except:
         result = ""
-    return render(request,'admission_sys/hssc.html',{'card':result})
+    return render(request, 'admission_sys/hssc.html', {'card': result})
+
 
 def admin_downloads(request):
-
     if not request.user.is_staff:
         return redirect('application')
     dform = downloadform()
@@ -936,20 +942,20 @@ def admin_downloads(request):
         response['Content-Disposition'] = 'attachment; filename="Applicants.csv"'
 
         writer = csv.writer(response)
-        writer.writerow(['ID', 'Form_number', 'Name','Mobile number', 'Program','City', 'Matric obtained marks',
-                         'Matric total marks','Matric %','Fsc obtained marks','Fsc total marks','Fsc %','14year total marks',
-                        '14year obtained marks','14year %','BS total marks/gpa','BS obtained marks.gpa',
-                         'BS %','Date'
+        writer.writerow(['ID', 'Form_number', 'Name', 'Mobile number', 'Program', 'City', 'Matric obtained marks',
+                         'Matric total marks', 'Matric %', 'Fsc obtained marks', 'Fsc total marks', 'Fsc %',
+                         '14year total marks',
+                         '14year obtained marks', '14year %', 'BS total marks/gpa', 'BS obtained marks.gpa',
+                         'BS %', 'Date'
                          ])
         date2 = request.POST.get('date')
         date3 = request.POST.get('date2')
-        det = Details.objects.filter(date__range=[date2,date3])
-        ids = det.values_list('signup_id',flat=True)
+        det = Details.objects.filter(date__range=[date2, date3])
+        ids = det.values_list('signup_id', flat=True)
         status = Status.objects.filter(signup_id__in=ids)
 
         id = 0
         for sta in status:
-
 
             try:
                 tt = 0
@@ -958,33 +964,35 @@ def admin_downloads(request):
                 cc = 0
                 pp = 0
                 pp2 = 0
-                y = get_object_or_404(Submit,signup_id=sta.signup_id)
-                x = get_object_or_404(Personal,signup_id=sta.signup_id)
-                m = get_object_or_404(EducationMatric,signup_id=sta.signup_id)
-                f = get_object_or_404(EducationFsc,signup_id=sta.signup_id)
-                p = get_object_or_404(Programs,signup_id=sta.signup_id)
-                d = get_object_or_404(Details,signup_id=sta.signup_id)
-                a = get_object_or_404(Address,signup_id=sta.signup_id)
+                y = get_object_or_404(Submit, signup_id=sta.signup_id)
+                x = get_object_or_404(Personal, signup_id=sta.signup_id)
+                m = get_object_or_404(EducationMatric, signup_id=sta.signup_id)
+                f = get_object_or_404(EducationFsc, signup_id=sta.signup_id)
+                p = get_object_or_404(Programs, signup_id=sta.signup_id)
+                d = get_object_or_404(Details, signup_id=sta.signup_id)
+                a = get_object_or_404(Address, signup_id=sta.signup_id)
                 try:
-                    bss = get_object_or_404(EducationBsc,signup_id=sta.signup_id)
-                    tt= bss.bsetocgpa
+                    bss = get_object_or_404(EducationBsc, signup_id=sta.signup_id)
+                    tt = bss.bsetocgpa
                     oo = bss.bseobt
-                    pp = (oo/tt)*100
+                    pp = (oo / tt) * 100
                 except:
                     pass
                 try:
                     bss2 = get_object_or_404(EducationMs, signup_id=sta.signup_id)
                     mm = bss2.mstocgpa
                     cc = bss2.mstocgpa
-                    pp2 = (cc/mm)*100
+                    pp2 = (cc / mm) * 100
                 except:
                     pass
                 cod = str(x.mobcode)
                 num = x.mobnumber
-                g = ("0"+cod+'-'+num)
+                g = ("0" + cod + '-' + num)
                 id += 1
-                feilds_list = [[id,y.id,x.uname,g,p.programone,a.city,m.totalmark,m.obtainmark,m.percent,f.fseobno,f.fsetono,f.percent,
-                                tt,oo,pp,mm,cc,pp2,d.date]]
+                feilds_list = [
+                    [id, y.id, x.uname, g, p.programone, a.city, m.totalmark, m.obtainmark, m.percent, f.fseobno,
+                     f.fsetono, f.percent,
+                     tt, oo, pp, mm, cc, pp2, d.date]]
                 writer.writerows(feilds_list)
 
             except:
@@ -992,7 +1000,7 @@ def admin_downloads(request):
 
         return response
     else:
-        return render(request,'admission_sys/admin_downloads.html',{'form':dform})
+        return render(request, 'admission_sys/admin_downloads.html', {'form': dform})
 
 
 def admissions(request):
@@ -1000,7 +1008,7 @@ def admissions(request):
         return redirect('application')
     adm = admissionsform()
     admit = admitform()
-    admis = get_object_or_404(Admissions,id=7)
+    admis = get_object_or_404(Admissions, id=7)
     admitcard = get_object_or_404(Admitcard, id=124)
     if request.method == 'POST':
         if request.POST.get('date'):
@@ -1019,17 +1027,17 @@ def admissions(request):
     else:
 
         if admis.close_date > datetime.date.today():
-            if admitcard.date>datetime.date.today():
-                return render(request, 'admission_sys/admissions.html', {'form': adm, 'aform': admit, 'x': 1,'y':1})
+            if admitcard.date > datetime.date.today():
+                return render(request, 'admission_sys/admissions.html', {'form': adm, 'aform': admit, 'x': 1, 'y': 1})
             else:
-                return render(request, 'admission_sys/admissions.html',{'form': adm,'aform':admit,'x':1})
+                return render(request, 'admission_sys/admissions.html', {'form': adm, 'aform': admit, 'x': 1})
         if admitcard.date > datetime.date.today():
             return render(request, 'admission_sys/admissions.html', {'form': adm, 'aform': admit, 'y': 1})
 
         else:
-            return render(request, 'admission_sys/admissions.html', {'form': adm,'aform':admit})
+            return render(request, 'admission_sys/admissions.html', {'form': adm, 'aform': admit})
 
-    return render(request,'admission_sys/admissions.html',{'form': adm,'aform':admit})
+    return render(request, 'admission_sys/admissions.html', {'form': adm, 'aform': admit})
 
 
 def programs(request):
@@ -1043,20 +1051,22 @@ def programs(request):
             pro.save()
         add_programs = request.POST.getlist('programs')
         for add in add_programs:
-            pr = get_object_or_404(Offered_programs,short_name=add)
+            pr = get_object_or_404(Offered_programs, short_name=add)
             pr.status = 1
             pr.save()
         return redirect('admission_opened')
-    return render(request,'admission_sys/programs.html',{'Programsb':progb})
+    return render(request, 'admission_sys/programs.html', {'Programsb': progb})
 
 
 def admission_opened(request):
     if not request.user.is_staff:
         return redirect('application')
-    session = get_object_or_404(Admissions,id = 7)
-    programs = Offered_programs.objects.filter(status = "1")
-    admit = get_object_or_404(Admitcard,id=124)
-    return render(request,'admission_sys/admission_opened.html',{'session':session,'programs':programs,'admit':admit})
+    session = get_object_or_404(Admissions, id=7)
+    programs = Offered_programs.objects.filter(status="1")
+    admit = get_object_or_404(Admitcard, id=124)
+    return render(request, 'admission_sys/admission_opened.html',
+                  {'session': session, 'programs': programs, 'admit': admit})
+
 
 def add_programs(request):
     if not request.user.is_staff:
@@ -1074,48 +1084,48 @@ def add_programs(request):
             prog.code = 3
         prog.Department = request.POST.get('dep')
         prog.save()
-        return render(request,'admission_sys/add_programs.html',{'sucess':1})
-    return render(request,'admission_sys/add_programs.html',{'sucess':0})
+        return render(request, 'admission_sys/add_programs.html', {'sucess': 1})
+    return render(request, 'admission_sys/add_programs.html', {'sucess': 0})
 
 
-def print(request,id):
+def print(request, id):
     if not request.user.is_staff:
         return redirect('application')
-    user = get_object_or_404(Signup,signup_id = id)
+    user = get_object_or_404(Signup, signup_id=id)
     user_id = user.user_id
-    main_user = get_object_or_404(User, id = user_id)
+    main_user = get_object_or_404(User, id=user_id)
     email = main_user.email
-    personal = get_object_or_404(Personal,signup=id)
+    personal = get_object_or_404(Personal, signup=id)
     try:
-        prog = get_object_or_404(Programs,signup_id=id)
+        prog = get_object_or_404(Programs, signup_id=id)
     except:
         prog = ""
     try:
-        educationm = get_object_or_404(EducationMatric,signup_id=id)
+        educationm = get_object_or_404(EducationMatric, signup_id=id)
     except:
         educationm = ""
     try:
-        educationf = get_object_or_404(EducationFsc,signup_id=id)
+        educationf = get_object_or_404(EducationFsc, signup_id=id)
     except:
         educationf = ""
     try:
-        educationb = get_object_or_404(EducationBsc,signup_id=id)
+        educationb = get_object_or_404(EducationBsc, signup_id=id)
     except:
         educationb = ""
     try:
-        educationms = get_object_or_404(EducationMs,signup_id=id)
+        educationms = get_object_or_404(EducationMs, signup_id=id)
     except:
         educationms = ""
     try:
-        addre = get_object_or_404(Address,signup_id=id)
+        addre = get_object_or_404(Address, signup_id=id)
     except:
         addre = ""
     try:
-        othr = get_object_or_404(Otherdeatils,signup_id=id)
+        othr = get_object_or_404(Otherdeatils, signup_id=id)
     except:
         othr = ""
     try:
-        sub = get_object_or_404(Submit,signup_id = id)
+        sub = get_object_or_404(Submit, signup_id=id)
     except:
         sub = ""
     c1 = str(personal.cnici)
@@ -1125,85 +1135,109 @@ def print(request,id):
     c5 = str(personal.month)
     c6 = str(personal.year)
     adm = Admissions.objects.get(id=7)
-    det = get_object_or_404(Details,signup_id = id)
-    res = get_object_or_404(Resultcard, signup_id = id)
-    return render(request,'admission_sys/print.html', { 'personal': personal, 'program': prog,
-                                                                   'educationm': educationm, 'educationf': educationf,
-                                                                   'educationb': educationb, 'educationms': educationms,
-                                                                   'address': addre, 'other': othr,
-                                                                    'submit':sub,'user':user,'adm':adm,
-                                                                    'c1': c1, 'c2': c2, 'c3': c3,
-                                                                    'c4': c4, 'c5': c5, 'c6': c6,'date':det.date,
-                                                                    'email':email,'result':res
-                                                                    })
+    det = get_object_or_404(Details, signup_id=id)
+    res = get_object_or_404(Resultcard, signup_id=id)
+    return render(request, 'admission_sys/print.html', {'personal': personal, 'program': prog,
+                                                        'educationm': educationm, 'educationf': educationf,
+                                                        'educationb': educationb, 'educationms': educationms,
+                                                        'address': addre, 'other': othr,
+                                                        'submit': sub, 'user': user, 'adm': adm,
+                                                        'c1': c1, 'c2': c2, 'c3': c3,
+                                                        'c4': c4, 'c5': c5, 'c6': c6, 'date': det.date,
+                                                        'email': email, 'result': res
+                                                        })
 
 
-def print_all(request,id):
-    if not request.user.is_staff:
-        return redirect('application')
-    user = get_object_or_404(Signup,signup_id = id)
-    user_id = user.user_id
-    main_user = get_object_or_404(User, id = user_id)
-    email = main_user.email
-    personal = get_object_or_404(Personal,signup=id)
-    try:
-        prog = get_object_or_404(Programs,signup_id=id)
-    except:
-        prog = ""
-    try:
-        educationm = get_object_or_404(EducationMatric,signup_id=id)
-    except:
-        educationm = ""
-    try:
-        educationf = get_object_or_404(EducationFsc,signup_id=id)
-    except:
-        educationf = ""
-    try:
-        educationb = get_object_or_404(EducationBsc,signup_id=id)
-    except:
-        educationb = ""
-    try:
-        educationms = get_object_or_404(EducationMs,signup_id=id)
-    except:
-        educationms = ""
-    try:
-        addre = get_object_or_404(Address,signup_id=id)
-    except:
-        addre = ""
-    try:
-        othr = get_object_or_404(Otherdeatils,signup_id=id)
-    except:
-        othr = ""
-    try:
-        sub = get_object_or_404(Submit,signup_id = id)
-    except:
-        sub = ""
-    c1 = str(personal.cnici)
-    c2 = str(personal.cnicii)
-    c3 = str(personal.cniciii)
-    c4 = str(personal.day)
-    c5 = str(personal.month)
-    c6 = str(personal.year)
-    adm = Admissions.objects.get(id=7)
-    det = get_object_or_404(Details,signup_id = id)
-	adt = Admitcard.objects.get(id=124)
+def print_all(request, id):
+        if not request.user.is_staff:
+            return redirect('application')
+        user = get_object_or_404(Signup, signup_id=id)
+        user_id = user.user_id
+        main_user = get_object_or_404(User, id=user_id)
+        email = main_user.email
+        personal = get_object_or_404(Personal, signup=id)
+        try:
+            prog = get_object_or_404(Programs, signup_id=id)
+        except:
+            prog = ""
+        try:
+            educationm = get_object_or_404(EducationMatric, signup_id=id)
+        except:
+            educationm = ""
+        try:
+            educationf = get_object_or_404(EducationFsc, signup_id=id)
+        except:
+            educationf = ""
+        try:
+            educationb = get_object_or_404(EducationBsc, signup_id=id)
+        except:
+            educationb = ""
+        try:
+            educationms = get_object_or_404(EducationMs, signup_id=id)
+        except:
+            educationms = ""
+        try:
+            addre = get_object_or_404(Address, signup_id=id)
+        except:
+            addre = ""
+        try:
+            othr = get_object_or_404(Otherdeatils, signup_id=id)
+        except:
+            othr = ""
+        try:
+            sub = get_object_or_404(Submit, signup_id=id)
+        except:
+            sub = ""
+        c1 = str(personal.cnici)
+        c2 = str(personal.cnicii)
+        c3 = str(personal.cniciii)
+        c4 = str(personal.day)
+        c5 = str(personal.month)
+        c6 = str(personal.year)
+        adm = Admissions.objects.get(id=7)
+        det = get_object_or_404(Details, signup_id=id)
+        adt = Admitcard.objects.get(id=124)
 
 
-    return render(request,'admission_sys/print2.html', { 'personal': personal, 'program': prog,
-                                                                   'educationm': educationm, 'educationf': educationf,
-                                                                   'educationb': educationb, 'educationms': educationms,
-                                                                   'address': addre, 'other': othr,
-                                                                    'submit':sub,'user':user,'adm':adm,
-                                                                    'c1': c1, 'c2': c2, 'c3': c3,
-                                                                    'c4': c4, 'c5': c5, 'c6': c6,'date':det.date,
-                                                                    'email':email,'card':adt
-                                                                    })
+        return render(request, 'admission_sys/print2.html', {'personal': personal, 'program': prog,
+                                                     'educationm': educationm, 'educationf': educationf,
+                                                     'educationb': educationb, 'educationms': educationms,
+                                                     'address': addre, 'other': othr,
+                                                     'submit': sub, 'user': user, 'adm': adm,
+                                                     'c1': c1, 'c2': c2, 'c3': c3,
+                                                     'c4': c4, 'c5': c5, 'c6': c6, 'date': det.date,
+                                                     'email': email, 'card': adt
+                                                     })
 
+from django.conf import settings
+
+path2 = settings.MEDIA_ROOT + '/downloads/challan_forms'
+path3 = settings.MEDIA_ROOT + '/downloads/list'
 from os import listdir
+import csv
+
+
 def messages(request):
     if not request.user.is_staff:
         return redirect('application')
     if request.method == 'POST':
+        names = []
+        numbers = []
+        forms = []
+        allfiles2 = listdir(path3)
+        for f in allfiles2:
+            with open(path3 + '/' + f, errors='ignore') as csvfile:
+                readCSV = csv.reader(csvfile)
+                for row in readCSV:
+                    name = row[0]
+                    form = row[1]
+                    number = row[2]
+
+                    names.append(name)
+                    forms.append(form)
+                    numbers.append(number)
+        x = zip(names, forms, numbers)
+
         recomended = request.POST.getlist('checks')
         my_url = "http://www.paigam.pk/"
 
@@ -1235,75 +1269,111 @@ def messages(request):
         br.form['ctl00$MainPlaceHolder$PasswordTextBox'] = 'Abasyn@123'
         br.submit()
         for r in recomended:
-            su = get_object_or_404(Submit, id = r)
-            pe = get_object_or_404(Personal,signup_id = su.signup_id)
-            mobile_code = pe.mobcode
-            mobile_number = pe.mobnumber
-            path = 'static/adsys/challan_forms'
+            for a, b, c in x:
+                if r == a:
+                    sms_url = "http://www.paigam.pk/UserSendSingleSMS.aspx"
 
+                    br.open(sms_url)
 
-            sms_url = "http://www.paigam.pk/UserSendSingleSMS.aspx"
+                    br.select_form(predicate=select_form)
+                    br.form['ctl00$MainPlaceHolder$MobileTextBox'] = c
+                    br.form['ctl00$MainPlaceHolder$MessageTextBox'] = b + " your Fee Chalan Link is " \
+                                                                          "http://www.abasynisb.edu.pk/media/downloads/challan_forms/" + r + ".pdf"
+                    br.submit()
 
-            br.open(sms_url)
-
-            br.select_form(predicate=select_form)
-            br.form['ctl00$MainPlaceHolder$MobileTextBox'] = "0"+str(mobile_code)+str(mobile_number)
-            br.form['ctl00$MainPlaceHolder$MessageTextBox'] = "Mr. " + pe.uname + " your Fee Chalan Link is" \
-                                                                                   "http://www.abasynisb.edu.pk/"+path+"/logo1.png"
-            br.submit()
-
-
-
-        return render(request, 'admission_sys/messages.html', {'sent':1})
+        return render(request, 'admission_sys/messages.html', {'sent': 1, 'list': x})
     else:
-        path = 'static/adsys/challan_forms'
+        path = path2
         allfiles = listdir(path)
-        sub = Submit.objects.all()
-        ids = sub.values_list('signup_id',flat=True)
-        applicants = Personal.objects.filter(signup_id__in=ids)
+        abc = []
+        for all in allfiles:
+            abc.append(re.sub('.pdf', '', all))
 
-        app_id = applicants.values_list('signup_id',flat=True)
-        sub_num = Submit.objects.filter(signup_id__in=app_id)
+        # sub = Submit.objects.filter(id__in = abc)
+        # ids = sub.values_list('signup_id',flat=True)
+        # applicants = Personal.objects.filter(signup_id__in=ids)
 
-        adm = get_object_or_404(Admissions,id = 7)
+        # app_id = applicants.values_list('signup_id',flat=True)
+        # sub_num = Submit.objects.filter(signup_id__in=app_id)
 
-        app = list(reversed(applicants))
-        sub2 = list(reversed(sub_num))
+        # adm = get_object_or_404(Admissions,id = 7)
 
-        x = zip(sub2,app)
+        # app = list(reversed(applicants))
+        # sub2 = list(reversed(sub_num))
 
-    return render(request,'admission_sys/messages.html',{'forms':allfiles,'submit':x})
+        # x = zip(sub2,app)
+        names = []
+        numbers = []
+        forms = []
+        allfiles2 = listdir(path3)
+        for f in allfiles2:
+            with open(path3 + '/' + f, errors='ignore') as csvfile:
+                readCSV = csv.reader(csvfile)
+                for row in readCSV:
+                    name = row[0]
+                    form = row[1]
+                    number = row[2]
+
+                    names.append(name)
+                    forms.append(form)
+                    numbers.append(number)
+        x = zip(names, forms, numbers)
+
+        return render(request, 'admission_sys/messages.html', {'list': x})
+
+    # return render(request,'admission_sys/messages.html',{'forms':abc,'submit':x,'p':path})
+
 
 def handle_uploaded_file(f):
-    with open('static/adsys/challan_forms/'+f.name, 'wb+') as destination:
+    with open(path2 + '/' + f.name, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
 
-from .forms import chaform
+
+def handle_uploaded_file2(f):
+    with open(path3 + '/' + f.name, 'wb+') as destination:
+        for chunk in f.chunks():
+            destination.write(chunk)
+
+
+from .forms import chaform, listform
 import shutil
+
 
 def upload(request):
     if not request.user.is_staff:
         return redirect('application')
     if 'delete' in request.POST:
-        path = 'static/adsys/challan_forms'
+        path = path2
+        pathh = path3
         allfiles = listdir(path)
+        allfiles2 = listdir(pathh)
         for f in allfiles:
-            os.remove(path+'/'+f)
+            os.remove(path + '/' + f)
+        for f in allfiles2:
+            os.remove(pathh + '/' + f)
         form = chaform()
-        return render(request, 'admission_sys/upload.html', {'form': form,'flag':1})
-    elif request.method == 'POST' and request.FILES.getlist('file'):
+        form2 = listform()
+        return render(request, 'admission_sys/upload.html', {'form': form, 'flag': 1, 'form2': form2})
+    elif request.method == 'POST' and request.FILES.getlist('Challan_forms'):
         form = chaform(request.FILES)
-        for f in request.FILES.getlist('file'):
+        for f in request.FILES.getlist('Challan_forms'):
             handle_uploaded_file(f)
+        return redirect('files')
+    elif request.method == 'POST' and request.FILES.getlist('list'):
+        form = listform(request.FILES)
+        for f in request.FILES.getlist('list'):
+            handle_uploaded_file2(f)
         return redirect('files')
     else:
         form = chaform()
-        return render(request, 'admission_sys/upload.html',{'form':form})
-
+        form2 = listform()
+        return render(request, 'admission_sys/upload.html', {'form': form, 'form2': form2})
 
 
 def files(request):
-    path = 'static/adsys/challan_forms'
+    path = path2
+    pathh = path3
     allfiles = listdir(path)
-    return render(request,'admission_sys/files.html',{'files':allfiles,'flag':0})
+    allfiles2 = listdir(pathh)
+    return render(request, 'admission_sys/files.html', {'files': allfiles, 'flag': 0, 'files2': allfiles2})

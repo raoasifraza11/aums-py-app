@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic.base import TemplateView
 from . import views
+from django.urls import path
 
 app_name ='slider'
 urlpatterns = [
@@ -13,6 +14,7 @@ urlpatterns = [
     url(r'^btech/list/$', TemplateView.as_view(template_name='btech-list.html'), name='btech-list'),
     url(r'^scholarships/$', TemplateView.as_view(template_name='scholarships.html'), name='scholarships'),
     url(r'^financial/aid/$', TemplateView.as_view(template_name='financial-aid.html'), name='financial-aid'),
+	path('recommended/', views.recommended , name = 'recommended'),
     
 
     # About Us  

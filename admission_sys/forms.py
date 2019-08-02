@@ -431,6 +431,9 @@ class admitform(forms.Form):
 
 
 class chaform(forms.Form):
-    file = forms.FileField(required=True,widget=forms.ClearableFileInput(attrs={'multiple': True}))
+    Challan_forms = forms.FileField(required=False,widget=forms.ClearableFileInput(attrs={'multiple': True}))
+
+class listform(forms.Form):
+    list = forms.FileField(required=False)
 
 

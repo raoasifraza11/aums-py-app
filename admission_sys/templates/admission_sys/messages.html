@@ -28,26 +28,29 @@ th, td {
 
 <form method="post" class="form-inline"  enctype="multipart/form-data">
 {% csrf_token %}
+
         <table  width="900" >
 <thead>
     <tr>
         <th>Name</th>
-        <th>Father name</th>
+
         <th >Mobile number</th>
         <th>Form number</th>
         <th>Recomended</th>
 
+
     </tr>
 </thead>
-            {% for p,app in submit %}
+
+            {% for a,b,c in list %}
         <tr>
-        <td>{{ app.uname }}</td>
-        <td>{{ app.fname }}</td>
+        <td>{{ b}}</td>
 
-        <td>0{{ app.mobcode }}-{{ app.mobnumber }}</td>
-            <td>{{p.id }}</td>
 
-        <td >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="checks" type="checkbox" value="{{ p.id }}" checked></td>
+        <td>{{  c}}</td>
+            <td>{{  a}}</td>
+
+        <td >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="checks" type="checkbox" value="{{ a }}" ></td>
 
         </tr>
 
@@ -57,5 +60,6 @@ th, td {
 <br>
     <button class="btn" style="margin-left: 850px" type="submit"  >Send</button>
 </form>
+
 
 {% endblock %}

@@ -58,4 +58,67 @@ class OBEView(generic.ListView):
 
     def get_queryset(self):
         return  CLO.objects.all()
+		
+from django.conf import settings
+path2 = settings.MEDIA_ROOT+'/downloads/challan_forms'
+path3 = settings.MEDIA_ROOT+'/downloads/list'
+from os import listdir
+import csv
+from easy_pdf.rendering import render_to_pdf_response
+def recommended(request):
+    if request.method == 'POST' and request.POST.get('submit'):
+        id = request.POST.get('submit')
+        allfiles2 = listdir(path3)
+        for f in allfiles2:
+            with open(path3 + '/' + f, errors='ignore') as csvfile:
+                readCSV = csv.reader(csvfile)
+                for row in readCSV:
+                    if id==row[0]:
+                        return render_to_pdf_response(request, 'Admission_Offer_letter.html', {'id':id, 'name':row[1],'program':row[3]})
+                    else:
+                        pass
+    elif 'q' in request.GET:
+        names = []
+        numbers = []
+        forms = []
+        programs = []
+        allfiles2 = listdir(path3)
+        for f in allfiles2:
+            with open(path3 + '/' + f, errors='ignore') as csvfile:
+                readCSV = csv.reader(csvfile)
+                for row in readCSV:
+                    if row[0]==request.GET['q']:
+                        name = row[0]
+                        form = row[1]
+                        number = row[2]
+                        program = row[3]
+
+                        names.append(name)
+                        forms.append(form)
+                        numbers.append(number)
+                        programs.append(program)
+                        x = zip(names, forms, numbers,programs)
+                        return render(request, 'recommended.html', {'list': x,'flag':1})
+                    else:
+                        pass
+                return render(request, 'recommended.html', {'id': request.GET['q'], 'flag': 0})
+    else:
+        names = []
+        numbers = []
+        forms = []
+        allfiles2 = listdir(path3)
+        for f in allfiles2:
+            with open(path3 + '/' + f, errors='ignore') as csvfile:
+                readCSV = csv.reader(csvfile)
+                for row in readCSV:
+                    name = row[0]
+                    form = row[1]
+                    number = row[2]
+
+                    names.append(name)
+                    forms.append(form)
+                    numbers.append(number)
+        x = zip(names, forms, numbers)
+        return render(request, 'recommended.html')
+    return render(request,'recommended.html')
 
