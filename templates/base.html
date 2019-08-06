@@ -51,7 +51,19 @@
     <!-- Font Awesome -->
     <link rel="icon" type="image/png" href='{% static "img/icon.png" %}'>
 </head>
-
+<style>
+    .blinking{
+    animation:blinkingText 0.7s infinite;
+        color: red;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: transparent; }
+    50%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+</style>
 <body class="template-slider layout-full-width header-classic minimalist-header sticky-header sticky-white subheader-title-left no-content-padding">
 
     <div id="fb-root"></div>
@@ -104,6 +116,11 @@
                     </li>
                     <li class="top-nav-list__item">
                         <a target="_blank" class="top-link" href="http://202.142.169.100/qecisb">Student Portal
+                        </a>
+                    </li>
+					<li class="top-nav-list__item">
+                        <a target="_blank" class="top-link" href="http://202.142.169.100/qecisb"><span style="background: yellow" class="blinking"><strong style="font-size: 14px">Entry Test Result
+                        </strong></span>
                         </a>
                     </li>
                 </ul>
