@@ -11,7 +11,7 @@ for r in range(1980, (datetime.now().year + 1)):
     YEAR_CHOICES.append((r,r ))
 
 YEAR_CHOICES2 = []
-for r in range(2018, (datetime.now().year + 1)):
+for r in range(2019, (datetime.now().year + 2)):
     YEAR_CHOICES2.append((r,r ))
 
 Day_choices = []

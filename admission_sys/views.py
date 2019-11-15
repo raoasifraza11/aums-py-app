@@ -990,7 +990,7 @@ def admin_downloads(request):
                 g = ("0" + cod + '-' + num)
                 id += 1
                 feilds_list = [
-                    [id, y.id, x.uname, g, p.programone, a.city, m.totalmark, m.obtainmark, m.percent, f.fseobno,
+                    [id, y.id, x.uname, g, p.programone, a.city, m.obtainmark,m.totalmark, m.percent, f.fseobno,
                      f.fsetono, f.percent,
                      tt, oo, pp, mm, cc, pp2, d.date]]
                 writer.writerows(feilds_list)
