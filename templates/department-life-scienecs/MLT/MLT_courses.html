@@ -1,0 +1,503 @@
+{% extends 'base.html' %} {% block body %}
+<div class="container" style="margin-top: 110px;">
+    <div class="col-sm-3">
+        <nav class="nav-sidebar">
+            {% include 'department-life-scienecs/MLT/sidebar-MLT.html' with courses="active" %}
+        </nav>
+      </div>
+
+      <div class="col-md-9 col-sm-9" id="static-content">
+    <div class="table-responsive">
+        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 1</h3>
+        <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>LT107</td>
+                    <td>Biochemistry-I</td>
+                    <td>3+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT102</td>
+                    <td>Human Physiology-I</td>
+                    <td>3+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT103</td>
+                    <td>Human Anatomy-I</td>
+                    <td>3+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>SS104</td>
+                    <td>English-I</td>
+                    <td>3+0</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>SS108</td>
+                    <td>Islamic Studies</td>
+                    <td>2+0</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>CS100</td>
+                    <td>Introduction to computing</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 2</h3>
+        <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>LT117</td>
+                    <td>Biochemistry-II</td>
+                    <td>3+1</td>
+                    <td>LT107</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT112</td>
+                    <td>Human Physiology-II</td>
+                    <td>3+1</td>
+                    <td>LT102</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT113</td>
+                    <td>Human Anatomy-II</td>
+                    <td>3+1</td>
+                    <td>LT103</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>SS203</td>
+                    <td>English-II</td>
+                    <td>3+0</td>
+                    <td>SS104</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>SS118</td>
+                    <td>Pak Studies</td>
+                    <td>2+0</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT207</td>
+                    <td>Medical Microbiology-I</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 3</h3>
+        <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>LT201</td>
+                    <td>General Pathology-I</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT202</td>
+                    <td>General Pharmacology-I</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT203</td>
+                    <td>Clinical Bacteriology</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT204</td>
+                    <td>Hematology-I</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT205</td>
+                    <td>Human Genetics</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>SS211</td>
+                    <td>Communication Skills</td>
+                    <td>3+0</td>
+                    <td>SS104</td>
+                </tr>
+            </tbody>
+             <tbody>
+                <tr>
+                    <td>LT217</td>
+                    <td>Medical Microbiology-II</td>
+                    <td>2+1</td>
+                    <td>LT207</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 4</h3>
+        <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>LT220</td>
+                    <td>General Pharmacology-II</td>
+                    <td>2+1</td>
+                    <td>LT201</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT211</td>
+                    <td>General Pathology-II</td>
+                    <td>2+1</td>
+                    <td>LT202</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT212</td>
+                    <td>RBC Disorders</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT213</td>
+                    <td>Clinical Virology and Mycology</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT214</td>
+                    <td>Chemical Pathology</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT215</td>
+                    <td>Behavioral Sciences</td>
+                    <td>2+0</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT216</td>
+                    <td>Hematology-II</td>
+                    <td>2+1</td>
+                    <td>LT204</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 5</h3>
+        <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>LT301</td>
+                    <td>WBC and Platelets Disorders</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT302</td>
+                    <td>Histopathology</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MT210</td>
+                    <td>Biostatistics</td>
+                    <td>3+0</td>
+                    <td>MB105</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT304</td>
+                    <td>Clinical Parasitology</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT305</td>
+                    <td>Clinical Pathology</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT306</td>
+                    <td>Biotechnology</td>
+                    <td>3+0</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+
+        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 6</h3>
+        <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>LT307</td>
+                    <td>Medical Laboratory Instrumentation </td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT346</td>
+                    <td>Bioinformatics</td>
+                    <td>1+2</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT309</td>
+                    <td>Immunology & Serology</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>SS401</td>
+                    <td>Research Methodology and Professional Ethics</td>
+                    <td>3+0</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT311</td>
+                    <td>Blood Banking</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT312</td>
+                    <td>Advances in Medical Laboratory Technology</td>
+                    <td>1+2</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 7</h3>
+        <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>LT401</td>
+                    <td>Medical Laboratory Management Skills</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT402</td>
+                    <td>Fundamentals of Infection Control</td>
+                    <td>1+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT403</td>
+                    <td>Molecular Biology</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT404</td>
+                    <td>Epidemiology</td>
+                    <td>2+0</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT405</td>
+                    <td>Systemic Diagnostic Bacteriology</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT410 </td>
+                    <td>Cytology and Cytogenetics</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h3 class="text-center" style="margin-bottom:20px;">SEMESTER 8</h3>
+        <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>LT499</td>
+                    <td>Research Project</td>
+                    <td>0+6</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT490</td>
+                    <td>Seminar</td>
+                    <td>1+0</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT408</td>
+                    <td>Medical Sociology</td>
+                    <td>2+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LT409</td>
+                    <td>Bioethics</td>
+                    <td>1+1</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+
+
+    </div>
+    </div>
+</div>
+{% endblock %}

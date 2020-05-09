@@ -126,6 +126,15 @@ urlpatterns = [
     url(r'^staff/DPT/$', views.StaffView.as_view(template_name='department-life-scienecs/DPT/DPT_staff.html'), name='staff-DPT'),
     url(r'^DPT/accredition/$', TemplateView.as_view(template_name='department-life-scienecs/DPT/accredition-DPT.html'), name='accredition-DPT'),
 
+    # Department of MLT
+    url(r'^hod/MLT/$', TemplateView.as_view(template_name='department-life-scienecs/MLT/hod_MLT.html'), name='hod-MLT'),
+    url(r'^MLT/info/$', TemplateView.as_view(template_name='department-life-scienecs/MLT/MLT_info.html'),
+        name='MLT_info'),
+    url(r'^MLT/courses/$', TemplateView.as_view(template_name='department-life-scienecs/MLT/MLT_courses.html'),
+        name='MLT-courses'),
+    url(r'^staff/MLT/$', views.StaffView.as_view(template_name='department-life-scienecs/MLT/MLT_staff.html'),
+        name='staff-MLT'),
+
     # Department of MBA
     url(r'^MBA/info/$', TemplateView.as_view(template_name='department-graduate/MBA/MBA-info.html'), name='MBA_info'),
     url(r'^MBA/stucture/$', TemplateView.as_view(template_name='department-graduate/MBA/MBA-structure.html'), name='MBA_structure'),
