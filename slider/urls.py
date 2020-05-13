@@ -134,6 +134,24 @@ urlpatterns = [
         name='MLT-courses'),
     url(r'^staff/MLT/$', views.StaffView.as_view(template_name='department-life-scienecs/MLT/MLT_staff.html'),
         name='staff-MLT'),
+        
+    # Department of HND
+    url(r'^HND/info/$', TemplateView.as_view(template_name='department-life-scienecs/HND/HND_info.html'),
+        name='HND_info'),
+    url(r'^staff/HND/$', views.StaffView.as_view(template_name='department-life-scienecs/HND/HND_staff.html'),
+        name='staff-HND'),
+
+    # Department of RT
+    url(r'^RT/info/$', TemplateView.as_view(template_name='department-life-scienecs/RT/RT_info.html'),
+        name='RT_info'),
+    url(r'^staff/RT/$', views.StaffView.as_view(template_name='department-life-scienecs/RT/RT_staff.html'),
+        name='staff-RT'),
+
+    # Department of PO
+    url(r'^PO/info/$', TemplateView.as_view(template_name='department-life-scienecs/PO/PO_info.html'),
+        name='PO_info'),
+    url(r'^staff/PO/$', views.StaffView.as_view(template_name='department-life-scienecs/PO/PO_staff.html'),
+        name='staff-PO'),
 
     # Department of MBA
     url(r'^MBA/info/$', TemplateView.as_view(template_name='department-graduate/MBA/MBA-info.html'), name='MBA_info'),
