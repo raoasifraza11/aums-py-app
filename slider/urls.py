@@ -152,6 +152,12 @@ urlpatterns = [
         name='PO_info'),
     url(r'^staff/PO/$', views.StaffView.as_view(template_name='department-life-scienecs/PO/PO_staff.html'),
         name='staff-PO'),
+        
+    # Department of Math and Stats
+    url(r'^Math/info/$', TemplateView.as_view(template_name='department-math/math_info.html'),
+        name='Math_info'),
+    url(r'^staff/Math/$', views.StaffView.as_view(template_name='department-math/math_staff.html'),
+        name='Math_staff'),
 
     # Department of MBA
     url(r'^MBA/info/$', TemplateView.as_view(template_name='department-graduate/MBA/MBA-info.html'), name='MBA_info'),
