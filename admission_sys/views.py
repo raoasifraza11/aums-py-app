@@ -627,21 +627,21 @@ def others(request):
             def select_form(form):
                 return form.attrs.get('id', None) == 'form1'
 
-            br.select_form(predicate=select_form)
-            br.form['ctl00$MainPlaceHolder$UserNameTextBox'] = 'AUIC'
-            br.form['ctl00$MainPlaceHolder$PasswordTextBox'] = 'Abasyn@123'
-            br.submit()
+            #br.select_form(predicate=select_form)
+            #br.form['ctl00$MainPlaceHolder$UserNameTextBox'] = 'AUIC'
+            #br.form['ctl00$MainPlaceHolder$PasswordTextBox'] = 'Abasyn@123'
+            #br.submit()
 
-            sms_url = "http://www.paigam.pk/UserSendSingleSMS.aspx"
+            #sms_url = "http://www.paigam.pk/UserSendSingleSMS.aspx"
 
-            br.open(sms_url)
+            #br.open(sms_url)
 
-            br.select_form(predicate=select_form)
-            br.form['ctl00$MainPlaceHolder$MobileTextBox'] = '0' + str(per.mobcode) + str(per.mobnumber)
-            br.form['ctl00$MainPlaceHolder$MessageTextBox'] = per.uname + ", your admission form " \
-                                                              + str(subm.id) + " in " + pro.programone + " has " \
-                                                                                                         "been submitted sucessfully"
-            br.submit()
+            #br.select_form(predicate=select_form)
+            #br.form['ctl00$MainPlaceHolder$MobileTextBox'] = '0' + str(per.mobcode) + str(per.mobnumber)
+            #br.form['ctl00$MainPlaceHolder$MessageTextBox'] = per.uname + ", your admission form " \
+             #                                                 + str(subm.id) + " in " + pro.programone + " has " \
+              #                                                                                           "been submitted sucessfully"
+            #br.submit()
             status = get_object_or_404(Status, signup=request.user.signup)
             status.submit = '1'
             status.save()

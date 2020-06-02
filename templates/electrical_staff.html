@@ -20,7 +20,7 @@
                 </div>
                 
                 {%for staff in object_list%}
-                {% if staff.department == "electrical"%}
+                
               <div class="col-md-4 col-sm-6">
                 <div class="team-box">
                 <div class="team-img">
@@ -28,12 +28,11 @@
                 </div>
                 <div class="team-title">
                     <h5>{{staff.name}}</h5>
-                    <h5>{{staff.designation}}</h5>
-                    <p>{{staff.qualification}}</p>
+                    <p>{{staff.designation}}</p>
                 </div>
             </div>
             </div>
-            {% endif %}
+            
             {%endfor%}
             </div>
         </div>
