@@ -121,4 +121,29 @@ def recommended(request):
         x = zip(names, forms, numbers)
         return render(request, 'recommended.html')
     return render(request,'recommended.html')
+    
+def result(request):
+    if 'q' in request.GET:
+        count = 0
+        allfiles2 = listdir(path3)
+        for f in allfiles2:
+            with open(path3 + '/' + f, errors='ignore') as csvfile:
+                readCSV = csv.reader(csvfile)
+                for r in readCSV:
+                    count +=1
+                    if count == 4:
+                        courses = r
+                    roll = r[0]
+                    rollnumber = roll[-4:]
+                    if rollnumber==request.GET['q']:
+                        name = r[1]
+                        reg = r[0]
+                        cou = courses[6:]
+                        gra = r[6:]
+                        cgpa = r[3]
+                        sgpa = r[2]
+                        list = zip(cou,gra)
+                        return render(request,'result.html',{'name':name,'reg':reg,'list':list,'cgpa':cgpa,'sgpa':sgpa,'flag':1})
+
+    return render(request, 'result.html')
 

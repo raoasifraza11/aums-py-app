@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^scholarships/$', TemplateView.as_view(template_name='scholarships.html'), name='scholarships'),
     url(r'^financial/aid/$', TemplateView.as_view(template_name='financial-aid.html'), name='financial-aid'),
 	path('recommended/', views.recommended , name = 'recommended'),
+    path('result/', views.result , name = 'result'),
     
 
     # About Us  

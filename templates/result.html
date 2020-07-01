@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% load static %}
+{% block link %}{{ link }}{% endblock %}
+{% block links %}{{ link }}{% endblock %}
+
+{% block body %}
+    <br>
+<h2 align="center">Result</h2>
+    <form method="get" action="" style="margin-left: 480px" >
+    <button type="submit"  class="btn" style="margin-left: 200px;height: 40px;color: black" > Search </button>
+
+    <input type="text" name="q" placeholder="enter your roll number" style="height: 40px;margin-left: -304px;border: 1px solid gray ">
+</form>
+
+    {% if flag == 1 %}
+        <div style="width:400px;height: 350px;border: 1px solid;padding: 10px; margin:0 auto;box-shadow: 5px 10px 18px #888888;">
+        <br>
+            <h4>{{ name }}</h4>
+            <h4>{{ reg }}</h4>
+        <table style="width: 100%">
+            <tr>
+                <th>Course</th>
+                <th>Grades</th>
+            </tr>
+            <tr></tr>
+
+
+            {% for a,b in list %}
+                <tr>
+                {% if b != "" %}
+                <td>{{ a }}</td>
+                <td>{{ b }}</td>
+                {% endif %}
+                </tr>
+            {% endfor%}
+        </table>
+        <p>SGPA  {{ sgpa }} - CGPA   {{ cgpa }}</p>
+        </div>
+    {% endif %}
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}
