@@ -129,6 +129,7 @@ def result(request):
         for f in allfiles2:
             with open(path3 + '/' + f, errors='ignore') as csvfile:
                 readCSV = csv.reader(csvfile)
+                count = 0
                 for r in readCSV:
                     count +=1
                     if count == 4:
