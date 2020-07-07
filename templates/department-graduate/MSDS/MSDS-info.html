@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-graduate/MSDS//MSDS-sidebar.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 class="text-center" style="font-family: 'Lato', sans-serif;">MS in Data Science</h2>
+            <p class="justify" >The MS (DS) program has been designed to give students the option to be part of a data science endeavor that begins with the identification of business processes, determination of data provenance and data ownership, understanding the ecosystem of the business decisions, skill sets and tools that shape the data, making data amenable to analytics, identifying sub-problems, recognizing the technology matrix required for problem resolution, creating incrementally-complex datadriven models and then maintaining them to ultimately leverage them for business growth. </p>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

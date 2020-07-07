@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-math/sidebar-math.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+            <h2 class="text-center" style="font-family: 'Lato', sans-serif;">Department of Mathematics & Statistics</h2>
+            <p class="justify" align="justify">Mathematics and statistics are exciting and challenging subjects and have numerous applications in all the fields of science, engineering, computing and social sciences.  The department aims to pursue excellence in mathematics and statistics through quality teaching and research. The department not only offers undergraduate programs in mathematics and statistics but also offer mathematics and statistics courses in different degree programs at the campus.</p>
+
+        </div>
+    </div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}

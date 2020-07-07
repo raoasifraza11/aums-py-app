@@ -20,7 +20,7 @@
                 </div>
 
                 {%for staff in object_list%}
-                
+                {% if staff.department == "life-scienecs"%}
               <div class="col-md-4 col-sm-6">
                 <div class="team-box">
                 <div class="team-img">
@@ -29,11 +29,12 @@
 
                 <div  class="team-title">
                     <h5>{{staff.name}}</h5>
-                    <p>{{staff.designation}}</p>
+                    <h4>{{staff.designation}}</h4>
+                    <p>{{staff.qualification}}</p>
                 </div>
             </div>
             </div>
-            
+            {% endif %}
             {%endfor%}
             </div>
         </div>

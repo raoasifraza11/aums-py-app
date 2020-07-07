@@ -135,7 +135,7 @@ urlpatterns = [
         name='MLT-courses'),
     url(r'^staff/MLT/$', views.StaffView.as_view(template_name='department-life-scienecs/MLT/MLT_staff.html'),
         name='staff-MLT'),
-        
+
     # Department of HND
     url(r'^HND/info/$', TemplateView.as_view(template_name='department-life-scienecs/HND/HND_info.html'),
         name='HND_info'),
@@ -153,12 +153,15 @@ urlpatterns = [
         name='PO_info'),
     url(r'^staff/PO/$', views.StaffView.as_view(template_name='department-life-scienecs/PO/PO_staff.html'),
         name='staff-PO'),
-        
+
     # Department of Math and Stats
+    url(r'^Math/dept_info/$', TemplateView.as_view(template_name='department-math/dept_info.html'),
+        name='deptt_info'),
     url(r'^Math/info/$', TemplateView.as_view(template_name='department-math/math_info.html'),
         name='Math_info'),
     url(r'^staff/Math/$', views.StaffView.as_view(template_name='department-math/math_staff.html'),
         name='Math_staff'),
+
 
     # Department of MBA
     url(r'^MBA/info/$', TemplateView.as_view(template_name='department-graduate/MBA/MBA-info.html'), name='MBA_info'),
@@ -172,6 +175,13 @@ urlpatterns = [
     url(r'^MSCMB/info/$', TemplateView.as_view(template_name='department-graduate/MSCMB/MSCMB-info.html'), name='MSCMB_info'),
     url(r'^MSCMB/stucture/$', TemplateView.as_view(template_name='department-graduate/MSCMB/MSCMB-structure.html'), name='MSCMB_structure'),
     url(r'^MSCMB/courses/$', TemplateView.as_view(template_name='department-graduate/MSCMB/MSCMB-courses.html'), name='MSCMB-courses'),
+    # Department of MphilMB
+    url(r'^MphilMB/info/$', TemplateView.as_view(template_name='department-graduate/MphilMB/MphilMB-info.html'),
+        name='MphilMB_info'),
+    url(r'^MphilMB/stucture/$', TemplateView.as_view(template_name='department-graduate/MphilMB/MphilMB-structure.html'),
+        name='MphilMB_structure'),
+    url(r'^MphilMB/courses/$', TemplateView.as_view(template_name='department-graduate/MphilMB/MphilMB-courses.html'),
+        name='MphilMB-courses'),
     # Department of MSEE
     url(r'^MSEE/info/$', TemplateView.as_view(template_name='department-graduate/MSEE/MSEE-info.html'), name='MSEE_info'),
     url(r'^MSEE/stucture/$', TemplateView.as_view(template_name='department-graduate/MSEE/MSEE-structure.html'), name='MSEE_structure'),
@@ -200,8 +210,13 @@ urlpatterns = [
     url(r'^MSCS/info/$', TemplateView.as_view(template_name='department-graduate/MSCS/MSCS-info.html'), name='MSCS_info'),
     url(r'^MSCS/stucture/$', TemplateView.as_view(template_name='department-graduate/MSCS/MSCS-structure.html'), name='MSCS_structure'),
     url(r'^MSCS/courses/$', TemplateView.as_view(template_name='department-graduate/MSCS/MSCS-courses.html'), name='MSCS-courses'),
-    
-    
-   
+    # Department of MSDS
+    url(r'^MSDS/info/$', TemplateView.as_view(template_name='department-graduate/MSDS/MSDS-info.html'),
+        name='MSDS_info'),
+    url(r'^MSDS/stucture/$', TemplateView.as_view(template_name='department-graduate/MSDS/MSDS-structure.html'),
+        name='MSDS_structure'),
+    url(r'^MSDS/courses/$', TemplateView.as_view(template_name='department-graduate/MSDS/MSDS-courses.html'),
+        name='MSDS-courses'),
+
 ]
 

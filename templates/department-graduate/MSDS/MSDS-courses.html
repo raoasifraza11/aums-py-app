@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-graduate/MSDS/MSDS-sidebar.html' with courses="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+
+        <div class="table-responsive">
+
+
+
+            <h3 class="text-center">SEMESTER 1</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+              <tbody>
+                                <tr>
+                                    <td>DS603</td>
+                                    <td>Tools and Techniques for Data Science</td>
+                                    <td>3+0</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>CS6XX</td>
+                                    <td>Elective I</td>
+                                    <td>3+0</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                <tbody>
+                                <tr>
+                                    <td>DS602</td>
+                                    <td>Statistical and Mathematical Methods for Data Analysis</td>
+                                    <td>3+0</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+            </table>
+
+            <h3 class="text-center">SEMESTER 2</h3>
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+               <tbody>
+                                <tr>
+                                    <td>DS604</td>
+                                    <td>Machine Learning</td>
+                                    <td>3+0</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>CS60XX</td>
+                                    <td>Specialization-Elective-I</td>
+                                    <td>3+0</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>CS60XX</td>
+                                    <td>Specialization-Elective-II</td>
+                                    <td>3+0</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+            </table>
+
+            <h3 class="text-center">SEMESTER 3</h3>
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                                <tr>
+                                    <td>CS6XX</td>
+                                    <td>Elective II</td>
+                                    <td>3+0</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+
+                            <tbody>
+                                <tr>
+                                    <td>DS689</td>
+                                    <td>Thesis-I</td>
+                                    <td>3+0</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+            </table>
+
+            <h3 class="text-center">SEMESTER 4</h3>
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+               <tbody>
+                                <tr>
+                                    <td>CS5XX</td>
+                                    <td>Elective-III</td>
+                                    <td>3+0</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>DS699</td>
+                                    <td>Thesis-II</td>
+                                    <td>3+0</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+
+{% endblock %}
