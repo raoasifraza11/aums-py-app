@@ -14,18 +14,20 @@
                         {% include 'about-us/about-us-sidebar.html' with message="active" %}
                     </div>
 			<div class="col-md-9" id="static-content">
-                <h1 style="background:#006666;color:white;">&nbsp;Messages</h1>
-                <h2  class="font-weight-bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Muhammad Imran Ullah (Chancellor)</h2>
+
+                <a onclick="myFunction3()"><h2 style="background:#006666;color:white;">&nbsp;Chancellor's Messages<span style="float: right;margin-right: 10px">&#8722;</span></h2></a><div id="myDIV3">
                 <center><img src='{% static "img/chancellor.jpg" %}' class="img-rounded" width="10%"></center>
                 <p align="justify" class="justify">Education is the core value of a nation, and the function of an educational institution is not only to take care
                 of an individual’s academic growth but also to take charge of his/her personal, social, mental, psychological,
                 and spiritual maturity for overall learning and transformation. Only an institution which takes care of all
                 these dynamics can shape a true scholar and a true professional, and Abasyn University is one of its kind
-                in this realm. Abasyn University, established in 2007 through an Act of Provincial Assembly, has now emerged
+                in this realm.<br><br>
+                    Abasyn University, established in 2007 through an Act of Provincial Assembly, has now emerged
                 as a sustainable organization with the grace of Almighty and the committed efforts of the faculty and the
                 management. Within a short span of time, the university has made a number of achievements including a thriving
                 campus at Islamabad, and one in Ras Al Khaimah, UAE which will be operational as soon as HEC gives a green
-                signal. This is heartening to know that apart from excelling in academic standards, students of Abasyn University
+                signal. <br><br>
+                    This is heartening to know that apart from excelling in academic standards, students of Abasyn University
                 actively participate in diverse socio-cultural activities of high standards such as tree plantation, traffic
                 education, blood donation, youth awareness, and community service campaigns, drives, and projects to nurture
                 exceptional values of social importance. The University, energized by its distinguished faculty and strengthened
@@ -33,18 +35,23 @@
                 forge new paths for a brighter tomorrow of Pakistan. I would like to congratulate the faculty and management
                 of the University for their efforts being rewarded in terms of recognition of D-Pharmacy Discipline by the
                 Pharmacy Council of Pakistan. This is going to be a historical year for Abasyn University as the university
-                has planned its first convocation which will be held in May 2014, In-sha-Allah. I pray to Allah to crown
-                our endeavors with success!</p>
-                <h2 class="font-weight-bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr. Syed Umer Farooq (Vice Chancellor)</h2>
+                has planned its first convocation which will be held in May 2014, In-sha-Allah.
+                    <br><br>I pray to Allah to crown
+                our endeavors with success!
+                    <br><br><strong>Dr. Muhammad Imran Ullah</strong></p></div>
+
+
+                <a onclick="myFunction()"><h2 style="background:#006666;color:white;">&nbsp;Vice Chancellor's Messages<span style="float: right;margin-right: 10px">&#43;</span></h2></a><div style="display: none" id="myDIV">
                 <center><img src='{% static "img/vc.jpg" %}' class="img-rounded" width="10%"></center>
 <p align="justify" class="justify">Great institutions are more than places. They’re ideas, and same is true for Abasyn University which is meant
                 to nurture the interplay of ideas, students, and place in ways that serve them all. At Abasyn University
                 we put to work our strongest and most promising academic disciplines and build avenues of access and opportunities
-                for the students. On behalf of the University community, I welcome you to the world of Abasyn University.
+                for the students. <br><br>
+                On behalf of the University community, I welcome you to the world of Abasyn University.
                 This Prospectus gives you an overview of the University's campus, programs and courses. With a very blend
                 of highly qualified faculty, excellent infra-structure and handsome enrolment figures, Abasyn University
-                has blossomed into an institution of great eminence. One of the University’s two main roles is to help our
-                students achieve that potential and become what they want to be and what society needs. Our other main role
+                has blossomed into an institution of great eminence.<br><br>
+                One of the University’s two main roles is to help our students achieve that potential and become what they want to be and what society needs. Our other main role
                 is to generate new knowledge that improves the world and illuminates our understanding of it. We are acknowledged
                 as excelling in both of these roles, and we intend to do even better - hence the ambitious program of investment
                 in facilities, faculties and staff at Abasyn University will be continuing in the future ahead. Abasyn University
@@ -54,26 +61,55 @@
                 and thereby promoting and ensuring excellence in higher education in Pakistan. It is constantly seeking new
                 vistas of wisdom and knowledge to stand out distinctly apart from the milling crowd of educational providers.
                 The introduction of innovative and dynamic programs has proved to be the key factors in the perspective of
-                lucrative placements. A bright opportunity is knocking at your door. Please come and tap it. I request you
-                to come and personally visit Abasyn University or go through this prospectus to know more about our academic
-                environment, curriculum and teaching/learning proceedings. I wish a very bright future for all of you. I
-                hope that after getting admission and education at Abasyn University, you will become an asset for the country
+                lucrative placements. A bright opportunity is knocking at your door. Please come and tap it.<br><br>
+                I request you to come and personally visit Abasyn University or go through this prospectus to know more about our academic
+                environment, curriculum and teaching/learning proceedings.<br><br>
+                I wish a very bright future for all of you. I hope that after getting admission and education at Abasyn University, you will become an asset for the country
                 and you will be able to play an important role for the development and prosperity of yourself, your family
-                and the people of Pakistan.</p>
-				                <h2 class="font-weight-bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr. Amjad Mahmood (Executive Director)</h2>
+                and the people of Pakistan.
+    <br><br><strong>Dr. Syed Umer Farooq</strong></p>
+                </div>
+                <a onclick="myFunction2()"><h2 style="background:#006666;color:white;">Executive Director's message<span style="float: right;margin-right: 10px">&#43;</span></h2></a><div style="display: none"  id="myDIV2">
                 <center>
                 <img src='{% static "img/dramjad.png" %}' class="img-rounded" width="10%">
             </center>
-            <p align="justify" class="justify">Abasyn University embodies the message in its tag line:<strong>
+            <p align="justify" class="justify">Abasyn University embodies the message in its tag line:<br><br><strong style="margin-left: 300px">
                 Passion to design futures.
-            </strong>
-                Established in 2012, Abasyn University Islamabad Campus (AUIC) is committed to provide high-quality education and equipping students with knowledge and skill necessary to address both local and global challenges. Within the short span of its existence, the AUIC has achieved remarkable success and continues to forge its future with new program initiative, modern curriculum, cutting edge research activities, student engagement, faculty development, international collaborations, industry collaboration and much more. Making transformative impact on students, faculty, industry and society is the aim of these programs.<br>
-                As we look into the future, one thing is certain – knowledge will be a highly sought-after key resource within Pakistan and around the world. Our challenge is to help to generate ideas that will benefit society, and to educate and train people to work in fields where they will be valued both for their specialized knowledge, and for their ability to communicate and solve problems.AUIC provides many opportunities to grow academically, intellectually and socially. At AUIC, we emphasize on critical thinking, technology awareness, interpersonal competencies and practical life skills. Our programs for faculty development ensure a dynamic and futuristic environment for teaching and research.<br>
-                As an Executive Director, I am committed to attracting a body of faculty and students dedicated to academic excellence, pedagogical sophistication, research, and service to society.<br>
-                I look forward to welcoming you to Abasyn University Islamabad Campus.</p>
+            <br><br></strong>
+                Established in 2012, Abasyn University Islamabad Campus (AUIC) is committed to provide high-quality education and equipping students with knowledge and skill necessary to address both local and global challenges. Within the short span of its existence, the AUIC has achieved remarkable success and continues to forge its future with new program initiative, modern curriculum, cutting edge research activities, student engagement, faculty development, international collaborations, industry collaboration and much more. Making transformative impact on students, faculty, industry and society is the aim of these programs.<br><br>
+                As we look into the future, one thing is certain – knowledge will be a highly sought-after key resource within Pakistan and around the world. Our challenge is to help to generate ideas that will benefit society, and to educate and train people to work in fields where they will be valued both for their specialized knowledge, and for their ability to communicate and solve problems.AUIC provides many opportunities to grow academically, intellectually and socially. At AUIC, we emphasize on critical thinking, technology awareness, interpersonal competencies and practical life skills. Our programs for faculty development ensure a dynamic and futuristic environment for teaching and research.<br><br>
+                As an Executive Director, I am committed to attracting a body of faculty and students dedicated to academic excellence, pedagogical sophistication, research, and service to society.<br><br>
+                I look forward to welcoming you to Abasyn University Islamabad Campus.<br><br>
+                <strong>Dr. Amjad Mahmood</strong></p></div>
 			</div>
 		</div>
 	</div>
+<script>
+function myFunction() {
 
+   var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function myFunction2() {
+     var x = document.getElementById("myDIV2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function myFunction3() {
+     var x = document.getElementById("myDIV3");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 <!-- End Vision & Mission -->
 {% endblock %}

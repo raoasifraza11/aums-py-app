@@ -1,16 +1,18 @@
 <nav class="nav-sidebar">
     <ul class="nav">
+        <li class="{{ message }}">
+        <a href="{% url 'slider:vc-message' %}">Message</a>
+      </li>
+         <li class="{{ history }}">
+        <a href="{% url 'slider:historys' %}">History</a>
+      </li>
       <li class="{{ vision }}">
         <a href="{% url 'slider:vision' %}">Vision & Mission</a>
       </li>
       <li class="{{ objective }}">
         <a href="{% url 'slider:objective' %}">Objective</a>
       </li>
-      <li class="{{ message }}">
-        <a href="{% url 'slider:vc-message' %}">Message</a>
-      </li>
-      <li class="{{ history }}">
-        <a href="{% url 'slider:historys' %}">History</a>
-      </li>
+
+
     </ul>
   </nav>
