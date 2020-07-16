@@ -1,0 +1,24 @@
+<nav class="nav-sidebar">
+    <ul class="nav">
+
+      <li class="{{ info }}">
+        <a href="{% url 'slider:cs_foreword' %}">Foreword</a>
+      </li>
+      <li class="{{ structure }}">
+        <a href="{% url 'slider:computing-course' %}">Semester Plan</a>
+      </li>
+        <li class="{{ elective }}">
+        <a href="{% url 'slider:cs_electives' %}">Electives</a>
+      </li>
+      <li class="{{ faculity }}">
+        <a  href="{% url 'slider:Staff' %}">Faculty</a>
+      </li>
+      
+      <li>
+        <a  href="{{admission.link}}">Apply Online</a>
+      </li>
+      <li>
+        <a target="_blank" href="{% url 'slider:feestructure' %}">Fee Structure</a>
+      </li>
+    </ul>
+  </nav>

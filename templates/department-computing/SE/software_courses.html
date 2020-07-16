@@ -1,0 +1,508 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab2 {
+  overflow: hidden;
+  border: 1px solid white;
+  background-color: white;
+}
+
+/* Style the buttons inside the tab */
+.tab2 button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 14.5px;
+}
+
+/* Change background color of buttons on hover */
+.tab2 button:hover {
+  background-color: #f1f1f1;
+    color:green;
+}
+
+/* Create an active/current tablink class */
+.tab2 button.active {
+  background-color: #006666 ;
+    color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-top: none;
+}
+</style>
+<!-- Courses Section -->
+<div class="container">
+        <div class="col-sm-3">
+                <nav class="nav-sidebar">
+                    {% include 'department-computing/se/sidebar.html' with structure="active" %}
+                </nav>
+              </div>
+    <div class="tab2">
+  <button class="tablinks active" onclick="opensem(event, 's1')">Semester 1</button>
+  <button class="tablinks" onclick="opensem(event, 's2')">Semester 2</button>
+  <button class="tablinks" onclick="opensem(event, 's3')">Semester 3</button>
+  <button class="tablinks" onclick="opensem(event, 's4')">Semester 4</button>
+  <button class="tablinks" onclick="opensem(event, 's5')">Semester 5</button>
+  <button class="tablinks" onclick="opensem(event, 's6')">Semester 6</button>
+  <button class="tablinks" onclick="opensem(event, 's7')">Semester 7</button>
+  <button class="tablinks" onclick="opensem(event, 's8')">Semester 8</button>
+</div>
+              <div class="col-md-9 col-sm-9" id="static-content">
+            <div class="table-responsive">
+            	<div id="s1" class="tabcontent" style="display: block;" >
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CS100</td>
+                            <td>Introduction to Computing</td>
+                            <td>3+0</td>
+                            <td>None</td>
+
+                        </tr>
+                        <tr>
+                            <td>CS106</td>
+                            <td>Introduction to Computer Programming</td>
+                            <td>3+1</td>
+                            <td>None</td>
+
+                        </tr>
+                        <tr>
+                            <td>NS109</td>
+                            <td>Applied Physics</td>
+                            <td>2+1</td>
+                            <td>None</td>
+
+                        </tr>
+                        <tr>
+                            <td>SS104</td>
+                            <td>English-I (Comprehension)</td>
+                            <td>3+0</td>
+                            <td>None</td>
+
+                        </tr>
+                        <tr>
+                            <td>SS108</td>
+                            <td>Islamic Studies/Ethics (for Non-Muslims)</td>
+                            <td>2+0</td>
+                            <td>None</td>
+                        </tr>
+                        <tr>
+                            <td>MT112</td>
+                            <td>Calculus-I</td>
+                            <td>3+0</td>
+                            <td>None</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <div id="s2" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MT221</td>
+                            <td>Linear Algebra </td>
+                            <td>3+0</td>
+                            <td>MT112</td>
+
+                        </tr>
+                        <tr>
+                            <td>CS200</td>
+                            <td>Object Oriented Programming</td>
+                            <td>3+1</td>
+                            <td>CS106</td>
+
+                        </tr>
+                        <tr>
+                            <td>SS124</td>
+                            <td>English-II (Communication Skills)</td>
+                            <td>3+0</td>
+                            <td>SS104</td>
+
+                        </tr>
+                        <tr>
+                            <td>SE242</td>
+                            <td>Software Engineering </td>
+                            <td>3+0</td>
+                            <td>None</td>
+                        </tr>
+                        <tr>
+                            <td>SS118</td>
+                            <td>Pakistan Studies</td>
+                            <td>2+0</td>
+                            <td>None</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <div id="s3" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CS210</td>
+                            <td>Data Structures & Algorithms </td>
+                            <td>3+1</td>
+                            <td>CS200</td>
+
+                        </tr>
+                        <tr>
+                            <td>SE253</td>
+                            <td>Software Requirement Engineering </td>
+                            <td>3+0</td>
+                            <td>SE242</td>
+
+                        </tr>
+                        <tr>
+                            <td>SE432</td>
+                            <td>Human Computer Interaction </td>
+                            <td>3+0</td>
+                            <td>SE242</td>
+
+                        </tr>
+                        <tr>
+                            <td>SE443</td>
+                            <td>Web Engineering </td>
+                            <td>3+0</td>
+                            <td>None</td>
+                        </tr>
+                        <tr>
+                            <td>SS216</td>
+                            <td>Intro. to Sociology </td>
+                            <td>3+1</td>
+                            <td>None</td>
+                        </tr>
+
+                    </tbody></table></div>
+                <div id="s4" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>CS385</td>
+                                <td>Database Management Systems </td>
+                                <td>3+1</td>
+                                <td>CS210</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>CS313</td>
+                                <td>Operating Systems Concepts</td>
+                                <td>3+1</td>
+                                <td>CS210</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SE317</td>
+                                <td>Software Design & Architecture</td>
+                                <td>2+1</td>
+                                <td>SE253</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SExxx</td>
+                                <td>Software Elective I</td>
+                                <td>3+0</td>
+                                <td>SE443</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SS218</td>
+                                <td>Into. To Psychology</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                </table></div>
+
+                <div id="s5" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                        <tr>
+                                <td>SE252</td>
+                                <td>Software Construction and Development</td>
+                                <td>2+1</td>
+                                <td>SE317</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT301</td>
+                                <td>Probability and Statistics </td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SExxx</td>
+                                <td>Supporting - I</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MG100</td>
+                                <td>Fundamentals of Accounting </td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SS401</td>
+                                <td>Research Methodology and Professional Ethics</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT201</td>
+                                <td>Discrete Structures</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                </table></div>
+                    <div id="s6" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                        <tr>
+                                <td>SE321</td>
+                                <td>Software Quality Engineering </td>
+                                <td>3+0</td>
+                                <td>SE242</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>CS306</td>
+                                <td>Computer Networks </td>
+                                <td>3+1</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SExxx</td>
+                                <td>Supporting – II</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SExxx</td>
+                                <td>Software Elective II</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SS211</td>
+                                <td>English-III (Technical Report Writing)</td>
+                                <td>3+0</td>
+                                <td>SS203</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SExxx</td>
+                                <td>Software Elective III</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>CS494</td>
+                                <td>Industrial Training Internship (During semester break or Summer Semester)</td>
+                                <td>2</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        </table></div>
+
+                <div id="s7" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                        <tr>
+                                <td>SE424</td>
+                                <td>Software Project Management </td>
+                                <td>3+0</td>
+                                <td>SE242</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SE308</td>
+                                <td>Software Re-Engineering  </td>
+                                <td>3+0</td>
+                                <td>SE252</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SExxx</td>
+                                <td>Supporting - III </td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SExxx</td>
+                                <td>Software Elective IV</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>CS499</td>
+                                <td>Final Project I</td>
+                                <td>0+3</td>
+                                <td>None</td>
+                            </tr>
+                    </tbody>
+</table></div>
+                  <div id="s8" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                        <tr>
+                                <td>SExxx</td>
+                                <td>Software Elective V</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>CS390</td>
+                                <td>Information Security</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MG404</td>
+                                <td>Entrepreneurship</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>CS499</td>
+                                <td>Final Project II</td>
+                                <td>0+3</td>
+                                <td>None</td>
+                            </tr>
+                    </tbody>
+                    </table></div>
+
+
+
+            </div>
+            </div>
+        </div>
+    <br>
+    <script>
+function opensem(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<!-- End Courses Section -->
+{% endblock %}

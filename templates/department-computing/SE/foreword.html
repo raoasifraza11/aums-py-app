@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+.x{
+   width: 200px;
+
+}
+</style>
+<!-- HOD Message -->
+<div class="container ">
+<div class="row">
+      <div class="col-sm-3">
+            {% include 'department-computing/se/sidebar.html' with info="active" %}
+      </div>
+
+
+
+
+
+
+<h1 style="font-family: 'Lato', sans-serif;" class="text-center">BS in Software Engineering</h1>
+    <div class="col-md-9 col-sm-9">
+    <p class="justify" style="text-align: justify">Software Engineering is the practice of creating and implementing large, reliable, efficient and economical software by applying the principles and practices of engineering. The basic intention of BS Program in Software Engineering is to train students in all aspects of software life cycle from requirements specification through analysis and design to testing, maintenance and evolution of software product; such that by means of critical analysis and creativity, reallife problems are addressed in an effective manner. </p>
+
+            <h4>Program Educational Objectives (PEOs)</h4>
+            <P>The Program Educational Objectives describe the career and professional accomplishments that the graduates are expected to attain within a few years of graduation. The Program Educational Objectives (PEOs) are focused on to produce BSSE graduates who:</P>
+            <ol>
+                <li>
+                    Are competent, employable and demonstrate sound knowledge and skills meeting needs of the modern computing practice and software industry.
+                </li>
+                <li>
+                    Are effective in communication and interpersonal skills with high professional and ethical standards.
+                </li>
+                <li>
+                    Are engaged in continuous pursuit of knowledge through research, continuous education and/or professional development.
+                </li>
+            </ol>
+            <br>
+            <h4>Program Learning Outcomes (PLOs) Mapping to Curriculum</h4>
+            <P>Program learning outcomes serve as guidelines that describe what students are expected to know and be able to do by the time of graduation. These relate to the knowledge, skills and attitude that the students acquire while progressing through the program:</P>
+            <ol type="a">
+                <li>Apply knowledge of mathematics, science and engineering.</li>
+                <li>Design and conduct experiments, as well as to analyze and interpret data.</li>
+                <li>Design a system, component, or process to meet desired needs within realistic constraints such as economic, environmental, social, political, ethical, health and safety, manufacturability, and sustainability.</li>
+                <li>Function on multidisciplinary teams.</li>
+                <li>Identify, formulate and solve engineering problems.</li>
+                <li>Understand professional and ethical responsibility.</li>
+                <li>Communicate effectively</li>
+                <li>Understand the impact of engineering solutions in a global, economic, environmental and societal context.</li>
+                <li>Recognize the need for, and an ability to engage in life-long learning.</li>
+                <li>Harness knowledge of contemporary issues.</li>
+                <li>Use the techniques, skills, and modern engineering tools necessary for engineering practice. </li>
+
+            </ol>
+
+    </div>
+</div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}

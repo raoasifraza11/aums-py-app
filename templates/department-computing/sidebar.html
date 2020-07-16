@@ -2,23 +2,16 @@
     <ul class="nav">
 
       <li class="{{ info }}">
-        <a href="{% url 'slider:computing-info' %}">Department Info</a>
+        <a href="{% url 'slider:computing-info' %}">Foreword</a>
       </li>
       <li class="{{ structure }}">
-        <a href="{% url 'slider:computing-structure' %}">Programs Info</a>
+        <a href="{% url 'slider:computing-structure' %}">Programs</a>
       </li>
-      <li class="{{ courses }}">
-          <a href="{% url 'slider:computing-course' %}">Curriculum CS</a>
-        </li>
-              <li class="{{ accredition }}">
-          <a href="{% url 'slider:accredition-computing' %}">Curriculum SE</a>
-        </li>
+
       <li class="{{ faculity }}">
         <a  href="{% url 'slider:Staff' %}">Faculty</a>
       </li>
-      <li class="{{ obe }}">
-          <a  href="{% url 'slider:obe-computing' %}">OBE</a>
-        </li>
+
       <li>
         <a  href="{{admission.link}}">Apply Online</a>
       </li>
