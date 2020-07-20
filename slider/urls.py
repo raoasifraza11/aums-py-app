@@ -52,17 +52,17 @@ urlpatterns = [
     url(r'^hod/computing/$', TemplateView.as_view(template_name='department-computing/hod_computing.html'), name='hod-computing'),
     url(r'^computing/info/$', TemplateView.as_view(template_name='department-computing/computing_info.html'), name='computing-info'),
     url(r'^staff/computing/$', views.StaffView.as_view(template_name='Staff.html'), name='Staff'),
-    url(r'^computing/cs/foreword$', TemplateView.as_view(template_name='department-computing/CS/foreword.html'),
+    url(r'^computing/cs/foreword$', TemplateView.as_view(template_name='department-computing/cs/foreword.html'),
         name='cs_foreword'),
     url(r'^computing/course_CS/$', TemplateView.as_view(template_name='department-computing/CS/computing_courses.html'), name='computing-course'),
-    url(r'^computing/cs/electives$', TemplateView.as_view(template_name='department-computing/CS/elective.html'),
+    url(r'^computing/cs/electives$', TemplateView.as_view(template_name='department-computing/cs/elective.html'),
         name='cs_electives'),
     url(r'^computing/stucture/$', TemplateView.as_view(template_name='department-computing/computing_structure.html'), name='computing-structure'),
     url(r'^obe/computing/$', views.OBEView.as_view(template_name='department-computing/obe.html'), name='obe-computing'),
-    url(r'^computing/se/foreword$', TemplateView.as_view(template_name='department-computing/SE/foreword.html'),
+    url(r'^computing/se/foreword$', TemplateView.as_view(template_name='department-computing/se/foreword.html'),
         name='se_foreword'),
      url(r'^computing/course_SE/$', TemplateView.as_view(template_name='department-computing/SE/software_courses.html'), name='se_courses'),
-    url(r'^computing/se/electives$', TemplateView.as_view(template_name='department-computing/SE/elective.html'),
+    url(r'^computing/se/electives$', TemplateView.as_view(template_name='department-computing/se/elective.html'),
         name='se_electives'),
     # Department of Civil
     url(r'^hod/civil/$', TemplateView.as_view(template_name='department-civil/hod_civil.html'), name='hod-civil'),
@@ -119,6 +119,18 @@ urlpatterns = [
      url(r'^business/courses/$', TemplateView.as_view(template_name='department-business/business_courses.html'), name='business_courses'),
     url(r'^staff/business/$', views.StaffView.as_view(template_name='department-business/business_staff.html'), name='staff-business'),
     url(r'^business/accredition/$', TemplateView.as_view(template_name='department-business/accredition-business.html'), name='accredition-business'),
+
+    #BSTHM
+    url(r'^BSTHM/info/$', TemplateView.as_view(template_name='department-business/BSTHM/BSTHM_info.html'),
+        name='BSTHM_info'),
+    url(r'^staff/BSTHM/$', views.StaffView.as_view(template_name='department-business/BSTHM/BSTHM_staff.html'),
+        name='staff-BSTHM'),
+    # Dept of Electronics
+    url(r'^de/info/$', TemplateView.as_view(template_name='department-electronics/de_info.html'),
+        name='de_info'),
+    url(r'^staff/de/$', views.StaffView.as_view(template_name='department-electronics/de_staff.html'),
+        name='staff-de'),
+
     # Department of Micro
     url(r'^hod/micro/$', TemplateView.as_view(template_name='department-life-scienecs/department-micro/hod_micro.html'), name='hod-micro'),
     url(r'^micro/info/$', TemplateView.as_view(template_name='department-life-scienecs/department-micro/micro_info.html'), name='micro_info'),
@@ -161,6 +173,12 @@ urlpatterns = [
         name='PO_info'),
     url(r'^staff/PO/$', views.StaffView.as_view(template_name='department-life-scienecs/PO/PO_staff.html'),
         name='staff-PO'),
+    # Department of BSBIO
+    url(r'^BSBIO/info/$', TemplateView.as_view(template_name='department-life-scienecs/BSBIO/BSBIO_info.html'),
+        name='BSBIO_info'),
+    url(r'^staff/BSBIO/$', views.StaffView.as_view(template_name='department-life-scienecs/BSBIO/BSBIO_staff.html'),
+        name='staff-BSBIO'),
+
 
     # Department of Math and Stats
     url(r'^Math/dept_info/$', TemplateView.as_view(template_name='department-math/dept_info.html'),

@@ -1,0 +1,16 @@
+<nav class="nav-sidebar">
+        <ul class="nav">
+          <li class="{{ info }}">
+            <a href="{% url 'slider:BSBIO_info' %}">Program Info</a>
+          </li>
+          <li class="{{ faculity }}">
+            <a href="{% url 'slider:staff-BSBIO' %}">Faculty</a>
+          </li>
+          <li>
+            <a  href="{{admission.link}}">Apply Online</a>
+          </li>
+          <li>
+            <a target="_blank" href="{% url 'slider:feestructure' %}">Fee Structure</a>
+          </li>
+        </ul>
+      </nav>
