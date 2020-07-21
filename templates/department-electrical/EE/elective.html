@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<!-- Courses Section -->
+<div class="container">
+        <div class="col-sm-3">
+                <nav class="nav-sidebar">
+                    {% include 'department-electrical/EE/sidebar-EE.html' with electives="active" %}
+                </nav>
+              </div>
+               <div class="col-md-9 col-sm-9" id="static-content">
+            <div class="table-responsive">
+
+
+                    <h3 class="text-center" style="margin-bottom:20px;">Technical Elective Courses</h3>
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EE412 </td>
+                        <td>Digital Electronics</td>
+                        <td>3+1</td>
+                        <td>EE215</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE444</td>
+                        <td>Artificial Intelligence  </td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>EE413</td>
+                        <td>Solid State Devices</td>
+                        <td>3+0</td>
+                        <td>EE215</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>EE422</td>
+                        <td>Digital Communication</td>
+                        <td>3+1</td>
+                        <td>EE321</td>
+                    </tr>
+                    <tr>
+                        <td>EE423</td>
+                        <td>Wave Propagation and Antennas</td>
+                        <td>3+1</td>
+                        <td>EE311</td>
+                    </tr>
+                    <tr>
+                        <td>EE424</td>
+                        <td>Wireless and Mobile Communication</td>
+                        <td>3+0</td>
+                        <td>EE321</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>EE432</td>
+                        <td>Power Generation</td>
+                        <td>3+1</td>
+                        <td>EE315</td>
+                    </tr>
+                    <tr>
+                        <td>EE433</td>
+                        <td>Power Distribution and Utilization</td>
+                        <td>3+1</td>
+                        <td>EE213</td>
+                    </tr>
+
+                    <tr>
+                        <td>EE441</td>
+                        <td>Computer Architecture</td>
+                        <td>3+1</td>
+                        <td>EE300</td>
+                    </tr>
+
+                    <tr>
+                        <td>EE443</td>
+                        <td>Operating Systems</td>
+                        <td>3+0</td>
+                        <td>CS210</td>
+                    </tr>
+                    <tr>
+                        <td>EE442</td>
+                        <td>Digital Design</td>
+                        <td>3+1</td>
+                        <td>EE200</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h3 class="text-center" style="margin-bottom:20px;">Humanities and Social Sciences Electives</h3>
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SS2xx</td>
+                        <td>Professional Ethics</td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>SS216</td>
+                        <td>Sociology for Engineers</td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>SS2xx</td>
+                        <td>Critical Thinking</td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>SS2xx</td>
+                        <td>Organizational Behavior</td>
+                        <td>3+0</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>SS218</td>
+                        <td>Professional Psychology</td>
+                        <td>3+0</td>
+                        <td>None</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            </div>
+            </div>
+        </div>
+
+<!-- End Courses Section -->
+{% endblock %}

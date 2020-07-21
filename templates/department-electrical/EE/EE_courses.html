@@ -1,0 +1,477 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab2 {
+  overflow: hidden;
+  border: 1px solid white;
+  background-color: white;
+}
+
+/* Style the buttons inside the tab */
+.tab2 button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 14.5px;
+}
+
+/* Change background color of buttons on hover */
+.tab2 button:hover {
+  background-color: #f1f1f1;
+    color:green;
+}
+
+/* Create an active/current tablink class */
+.tab2 button.active {
+  background-color: #006666 ;
+    color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-top: none;
+}
+</style>
+<!-- Courses Section -->
+<div class="container">
+        <div class="col-sm-3">
+                <nav class="nav-sidebar">
+                    {% include 'department-electrical/EE/sidebar-EE.html' with courses="active" %}
+                </nav>
+              </div>
+    <div class="tab2">
+  <button class="tablinks active" onclick="opensem(event, 's1')">Semester 1</button>
+  <button class="tablinks" onclick="opensem(event, 's2')">Semester 2</button>
+  <button class="tablinks" onclick="opensem(event, 's3')">Semester 3</button>
+  <button class="tablinks" onclick="opensem(event, 's4')">Semester 4</button>
+  <button class="tablinks" onclick="opensem(event, 's5')">Semester 5</button>
+  <button class="tablinks" onclick="opensem(event, 's6')">Semester 6</button>
+  <button class="tablinks" onclick="opensem(event, 's7')">Semester 7</button>
+  <button class="tablinks" onclick="opensem(event, 's8')">Semester 8</button>
+</div>
+              <div class="col-md-9 col-sm-9" id="static-content">
+            <div class="table-responsive">
+            	<div id="s1" class="tabcontent" style="display: block;" >
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>NS111</td>
+                        <td>Applied Physics</td>
+                        <td>3+1</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>SS108</td>
+                        <td>Islamic Studies / Ethics (for non Muslim students)</td>
+                        <td>2+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>CS100</td>
+                        <td>Introduction to Computing</td>
+                        <td>1+1</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>SS104</td>
+                        <td>English-I (Comprehension)</td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>MT101</td>
+                        <td>Calculus & Analytical Geometry(Math-1)</td>
+                        <td>3+0</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>EE112</td>
+                        <td>Workshop Practice</td>
+                        <td>0+1</td>
+                        <td>None</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+                <div id="s2" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EE121</td>
+                        <td>Engineering Drawing</td>
+                        <td>0+1</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE116</td>
+                        <td>Linear Circuit Analysis-I</td>
+                        <td>3+1</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>CS114</td>
+                        <td>Programming Fundamentals</td>
+                        <td>3+1</td>
+                        <td>CS100</td>
+
+                    </tr>
+                    <tr>
+                        <td>SS2xx</td>
+                        <td>Humanities and Social Sciences Elective</td>
+                        <td>3+0</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>MT111</td>
+                        <td>Differential Equations</td>
+                        <td>3+0</td>
+                        <td>MT101</td>
+                    </tr>
+                    <tr>
+                        <td>SS124</td>
+                        <td>English – II (Communication Skills) </td>
+                        <td>3+0</td>
+                        <td>SS104</td>
+                    </tr>
+
+                </tbody>
+            </table></div>
+
+                <div id="s3" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EE200</td>
+                        <td>Digital Logic Design</td>
+                        <td>3+1</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE222</td>
+                        <td>Basic Civil Engineering</td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>MT221</td>
+                        <td>Linear Algebra</td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE215</td>
+                        <td>Electronic Devices & Circuits</td>
+                        <td>3+1</td>
+                        <td>EE116</td>
+                    </tr>
+                    <tr>
+                        <td>MT214</td>
+                        <td>Complex Variable & Transforms </td>
+                        <td>3+0</td>
+                        <td>MT104</td>
+                    </tr>
+                </tbody>
+            </table>
+</div>
+                <div id="s4" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EE223</td>
+                        <td>Signals & System</td>
+                        <td>3+1</td>
+                        <td>MT214</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE213</td>
+                        <td>Electrical Network Analysis</td>
+                        <td>3+1</td>
+                        <td>EE116</td>
+
+                    </tr>
+                    <tr>
+                        <td>CS210</td>
+                        <td>Data Structure & Algorithm</td>
+                        <td>3+1</td>
+                        <td>CS106</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE224</td>
+                        <td>Electronic Circuit Design</td>
+                        <td>3+1</td>
+                        <td>EE215</td>
+                    </tr>
+                    <tr>
+                        <td>SS118</td>
+                        <td>Pakistan Studies</td>
+                        <td>2+0</td>
+                        <td>None</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+                <div id="s5" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EE302</td>
+                        <td>Embedded Systems</td>
+                        <td>3+1</td>
+                        <td>CS106</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE316</td>
+                        <td>Digital Signal Processing</td>
+                        <td>3+1</td>
+                        <td>EE223</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE313</td>
+                        <td>Probability Methods in Engineering</td>
+                        <td>3+0</td>
+                        <td>MT101</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE311</td>
+                        <td>Electromagnetic Field Theory</td>
+                        <td>3+0</td>
+                        <td>NS111</td>
+                    </tr>
+                    <tr>
+                        <td>EE315</td>
+                        <td>Electrical Machines</td>
+                        <td>3+1</td>
+                        <td>EE116</td>
+                    </tr>
+                </tbody>
+            </table></div>
+                    <div id="s6" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EE321</td>
+                        <td>Communication System</td>
+                        <td>3+1</td>
+                        <td>EE223</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE322</td>
+                        <td>Linear Control Systems</td>
+                        <td>3+1</td>
+                        <td>EE223</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE324</td>
+                        <td>Measurement & Instrumentation</td>
+                        <td>3+1</td>
+                        <td>EE215</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE411</td>
+                        <td>Power Electronics</td>
+                        <td>3+1</td>
+                        <td>EE215</td>
+                    </tr>
+                    <tr>
+                        <td>SS211</td>
+                        <td>English – III (Technical Report Writing)</td>
+                        <td>3+0</td>
+                        <td>SS124</td>
+                    </tr>
+
+                </tbody>
+            </table></div>
+
+                <div id="s7" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SS401</td>
+                        <td>Research Methods and Professional Ethics</td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE312</td>
+                        <td>Applied Thermodynamics</td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE4xx</td>
+                        <td>Technical Elective - I</td>
+                        <td>3+1</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE4xx </td>
+                        <td>Technical Elective - II</td>
+                        <td>3+0</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>EE498</td>
+                        <td>Senior Design Project – I</td>
+                        <td>3+0</td>
+                        <td>None</td>
+                    </tr>
+
+                </tbody>
+            </table></div>
+                  <div id="s8" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EE421</td>
+                        <td>Computer Communication Networks</td>
+                        <td>3+1</td>
+                        <td>EE321</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE434</td>
+                        <td>Power System Analysis</td>
+                        <td>3+0</td>
+                        <td>EE213</td>
+
+                    </tr>
+                    <tr>
+                        <td>MG435</td>
+                        <td>Engineering Economics & Management</td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>EE499</td>
+                        <td>Senior Design Project – II</td>
+                        <td>3+0</td>
+                        <td>EE498</td>
+                    </tr>
+                     <tr>
+                        <td>MG436</td>
+                        <td>Entrepreneurship </td>
+                        <td>2+0</td>
+                        <td>None</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+
+
+            </div>
+            </div>
+        </div>
+    <br>
+    <script>
+function opensem(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<!-- End Courses Section -->
+{% endblock %}

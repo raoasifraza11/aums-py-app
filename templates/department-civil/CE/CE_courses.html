@@ -1,0 +1,500 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab2 {
+  overflow: hidden;
+  border: 1px solid white;
+  background-color: white;
+}
+
+/* Style the buttons inside the tab */
+.tab2 button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 14.5px;
+}
+
+/* Change background color of buttons on hover */
+.tab2 button:hover {
+  background-color: #f1f1f1;
+    color:green;
+}
+
+/* Create an active/current tablink class */
+.tab2 button.active {
+  background-color: #006666 ;
+    color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-top: none;
+}
+</style>
+<!-- Courses Section -->
+<div class="container">
+        <div class="col-sm-3">
+                <nav class="nav-sidebar">
+                    {% include 'department-civil/CE/sidebar-CE.html' with structure="active" %}
+                </nav>
+              </div>
+    <div class="tab2">
+  <button class="tablinks active" onclick="opensem(event, 's1')">Semester 1</button>
+  <button class="tablinks" onclick="opensem(event, 's2')">Semester 2</button>
+  <button class="tablinks" onclick="opensem(event, 's3')">Semester 3</button>
+  <button class="tablinks" onclick="opensem(event, 's4')">Semester 4</button>
+  <button class="tablinks" onclick="opensem(event, 's5')">Semester 5</button>
+  <button class="tablinks" onclick="opensem(event, 's6')">Semester 6</button>
+  <button class="tablinks" onclick="opensem(event, 's7')">Semester 7</button>
+  <button class="tablinks" onclick="opensem(event, 's8')">Semester 8</button>
+</div>
+              <div class="col-md-9 col-sm-9" id="static-content">
+            <div class="table-responsive">
+            	<div id="s1" class="tabcontent" style="display: block;" >
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CE112</td>
+                       <td>Civil Engineering Materials</td>
+                        <td>2+1</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE116</td>
+                       <td>Basic Electrical & Mechanical Engineering</td>
+                        <td>3+1</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE210</td>
+                       <td>Civil Engineering Drawing</td>
+                        <td>2+2</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>SS104</td>
+                       <td>Functional English</td>
+                        <td>2+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>MT103</td>
+                        <td>Applied Calculus (Math-1)</td>
+                        <td>3+0</td>
+                        <td>None</td>
+                    </tr>
+					<tr>
+                        <td>SS118</td>
+                        <td>Pakistan studies</td>
+                        <td>1+0</td>
+                        <td>None</td>
+                    </tr>
+
+                </tbody>
+            </table></div>
+
+                <div id="s2" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CE215</td>
+                        <td>Engineering Survey-1</td>
+                        <td>2+1</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE226</td>
+                        <td>Engineering Geology</td>
+                        <td>2+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>SS108</td>
+                        <td>Islamic Studies / Ethics</td>
+                        <td>2+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE111</td>
+                        <td>Engineering Mechanics</td>
+                        <td>3+1</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>MT116</td>
+                        <td>Applied Differential Equations (Math-2)</td>
+                        <td>3+0</td>
+                        <td>None</td>
+                    </tr>
+
+
+                </tbody>
+            </table></div>
+
+                <div id="s3" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CS115</td>
+                        <td> Computing & Programming</td>
+                        <td>1+2</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE211</td>
+                        <td>Civil Engineering drawing and Graphics</td>
+                        <td>1+2</td>
+                        <td>CE210</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE314</td>
+                        <td>Advance Engineering Surveying</td>
+                        <td>2+1</td>
+                        <td>CE212</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE216</td>
+                        <td>Mechanics of Solids-1</td>
+                        <td>2+1</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>MG434</td>
+                        <td>Engineering Economics </td>
+                        <td>2+0</td>
+                        <td>None</td>
+                    </tr>
+
+                </tbody>
+            </table></div>
+                <div id="s4" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CE326</td>
+                        <td>Construction Engineering</td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE214</td>
+                        <td>Structural Analysis-1	</td>
+                        <td>3+0</td>
+                        <td>CE111</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE213</td>
+                        <td>Soil Mechanics (GeoTech-1)</td>
+                        <td>3+1</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE221</td>
+                        <td>Fluid Mechanics</td>
+                        <td>3+1</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>MT302</td>
+                        <td>Numerical Analysis (Math-4)</td>
+                        <td>3+0</td>
+                        <td>None</td>
+                    </tr>
+
+                </tbody>
+            </table></div>
+
+                <div id="s5" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MT313</td>
+                        <td>Probability & Statistics (Math 4)</td>
+                        <td>2+1</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE301</td>
+                        <td>Advance Fluid Mechanics</td>
+                        <td>3+1</td>
+                        <td>FM1</td>
+
+                    </tr>
+                    <tr>
+                        <td>SS204</td>
+                        <td>Business Communication</td>
+                        <td>2+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>SS201</td>
+                        <td>Professional Ethics</td>
+                        <td>2+0</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>CE316</td>
+                        <td>Reinforced Concrete Design-1</td>
+                        <td>3+1</td>
+                        <td>None</td>
+                    </tr>
+                     <tr>
+                        <td>CE324</td>
+                        <td>Quantity & Cost Estimation</td>
+                        <td>2+1</td>
+                        <td>CE212</td>
+                    </tr>
+                </tbody>
+            </table></div>
+                    <div id="s6" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CE327</td>
+                        <td>Construction Management</td>
+                        <td>2+1</td>
+                        <td>CE326</td>
+
+                    </tr>
+					<tr>
+                        <td>CE317</td>
+                        <td>Mechanics of Solids-2</td>
+                        <td>2+1</td>
+                        <td>CE216</td>
+                    </tr>
+                    <tr>
+                        <td>CE412</td>
+                        <td>Plain &Reinforced Concrete Design-2</td>
+                        <td>3+1</td>
+                        <td>CE316</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE319</td>
+                        <td>Transportation Engineering-1</td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE323</td>
+                        <td>Engineering Hydrology</td>
+                        <td>2+1</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>CE318</td>
+                        <td>Structural Analysis-2</td>
+                        <td>3+0</td>
+                        <td>CE214</td>
+                    </tr>
+
+                </tbody>
+            </table></div>
+
+                <div id="s7" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CE305</td>
+                        <td>Environmental Engineering-1</td>
+                        <td>2+1</td>
+                        <td>CE214</td>
+
+                    </tr>
+					<tr>
+                        <td>MG403</td>
+                        <td>Mgmt Sc Elective (Entrepreneurship)</td>
+                        <td>3+0</td>
+                        <td>CE312</td>
+                    </tr>
+                    <tr>
+                        <td>CE330</td>
+                        <td>Architecture & Town Planning</td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE404</td>
+                        <td>GeoTech & Foundation Engg</td>
+                        <td>3+1</td>
+                        <td>CE223</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE419</td>
+                        <td>Transportation Engineering-2</td>
+                        <td>3+1</td>
+                        <td>CE319</td>
+
+                    </tr>
+					<tr>
+                        <td>CE498 </td>
+                        <td>Civil Engineering Project – I</td>
+                        <td>0+3</td>
+                        <td>None</td>
+                    </tr>
+
+                </tbody>
+            </table></div>
+                  <div id="s8" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CE411 </td>
+                        <td>Geo-Informatics</td>
+                        <td>1+1</td>
+                        <td>None</td>
+
+                    </tr>
+                   <tr>
+                        <td>CE406</td>
+                        <td>Environmental Engineering-2</td>
+                        <td>2+0</td>
+                        <td>CE305</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE425</td>
+                        <td>Steel Structures </td>
+                        <td>3+0</td>
+                        <td>None</td>
+
+                    </tr>
+                    <tr>
+                        <td>CE424</td>
+                        <td>Hydraulics & Irrigation Engineering</td>
+                        <td>3+1</td>
+                        <td>CE316</td>
+                    </tr>
+                     <tr>
+                        <td>MG295</td>
+                        <td>Social Science Elective (OB)</td>
+                        <td>2+0</td>
+                        <td>None</td>
+                    </tr>
+                     <tr>
+                        <td>CE499</td>
+                        <td>Civil Engineering Project – 2</td>
+                        <td>0+3</td>
+                        <td>CE498</td>
+                    </tr>
+
+                </tbody>
+            </table></div>
+
+
+
+            </div>
+            </div>
+        </div>
+    <br>
+    <script>
+function opensem(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<!-- End Courses Section -->
+{% endblock %}

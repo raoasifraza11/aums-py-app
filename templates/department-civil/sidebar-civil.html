@@ -2,22 +2,15 @@
     <ul class="nav">
 
       <li class="{{ info }}">
-        <a href="{% url 'slider:civil-info' %}">Department Info</a>
+        <a href="{% url 'slider:civil-info' %}">Foreword</a>
       </li>
       <li class="{{ structure }}">
-        <a href="{% url 'slider:civil-stucture' %}">Program Info</a>
+        <a href="{% url 'slider:civil-stucture' %}">Programs</a>
       </li>
-      <li class="{{ courses }}">
-          <a href="{% url 'slider:civil-course' %}">Curriculum</a>
-        </li>
+
       <li class="{{ faculity }}">
         <a href="{% url 'slider:staff-civil' %}">Faculty</a>
       </li>
-      
-
-      <li class="{{ obe }}">
-          <a  href="{% url 'slider:obe' %}">OBE</a>
-        </li>
       <li>
         <a  href="{{admission.link}}">Apply Online</a>
       </li>

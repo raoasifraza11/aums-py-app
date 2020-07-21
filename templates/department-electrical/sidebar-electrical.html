@@ -3,21 +3,17 @@
 
         
       <li class="{{ info }}">
-        <a href="{% url 'slider:electrical_info' %}">Department Info</a>
+        <a href="{% url 'slider:electrical_info' %}">Foreword</a>
       </li>
       <li class="{{ structure }}">
-        <a href="{% url 'slider:electrical_structure' %}">Program Info</a>
+        <a href="{% url 'slider:electrical_structure' %}">Programs</a>
       </li>
-      <li class="{{ courses }}">
-          <a href="{% url 'slider:electrical_courses'%}">Curriculum</a>
-        </li>
+
       <li class="{{ faculity }}">
         <a href="{% url 'slider:staff-electrical' %}">Faculty</a>
       </li>
-    
-      <li class="{{ obe }}">
-          <a  href="{% url 'slider:obe-electrical' %}">OBE</a>
-        </li>
+
+
       <li>
           <a  href="{{admission.link}}">Apply Online</a>
       </li>

@@ -1,0 +1,636 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab2 {
+  overflow: hidden;
+  border: 1px solid white;
+  background-color: white;
+}
+
+/* Style the buttons inside the tab */
+.tab2 button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 8px;
+  transition: 0.3s;
+  font-size: 13px;
+}
+
+/* Change background color of buttons on hover */
+.tab2 button:hover {
+  background-color: #f1f1f1;
+    color:green;
+}
+
+/* Create an active/current tablink class */
+.tab2 button.active {
+  background-color: #006666 ;
+    color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-top: none;
+}
+</style>
+<!-- Courses Section -->
+<div class="container">
+        <div class="col-sm-3">
+                <nav class="nav-sidebar">
+                    {% include 'department-pharmacy/PD/sidebar-PD.html' with structure="active" %}
+                </nav>
+              </div>
+    <div class="tab2">
+  <button class="tablinks active" onclick="opensem(event, 's1')">Semester 1</button>
+  <button class="tablinks" onclick="opensem(event, 's2')">Semester 2</button>
+  <button class="tablinks" onclick="opensem(event, 's3')">Semester 3</button>
+  <button class="tablinks" onclick="opensem(event, 's4')">Semester 4</button>
+  <button class="tablinks" onclick="opensem(event, 's5')">Semester 5</button>
+  <button class="tablinks" onclick="opensem(event, 's6')">Semester 6</button>
+  <button class="tablinks" onclick="opensem(event, 's7')">Semester 7</button>
+  <button class="tablinks" onclick="opensem(event, 's8')">Semester 8</button>
+  <button class="tablinks" onclick="opensem(event, 's9')">Semester 9</button>
+  <button class="tablinks" onclick="opensem(event, 's10')">Semester 10</button>
+</div>
+              <div class="col-md-9 col-sm-9" id="static-content">
+            <div class="table-responsive">
+            	<div id="s1" class="tabcontent" style="display: block;" >
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SS103</td>
+                        <td>English-A (Functional English)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD103</td>
+                        <td>Pharmaceutics-IA (Physical Pharmacy)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD101</td>
+                        <td>Pharmaceutical Chemistry-IA (Organic)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD102</td>
+                        <td>Pharmaceutical Chemistry-IIA (Biochemistry)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD104</td>
+                        <td>Physiology-A</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD105</td>
+                        <td>Anatomy & Histology</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+                <div id="s2" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SS124</td>
+                        <td>English-B (Communication & Writing skills)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD127</td>
+                        <td>Pharmaceutics-IB (Physical Pharmacy)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD123</td>
+                        <td>Pharmaceutical Chemistry-IB (Organic)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD126</td>
+                        <td>Pharmaceutical Chemistry-IIB (Biochemistry)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD128</td>
+                        <td>Physiology-B</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+                <div id="s3" class="tabcontent">
+
+            <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SS108</td>
+                        <td>Islamic Studies</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD201</td>
+                        <td>Pharmaceutics-IIA (Dosage Forms Science)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD204</td>
+                        <td>Pharmaceutics-IIIA (Pharmaceutical Microbiology & Immunology)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD202</td>
+                        <td>Pharmacology and Therapeutics-IA</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD203</td>
+                        <td>Pharmacognosy-IA (Basic)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>MT211</td>
+                        <td>Pharmacy Practice-IB (Pharmaceutical Mathematics)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table></div>
+                <div id="s4" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SS118</td>
+                        <td>Pakistan Studies</td>
+                        <td>2+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD221</td>
+                        <td>Pharmaceutics-IIB (Dosage Forms Science)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD224</td>
+                        <td>Pharmaceutics-IIIB (Pharmaceutical Microbiology & Immunology)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD222</td>
+                        <td>Pharmacology and Therapeutics-IB</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD223</td>
+                        <td>Pharmacognosy-IB (Basic)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>MT226</td>
+                        <td>Pharmacy Practice-III (Bio-statistics)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+</div>
+
+                <div id="s5" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PD305</td>
+                        <td>Pharmacy Practice-IIA (Dispensing Pharmacy)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD304</td>
+                        <td>Pharmaceutical Chemistry-IIIA (Pharmaceutical Analysis)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD302</td>
+                        <td>Pharmacology and Therapeutics-IIA</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD303</td>
+                        <td>Pharmacognosy-IIA (Advanced)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD301</td>
+                        <td>Pathology</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+</div>
+                    <div id="s6" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PD328</td>
+                        <td>Pharmacy Practice-IIB (Community, Social & Administrative Pharmacy)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD327</td>
+                        <td>Pharmaceutical Chemistry-IIIB (Pharmaceutical Analysis)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD325</td>
+                        <td>Pharmacology and Therapeutics-IIB</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD326</td>
+                        <td>Pharmacognosy-IIB (Advanced)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD329</td>
+                        <td>Pharmacy Practice-III (Computer and its Applications in Pharmacy)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+                <div id="s7" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PD330</td>
+                        <td>Pharmacy Practice-IVA (Hospital Pharmacy-I)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD331</td>
+                        <td>Pharmacy Practice-VA (Clinical Pharmacy-I)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD332</td>
+                        <td>Pharmaceutics-IVA (Industrial Pharmacy-I)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD334</td>
+                        <td>Pharmaceutics-VA (Biopharmaceutics & Pharmacokinetics-I)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD335</td>
+                        <td>Pharmaceutics-VIA (Pharmaceutical Quality Management-I)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+</div>
+                  <div id="s8" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PD401</td>
+                        <td>Pharmacy Practice-IVB (Hospital Pharmacy-II)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD402</td>
+                        <td>Pharmacy Practice-VB (Clinical Pharmacy-II)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD403</td>
+                        <td>Pharmaceutics-IVB (Industrial Pharmacy-II)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD404</td>
+                        <td>Pharmaceutics-VB (Biopharmaceutics & Pharmacokinetics-II)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD405</td>
+                        <td>Pharmaceutics-VIB (Pharmaceutical Quality Management-II)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+</div>
+
+                  <div id="s9" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PD432</td>
+                        <td>Pharmaceutics-VIIA (Pharmaceutical Technology-I)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD431</td>
+                        <td>Pharmacy Practice-VIA (Advanced Clinical Pharmacy-I)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD433</td>
+                        <td>Pharmacy Practice-VIIA (Forensic Pharmacy- I)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD434</td>
+                        <td>Pharmacy Practice-VIIIA (Pharmaceutical Management & Marketing-I)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD430</td>
+                        <td>Pharmaceutical Chemistry-IVA (Medicinal Chemistry-I)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+</div>
+
+
+                                  <div id="s10" class="tabcontent">
+                <table class="table">
+                <thead style="background-color:#006666; color: white">
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Pre Req</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PD442</td>
+                        <td>Pharmaceutics- VIIB (Pharmaceutical Technology-II)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD441</td>
+                        <td>Pharmacy Practice-VIB (Advanced Clinical Pharmacy-II)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD443</td>
+                        <td>Pharmacy Practice-VIIB (Forensic Pharmacy-II)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD444</td>
+                        <td>Pharmacy Practice-VIIIB (Pharmaceutical Management & Marketing-II)</td>
+                        <td>3+0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>PD440</td>
+                        <td>Pharmaceutical Chemistry-IVB (Medicinal Chemistry-II)</td>
+                        <td>3+1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+</div>
+
+            </div>
+            </div>
+        </div>
+    <br>
+    <script>
+function opensem(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<!-- End Courses Section -->
+{% endblock %}
