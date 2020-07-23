@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+    .footer1 {
+        margin-top: 200px;
+    }
+</style>
+<div style="margin-top: 30px;" class="container">
+        <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-business/sidebar-business.html' with info="active" %}
+        </div>
+            <div class="col-md-9 col-sm-9" id="static-content">
+                <h2 align="center" >Department of Management & Social Sciences</h2>
+                <p align="justify">The Department of Management & Social Sciences is one of most accomplished and reputed department.  The department provides students with a stimulating environment in which students can acquire a superior level of business, linguistics, literary, communicative, cultural and humanistic competences broad enough to make them operate  in  diverse  walks of life quite  effectively   and efficiently. The Department has established a diversified academic portfolio of undergraduate programs in Business Administration, English and Psychology.</p>
+
+            </div>
+        </div>
+        </div>
+{% endblock %}

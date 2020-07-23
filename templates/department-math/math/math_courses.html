@@ -1,0 +1,510 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab2 {
+  overflow: hidden;
+  border: 1px solid white;
+  background-color: white;
+}
+
+/* Style the buttons inside the tab */
+.tab2 button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 14.5px;
+}
+
+/* Change background color of buttons on hover */
+.tab2 button:hover {
+  background-color: #f1f1f1;
+    color:green;
+}
+
+/* Create an active/current tablink class */
+.tab2 button.active {
+  background-color: #006666 ;
+    color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-top: none;
+}
+</style>
+<!-- Courses Section -->
+<div class="container">
+        <div class="col-sm-3">
+                <nav class="nav-sidebar">
+                    {% include 'department-math/math/sidebar-math.html' with structure="active" %}
+                </nav>
+              </div>
+    <div class="tab2">
+  <button class="tablinks active" onclick="opensem(event, 's1')">Semester 1</button>
+  <button class="tablinks" onclick="opensem(event, 's2')">Semester 2</button>
+  <button class="tablinks" onclick="opensem(event, 's3')">Semester 3</button>
+  <button class="tablinks" onclick="opensem(event, 's4')">Semester 4</button>
+  <button class="tablinks" onclick="opensem(event, 's5')">Semester 5</button>
+  <button class="tablinks" onclick="opensem(event, 's6')">Semester 6</button>
+  <button class="tablinks" onclick="opensem(event, 's7')">Semester 7</button>
+  <button class="tablinks" onclick="opensem(event, 's8')">Semester 8</button>
+</div>
+              <div class="col-md-9 col-sm-9" id="static-content">
+            <div class="table-responsive">
+            	<div id="s1" class="tabcontent" style="display: block;" >
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MT112</td>
+                            <td>Calculus-I</td>
+                            <td>4+0</td>
+                            <td>None</td>
+
+                        </tr>
+                        <tr>
+                            <td>MT120</td>
+                            <td>Mathematical Thinking</td>
+                            <td>3+0</td>
+                            <td>None</td>
+
+                        </tr>
+                        <tr>
+                            <td>SS104</td>
+                            <td>English-I (Comprehension)</td>
+                            <td>3+0</td>
+                            <td>None</td>
+
+                        </tr>
+                        <tr>
+                            <td>CS100</td>
+                            <td>Introduction to Computing</td>
+                            <td>2+1</td>
+                            <td>None</td>
+
+                        </tr>
+                        <tr>
+                            <td>ECO101</td>
+                            <td>Introduction to Economics</td>
+                            <td>3+0</td>
+                            <td>None</td>
+                        </tr>
+                        <tr>
+                            <td>SS118</td>
+                            <td>Islamic Studies/Ethics</td>
+                            <td>2+0</td>
+                            <td>None</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <div id="s2" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MT114</td>
+                            <td>Calculus–II</td>
+                            <td>4+0</td>
+                            <td>MT112</td>
+
+                        </tr>
+                        <tr>
+                            <td>MT221</td>
+                            <td>Linear Algebra</td>
+                            <td>4+0</td>
+                            <td>CS106</td>
+
+                        </tr>
+                        <tr>
+                            <td>NS109</td>
+                            <td>Applied Physics-I</td>
+                            <td>2+1</td>
+                            <td>SS104</td>
+
+                        </tr>
+                        <tr>
+                            <td>CS106</td>
+                            <td>Introduction to Computer Programming</td>
+                            <td>3+1</td>
+                            <td>CS100</td>
+                        </tr>
+                        <tr>
+                            <td>SS118 </td>
+                            <td> Pakistan Studies</td>
+                            <td>2+0</td>
+                            <td>None</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+
+                <div id="s3" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MT217</td>
+                            <td>Calculus-III</td>
+                            <td>4+0</td>
+                            <td>MT114</td>
+
+                        </tr>
+                        <tr>
+                            <td>MT-212</td>
+                            <td>Advanced Linear Algebra</td>
+                            <td>3+0</td>
+                            <td>MT221</td>
+
+                        </tr>
+                        <tr>
+                            <td>ST101</td>
+                            <td>Introduction to Statistics</td>
+                            <td>3+0</td>
+                            <td>None</td>
+
+                        </tr>
+                        <tr>
+                            <td>CS116</td>
+                            <td>Computing Tools for Mathematics</td>
+                            <td>1+1</td>
+                            <td>None</td>
+                        </tr>
+                        <tr>
+                            <td>NS219</td>
+                            <td>Applied-Physics-II</td>
+                            <td>2+1</td>
+                            <td> NS109</td>
+                        </tr>
+                        <tr>
+                            <td>SS203</td>
+                            <td>English-II (Communication Skills)</td>
+                            <td>3+0</td>
+                            <td>SS104</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+                <div id="s4" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>MT223</td>
+                                <td>Real Analysis</td>
+                                <td> 3+0</td>
+                                <td>None </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT224 </td>
+                                <td>Introduction to Topology</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT225 </td>
+                                <td>Affine and Euclidean Geometry</td>
+                                <td>3+0</td>
+                                <td>None </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SS216 </td>
+                                <td>Introduction to Sociology</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SS211</td>
+                                <td>English-III (Technical Report Writing)</td>
+                                <td>3+0</td>
+                                <td>SS203</td>
+                            </tr>
+                        </tbody>
+                    <tbody>
+                            <tr>
+                                <td>MT228</td>
+                                <td>Elements of Set theory and Mathematical Logic</td>
+                                <td>3+0</td>
+                                <td>None </td>
+                            </tr>
+                        </tbody>
+                </table></div>
+
+                <div id="s5" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                        <tr>
+                                <td>MT320</td>
+                                <td>Functional Analysis</td>
+                                <td>3+0</td>
+                                <td>None </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT321 </td>
+                                <td>Complex Analysis</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT322 </td>
+                                <td>Ordinary Differential Equations</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT323 </td>
+                                <td>Group Theory</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT324 </td>
+                                <td>Numerical Methods</td>
+                                <td>3+1</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+
+
+                </table></div>
+                    <div id="s6" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                        <tr>
+                                <td>MT331 </td>
+                                <td>Partial Differential Equations</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT332</td>
+                                <td>Classical Mechanics</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT333</td>
+                                <td>Differential Geometry</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT334 </td>
+                                <td>Probability Theory</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT335 </td>
+                                <td>Special Functions and Transform</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+
+
+                </table></div>
+
+                <div id="s7" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                        <tr>
+                                <td>MT411 </td>
+                                <td>Numerical Analysis</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT412 </td>
+                                <td>History of Mathematics </td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT413 </td>
+                                <td>Riemannian Geometry</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT414 </td>
+                                <td>Theory of Ring and Field</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MTxxx </td>
+                                <td>Final year Project Or Elective Course</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                    </tbody>
+                </table></div>
+                  <div id="s8" class="tabcontent">
+                <table class="table">
+                    <thead style="background-color:#006666; color: white">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Pre Req</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                        <tr>
+                                <td>MTxxx </td>
+                                <td>Elective –I</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MTxxx</td>
+                                <td>Elective –2</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MTxxx</td>
+                                <td>Elective –3</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MTxxx</td>
+                                <td>Elective –4</td>
+                                <td>#+0</td>
+                                <td>None</td>
+                            </tr>
+                    </tbody>
+                    <tbody>
+                            <tr>
+                                <td>MTxxx</td>
+                                <td>Final year Project Or Elective Course</td>
+                                <td>3+0</td>
+                                <td>None</td>
+                            </tr>
+                    </tbody>
+                </table></div>
+
+
+
+            </div>
+            </div>
+        </div>
+    <br>
+    <script>
+function opensem(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<!-- End Courses Section -->
+{% endblock %}

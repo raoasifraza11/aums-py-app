@@ -2,13 +2,14 @@
         <ul class="nav">
 
           <li class="{{ info }}">
-            <a href="{% url 'slider:BSTHM_info' %}">foreword</a>
+            <a href="{% url 'slider:english_info' %}">Foreword</a>
           </li>
-          <li class="{{ structure }}">
-            <a href="{% url 'slider:BSTHM_courses' %}">Semester plan</a>
-          </li>
+
+          <li class="{{ courses }}">
+              <a href="{% url 'slider:english_courses'%}">Semester plan</a>
+            </li>
           <li class="{{ faculity }}">
-            <a href="{% url 'slider:staff-BSTHM' %}">Faculty</a>
+            <a href="{% url 'slider:staff-english' %}">Faculty</a>
           </li>
 
           <li>

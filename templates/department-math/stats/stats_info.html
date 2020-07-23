@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- HOD Message -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            {% include 'department-math/stats/sidebar-stats.html' with info="active" %}
+        </div>
+        <div class="col-md-9 col-sm-9" id="static-content">
+           <h4 class="text-center" style="font-family: 'Lato', sans-serif;">BS in Statistics</h4>
+            <p align="justify">Department of Mathematical and Statistical Sciences is offering a 4-years BS degree program in Statistics. Program has been designed according to the scheme of studies approved by the Higher Education Commission (HEC) of Pakistan to assure the quality education to equalize it with national and international standards. Department has offered a variety of courses
+to have the benefit of a flexible curricular program. The program aims to produce quality students who are able to prepare themselves for advance studies, teaching and research in statistics as well as careers in other related disciplines. In this regard Mathematics department will provide them with possible facilities and guidance.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- End HOD Message -->
+{% endblock %}
+

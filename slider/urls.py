@@ -9,7 +9,7 @@ from django.urls import path
 app_name ='slider'
 urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name='index'), 
-    url(r'^management/sciences/list/$', TemplateView.as_view(template_name='management-sciences.html'), name='management-sciences'),
+    url(r'^management/sciences/list/$', TemplateView.as_view(template_name='department-business/management-sciences.html'), name='management-sciences'),
     url(r'^life/sciences/list/$', TemplateView.as_view(template_name='life-sciences-list.html'), name='life-sciences'),
     url(r'^btech/list/$', TemplateView.as_view(template_name='btech-list.html'), name='btech-list'),
     url(r'^scholarships/$', TemplateView.as_view(template_name='scholarships.html'), name='scholarships'),
@@ -34,17 +34,17 @@ urlpatterns = [
     url(r'^rules&policy/$', TemplateView.as_view(template_name='rules_policy.html'), name='rules-policy'),
     # Department of English
     url(r'^hod/english/$', TemplateView.as_view(template_name='department-english/hod_english.html'), name='hod-english'),
-    url(r'^english/info/$', TemplateView.as_view(template_name='department-english/english_info.html'), name='english_info'),
+    url(r'^english/info/$', TemplateView.as_view(template_name='department-business/english/english_info.html'), name='english_info'),
     url(r'^staff/english/$', views.StaffView.as_view(template_name='department-english/english_staff.html'), name='staff-english'),
-    url(r'^english/course/$', TemplateView.as_view(template_name='department-english/english_courses.html'), name='english_courses'),
+    url(r'^english/course/$', TemplateView.as_view(template_name='department-business/english/english_courses.html'), name='english_courses'),
     url(r'^english/stucture/$', TemplateView.as_view(template_name='department-english/english_structure.html'), name='english_structure'),
     url(r'^english/accredition/$', TemplateView.as_view(template_name='department-english/accredition-english.html'), name='accredition-english'),
 
     # Department of Psychology
     url(r'^hod/psychology/$', TemplateView.as_view(template_name='department-psychology/hod_psychology.html'), name='hod-psychology'),
-    url(r'^psychology/info/$', TemplateView.as_view(template_name='department-psychology/psychology_info.html'), name='psychology_info'),
+    url(r'^psychology/info/$', TemplateView.as_view(template_name='department-business/psychology/psychology_info.html'), name='psychology_info'),
     url(r'^staff/psychology/$', views.StaffView.as_view(template_name='department-psychology/psychology_staff.html'), name='staff-psychology'),
-    url(r'^psychology/course/$', TemplateView.as_view(template_name='department-psychology/psychology_courses.html'), name='psychology_courses'),
+    url(r'^psychology/course/$', TemplateView.as_view(template_name='department-business/psychology/psychology_courses.html'), name='psychology_courses'),
     url(r'^psychology/stucture/$', TemplateView.as_view(template_name='department-psychology/psychology_structure.html'), name='psychology_structure'),
     url(r'^psychology/accredition/$', TemplateView.as_view(template_name='department-psychology/accredition-psychology.html'), name='accredition-psychology'),
 
@@ -127,22 +127,33 @@ urlpatterns = [
 
     # Department of Business
     url(r'^hod/business/$', TemplateView.as_view(template_name='department-business/hod_business.html'), name='hod-business'),
-    url(r'^business/info/$', TemplateView.as_view(template_name='department-business/business_info.html'), name='business_info'),
+    url(r'^business/info/$', TemplateView.as_view(template_name='department-business/bba/business_info.html'), name='bba_info'),
     url(r'^business/stucture/$', TemplateView.as_view(template_name='department-business/business_structure.html'), name='business_structure'),
      url(r'^business/courses/$', TemplateView.as_view(template_name='department-business/business_courses.html'), name='business_courses'),
     url(r'^staff/business/$', views.StaffView.as_view(template_name='department-business/business_staff.html'), name='staff-business'),
     url(r'^business/accredition/$', TemplateView.as_view(template_name='department-business/accredition-business.html'), name='accredition-business'),
 
+    #bba
+    url(r'^bba/courses$', TemplateView.as_view(template_name='department-business/bba/business_courses.html'), name='bba_structure'),
+
     #BSTHM
     url(r'^BSTHM/info/$', TemplateView.as_view(template_name='department-business/BSTHM/BSTHM_info.html'),
         name='BSTHM_info'),
+    url(r'^BSTHM/courses/$', TemplateView.as_view(template_name='department-business/BSTHM/BSTHM_courses.html'),
+        name='BSTHM_courses'),
     url(r'^staff/BSTHM/$', views.StaffView.as_view(template_name='department-business/BSTHM/BSTHM_staff.html'),
         name='staff-BSTHM'),
     # Dept of Electronics
+    url(r'^de/dept_info/$', TemplateView.as_view(template_name='department-electronics/dept_info.html'),
+        name='dept_info'),
     url(r'^de/info/$', TemplateView.as_view(template_name='department-electronics/de_info.html'),
         name='de_info'),
+    url(r'^de/foreword/$', TemplateView.as_view(template_name='department-electronics/de/de_info.html'),
+        name='de_foreword'),
     url(r'^staff/de/$', views.StaffView.as_view(template_name='department-electronics/de_staff.html'),
         name='staff-de'),
+    url(r'^de/courses$', views.StaffView.as_view(template_name='department-electronics/de/de_courses.html'),
+        name='de_courses'),
 
     # Department of Micro
     url(r'^hod/micro/$', TemplateView.as_view(template_name='department-life-scienecs/department-micro/hod_micro.html'), name='hod-micro'),
@@ -200,6 +211,15 @@ urlpatterns = [
         name='Math_info'),
     url(r'^staff/Math/$', views.StaffView.as_view(template_name='department-math/math_staff.html'),
         name='Math_staff'),
+    url(r'^Math/bsm$', views.StaffView.as_view(template_name='department-math/math/math_info.html'),
+        name='math_foreword'),
+    url(r'^Math/courses$', views.StaffView.as_view(template_name='department-math/math/math_courses.html'),
+        name='math_courses'),
+    url(r'^Math/bss$', views.StaffView.as_view(template_name='department-math/stats/stats_info.html'),
+        name='stats_foreword'),
+    url(r'^Math/s_courses$', views.StaffView.as_view(template_name='department-math/stats/stats_courses.html'),
+        name='stats_courses'),
+
 
 
     # Department of MBA

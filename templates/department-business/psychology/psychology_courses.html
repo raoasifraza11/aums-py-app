@@ -1,0 +1,541 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab2 {
+  overflow: hidden;
+  border: 1px solid white;
+  background-color: white;
+}
+
+/* Style the buttons inside the tab */
+.tab2 button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 14.5px;
+}
+
+/* Change background color of buttons on hover */
+.tab2 button:hover {
+  background-color: #f1f1f1;
+    color:green;
+}
+
+/* Create an active/current tablink class */
+.tab2 button.active {
+  background-color: #006666 ;
+    color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-top: none;
+}
+</style>
+<!-- Courses Section -->
+<div class="container">
+        <div class="col-sm-3">
+                <nav class="nav-sidebar">
+                    {% include 'department-business/psychology/sidebar-psychology.html' with structure="active" %}
+                </nav>
+              </div>
+    <div class="tab2">
+  <button class="tablinks active" onclick="opensem(event, 's1')">Semester 1</button>
+  <button class="tablinks" onclick="opensem(event, 's2')">Semester 2</button>
+  <button class="tablinks" onclick="opensem(event, 's3')">Semester 3</button>
+  <button class="tablinks" onclick="opensem(event, 's4')">Semester 4</button>
+  <button class="tablinks" onclick="opensem(event, 's5')">Semester 5</button>
+  <button class="tablinks" onclick="opensem(event, 's6')">Semester 6</button>
+  <button class="tablinks" onclick="opensem(event, 's7')">Semester 7</button>
+  <button class="tablinks" onclick="opensem(event, 's8')">Semester 8</button>
+</div>
+              <div class="col-md-9 col-sm-9" id="static-content">
+            <div class="table-responsive">
+            	<div id="s1" class="tabcontent" style="display: block;" >
+                <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+            <tbody>
+                            <tr>
+                                <td>SS104</td>
+                                <td>English – 1 (Comprehension)</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT100</td>
+                                <td>Basic Mathematics </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>CS100</td>
+                                <td>Introduction to Computing</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SS118</td>
+                                <td>Pakistan Studies</td>
+                                <td>2</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>XXxxx </td>
+                                <td>General Course I</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY101</td>
+                                <td>Introduction to Psychology</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+        </table></div>
+
+                <div id="s2" class="tabcontent">
+                <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+            <tbody>
+                            <tr>
+                                <td>SS203</td>
+                                <td>English – II (Communication Skills)</td>
+                                <td>3</td>
+                                <td>SS104</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SS108</td>
+                                <td>Islamic Studies/Ethics</td>
+                                <td>2</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MT205</td>
+                                <td>Introduction to Statistics</td>
+                                <td>3</td>
+                                <td> </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY102 </td>
+                                <td>History and Schools of Psychology </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>XXxxx </td>
+                                <td>General Course II</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>XXxxx </td>
+                                <td>General Course III</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+        </table></div>
+
+                <div id="s3" class="tabcontent">
+                <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+           <tbody>
+                            <tr>
+                                <td>SS211 </td>
+                                <td>English – III (Technical Report Writing)</td>
+                                <td>3</td>
+                                <td>SS203 </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>MG308 </td>
+                                <td>Business Law</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY201 </td>
+                                <td>Neurological Basis of Behavior</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY203 </td>
+                                <td>Personality Theories – I</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>XXxxx </td>
+                                <td>General Course IV</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>XXxxx</td>
+                                <td>General Course V</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+        </table></div>
+                <div id="s4" class="tabcontent">
+                <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+           <tbody>
+                            <tr>
+                                <td>PSY204 </td>
+                                <td>Introduction to Social Psychology</td>
+                                <td>3</td>
+                                <td>PSY101 </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY213 </td>
+                                <td>Personality Theories – II</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY202 </td>
+                                <td>Experimental Psychology </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY215 </td>
+                                <td>Elementary Statistics for Psychology</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>SS240 </td>
+                                <td>Introduction to logic </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>XXxxx </td>
+                                <td>General Course VI</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+        </table></div>
+
+                <div id="s5" class="tabcontent">
+                <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+            <tbody>
+                            <tr>
+                                <td>PSY301 </td>
+                                <td>Mental Health and Psycho-pathology – I </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY302 </td>
+                                <td>Psychological Testing – I </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY303 </td>
+                                <td>Research Methods in Psychology – I</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY304 </td>
+                                <td>Applied Statistics for Psychology</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY305 </td>
+                                <td>Advanced Social Psychology </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>XXxxx </td>
+                                <td>General Elective VII </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+        </table></div>
+                    <div id="s6" class="tabcontent">
+                <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+           <tbody>
+                            <tr>
+                                <td>PSY311 </td>
+                                <td>Mental Health and Psycho-pathology – II</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY303 </td>
+                                <td>Developmental Psychology </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY312 </td>
+                                <td>Psychological Testing – II</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY313 </td>
+                                <td>Research Methods in Psychology – II</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY314 </td>
+                                <td>Industrial Organizational Psychology </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+
+        </table></div>
+
+                <div id="s7" class="tabcontent">
+                <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+            <tbody>
+                            <tr>
+                                <td>PSY401 </td>
+                                <td>Educational Psychology</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY402 </td>
+                                <td>Positive Psychology</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>PSY403 </td>
+                                <td>Cross Cultural Psychology</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>XXxxx </td>
+                                <td>Elective 1 </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>XXxxx</td>
+                                <td>Elective 2 </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>XXxxx</td>
+                                <td>Internship </td>
+                                <td>0</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+        </table></div>
+                  <div id="s8" class="tabcontent">
+                <table class="table">
+            <thead style="background-color:#006666; color: white">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Pre Req</th>
+                </tr>
+            </thead>
+            <tbody>
+                            <tr>
+                                <td>PSY404 </td>
+                                <td>Cognitive Psychology </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>XXxxx </td>
+                                <td> Elective-III </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>XXxxx </td>
+                                <td> Elective-IV </td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>XXxxx </td>
+                                <td> Research Project </td>
+                                <td>6</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+        </table></div>
+
+
+
+            </div>
+            </div>
+        </div>
+    <br>
+    <script>
+function opensem(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<!-- End Courses Section -->
+{% endblock %}

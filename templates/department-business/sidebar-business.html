@@ -2,18 +2,16 @@
         <ul class="nav">
 
           <li class="{{ info }}">
-            <a href="{% url 'slider:business_info' %}">Program Info</a>
+            <a href="{% url 'slider:management-sciences' %}">Foreword</a>
           </li>
           <li class="{{ structure }}">
-            <a href="{% url 'slider:business_structure' %}">Program Structure</a>
+            <a href="{% url 'slider:business_structure' %}">Programs</a>
           </li>
 
           <li class="{{ faculity }}">
             <a href="{% url 'slider:staff-business' %}">Faculty</a>
           </li>
-          <li class="{{ accredition }}">
-            <a href="{% url 'slider:accredition-business' %}">Accreditation</a>
-          </li>
+
           <li>
             <a  href="{{admission.link}}">Apply Online</a>
           </li>

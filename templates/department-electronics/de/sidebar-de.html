@@ -1,16 +1,14 @@
 <nav class="nav-sidebar">
         <ul class="nav">
-
           <li class="{{ info }}">
-            <a href="{% url 'slider:BSTHM_info' %}">foreword</a>
+            <a href="{% url 'slider:de_foreword' %}">Foreword</a>
           </li>
-          <li class="{{ structure }}">
-            <a href="{% url 'slider:BSTHM_courses' %}">Semester plan</a>
+            <li class="{{ courses }}">
+            <a href="{% url 'slider:de_courses' %}">Semester plan</a>
           </li>
           <li class="{{ faculity }}">
-            <a href="{% url 'slider:staff-BSTHM' %}">Faculty</a>
+            <a href="{% url 'slider:staff-de' %}">Faculty</a>
           </li>
-
           <li>
             <a  href="{{admission.link}}">Apply Online</a>
           </li>
